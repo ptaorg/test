@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <title>今、実際に何が行われているか | PTA適正化推進委員会</title>
+  <meta name="description" content="学校とPTAの関係で問題になりやすい文書・案内・徴収・名簿・教職員関与の構造を、実例型の再現資料を使って整理します。">
+  <link rel="canonical" href="https://ptaorg.com/reality.html">
+  <meta property="og:title" content="今、実際に何が行われているか | PTA適正化推進委員会">
+  <meta property="og:description" content="学校とPTAの関係で問題になりやすい文書・案内・徴収・名簿・教職員関与の構造を、再現資料を使って整理します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ptaorg.com/reality.html">
+  <meta property="og:image" content="https://ptaorg.com/assets/og-image-popc-en.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="今、実際に何が行われているか | PTA適正化推進委員会">
+  <meta name="twitter:description" content="学校とPTAの関係で問題になりやすい文書・案内・徴収・名簿・教職員関与の構造を、再現資料を使って整理します。">
+  <meta name="twitter:image" content="https://ptaorg.com/assets/og-image-popc-en.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+
+/* =============================================
+   HERO — 実態調査ページ
+   ============================================= */
+.reality-hero {
+  background:
+    linear-gradient(90deg, rgba(91,20,20,.34) 0%, rgba(127,29,29,.18) 54%, rgba(127,29,29,.08) 100%),
+    url('assets/slides/1.jpg') center/cover;
+  padding: 80px 0 72px;
+  text-align: center;
+  color: #fff;
+}
+.reality-hero-kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 18px; border-radius: 999px;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+  font-size: .72rem; font-weight: 900; letter-spacing: .14em;
+  text-transform: uppercase; color: #fca5a5;
+  margin-bottom: 24px;
+}
+.reality-hero-kicker::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: #fca5a5; animation: blink 2s ease infinite;
+}
+@keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
+.reality-hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.7rem, 3.8vw, 2.9rem);
+  font-weight: 900; line-height: 1.25; color: #fff;
+  margin-bottom: 22px; letter-spacing: -.01em;
+}
+.reality-hero-lead {
+  font-size: clamp(.9rem, 1.4vw, 1.05rem);
+  color: rgba(255,255,255,.82); line-height: 1.9;
+  max-width: 660px; margin-inline: auto;
+}
+
+/* =============================================
+   ページ内アンカーナビ
+   ============================================= */
+.anchor-nav {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 80;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+.anchor-nav-inner {
+  display: flex; gap: 0; overflow-x: auto;
+  scrollbar-width: none;
+  width: min(calc(100% - 40px), 860px);
+  margin-inline: auto;
+}
+.anchor-nav-inner::-webkit-scrollbar { display: none; }
+.anchor-link {
+  display: flex; align-items: center; gap: 8px;
+  padding: 14px 20px;
+  font-size: .82rem; font-weight: 800;
+  color: var(--text-soft);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  transition: color .2s, border-color .2s;
+}
+.anchor-link:hover {
+  color: var(--navy);
+  border-bottom-color: var(--gold);
+}
+.anchor-link .anchor-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #fee2e2; color: #b91c1c;
+  font-size: .68rem; font-weight: 900;
+  flex-shrink: 0;
+}
+
+/* =============================================
+   書類モックアップ
+   ============================================= */
+.doc-mockup {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 5px solid #f59e0b;
+  border-radius: 8px;
+  padding: 22px 24px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: .9rem; line-height: 2;
+  color: #1a1a1a;
+  position: relative;
+  margin: 20px 0;
+}
+.doc-mockup-label {
+  display: inline-block; margin-bottom: 12px;
+  padding: 3px 10px; border-radius: 4px;
+  background: #fef3c7; color: #92400e;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: .7rem; font-weight: 900; letter-spacing: .06em;
+}
+.doc-mockup-title {
+  font-weight: 900; font-size: 1.05rem;
+  margin-bottom: 8px; color: #111;
+}
+.doc-mockup-body { color: #2a2a2a; }
+.doc-mockup-body p { margin: 0; }
+
+/* 適正書類（緑） */
+.doc-mockup-ok {
+  background: #f0fdf4;
+  border-color: #86efac;
+  border-left-color: #16a34a;
+}
+.doc-mockup-ok .doc-mockup-label {
+  background: #dcfce7; color: #15803d;
+}
+
+/* =============================================
+   問題点注釈
+   ============================================= */
+.problem-notes {
+  margin-top: 18px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.problem-note {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: #fff5f5; border-radius: 8px;
+  padding: 12px 16px;
+  border-left: 3px solid #ef4444;
+}
+.problem-note-arrow {
+  color: #ef4444; font-weight: 900; font-size: 1rem;
+  flex-shrink: 0; margin-top: 1px;
+}
+.problem-note-text {
+  font-size: .86rem; color: #7f1d1d; line-height: 1.65; font-weight: 700;
+}
+.good-note {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: #f0fdf4; border-radius: 8px;
+  padding: 12px 16px;
+  border-left: 3px solid #16a34a;
+}
+.good-note-arrow {
+  color: #16a34a; font-weight: 900; font-size: 1rem;
+  flex-shrink: 0; margin-top: 1px;
+}
+.good-note-text {
+  font-size: .86rem; color: #14532d; line-height: 1.65; font-weight: 700;
+}
+
+/* =============================================
+   法的根拠ボックス
+   ============================================= */
+.law-box {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-top: 20px;
+}
+.law-box-label {
+  font-size: .68rem; font-weight: 900; letter-spacing: .1em;
+  color: #d4af37; text-transform: uppercase; margin-bottom: 10px;
+}
+.law-box-content {
+  font-size: .9rem; line-height: 1.85; color: rgba(255,255,255,.88);
+}
+.law-box-content strong { color: #fde68a; }
+
+/* =============================================
+   引用バナー（教育委員会）
+   ============================================= */
+.edu-quote {
+  background: #0a1628;
+  border-radius: 10px;
+  padding: 22px 24px;
+  margin-top: 20px;
+}
+.edu-quote-source {
+  font-size: .72rem; font-weight: 900; letter-spacing: .07em;
+  color: #d4af37; margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.edu-quote blockquote {
+  font-family: 'Noto Serif JP', serif;
+  font-size: .96rem; color: #fff;
+  line-height: 1.85; margin: 0; font-weight: 700;
+}
+.edu-quote blockquote::before {
+  content: '\201C'; font-size: 1.8rem; color: #d4af37;
+  line-height: 0; vertical-align: -.35em; margin-right: 4px;
+}
+
+/* =============================================
+   タイムライン
+   ============================================= */
+.timeline {
+  position: relative;
+  margin-top: 32px;
+  padding-left: 40px;
+}
+.timeline::before {
+  content: '';
+  position: absolute; left: 14px; top: 4px; bottom: 4px;
+  width: 2px;
+  background: linear-gradient(to bottom, #ef4444, #b91c1c 60%, rgba(185,28,28,.15));
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 32px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  position: absolute; left: -33px; top: 3px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: #ef4444; border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #ef4444;
+}
+.timeline-dot.question {
+  background: #7f1d1d; box-shadow: 0 0 0 2px #7f1d1d;
+}
+.timeline-when {
+  font-size: .72rem; font-weight: 900; letter-spacing: .07em;
+  color: #b91c1c; text-transform: uppercase; margin-bottom: 4px;
+}
+.timeline-item h4 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: .97rem; font-weight: 900; color: var(--navy);
+  margin-bottom: 6px; line-height: 1.4;
+}
+.timeline-item p {
+  font-size: .86rem; color: var(--text-soft); line-height: 1.75; margin: 0;
+}
+.timeline-item.question-item h4 { color: #991b1b; }
+
+/* =============================================
+   資金フロー図
+   ============================================= */
+.flow-diagram {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 24px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flow-box {
+  background: #fff;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 20px;
+  text-align: center;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+.flow-box.school {
+  border-color: #3b82f6; background: #eff6ff;
+}
+.flow-box.pta {
+  border-color: #f59e0b; background: #fffbeb;
+}
+.flow-box.parent {
+  border-color: #6b7280; background: #f9fafb;
+}
+.flow-box-label {
+  font-size: .68rem; font-weight: 900; letter-spacing: .06em;
+  text-transform: uppercase; margin-bottom: 6px;
+}
+.flow-box.school .flow-box-label { color: #1d4ed8; }
+.flow-box.pta .flow-box-label { color: #92400e; }
+.flow-box.parent .flow-box-label { color: #374151; }
+.flow-box-name {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 900; font-size: .97rem; color: var(--navy);
+}
+.flow-arrow {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 2px; padding: 0 10px; flex-shrink: 0;
+}
+.flow-arrow-line {
+  font-size: 1.4rem; color: #ef4444; line-height: 1;
+}
+.flow-arrow-desc {
+  font-size: .68rem; font-weight: 700; color: #ef4444;
+  white-space: nowrap;
+}
+.flow-problem-note {
+  width: 100%; margin-top: 14px;
+  background: #fff5f5; border-radius: 8px; padding: 12px 16px;
+  border-left: 3px solid #ef4444;
+  font-size: .84rem; color: #7f1d1d; font-weight: 700;
+}
+
+/* =============================================
+   セクション共通
+   ============================================= */
+.reality-section {
+  padding: 80px 0;
+}
+.reality-section-white { background: #fff; }
+.reality-section-bg { background: var(--bg); }
+
+.section-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 14px; border-radius: 4px;
+  background: #fee2e2; border: 1px solid #fecaca;
+  color: #b91c1c; font-size: .72rem; font-weight: 900;
+  letter-spacing: .08em; text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.reality-section h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 900; color: var(--navy);
+  margin-bottom: 14px; line-height: 1.35;
+}
+.reality-section-lead {
+  font-size: .97rem; color: var(--text-soft);
+  line-height: 1.9; margin-bottom: 30px;
+  max-width: 720px;
+}
+
+/* =============================================
+   CTA セクション（まとめ）
+   ============================================= */
+.reality-cta {
+  background: linear-gradient(135deg, #0d2044, #1a3a6b);
+  padding: 80px 0;
+  text-align: center;
+  color: #fff;
+}
+.reality-cta-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  font-weight: 900; color: #f4e7a6;
+  margin-bottom: 16px; line-height: 1.3;
+}
+.reality-cta-lead {
+  font-size: clamp(.88rem, 1.2vw, 1rem);
+  color: rgba(255,255,255,.75); line-height: 1.9;
+  max-width: 620px; margin-inline: auto; margin-bottom: 40px;
+}
+.cta-btn-group {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  justify-content: center;
+}
+.cta-btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 999px;
+  background: #d4af37; color: #0d2044;
+  font-size: .93rem; font-weight: 900; text-decoration: none;
+  transition: opacity .2s, transform .2s;
+}
+.cta-btn-primary:hover { opacity: .88; transform: translateY(-2px); }
+.cta-btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 24px; border-radius: 999px;
+  background: transparent; color: #fff;
+  border: 2px solid rgba(255,255,255,.35);
+  font-size: .88rem; font-weight: 800; text-decoration: none;
+  transition: all .2s;
+}
+.cta-btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+
+/* =============================================
+   事例ハイライトボックス
+   ============================================= */
+.incident-box {
+  background: #fff5f5;
+  border: 1px solid #fecaca;
+  border-left: 5px solid #ef4444;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-top: 20px;
+}
+.incident-box-label {
+  font-size: .7rem; font-weight: 900; letter-spacing: .07em;
+  color: #b91c1c; text-transform: uppercase; margin-bottom: 8px;
+}
+.incident-box-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem; font-weight: 900; color: #7f1d1d;
+  margin-bottom: 8px; line-height: 1.4;
+}
+.incident-box-body {
+  font-size: .88rem; color: #4a1c1c; line-height: 1.8;
+}
+
+/* 職専免サンプル（適正書類、緑系） */
+.doc-mockup-stamp {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; border-radius: 50%;
+  border: 3px solid #d4af37; color: #d4af37;
+  font-size: .72rem; font-weight: 900; letter-spacing: .04em;
+  text-align: center; line-height: 1.3;
+  float: right; margin: -4px 0 8px 16px;
+}
+
+/* =============================================
+   レスポンシブ
+   ============================================= */
+@media(max-width:860px){
+  .flow-diagram { gap: 8px; }
+  .flow-arrow { padding: 0 4px; }
+}
+@media(max-width:640px){
+  .flow-diagram { flex-direction: column; align-items: center; }
+  .flow-arrow { flex-direction: row; padding: 4px 0; }
+  .flow-arrow-line { transform: rotate(90deg); }
+  .anchor-link { padding: 12px 14px; font-size: .76rem; }
+}
+
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0D18ZSSLMH');
+</script>
+<link href="css/refine.css?v=refine1" rel="stylesheet"/>
+</head>
+<body>
+
+
+<!-- =========================================
+     ヘッダー
+     ========================================= -->
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="assets/popc-logo.png" alt="PTA適正化推進委員会ロゴ">
+      <span>PTA適正化推進委員会</span>
+    </a>
+    <div class="header-search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" class="search-input" placeholder="キーワードで検索…" aria-label="サイト内検索">
+      <div class="search-results-dropdown"></div>
+    </div>
+    <nav class="desktop-nav" aria-label="主要ナビゲーション">
+      <a href="index.html" class="nav-link">トップ</a>
+      <div class="nav-item has-dropdown">
+        <a href="#" class="nav-link">立場別入り口</a>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <h4>立場別ガイド</h4>
+            <ul>
+              <li><a href="guide-parent.html">保護者の方へ</a></li>
+              <li><a href="guide-pta.html">PTA役員の方へ</a></li>
+              <li><a href="guide-board.html">学校・教育委員会の方へ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <a href="#" class="nav-link">資料</a>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <h4>証拠資料</h4>
+            <ul>
+              <li><a href="board-responses.html">教育委員会の回答</a></li>
+              <li><a href="national-archive.html">全国資料館</a></li>
+              <li><a href="administrative-materials.html">行政資料整理</a></li>
+            </ul>
+          </div>
+          <div class="mega-col">
+            <h4>ガイド・ツール</h4>
+            <ul>
+              <li><a href="guideline.html">適正化ガイドライン</a></li>
+              <li><a href="audit/index.html">運営チェックアプリ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item has-dropdown">
+        <a href="#" class="nav-link">研究論考</a>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <h4>研究・論考</h4>
+            <ul>
+              <li><a href="journal.html">論考・調査報告</a></li>
+              <li><a href="report.html">総合分析レポート</a></li>
+              <li><a href="law-map.html">法制度マップ</a></li>
+              <li><a href="cases.html">判例整理</a></li>
+              <li><a href="timeline.html">PTA制度史</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a href="https://ptaorg.github.io/donate/" class="nav-link support-nav-link">応援</a>
+      <a href="audit/index.html" class="btn-gold">⚙️ 運営チェック</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileOverlay">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-overlay" id="mobileOverlay">
+  <a href="index.html" class="mobile-link"><span>Top</span>トップ</a>
+  <a href="guide-parent.html" class="mobile-link"><span>Parents</span>保護者の方へ</a>
+  <a href="guide-pta.html" class="mobile-link"><span>PTA Board</span>PTA役員の方へ</a>
+  <a href="guide-board.html" class="mobile-link"><span>School / Board</span>学校・教育委員会の方へ</a>
+  <a href="board-responses.html" class="mobile-link"><span>Evidence</span>教育委員会の回答</a>
+  <a href="national-archive.html" class="mobile-link"><span>Archive</span>全国資料館</a>
+  <a href="journal.html" class="mobile-link"><span>Research</span>論考・調査報告</a>
+  <a href="audit/index.html" class="mobile-link"><span>Check</span>運営チェックアプリ</a>
+  <a href="https://ptaorg.github.io/donate/" class="mobile-link support-mobile-link"><span>Support</span>応援・寄付</a>
+  <div class="close-overlay" id="closeOverlay">CLOSE ×</div>
+</div>
+
+<!-- =========================================
+     ヒーローセクション
+     ========================================= -->
+<section class="reality-hero">
+  <div class="wrap">
+    <div class="reality-hero-kicker">実態調査</div>
+    <h1>今、実際に何が行われているか</h1>
+    <p class="reality-hero-lead">
+      学校とPTAの関係で問題になりやすい文書・案内・徴収・名簿・教職員関与の構造を、再現資料を使って整理します。<br>
+      これは「昔の話」ではありません。
+    </p>
+  </div>
+</section>
+
+<!-- =========================================
+     ページ内アンカーナビ
+     ========================================= -->
+<nav class="anchor-nav" aria-label="ページ内ナビゲーション">
+  <div class="anchor-nav-inner">
+    <a href="#issue1" class="anchor-link">
+      <span class="anchor-num">1</span>みなし加入
+    </a>
+    <a href="#issue2" class="anchor-link">
+      <span class="anchor-num">2</span>会費強制徴収
+    </a>
+    <a href="#issue3" class="anchor-link">
+      <span class="anchor-num">3</span>個人情報
+    </a>
+    <a href="#issue4" class="anchor-link">
+      <span class="anchor-num">4</span>教職員の関与
+    </a>
+  </div>
+</nav>
+
+<main>
+
+<section class="editorial-section reality-reading-note" aria-labelledby="reality-reading-title">
+  <h2 id="reality-reading-title">再現資料は、断定ではなく点検のために読む</h2>
+  <p>このページの文書例は、実際の学校資料を読むときに見落としやすい構造を示すための再現です。特定の学校・自治体をこのページだけで評価するものではありません。</p>
+  <p>確認の順番は、入会意思の記録、学校徴収金との分離、個人情報の取得経路、教職員の関与根拠です。見た目は単なる案内文でも、これらが一体化している場合、保護者からはPTA加入や会費支払が学校手続の一部のように見えます。</p>
+</section>
+
+
+<section class="editorial-section reality-reading-note" id="reality-source-expansion">
+  <h2>再現例は、収集資料と照合して論点を広げる</h2>
+  <p>収集している行政資料、研究論文、報道、自治体ページは、このページの再現例を現実の資料と照合するために使います。たとえば、学校徴収金の制度資料は会費徴収の混在を、教職員の職務整理資料はPTA内部事務の学校依存を、会計不祥事報道は団体会計の自立性と監査の必要性を考える材料になります。</p>
+  <p>重要なのは、資料を「違反を断定する証拠」として一足飛びに使うことではなく、どの文書を開示請求すべきか、どの回答を教育委員会に求めるべきか、どの学校資料を比較すべきかを明確にすることです。</p>
+</section>
+
+
+<section class="editorial-section source-lens-panel" id="reality-request-map">
+  <h2>再現例から、次に集める資料を決める</h2>
+  <p>このページの再現例を見た後は、感想で終わらせず、どの資料を追加で確認すべきかに落とし込みます。開示請求や教育委員会照会では、次のように論点別に資料を分けて求めると、学校とPTAの境界が見えやすくなります。</p>
+  <div class="source-lens-grid" aria-label="再現例から集める資料">
+    <div class="source-lens-item"><strong>みなし加入</strong><p>入会案内、入会申込書、退会届、会員名簿、入学説明会配布資料を確認する。</p></div>
+    <div class="source-lens-item"><strong>会費徴収</strong><p>学校徴収金案内、口座振替依頼書、委任状、徴収データ、PTA会計規程を確認する。</p></div>
+    <div class="source-lens-item"><strong>個人情報</strong><p>名簿提供記録、同意書、利用目的説明、不同意者処理、PTA側の保管・廃棄規程を確認する。</p></div>
+    <div class="source-lens-item"><strong>教職員関与</strong><p>職専免記録、校務分掌、勤務命令、PTA事務分担、メール配信や印刷の依頼記録を確認する。</p></div>
+    <div class="source-lens-item"><strong>施設利用</strong><p>施設使用許可、PTA室の使用条件、鍵管理、光熱費・印刷費負担、備品利用記録を確認する。</p></div>
+    <div class="source-lens-item"><strong>会計・監査</strong><p>予算、決算、通帳、領収書、監査報告、学校側が関与した会計資料の有無を確認する。</p></div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     問題① みなし加入
+     ========================================= -->
+<section id="issue1" class="reality-section reality-section-white">
+  <div class="wrap">
+    <div class="section-badge">問題① 入会手続</div>
+    <h2>入会届なしに会員にされる「みなし加入」</h2>
+    <p class="reality-section-lead">
+      入学・転入のタイミングで、保護者の明示的な意思確認（入会申込書の記入・署名）を確認しにくいまま、PTA会員として扱われる運用があります。以下は、そのような運用で使われがちな案内文書のタイプを再現したものです。
+    </p>
+
+    <div class="doc-mockup">
+      <span class="doc-mockup-label">悪い例：実際に流通しているタイプの書類</span>
+      <div class="doc-mockup-title">令和○年度 PTAご案内</div>
+      <div class="doc-mockup-body">
+        <p>○○小学校・中学校に入学されたお子様の保護者の皆様へ、</p>
+        <p>本年度よりPTA会費（月額500円）を学校の口座引落にてお預かりします。</p>
+        <p>なお、PTA活動へのご参加は全家庭を原則としております。</p>
+        <p style="margin-top:8px;">ご不明の点は学校事務室まで。</p>
+      </div>
+    </div>
+
+    <div class="problem-notes">
+      <div class="problem-note">
+        <span class="problem-note-arrow">→</span>
+        <span class="problem-note-text">【問題点①】入会の意思を確認する書類（入会申込書）が一切ない。「ご案内」とあるだけで、加入を断る選択肢が示されていない。</span>
+      </div>
+      <div class="problem-note">
+        <span class="problem-note-arrow">→</span>
+        <span class="problem-note-text">【問題点②】「会費をお預かりします」という表現で、加入を既成事実として扱っている。未加入者への意思確認がない。</span>
+      </div>
+      <div class="problem-note">
+        <span class="problem-note-arrow">→</span>
+        <span class="problem-note-text">【問題点③】「全家庭を原則」という表現は、加入を義務のように誤解させる。PTAは任意の民間団体であり、参加は任意である。</span>
+      </div>
+      <div class="problem-note">
+        <span class="problem-note-arrow">→</span>
+        <span class="problem-note-text">【問題点④】問い合わせ先が「学校事務室」。学校とPTAが一体化しており、学校がPTAの業務を代行していることを示す。</span>
+      </div>
+    </div>
+
+    <div class="law-box" style="margin-top:28px;">
+      <div class="law-box-label">法的根拠</div>
+      <div class="law-box-content">
+        <strong>民法第522条（契約の成立）</strong>：契約は、契約の内容を示してその締結を申し入れる意思表示（申込み）に対して相手方が承諾をしたときに成立する。保護者の側から入会の意思表示がない限り、PTAとの会員契約は成立しない。<br><br>
+        <strong>憲法第21条（結社の自由）</strong>：いかなる団体への加入も、本人の意思に反して強制することはできない。「加入しない自由」は憲法上の権利として保障されている。
+      </div>
+    </div>
+
+    <div class="edu-quote">
+      <div class="edu-quote-source">教育委員会公式回答</div>
+      <blockquote>みなし加入は不適切と明言</blockquote>
+      <p style="font-size:.82rem;color:rgba(255,255,255,.6);margin-top:8px;">教育委員会回答の一例。回答本文・発出主体・対象範囲を確認し、他の自治体回答や学校別資料と照合して読む必要があります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     問題② 会費強制徴収・代行徴収
+     ========================================= -->
+<section id="issue2" class="reality-section reality-section-bg">
+  <div class="wrap">
+    <div class="section-badge">問題② 会費徴収</div>
+    <h2>学校が「代理」でPTA会費を集める構造</h2>
+    <p class="reality-section-lead">
+      本来、PTAは学校とは独立した任意団体です。しかし、給食費や教材費などの学校徴収金と同じ案内・同じ口座・同じ引落しの中でPTA会費が扱われると、保護者から見て学校費用とPTA会費の境界が分かりにくくなります。加入の有無、会費徴収の根拠、停止手続を分けて確認する必要があります。
+    </p>
+
+    <div class="doc-mockup">
+      <span class="doc-mockup-label">悪い例：問題のある徴収案内</span>
+      <div class="doc-mockup-title">学校徴収金のご案内（○月分）</div>
+      <div class="doc-mockup-body">
+        <table style="width:100%;border-collapse:collapse;font-family:'Noto Serif JP',serif;">
+          <tr>
+            <td style="padding:4px 0;">① 給食費</td>
+            <td style="text-align:right;padding:4px 0;">4,500円</td>
+          </tr>
+          <tr>
+            <td style="padding:4px 0;">② 学校教材費</td>
+            <td style="text-align:right;padding:4px 0;">800円</td>
+          </tr>
+          <tr style="color:#b91c1c;">
+            <td style="padding:4px 0;font-weight:900;">③ PTA会費（※）</td>
+            <td style="text-align:right;padding:4px 0;font-weight:900;">500円</td>
+          </tr>
+          <tr style="border-top:2px solid #999;">
+            <td style="padding:6px 0;font-weight:900;">合計</td>
+            <td style="text-align:right;padding:6px 0;font-weight:900;">5,800円</td>
+          </tr>
+        </table>
+        <p style="margin-top:12px;font-size:.82rem;color:#666;">※PTAに加入されていない方も引落対象です</p>
+      </div>
+    </div>
+
+    <div class="problem-notes">
+      <div class="problem-note">
+        <span class="problem-note-arrow">→</span>
+        <span class="problem-note-text">【最大の問題】「※PTAに加入されていない方も引落対象です」という記載は、未加入者からもPTA会費を徴収する趣旨に読めます。加入していない団体の会費を請求する根拠、返金・停止手続、学校が関与する理由を個別に確認する必要があります。</span>
+      </div>
+      <div class="problem-note">
+        <span class="problem-note-arrow">→</span>
+        <span class="problem-note-text">【問題点①】学校（公的機関）が、任意団体であるPTAの会費を一緒に集めることで、「学校の費用」と誤認させる効果がある。</span>
+      </div>
+      <div class="problem-note">
+        <span class="problem-note-arrow">→</span>
+        <span class="problem-note-text">【問題点②】引落口座は学校が管理する口座であることが多く、PTAに「加入しない」と申し出ても、引落を止めるには学校側の対応が必要になる構造的問題がある。</span>
+      </div>
+    </div>
+
+    <!-- 資金フロー図 -->
+    <h3 style="font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:900;color:var(--navy);margin:28px 0 0;">絵でわかる：代行徴収の資金の流れ</h3>
+    <div class="flow-diagram">
+      <div class="flow-box parent">
+        <div class="flow-box-label">保護者</div>
+        <div class="flow-box-name">口座から<br>引落</div>
+      </div>
+      <div class="flow-arrow">
+        <div class="flow-arrow-line">→</div>
+        <div class="flow-arrow-desc">学校口座へ<br>一括振込</div>
+      </div>
+      <div class="flow-box school">
+        <div class="flow-box-label">学校</div>
+        <div class="flow-box-name">徴収金を<br>一括管理</div>
+      </div>
+      <div class="flow-arrow">
+        <div class="flow-arrow-line">→</div>
+        <div class="flow-arrow-desc">PTA会費分を<br>仕分け・送金</div>
+      </div>
+      <div class="flow-box pta">
+        <div class="flow-box-label">PTA</div>
+        <div class="flow-box-name">PTA口座に<br>入金</div>
+      </div>
+    </div>
+    <div class="flow-problem-note">
+      この構造では、PTAへの「加入・未加入」の区別なく引き落とされ、保護者は実質的に拒否できない状態に置かれます。学校（公的機関）がPTA（任意団体）の徴収業務を代行することは、双方の独立性を損なうものです。
+    </div>
+
+    <div class="edu-quote" style="margin-top:24px;">
+      <div class="edu-quote-source">教育委員会公式回答</div>
+      <blockquote>PTAが独自に徴収することが最もふさわしい方法</blockquote>
+      <p style="font-size:.82rem;color:rgba(255,255,255,.6);margin-top:8px;">厚木市教育委員会（令和8年4月）— 「代行徴収に法的位置づけはない」として、学校によるPTA会費代行徴収の問題性を間接的に認める。</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     問題③ 個人情報提供の根拠確認
+     ========================================= -->
+<section id="issue3" class="reality-section reality-section-white">
+  <div class="wrap">
+    <div class="section-badge">問題③ 個人情報</div>
+    <h2>保護者の同意なく学校名簿がPTAに渡される</h2>
+    <p class="reality-section-lead">
+      学校が管理している児童・生徒の名簿（氏名・住所・電話番号等）が、PTA役員に渡されたのではないかと問題になることがあります。ここで確認すべきなのは、本人同意の有無、提供項目、不同意者の除外、提供記録、PTAが本人から直接取得した情報なのかどうかです。
+    </p>
+
+    <!-- タイムライン -->
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">入学時（3〜4月）</div>
+        <h4>学校が児童名簿（氏名・住所・電話番号）を作成</h4>
+        <p>学校は就学通知・健康診断等の目的で保護者から個人情報を収集する。この時点での利用目的は「学校の教育活動のため」と示されている。</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">4月上旬</div>
+        <h4>PTA役員が学校から名簿を受け取る</h4>
+        <p>慣行として、PTA本部役員や地区委員が学校から「名簿のデータ」「クラス名簿」を受け取る。保護者への事前通知・同意取得なしに行われることが多い。</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-when">5月〜</div>
+        <h4>PTA連絡網・活動通知が届く</h4>
+        <p>PTAから自宅に通知物が届いたり、未登録の電話番号に連絡が入る。保護者がPTAに自分の情報を提供した覚えがない場合も多い。</p>
+      </div>
+
+      <div class="timeline-item question-item">
+        <div class="timeline-dot question"></div>
+        <div class="timeline-when">保護者の疑問</div>
+        <h4>「なぜPTAが自分の連絡先を知っているのか？」</h4>
+        <p>PTAに加入した覚えも、個人情報を提供した覚えもないのに、PTA役員から電話が来たり自宅に郵便物が届く——この時点で個人情報はすでに第三者に渡っている。</p>
+      </div>
+    </div>
+
+    <div class="incident-box">
+      <div class="incident-box-label">実際の事案</div>
+      <div class="incident-box-title">静岡市立20校・9,200人分の個人情報をPTAに根拠不明の提供（令和8年4月発覚）</div>
+      <div class="incident-box-body">
+        静岡市立小中学校20校において、保護者の同意なく9,200人分の個人情報（氏名・住所・電話番号等）がPTAに提供されていたことが発覚。市教育委員会はそれ以前の照会に対し「分離済み」と回答していたにもかかわらず、実態は継続していた。静岡市教育長は「法律と学校文化にずれがある」と認め、再発防止策の策定を表明。
+      </div>
+    </div>
+
+    <div class="law-box" style="margin-top:24px;">
+      <div class="law-box-label">法的根拠</div>
+      <div class="law-box-content">
+        <strong>個人情報保護法第69条（利用及び提供の制限）</strong>：行政機関等が保有する個人情報を、当初の収集目的を超えて第三者（PTAを含む）に提供するためには、法令の根拠、または本人の同意が必要。「学校の教育活動のため」として収集した個人情報を、任意団体であるPTAに提供することは、原則として本人の同意なしには認められない。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     問題④ 教職員の関与
+     ========================================= -->
+<section id="issue4" class="reality-section reality-section-bg">
+  <div class="wrap">
+    <div class="section-badge">問題④ 教職員関与</div>
+    <h2>教員・事務職員が勤務中にPTA業務をしている</h2>
+    <p class="reality-section-lead">
+      公立学校の教員・事務職員は地方公務員であり、勤務時間中は職務に専念する義務があります。PTAは任意の民間団体であり、教職員がPTA業務を行う場合には「職務専念義務免除（職専免）」の申請・承認が必要です。しかし実態として、この手続きなしにPTA業務が行われているケースが複数の外部監査で指摘されています。
+    </p>
+
+    <div class="doc-mockup doc-mockup-ok">
+      <span class="doc-mockup-label" style="background:#dcfce7;color:#15803d;">適正な例：正しく手続きされた職専免申請書</span>
+      <div class="doc-mockup-stamp">承認<br>印</div>
+      <div class="doc-mockup-title">職務専念義務免除申請書（適正な場合）</div>
+      <div class="doc-mockup-body">
+        <table style="width:100%;border-collapse:collapse;font-size:.88rem;font-family:'Noto Serif JP',serif;">
+          <tr><td style="padding:3px 0;width:130px;">申請者氏名</td><td>○○ ○○</td></tr>
+          <tr><td style="padding:3px 0;">所属</td><td>○○小学校</td></tr>
+          <tr><td style="padding:3px 0;">PTA活動の名称</td><td>PTA総会準備・運営</td></tr>
+          <tr><td style="padding:3px 0;">申請日時</td><td>令和○年○月○日（○）○時〜○時</td></tr>
+          <tr><td style="padding:3px 0;">承認</td><td>校長 ○○ ○○ 印</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="good-note" style="margin-top:16px;">
+      <span class="good-note-arrow">→</span>
+      <span class="good-note-text">適正な場合：事前に申請書を提出し、校長の承認を得た上でPTA業務を行う。日時・活動名称・承認者が明記されており、透明性がある。</span>
+    </div>
+
+    <div style="background:#fff;border:2px solid #fecaca;border-radius:12px;padding:24px;margin-top:28px;">
+      <h3 style="font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:900;color:#7f1d1d;margin-bottom:12px;">しかし実態は？</h3>
+      <div class="problem-notes" style="margin-top:0;">
+        <div class="problem-note">
+          <span class="problem-note-arrow">→</span>
+          <span class="problem-note-text">申請書なしで、授業の合間や放課後にPTA書類の作成・連絡業務を行っている教職員がいる。</span>
+        </div>
+        <div class="problem-note">
+          <span class="problem-note-arrow">→</span>
+          <span class="problem-note-text">学校の電話・コピー機・PCをPTA業務に使用しているケースがある（公費の私的使用の問題）。</span>
+        </div>
+        <div class="problem-note">
+          <span class="problem-note-arrow">→</span>
+          <span class="problem-note-text">「包括的な職専免承認」（期間・活動名を特定せず一括承認）という形式で、実質的に無限定の免除が行われているケースが監査で指摘されている。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="law-box" style="margin-top:24px;">
+      <div class="law-box-label">法的根拠</div>
+      <div class="law-box-content">
+        <strong>地方公務員法第35条（職務に専念する義務）</strong>：職員は、法律または条例に特別の定がある場合を除く外、その勤務時間及び職務上の注意力のすべてをその職責遂行のために用い、当該地方公共団体がなすべき責を有する職務にのみ従事しなければならない。<br><br>
+        PTA業務は「当該地方公共団体がなすべき職務」ではない。勤務時間中にPTA業務を行うためには、正式な職専免の申請・承認が必要。
+      </div>
+    </div>
+
+    <div class="incident-box" style="margin-top:24px;">
+      <div class="incident-box-label">外部監査による指摘事例</div>
+      <div class="incident-box-title">長野県包括外部監査：職専免の不適切な運用を指摘</div>
+      <div class="incident-box-body">
+        長野県の包括外部監査報告書において、学校教職員のPTA業務にかかる職務専念義務免除の運用実態が調査された。複数の学校で、申請・承認の記録が不十分であったり、活動の日時・内容が特定されないまま「一括承認」されているケースが確認され、法令上の問題が指摘された。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+     まとめ・CTAセクション
+     ========================================= -->
+<section class="reality-cta">
+  <div class="wrap">
+    <div style="max-width:720px;margin-inline:auto;">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:5px 18px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:.72rem;font-weight:900;letter-spacing:.12em;color:rgba(255,255,255,.7);text-transform:uppercase;margin-bottom:24px;">
+        まとめ
+      </div>
+      <h2 class="reality-cta-title">これらは一部の例外ではない</h2>
+      <p class="reality-cta-lead">
+        このページで示した4つの問題——みなし加入、会費代行徴収、個人情報の根拠不明の提供、教職員関与——は、いずれも特定の学校や地域だけの問題ではありません。当委員会の全国調査では、これらの慣行が広く一般化していることが確認されています。<br><br>
+        問題が「慣習」として続く背景には、保護者・PTA役員・学校側のいずれも、入会、徴収、個人情報、服務の論点を分けて確認する機会が少なかったことがあります。一次資料と行政の公式見解を確認し、根拠を持って行動してください。
+      </p>
+      <div class="cta-btn-group">
+        <a href="board-responses.html" class="cta-btn-primary">教育委員会の公式回答を見る →</a>
+        <a href="national-archive.html" class="cta-btn-secondary">実際の公文書を見る</a>
+        <a href="guide-parent.html" class="cta-btn-secondary">あなたの立場で確認する</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =========================================
+     フッター
+     ========================================= -->
+<footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div>
+          <h3>PTA適正化推進委員会</h3>
+          <a href="https://yokomusubi.city.yokohama.lg.jp/organizations/detail/f69c7ad2-cf21-4dfa-87bb-9c891874eb6b/" target="_blank" rel="noopener noreferrer" class="yokomusubi-card">
+            <img src="assets/yokomusubi.png" alt="よこむすび">
+            <span class="yokomusubi-tagline">磯子区「よこむすび」掲載団体</span>
+            <span class="yokomusubi-meta">登録番号：磯子12406</span>
+            <span class="yokomusubi-meta">分類番号：12-4（市民活動・社会教育推進）</span>
+          </a>
+          <div class="footer-contact">
+            <p>〒235-0021<br>神奈川県横浜市磯子区岡村8-17-5-301</p>
+            <p><strong>070-9012-7772</strong></p>
+            <p><a href="mailto:info@ptaorg.com">info@ptaorg.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h4>公式発信</h4>
+          <p class="footer-sns-sub">最新資料・論考・動画はこちら</p>
+          <div class="footer-sns-cards">
+            <a href="https://x.com/jjjqqqxxx0852" target="_blank" rel="noopener" class="fsns-card fsns-x">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.836L2.25 2.25H8.08l4.263 5.636L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+              <div>
+                <div class="fsns-name">X</div>
+                <div class="fsns-desc">速報・資料更新</div>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@PTA%E9%81%A9%E6%AD%A3%E5%8C%96%E6%8E%A8%E9%80%B2%E5%A7%94%E5%93%A1%E4%BC%9A" target="_blank" rel="noopener" class="fsns-card fsns-yt">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <div>
+                <div class="fsns-name">YouTube</div>
+                <div class="fsns-desc">動画で解説</div>
+              </div>
+            </a>
+            <a href="https://note.com/hiroshisatoh" target="_blank" rel="noopener" class="fsns-card fsns-note">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H4zm2 3h10v2H6V8zm0 4h10v2H6v-2zm0 4h6v2H6v-2z"/></svg>
+              <div>
+                <div class="fsns-name">note</div>
+                <div class="fsns-desc">論考・研究ノート</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>立場別</h4>
+          <ul>
+            <li><a href="guide-parent.html">保護者</a></li>
+            <li><a href="guide-pta.html">PTA役員</a></li>
+            <li><a href="guide-board.html">教育委員会・学校</a></li>
+            <li><a href="guide-research.html">研究者・記者</a></li>
+            <li><a href="guide-board.html">教育委員会向け指針</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>論点</h4>
+          <ul>
+            <li><a href="membership.html">入会手続</a></li>
+            <li><a href="privacy.html">個人情報</a></li>
+            <li><a href="fee-collection.html">会費徴収</a></li>
+            <li><a href="personnel.html">教職員関与</a></li>
+            <li><a href="facilities.html">施設利用</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>資料・支援</h4>
+          <ul>
+            <li><a href="https://ptaorg.github.io/donate/">応援・寄付</a></li>
+            <li><a href="board-responses.html">教育委員会の回答</a></li>
+            <li><a href="national-archive.html">全国資料館</a></li>
+            <li><a href="journal.html">論考・調査報告</a></li>
+            <li><a href="report.html">総合分析レポート</a></li>
+            <li><a href="audit/index.html">運営チェックアプリ</a></li>
+            <li><a href="law-map.html">法制度マップ</a></li>
+            <li><a href="guideline.html">適正化ガイドライン</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  <div class="footer-support">
+    <div>
+      <strong>調査・資料公開の継続を応援してください</strong>
+      <p>いただいたご支援は、公文書開示、資料整理、Web公開、自治体・学校への働きかけに活用します。</p>
+    </div>
+    <a href="https://ptaorg.github.io/donate/">応援ページへ</a>
+  </div>
+    <p class="copyright">© PTA適正化推進委員会</p>
+  </footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>

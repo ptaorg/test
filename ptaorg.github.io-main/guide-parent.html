@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="canonical" href="https://ptaorg.com/guide-parent.html">
+  <meta property="og:title" content="保護者の方へ | PTA適正化推進委員会">
+  <meta property="og:description" content="PTA入会・会費・個人情報の問題を絵で直感的に整理。テンプレートPDF・FAQ付き。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ptaorg.com/guide-parent.html">
+  <meta property="og:image" content="https://ptaorg.com/assets/og-image-popc-en.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="保護者の方へ | PTA適正化推進委員会">
+  <meta name="twitter:description" content="PTA入会・会費・個人情報の問題を絵で直感的に整理。テンプレートPDF・FAQ付き。">
+  <meta name="twitter:image" content="https://ptaorg.com/assets/og-image-popc-en.png">
+  <title>保護者の方へ | PTA適正化推進委員会</title>
+  <meta name="description" content="PTA入会・会費・個人情報の問題を絵で直感的に整理。テンプレートPDF付き。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Visual cards — 絵で直感的に */
+    .visual-section{background:#fff;padding:80px 0}
+    .visual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+    .visual-card{
+      border-radius:var(--radius);overflow:hidden;
+      box-shadow:var(--shadow-sm);
+      text-decoration:none;color:inherit;
+      transition:var(--t);
+      border:1px solid var(--line);
+    }
+    .visual-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+    .vc-visual{
+      height:200px;
+      background-size:cover;background-position:center;
+      position:relative;overflow:hidden;
+    }
+    .vc-visual::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(to bottom, transparent 40%, rgba(0,0,0,.55) 100%);
+    }
+    .vc-visual-ok  { background-color:#c8e6c9; }
+    .vc-visual-ng  { background-color:#ffcdd2; }
+    .vc-visual-warn{ background-color:#fff9c4; }
+    .vc-label{
+      position:absolute;top:12px;left:12px;z-index:2;
+      padding:4px 10px;border-radius:999px;
+      font-size:.68rem;font-weight:900;letter-spacing:.08em;
+    }
+    .vc-label-ok{background:#dcfce7;color:#15803d}
+    .vc-label-ng{background:#fee2e2;color:#b91c1c}
+    .vc-label-warn{background:#fef3c7;color:#92400e}
+    .vc-body{padding:22px}
+    .vc-title{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:900;color:var(--navy);margin-bottom:8px}
+    .vc-desc{font-size:.88rem;color:var(--text-soft);line-height:1.75}
+    .vc-law{display:inline-flex;margin-top:10px;padding:3px 9px;border-radius:999px;font-size:.7rem;font-weight:800;background:rgba(5,17,31,.07);color:var(--navy)}
+
+    /* Pattern section — 不審な入会書類の実例 */
+    .examples-section{background:var(--bg);padding:80px 0}
+    .examples-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px}
+    .example-card{
+      background:#fff;border-radius:var(--radius);
+      border:1px solid var(--line);overflow:hidden;
+      box-shadow:var(--shadow-sm);
+    }
+    .ex-header{
+      padding:16px 20px;
+      display:flex;align-items:center;gap:12px;
+    }
+    .ex-header-ng{background:#fff5f5;border-bottom:2px solid #fecaca}
+    .ex-icon{font-size:1.5rem}
+    .ex-title{font-weight:900;font-size:1rem;color:var(--navy)}
+    .ex-body{padding:0 20px 20px}
+    .ex-doc{
+      background:#fffbeb;border:1px solid #fde68a;
+      border-radius:10px;padding:16px;
+      margin-top:14px;font-size:.85rem;line-height:1.75;
+      font-family:'Noto Serif JP',serif;color:var(--text);
+    }
+    .ex-doc-label{
+      display:inline-block;margin-bottom:8px;padding:3px 9px;
+      border-radius:999px;background:#fef3c7;color:#92400e;
+      font-family:'Noto Sans JP',sans-serif;font-size:.7rem;font-weight:900;
+    }
+    .ex-problem{
+      margin-top:12px;padding:12px 14px;
+      background:#fff5f5;border-radius:10px;
+      border-left:3px solid var(--red);
+    }
+    .ex-problem p{font-size:.84rem;color:var(--red);font-weight:700;margin:0}
+
+    .ex-doc-good{
+      background:#f0fdf4;border:1px solid #bbf7d0;
+      border-radius:10px;padding:16px;
+      margin-top:14px;font-size:.85rem;line-height:1.75;
+      font-family:'Noto Serif JP',serif;color:var(--text);
+    }
+    .ex-doc-label-ok{background:#dcfce7;color:#15803d}
+    .ex-good{
+      margin-top:12px;padding:12px 14px;
+      background:#f0fdf4;border-radius:10px;
+      border-left:3px solid var(--green);
+    }
+    .ex-good p{font-size:.84rem;color:var(--green);font-weight:700;margin:0}
+
+    /* Steps */
+    .steps-section{background:#fff;padding:80px 0}
+    .steps-flow{
+      display:flex;align-items:stretch;
+      gap:0;margin-top:48px;flex-wrap:wrap;
+    }
+    .step-block{
+      flex:1;min-width:200px;
+      background:var(--bg);border:1px solid var(--line);
+      border-radius:0;padding:28px 24px;
+      position:relative;text-align:center;
+    }
+    .step-block:first-child{border-radius:var(--radius) 0 0 var(--radius)}
+    .step-block:last-child{border-radius:0 var(--radius) var(--radius) 0}
+    .step-block::after{
+      content:'→';
+      position:absolute;right:-14px;top:50%;transform:translateY(-50%);
+      font-size:1.2rem;color:var(--text-soft);z-index:1;
+      display:block;
+    }
+    .step-block:last-child::after{display:none}
+    .step-num{
+      width:44px;height:44px;border-radius:50%;
+      background:linear-gradient(135deg,var(--navy),var(--navy-3));
+      color:#fff;display:grid;place-items:center;
+      font-size:1.1rem;font-weight:900;margin:0 auto 12px;
+    }
+    .step-block h4{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:900;color:var(--navy);margin-bottom:6px}
+    .step-block p{font-size:.82rem;color:var(--text-soft);line-height:1.6}
+
+    /* PDF downloads */
+    .pdf-section{background:var(--navy);padding:72px 0;color:#fff}
+    .pdf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+    .pdf-card{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:var(--radius);padding:24px;
+      transition:var(--t);
+    }
+    .pdf-card:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+    .pdf-icon{font-size:2rem;margin-bottom:10px}
+    .pdf-card h3{font-size:1rem;font-weight:900;color:var(--gold-lt);margin-bottom:6px}
+    .pdf-card p{font-size:.84rem;color:rgba(255,255,255,.72);line-height:1.65;margin-bottom:14px}
+    .pdf-btn{
+      display:inline-flex;align-items:center;gap:7px;
+      padding:9px 16px;border-radius:999px;
+      background:var(--gold);color:var(--navy);
+      font-weight:900;font-size:.82rem;
+      text-decoration:none;transition:var(--t);
+    }
+    .pdf-btn:hover{background:var(--gold-lt)}
+
+    /* FAQ */
+    .faq-section{background:#fff;padding:80px 0}
+    .faq-list{display:flex;flex-direction:column;gap:10px;margin-top:40px}
+    .faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .faq-q{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none}
+    .faq-q:hover{background:var(--bg)}
+    .faq-q-text{font-size:.97rem;font-weight:700;color:var(--navy);flex:1}
+    .faq-q-text::before{content:'Q. ';color:var(--gold)}
+    .faq-toggle{color:var(--text-soft);transition:transform .25s ease;flex-shrink:0}
+    .faq-item.is-open .faq-toggle{transform:rotate(180deg)}
+    .faq-a{padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
+    .faq-item.is-open .faq-a{max-height:500px;padding:0 22px 18px}
+    .faq-a p{font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)}
+    .faq-a p::before{content:'A. ';color:var(--navy);font-weight:700}
+
+    @media(max-width:900px){.visual-grid{grid-template-columns:1fr 1fr}.examples-grid{grid-template-columns:1fr}.pdf-grid{grid-template-columns:1fr 1fr}.steps-flow{flex-direction:column}}
+    @media(max-width:600px){.visual-grid{grid-template-columns:1fr}.pdf-grid{grid-template-columns:1fr}}
+
+    /* ===== 追加セクション ===== */
+
+    /* FAQ アコーディオン（追加版） */
+    .faq2-section{background:var(--bg);padding:80px 0}
+    .faq2-list{display:flex;flex-direction:column;gap:10px;margin-top:40px}
+    .faq2-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:box-shadow .2s}
+    .faq2-item.is-open{box-shadow:var(--shadow-sm)}
+    .faq2-q{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none}
+    .faq2-q:hover{background:var(--bg)}
+    .faq2-q-text{font-size:.97rem;font-weight:700;color:var(--navy);flex:1;line-height:1.6}
+    .faq2-q-text::before{content:'Q. ';color:var(--gold)}
+    .faq2-chevron{color:var(--text-soft);transition:transform .3s ease;flex-shrink:0;width:20px;height:20px}
+    .faq2-item.is-open .faq2-chevron{transform:rotate(180deg)}
+    .faq2-a{padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
+    .faq2-item.is-open .faq2-a{max-height:600px;padding:0 22px 20px}
+    .faq2-a p{font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:14px;border-top:1px solid var(--line)}
+    .faq2-a p::before{content:'A. ';color:var(--navy);font-weight:700}
+
+    /* 教育委員会引用バナー */
+    .quote-banner{background:#0a1628;padding:60px 0}
+    .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+    .quote-card{
+      background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);
+      border-radius:var(--radius);padding:28px 24px;
+      border-top:3px solid var(--gold);
+    }
+    .quote-card blockquote{
+      font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:700;
+      color:#fff;line-height:1.75;margin:0 0 16px;
+    }
+    .quote-card blockquote::before{
+      content:'\201C';font-size:2rem;color:var(--gold);line-height:0;vertical-align:-.4em;margin-right:4px;
+    }
+    .quote-source{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6}
+    .quote-source strong{color:rgba(255,255,255,.82);display:block;margin-bottom:2px}
+
+    /* 退会手順ステップ */
+    .howto-section{background:#fff;padding:80px 0}
+    .howto-steps{display:flex;flex-direction:column;gap:0;margin-top:48px;position:relative}
+    .howto-steps::before{
+      content:'';position:absolute;left:27px;top:28px;bottom:28px;
+      width:2px;background:linear-gradient(to bottom,var(--navy),rgba(5,17,31,.15));
+      z-index:0;
+    }
+    .howto-step{
+      display:flex;align-items:flex-start;gap:24px;
+      padding:0 0 36px;position:relative;z-index:1;
+    }
+    .howto-step:last-child{padding-bottom:0}
+    .howto-num{
+      flex-shrink:0;width:56px;height:56px;border-radius:50%;
+      background:var(--navy);color:#fff;
+      display:grid;place-items:center;
+      font-size:.72rem;font-weight:900;line-height:1.2;text-align:center;
+      letter-spacing:.04em;box-shadow:0 4px 12px rgba(5,17,31,.25);
+    }
+    .howto-num span{display:block;font-size:1.15rem;font-weight:900;line-height:1}
+    .howto-body{flex:1;padding-top:8px}
+    .howto-body h4{
+      font-family:'Noto Serif JP',serif;font-size:1.08rem;font-weight:900;
+      color:var(--navy);margin-bottom:6px;
+    }
+    .howto-body p{font-size:.88rem;color:var(--text-soft);line-height:1.75;margin:0}
+    .howto-body .howto-tip{
+      display:inline-block;margin-top:8px;padding:4px 10px;
+      border-radius:999px;background:rgba(212,175,55,.12);
+      color:#92400e;font-size:.75rem;font-weight:700;
+    }
+
+    @media(max-width:900px){
+      .quote-grid{grid-template-columns:1fr}
+    }
+
+    .page-hero{position:relative;overflow:hidden;}
+    .page-hero-bg-img{
+      position:absolute;inset:0;z-index:0;
+    }
+    .page-hero-bg-img img{
+      width:100%;height:100%;object-fit:cover;
+      filter:brightness(1.05);
+    }
+    .page-hero-bg-img::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(160deg,rgba(5,17,31,.32) 0%,rgba(5,17,31,.14) 60%,rgba(5,17,31,.05) 100%);
+    }
+    .page-hero-inner{position:relative;z-index:1;}
+  
+    /* ↓ Photo hero overrides — keep white text on photo background ↓ */
+    .page-hero{background:transparent!important;border-top:none!important;border-bottom:none!important}
+    .page-hero h1{color:#fff!important}
+    .page-hero h1 em{color:var(--gold-lt)!important}
+    .page-hero p{color:rgba(255,255,255,.88)!important}
+    .page-hero-kicker{background:rgba(212,175,55,.18)!important;border:1px solid rgba(212,175,55,.4)!important;color:var(--gold-lt)!important}
+    .hero-actions .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.5)!important}
+    .hero-actions .btn-outline:hover{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.8)!important}
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0D18ZSSLMH');
+</script>
+<link href="css/refine.css?v=refine1" rel="stylesheet"/>
+</head>
+<body>
+  
+<header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/popc-logo.png" alt="PTA適正化推進委員会">
+        <span>PTA適正化推進委員会</span>
+      </a>
+      <div class="header-search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" class="search-input" placeholder="キーワードで検索…" aria-label="サイト内検索">
+        <div class="search-results-dropdown"></div>
+      </div>
+      <nav class="desktop-nav" aria-label="主要ナビゲーション">
+        <a href="index.html" class="nav-link">トップ</a>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">立場別</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>入口</h4>
+              <ul>
+                <li><a href="guide-parent.html">保護者の方へ</a></li>
+                <li><a href="guide-pta.html">PTA役員の方へ</a></li>
+                <li><a href="guide-board.html">教育委員会・学校へ</a></li>
+                <li><a href="guide-research.html">研究者・記者の方へ</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>ツール</h4>
+              <ul>
+                <li><a href="audit/index.html">運営チェックアプリ</a></li>
+                <li><a href="guideline.html">適正化ガイドライン</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">論点</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>主要論点</h4>
+              <ul>
+                <li><a href="membership.html">入会手続・オプトアウト</a></li>
+                <li><a href="privacy.html">個人情報提供</a></li>
+                <li><a href="fee-collection.html">会費徴収</a></li>
+                <li><a href="personnel.html">教職員関与</a></li>
+                <li><a href="facilities.html">施設利用</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>制度整理</h4>
+              <ul>
+                <li><a href="law-map.html">法制度マップ</a></li>
+                <li><a href="cases.html">判例整理</a></li>
+                <li><a href="timeline.html">PTA制度史</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">資料</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>資料</h4>
+              <ul>
+                <li><a href="board-responses.html">教育委員会の回答</a></li>
+                <li><a href="national-archive.html">全国資料館</a></li>
+                <li><a href="journal.html">論考・調査報告</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>分析</h4>
+              <ul>
+                <li><a href="report.html">総合分析レポート</a></li>
+                <li><a href="administrative-materials.html">行政資料整理</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="https://ptaorg.github.io/donate/" class="nav-link support-nav-link">応援</a>
+        <a href="audit/index.html" class="btn-gold">運営チェック</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileOverlay">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-overlay" id="mobileOverlay">
+    <a href="index.html" class="mobile-link"><span>Home</span>トップページ</a>
+    <a href="guide-parent.html" class="mobile-link"><span>Guide</span>保護者の方へ</a>
+    <a href="guide-pta.html" class="mobile-link"><span>Guide</span>PTA役員の方へ</a>
+    <a href="guide-board.html" class="mobile-link"><span>Guide</span>教育委員会・学校へ</a>
+    <a href="board-responses.html" class="mobile-link"><span>Data</span>教育委員会の回答</a>
+    <a href="national-archive.html" class="mobile-link"><span>Archive</span>全国資料館</a>
+    <a href="journal.html" class="mobile-link"><span>Journal</span>論考・調査報告</a>
+    <a href="audit/index.html" class="mobile-link"><span>Check</span>運営チェックアプリ</a>
+    <a href="https://ptaorg.github.io/donate/" class="mobile-link support-mobile-link"><span>Support</span>応援・寄付</a>
+  <div class="close-overlay" id="closeOverlay">CLOSE ×</div>
+  </div>
+
+  <section class="page-hero page-hero--photo">
+    <div class="page-hero-bg-img" aria-hidden="true">
+      <img src="assets/slides/1.jpg" alt="" aria-hidden="true" loading="eager">
+    </div>
+    <div class="page-hero-inner">
+      <div class="page-hero-kicker">For Parents</div>
+      <h1>PTAの「おかしい」に<br><em>法的根拠</em>があります。</h1>
+      <p>「入会した覚えがない」「断ると子供が困るかも」「会費の根拠が分からない」——そのモヤモヤは制度の歪みです。絵と実例で直感的に整理します。</p>
+      <div class="hero-actions">
+        <a href="#parent-lead-story" class="btn-gold">手元のPTAプリントを確認する</a>
+        <a href="#pdf-dl" class="btn-outline">テンプレートを確認</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <section class="parent-lead-story" id="parent-lead-story">
+      <div class="parent-lead-story-inner">
+        <div class="parent-lead-kicker">Parent Guide</div>
+        <h2>そのPTAのプリント、学校の手続だと思っていませんか</h2>
+        <p>入学説明会で配られた書類、学校からの封筒に入っていたプリント、担任の先生へ提出するように見える用紙。PTAの文書は、学校の手続と一体に見える形で届くことがあります。</p>
+        <p>でも、PTAは学校とは別の任意団体です。入会するかどうか、会費を払うかどうか、個人情報をどこまで提供するかは、本来、保護者が自分で判断するものです。</p>
+        <p>「これって本当に出さないといけないのかな」という違和感は、間違っていないかもしれません。このページでは、まず手元の文書のどこを見るべきかを整理します。</p>
+      </div>
+    </section>
+
+
+    <section class="editorial-brief parent-editorial-brief" aria-labelledby="parent-reading-order">
+      <div class="editorial-brief-band">保護者向け・文書の読み方</div>
+      <div class="editorial-brief-body">
+        <h2 id="parent-reading-order">PTA書類は、学校書類に見えても「団体加入・会費・個人情報」の文書として読み分けます</h2>
+        <p>PTAの案内は、入学説明会、学校封筒、担任回収、学校メールなどを通じて届くため、学校の正式手続と同じものに見えがちです。しかし、PTAは学校とは別の任意団体です。保護者が確認すべきなのは、文面の丁寧さではなく、入会意思、会費徴収、個人情報利用、子どもの扱いが分けて説明されているかです。</p>
+        <div class="editorial-brief-grid">
+          <div class="editorial-brief-point"><span>1</span><strong>入会</strong><p>「全員加入」「非提出なら加入」ではなく、入る人が申し込む形かを確認します。</p></div>
+          <div class="editorial-brief-point"><span>2</span><strong>会費</strong><p>学校徴収金と一体の引落しになっていないか、支払根拠を確認します。</p></div>
+          <div class="editorial-brief-point"><span>3</span><strong>個人情報</strong><p>学校保有情報の提供なのか、PTAが本人から直接取得する情報なのかを分けます。</p></div>
+          <div class="editorial-brief-point"><span>4</span><strong>子どもの扱い</strong><p>保護者の加入・非加入で、学校生活上の扱いを分ける説明がないかを見ます。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial-brief parent-editorial-brief" id="parent-child-worry" aria-labelledby="parent-child-worry-h">
+<div class="editorial-brief-band">お子さんへの不利益が心配な方へ</div>
+<div class="editorial-brief-body">
+<h2 id="parent-child-worry-h">「断ったら、うちの子が不利に扱われるのでは」という不安について</h2>
+<p>まず、過度に心配しすぎる必要はありません。保護者がPTAに入らないことを理由に、学校が子どもを露骨に差別することは、実際にはまれです。学校にとってもリスクが高い行為だからです。</p>
+<p>正直にお伝えすると、法的に「絶対に不利益は起きない」と保証できるわけではありません（過去には、非会員家庭の子へ記念品が配られず争われた例もあります）。だからこそ、次の備えが役に立ちます。</p>
+<div class="editorial-brief-grid">
+<div class="editorial-brief-point"><span>1</span><strong>記録する</strong><p>「会員かどうかで子どもの扱いが違う」と感じたら、日付・内容をメモし、配布物やお便りを残します。</p></div>
+<div class="editorial-brief-point"><span>2</span><strong>分けて考える</strong><p>学校の教育活動（全員が対象）と、PTAの活動（会員向け）は別物です。教育活動での差は、本来あってはなりません。</p></div>
+<div class="editorial-brief-point"><span>3</span><strong>相談・照会する</strong><p>不利益が起きた場合は、学校・教育委員会に確認できます。本ページのテンプレート（教育委員会への相談書）が使えます。</p></div>
+</div>
+<p style="margin-top:14px">PTAは任意団体です。入る・入らないは、子どもの学校生活とは切り離して判断できる——これが制度の建前であり、あなたの不安は「わがまま」ではありません。</p>
+</div>
+</section>
+<section class="parent-pattern-list" id="parent-patterns">
+      <div class="parent-flow-inner">
+        <div class="section-kicker">よくある形</div>
+        <h2 class="section-title">全国的に見られる典型パターン</h2>
+        <p class="section-lead">学校や地域が違っても、PTA文書には似た構造が見られます。まずは「自分の学校にも当てはまるか」を落ち着いて確認してください。</p>
+        <div class="parent-pattern-grid" aria-label="PTA文書でよく見られる典型パターン">
+          <div class="parent-pattern-item"><span>01</span><p>入学と同時にPTA加入扱いになっている。</p></div>
+          <div class="parent-pattern-item"><span>02</span><p>提出しない場合は加入とみなす、という説明になっている。</p></div>
+          <div class="parent-pattern-item"><span>03</span><p>PTA会費が学校徴収金と一緒に引き落とされている。</p></div>
+          <div class="parent-pattern-item"><span>04</span><p>PTA書類の提出先が担任、学校、学校事務になっている。</p></div>
+          <div class="parent-pattern-item"><span>05</span><p>入会申込書がなく、役員希望や委員希望だけを書かせている。</p></div>
+          <div class="parent-pattern-item"><span>06</span><p>役員・委員をくじ引き、免除申請、ポイント制で決めている。</p></div>
+          <div class="parent-pattern-item"><span>07</span><p>個人情報の同意や名簿提供が学校手続に混ざっている。</p></div>
+          <div class="parent-pattern-item"><span>08</span><p>退会や非加入によって不利益があるように読める文書がある。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="parent-example-section" id="parent-examples">
+      <div class="parent-flow-inner">
+        <div class="section-kicker">実例の読み方</div>
+        <h2 class="section-title">実際の文書・スクリーンショットで見る確認ポイント</h2>
+        <p class="section-lead">公開用に加工した画像が準備できるまでは、差し替え前提の枠で示します。画像そのものよりも、文書のどの表現が問題となり得るかを確認してください。</p>
+      </div>
+
+      <article class="parent-example-case">
+        <div class="parent-example-text">
+          <span class="parent-case-label">加入扱い</span>
+          <h3>入学と同時にPTA会員として扱われている</h3>
+          <p>入会申込書や同意欄がないまま、学年・氏名・連絡先がPTAの名簿や役員選出に使われている場合があります。入会は保護者本人の意思表示が必要です。</p>
+          <ul>
+            <li>入会申込書に自署・提出した記録があるか。</li>
+            <li>「全員加入」「自動加入」「辞退しない限り加入」と読める表現がないか。</li>
+            <li>PTA会則に入会手続が明記されているか。</li>
+          </ul>
+          <a href="compliance.html#case01" class="parent-text-link">みなし加入の論点を見る</a>
+        </div>
+        <figure class="parent-example-figure">
+          <div class="parent-example-placeholder" role="img" aria-label="入学時にPTA加入扱いとなる文書例の公開用画像を準備中">
+            <span>公開用画像準備中</span>
+            <code>assets/parents/examples/example-minashi.png</code>
+          </div>
+          <figcaption>提供資料をもとに、学校名・個人名等を加工して掲載予定です。個別の学校を非難する目的ではなく、文書の読み方を示すために掲載します。</figcaption>
+        </figure>
+      </article>
+
+      <article class="parent-example-case">
+        <div class="parent-example-text">
+          <span class="parent-case-label">非提出で加入</span>
+          <h3>「出さなければ加入」と読める案内になっている</h3>
+          <p>非加入届や退会届を出さない限り会員扱いにする方式は、加入意思を確認したことにはなりません。保護者が積極的に入会を申し込む形かを確認します。</p>
+          <ul>
+            <li>「提出がない場合は同意したものとみなします」という記載がないか。</li>
+            <li>入る人だけが提出する申込書になっているか。</li>
+            <li>非加入を選ぶ保護者だけに説明責任や負担を寄せていないか。</li>
+          </ul>
+          <a href="membership.html" class="parent-text-link">入会意思確認の基本を見る</a>
+        </div>
+        <figure class="parent-example-figure">
+          <div class="parent-example-placeholder" role="img" aria-label="非提出の場合にPTA加入とみなす文書例の公開用画像を準備中">
+            <span>公開用画像準備中</span>
+            <code>assets/parents/examples/example-enrollment.png</code>
+          </div>
+          <figcaption>公開時は、個人情報部分や学校を特定し得る部分を加工した画像のみを使用します。未加工画像はHTMLから直接参照しません。</figcaption>
+        </figure>
+      </article>
+
+      <article class="parent-example-case">
+        <div class="parent-example-text">
+          <span class="parent-case-label">会費徴収</span>
+          <h3>学校徴収金とPTA会費が一緒に引き落とされている</h3>
+          <p>給食費、教材費、学年費などの学校徴収金と、任意団体であるPTA会費が同じ口座・同じ通知で扱われると、学校費用と誤認しやすくなります。</p>
+          <ul>
+            <li>請求主体が学校なのかPTAなのか分かるか。</li>
+            <li>PTA会費を支払わない選択肢が明示されているか。</li>
+            <li>入会していない保護者から会費を徴収していないか。</li>
+          </ul>
+          <a href="compliance.html#case02" class="parent-text-link">抱き合わせ徴収の論点を見る</a>
+        </div>
+        <figure class="parent-example-figure">
+          <div class="parent-example-placeholder" role="img" aria-label="学校徴収金とPTA会費が一緒に扱われる通知例の公開用画像を準備中">
+            <span>公開用画像準備中</span>
+            <code>assets/parents/examples/example-fee-collection.png</code>
+          </div>
+          <figcaption>金額、口座情報、学校名、児童名などを加工した公開用画像に差し替える前提の枠です。</figcaption>
+        </figure>
+      </article>
+
+      <article class="parent-example-case">
+        <div class="parent-example-text">
+          <span class="parent-case-label">学校経由提出</span>
+          <h3>PTA文書の提出先が学校や担任になっている</h3>
+          <p>PTAの入会、役員希望、個人情報同意、協力金などの書類を学校経由で配布・回収する運用では、学校とPTAの境界が曖昧になります。</p>
+          <ul>
+            <li>提出先がPTAなのか学校なのか。</li>
+            <li>担任や事務職員が回収・集計に関与していないか。</li>
+            <li>学校が任意団体の事務を当然に担っていないか。</li>
+          </ul>
+          <a href="compliance.html#case06" class="parent-text-link">学校経由事務の論点を見る</a>
+        </div>
+        <figure class="parent-example-figure">
+          <div class="parent-example-placeholder" role="img" aria-label="PTA文書の提出先が学校となっている文書例の公開用画像を準備中">
+            <span>公開用画像準備中</span>
+            <code>assets/parents/examples/example-school-submit.png</code>
+          </div>
+          <figcaption>提出先、締切、担当者名などが読み取れる部分は、公開前に必要な加工を行います。</figcaption>
+        </figure>
+      </article>
+
+      <article class="parent-example-case">
+        <div class="parent-example-text">
+          <span class="parent-case-label">役員希望</span>
+          <h3>入会確認より先に役員希望を書かされている</h3>
+          <p>加入するかどうかを確認しないまま、役員や委員の希望、できない理由、家庭事情を書かせる文書があります。まず確認すべきなのは入会意思です。</p>
+          <ul>
+            <li>入会申込欄と役員希望欄が分かれているか。</li>
+            <li>未加入・退会予定の保護者まで役員候補に含めていないか。</li>
+            <li>家庭事情の提出を過度に求めていないか。</li>
+          </ul>
+          <a href="compliance.html#case05" class="parent-text-link">役員選出の論点を見る</a>
+        </div>
+        <figure class="parent-example-figure">
+          <div class="parent-example-placeholder" role="img" aria-label="入会確認前に役員希望を書かせる文書例の公開用画像を準備中">
+            <span>公開用画像準備中</span>
+            <code>assets/parents/examples/example-officer-choice.png</code>
+          </div>
+          <figcaption>公開用画像では、家庭事情や児童・保護者を特定し得る部分を加工して掲載予定です。</figcaption>
+        </figure>
+      </article>
+
+      <article class="parent-example-case">
+        <div class="parent-example-text">
+          <span class="parent-case-label">免除審査</span>
+          <h3>役員免除のために事情説明を求められる</h3>
+          <p>介護、疾病、妊娠、ひとり親、仕事などの事情を提出させ、PTA側が免除の可否を審査する運用は、保護者に過度な心理的負担を与えることがあります。</p>
+          <ul>
+            <li>役員が任意の協力であることが明記されているか。</li>
+            <li>免除理由の提出が実質的な強制になっていないか。</li>
+            <li>個人情報や家庭事情を必要以上に集めていないか。</li>
+          </ul>
+          <a href="compliance.html#case05" class="parent-text-link">強制化・免除審査の論点を見る</a>
+        </div>
+        <figure class="parent-example-figure">
+          <div class="parent-example-placeholder" role="img" aria-label="役員免除申請やくじ引きに関する文書例の公開用画像を準備中">
+            <span>公開用画像準備中</span>
+            <code>assets/parents/examples/example-exemption-lottery.png</code>
+          </div>
+          <figcaption>免除理由や家庭事情を含む資料は、公開前に十分なマスキングを行ったものだけを使用します。</figcaption>
+        </figure>
+      </article>
+
+      <article class="parent-example-case">
+        <div class="parent-example-text">
+          <span class="parent-case-label">個人情報</span>
+          <h3>学校が持つ連絡先や学級情報がPTAに渡っている</h3>
+          <p>公立学校が保有する児童・保護者情報をPTAへ提供する場面では、個人情報保護法第69条の目的外利用・目的外提供の問題として確認が必要です。</p>
+          <ul>
+            <li>本人同意、利用目的、提供先、提供項目が示されているか。</li>
+            <li>同意しない場合の扱いが不利益になっていないか。</li>
+            <li>PTA名簿や地区班に学校情報が使われていないか。</li>
+          </ul>
+          <a href="compliance.html#case03" class="parent-text-link">個人情報提供の論点を見る</a>
+        </div>
+        <figure class="parent-example-figure">
+          <div class="parent-example-placeholder" role="img" aria-label="学校保有個人情報のPTA提供に関する文書例の公開用画像を準備中">
+            <span>公開用画像準備中</span>
+            <code>assets/parents/examples/example-personal-info.png</code>
+          </div>
+          <figcaption>名簿、住所、電話番号、学級情報などは公開用に加工した画像だけを参照します。</figcaption>
+        </figure>
+      </article>
+
+      <article class="parent-example-case">
+        <div class="parent-example-text">
+          <span class="parent-case-label">退会・非加入</span>
+          <h3>退会や非加入で子どもに不利益があるように読める</h3>
+          <p>PTAに入らない、会費を払わない、退会するという選択によって、児童への配布物、行事参加、登校班などで不利益があるように読める文書は、慎重な確認が必要です。</p>
+          <ul>
+            <li>児童本人への不利益や差別的取扱いが示唆されていないか。</li>
+            <li>非会員の子どもを特定する運用になっていないか。</li>
+            <li>学校教育活動とPTA活動が混同されていないか。</li>
+          </ul>
+          <a href="compliance.html#case09" class="parent-text-link">不利益・差別的取扱いの論点を見る</a>
+        </div>
+        <figure class="parent-example-figure">
+          <div class="parent-example-placeholder" role="img" aria-label="退会や非加入による不利益に関する文書例の公開用画像を準備中">
+            <span>公開用画像準備中</span>
+            <code>assets/parents/examples/example-withdrawal-risk.png</code>
+          </div>
+          <figcaption>公開時は、児童や保護者を特定し得る記載を加工した資料だけを使用します。</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section class="parent-document-check" id="parent-document-check">
+      <div class="parent-flow-inner">
+        <div class="section-kicker">手元で確認</div>
+        <h2 class="section-title">あなたの手元の文書で確認するポイント</h2>
+        <p class="section-lead">まずは判断を急がず、配られた文書をそのまま保存し、どの部分が学校手続で、どの部分がPTA手続なのかを分けて見ます。</p>
+        <div class="parent-checklist">
+          <div><span>1</span><p>配布されたプリント、封筒、メール、アプリ通知を保存する。</p></div>
+          <div><span>2</span><p>発行者、提出先、問い合わせ先が学校かPTAかを確認する。</p></div>
+          <div><span>3</span><p>入会申込書があり、自分の意思で提出する形になっているかを見る。</p></div>
+          <div><span>4</span><p>PTA会費の請求主体、引落先、支払わない場合の扱いを確認する。</p></div>
+          <div><span>5</span><p>個人情報の利用目的、提供先、提供項目、同意の取り方を確認する。</p></div>
+          <div><span>6</span><p>不安があれば、学校・PTA・教育委員会へ文書で確認する。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="parent-check-app" id="parent-check-app">
+      <div class="parent-check-app-card">
+        <div>
+          <div class="parent-lead-kicker">運営チェックアプリ</div>
+          <h2>自分のケースをチェックする</h2>
+          <p>手元のPTAプリントを見ながら、入会申込、会費徴収、個人情報、役員選出、学校経由提出のどこに注意すべきかを確認できます。結果は法的判断を確定するものではありませんが、学校・PTA・教育委員会へ確認する前の整理に使えます。</p>
+          <p class="parent-check-app-note">このチェックは、個別事案の適法性を断定するものではありません。手元の文書を整理し、どの点を学校・PTA・教育委員会に確認すべきかを把握するためのものです。</p>
+        </div>
+        <div class="parent-check-app-actions">
+          <a href="audit/index.html?mode=parent" class="btn-gold">保護者向けチェックを開始する</a>
+          <a href="compliance.html" class="btn-outline">現場実例を詳しく見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="parent-next-action" id="parent-next-action">
+      <div class="parent-flow-inner">
+        <div class="section-kicker">関連ページ</div>
+        <h2 class="section-title">次に確認するページ</h2>
+        <p class="section-lead">手元の文書で気になる点が見つかったら、該当する論点ページで根拠と確認先を整理してください。</p>
+        <div class="parent-related-links">
+          <a href="compliance.html">PTA運営の現場実例</a>
+          <a href="membership.html">入会意思確認</a>
+          <a href="fee-collection.html">会費徴収</a>
+          <a href="privacy.html">個人情報</a>
+          <a href="board-responses.html">教育委員会回答集</a>
+          <a href="national-archive.html">全国資料館</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3つの事実（絵カード） ===== -->
+    <section class="visual-section">
+      <div class="wrap">
+        <div class="section-center">
+          <div class="section-kicker">基本の3事実</div>
+          <h2 class="section-title">まず知っておくべきこと</h2>
+          <p class="section-lead">PTAに関する3つの法的事実です。「みんなやっているから」は法的根拠になりません。</p>
+        </div>
+        <div class="visual-grid">
+          <a href="membership.html" class="visual-card">
+            <div class="vc-visual vc-visual-ok" style="background-image:url('assets/slides/1.jpg')">
+              <span class="vc-label vc-label-ok">✅ あなたの権利</span>
+              <div style="position:absolute;bottom:14px;width:100%;text-align:center;font-size:1rem;font-weight:900;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7);z-index:2">入らなくていい</div>
+            </div>
+            <div class="vc-body">
+              <div class="vc-title">PTAは100%任意加入です</div>
+              <div class="vc-desc">社会教育法上の任意団体であり、加入・非加入はあなたの完全な自由です。強制加入は憲法21条違反です。</div>
+              <div class="vc-law">憲法 21条</div><div class="vc-law" style="margin-left:6px">社会教育法 10条</div>
+            </div>
+          </a>
+          <a href="privacy.html" class="visual-card">
+            <div class="vc-visual vc-visual-ng" style="background-image:url('assets/slides/2.jpg')">
+              <span class="vc-label vc-label-warn">⚠️ 要確認</span>
+              <div style="position:absolute;bottom:14px;width:100%;text-align:center;font-size:1rem;font-weight:900;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7);z-index:2">名簿提供の根拠確認</div>
+            </div>
+            <div class="vc-body">
+              <div class="vc-title">学校からPTAへの名簿提供は目的外提供の問題</div>
+              <div class="vc-desc">学校が教育目的で保有する住所・電話番号等を、根拠なくPTAへ渡す運用は、個人情報保護法第69条との関係で確認が必要です。</div>
+              <div class="vc-law">個人情報保護法 69条</div>
+            </div>
+          </a>
+          <a href="fee-collection.html" class="visual-card">
+            <div class="vc-visual vc-visual-ng" style="background-image:url('assets/slides/2.jpg')">
+              <span class="vc-label vc-label-ng">❌ 返還請求できます</span>
+              <div style="position:absolute;bottom:14px;width:100%;text-align:center;font-size:1rem;font-weight:900;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7);z-index:2">入会なき会費は不当利得</div>
+            </div>
+            <div class="vc-body">
+              <div class="vc-title">入会していない会費は返してもらえます</div>
+              <div class="vc-desc">入会の意思表示がないまま徴収された会費は、法律上の根拠を欠く「不当利得」です。民法703条で返還請求ができます。</div>
+              <div class="vc-law">民法 703条</div>
+            </div>
+          </a>
+          <a href="guide-board.html" class="visual-card">
+            <div class="vc-visual vc-visual-ng" style="background-image:url('assets/slides/1.jpg')">
+              <span class="vc-label vc-label-ng">❌ 人権侵害です</span>
+              <div style="position:absolute;bottom:14px;width:100%;text-align:center;font-size:1rem;font-weight:900;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7);z-index:2">非会員の子を差別してはいけない</div>
+            </div>
+            <div class="vc-body">
+              <div class="vc-title">子どもへの差別的扱いは禁止です</div>
+              <div class="vc-desc">「登校班に入れない」「記念品を配らない」など、保護者の加入・非加入を理由に子どもの扱いを分ける運用は、学校教育上の配慮として問題になります。</div>
+              <div class="vc-law">憲法 26条・14条</div>
+            </div>
+          </a>
+          <a href="membership.html" class="visual-card">
+            <div class="vc-visual vc-visual-warn" style="background-image:url('assets/slides/2.jpg')">
+              <span class="vc-label vc-label-warn">⚠️ 注意</span>
+              <div style="position:absolute;bottom:14px;width:100%;text-align:center;font-size:1rem;font-weight:900;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7);z-index:2">断るのはオプトアウト</div>
+            </div>
+            <div class="vc-body">
+              <div class="vc-title">「断らないと加入」は無効です</div>
+              <div class="vc-desc">非加入届を出さない限り会員扱いにする方式は、入会の申込み・承諾を確認したことにならず、契約成立の説明が困難です。</div>
+              <div class="vc-law">消費者契約法 4条</div>
+            </div>
+          </a>
+          <a href="membership.html" class="visual-card">
+            <div class="vc-visual vc-visual-ok" style="background-image:url('assets/slides/2.jpg')">
+              <span class="vc-label vc-label-ok">✅ これが正しい形</span>
+              <div style="position:absolute;bottom:14px;width:100%;text-align:center;font-size:1rem;font-weight:900;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7);z-index:2">入会届に自署してから入会</div>
+            </div>
+            <div class="vc-body">
+              <div class="vc-title">本来はこうあるべき</div>
+              <div class="vc-desc">PTAが独自に入会申込を受け、保護者が自ら意思表示する形が、任意加入団体として最も説明しやすい基本形です。</div>
+              <div class="vc-law">民法 522条</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 一次資料・根拠文献 ===== -->
+    <section style="background:#f8f9fb;padding:72px 0">
+      <div class="wrap">
+        <div class="section-center">
+          <div class="section-kicker">一次資料</div>
+          <h2 class="section-title">このページの主な根拠文献</h2>
+          <p class="section-lead">行政通知・研究論文・省庁資料など、法的主張の根拠となる一次資料を、原文PDFを開く前に要点で確認できます。</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px;margin-top:36px">
+
+          <a href="documents.html?id=yokohama-notice"
+             style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#fff;border-radius:14px;border:1.5px solid var(--line);text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s;box-shadow:var(--shadow-sm)"
+             onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.1)'"
+             onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:40px;height:40px;border-radius:10px;background:#fff0f0;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">📋</div>
+              <div style="font-size:.65rem;font-weight:900;letter-spacing:.08em;color:#b91c1c;background:#fee2e2;padding:3px 10px;border-radius:4px">行政通知</div>
+            </div>
+            <div>
+              <div style="font-size:.88rem;font-weight:900;color:var(--navy);line-height:1.4;margin-bottom:6px">横浜市教育委員会通知<br>学教第1965号</div>
+              <div style="font-size:.75rem;color:var(--text-s);line-height:1.6">PTAの任意加入・非加入者差別禁止・個人情報取扱いを定めた、全国で最も詳細な行政通知。</div>
+            </div>
+            <div style="margin-top:auto;display:flex;align-items:center;gap:6px;font-size:.75rem;font-weight:900;color:#b91c1c">要点を見る <span style="font-size:.65rem;color:#999">（原文PDFは解説ページ下部）</span></div>
+          </a>
+
+          <a href="documents.html?id=pta-voluntary-kamino"
+             style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#fff;border-radius:14px;border:1.5px solid var(--line);text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s;box-shadow:var(--shadow-sm)"
+             onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.1)'"
+             onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:40px;height:40px;border-radius:10px;background:#eff6ff;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">📖</div>
+              <div style="font-size:.65rem;font-weight:900;letter-spacing:.08em;color:#1d4ed8;background:#dbeafe;padding:3px 10px;border-radius:4px">研究論文</div>
+            </div>
+            <div>
+              <div style="font-size:.88rem;font-weight:900;color:var(--navy);line-height:1.4;margin-bottom:6px">PTAの今日的課題<br>神野 潔・竹尾 和子</div>
+              <div style="font-size:.75rem;color:var(--text-s);line-height:1.6">「任意加入」「強制加入」に関する法学的・歴史学的考察。PTAの法的位置づけを学術的に整理した論文。</div>
+            </div>
+            <div style="margin-top:auto;display:flex;align-items:center;gap:6px;font-size:.75rem;font-weight:900;color:#1d4ed8">要点を見る <span style="font-size:.65rem;color:#999">（原文PDFは解説ページ下部）</span></div>
+          </a>
+
+          <a href="documents.html?id=mext-toshin2019"
+             style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#fff;border-radius:14px;border:1.5px solid var(--line);text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s;box-shadow:var(--shadow-sm)"
+             onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.1)'"
+             onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:40px;height:40px;border-radius:10px;background:#f0fdf4;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">🏛️</div>
+              <div style="font-size:.65rem;font-weight:900;letter-spacing:.08em;color:#15803d;background:#dcfce7;padding:3px 10px;border-radius:4px">省庁資料</div>
+            </div>
+            <div>
+              <div style="font-size:.88rem;font-weight:900;color:var(--navy);line-height:1.4;margin-bottom:6px">文部科学省 答申<br>平成31年（2019）</div>
+              <div style="font-size:.75rem;color:var(--text-s);line-height:1.6">文科省が学校・地域・家庭の連携に関して示した答申。PTA活動の位置づけに関する公式見解を含む。</div>
+            </div>
+            <div style="margin-top:auto;display:flex;align-items:center;gap:6px;font-size:.75rem;font-weight:900;color:#15803d">要点を見る <span style="font-size:.65rem;color:#999">（原文PDFは解説ページ下部）</span></div>
+          </a>
+
+        </div>
+        <div style="text-align:center;margin-top:24px">
+          <a href="national-archive.html" style="display:inline-flex;align-items:center;gap:8px;padding:11px 28px;border-radius:999px;border:1.5px solid var(--line);color:var(--navy);font-size:.84rem;font-weight:900;text-decoration:none">
+            全ての一次資料を見る →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 不審な入会書類の実例 ===== -->
+    <section class="examples-section">
+      <div class="wrap">
+        <div class="section-center">
+          <div class="section-kicker">実例で確認</div>
+          <h2 class="section-title">問題のある入会書類と正しい書類</h2>
+          <p class="section-lead">あなたの学校のPTA書類と比べてみてください。どのパターンか、すぐにわかります。</p>
+        </div>
+        <div class="examples-grid">
+
+          <div class="example-card">
+            <div class="ex-header ex-header-ng">
+              <div class="ex-icon">❌</div>
+              <div class="ex-title">問題あり：みなし加入パターン</div>
+            </div>
+            <div class="ex-body">
+              <div class="ex-doc">
+                <div class="ex-doc-label">⚠️ 実際によくある文書の例</div>
+                令和○年度 PTA会費のご案内<br>
+                本年度よりPTA会費（月額○○円）を、学校徴収金と合わせて口座引落にてお預かりします。<br>
+                ご不明な点は学校事務室までお問い合わせください。
+              </div>
+              <div class="ex-problem">
+                <p>⚠️ 問題点：入会の意思確認がない。会費の引落に同意した覚えがない。非加入の選択肢が示されていない。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="example-card">
+            <div class="ex-header ex-header-ng">
+              <div class="ex-icon">❌</div>
+              <div class="ex-title">問題あり：オプトアウトパターン</div>
+            </div>
+            <div class="ex-body">
+              <div class="ex-doc">
+                <div class="ex-doc-label">⚠️ 実際によくある文書の例</div>
+                保護者の皆様へ<br>
+                PTA活動へのご参加をお願いします。お子様が入学された場合、原則として保護者の方にPTA会員になっていただきます。加入を希望されない方は、別紙「非加入届」をご提出ください。
+              </div>
+              <div class="ex-problem">
+                <p>⚠️ 問題点：加入が原則（「希望しない場合のみ届出」）。これはオプトアウト方式で、消費者契約法・民法に違反します。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="example-card">
+            <div class="ex-header" style="background:#f0fdf4;border-bottom:2px solid #bbf7d0">
+              <div class="ex-icon">✅</div>
+              <div class="ex-title">適正：オプトイン方式の例</div>
+            </div>
+            <div class="ex-body">
+              <div class="ex-doc-good">
+                <div class="ex-doc-label ex-doc-label-ok">✅ 適正な書類の例</div>
+                PTA入会申込書<br>
+                PTAは任意加入の団体です。加入を希望される方のみ、以下にご記入の上ご提出ください。<br>
+                □ PTA活動への個人情報利用に同意します<br>
+                氏名：___________（自署）
+              </div>
+              <div class="ex-good">
+                <p>✅ 適正な理由：任意性を明示。自署で意思表示。個人情報の利用目的を明記。本人からPTAへ直接提出する形式。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="example-card">
+            <div class="ex-header ex-header-ng">
+              <div class="ex-icon">❌</div>
+              <div class="ex-title">問題あり：個人情報の混在パターン</div>
+            </div>
+            <div class="ex-body">
+              <div class="ex-doc">
+                <div class="ex-doc-label">⚠️ 実際によくある書類の例</div>
+                緊急連絡先届兼PTA名簿登録申請書<br>
+                お子様の緊急連絡先として以下をご記入ください。記入された情報はPTA名簿にも使用します。
+              </div>
+              <div class="ex-problem">
+                <p>⚠️ 問題点：「緊急連絡先」として提供した情報がPTAに流用されています。目的外利用（個人情報保護法違反）です。</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 書類チェッカー（対話型） ===== -->
+    <section style="background:linear-gradient(135deg,#1d4ed8,#2563eb);padding:72px 0;color:#fff">
+      <div class="wrap wrap-narrow">
+        <div style="text-align:center;margin-bottom:40px">
+          <div class="section-kicker" style="background:rgba(212,175,55,.15);color:var(--gold-lt)">対話型ツール</div>
+          <h2 class="section-title" style="color:#fff;margin-top:8px">手元の書類をチェックする</h2>
+          <p style="color:rgba(255,255,255,.78);font-size:.95rem;line-height:1.85">学校から届いた書類の特徴を選ぶと、問題点と対処法を表示します。</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px">
+          <p style="color:rgba(255,255,255,.7);font-size:.85rem;margin-bottom:16px">書類の特徴をすべて選択してください（複数可）</p>
+
+          <div id="checker-options" style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px">
+            <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;transition:background .2s">
+              <input type="checkbox" value="auto" style="margin-top:3px;width:16px;height:16px;accent-color:var(--gold)">
+              <div>
+                <div style="font-weight:800;color:#fff;font-size:.95rem">入会の意思確認欄がない</div>
+                <div style="font-size:.82rem;color:rgba(255,255,255,.6);margin-top:2px">書類を受け取っただけで自動的に会員扱いになる</div>
+              </div>
+            </label>
+            <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;transition:background .2s">
+              <input type="checkbox" value="optout" style="margin-top:3px;width:16px;height:16px;accent-color:var(--gold)">
+              <div>
+                <div style="font-weight:800;color:#fff;font-size:.95rem">「希望しない場合はご連絡ください」と書いてある</div>
+                <div style="font-size:.82rem;color:rgba(255,255,255,.6);margin-top:2px">断らなければ加入というオプトアウト方式</div>
+              </div>
+            </label>
+            <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;transition:background .2s">
+              <input type="checkbox" value="combined" style="margin-top:3px;width:16px;height:16px;accent-color:var(--gold)">
+              <div>
+                <div style="font-weight:800;color:#fff;font-size:.95rem">給食費等と同じ書類・口座で会費が記載されている</div>
+                <div style="font-size:.82rem;color:rgba(255,255,255,.6);margin-top:2px">学校徴収金とPTA会費が一体化している</div>
+              </div>
+            </label>
+            <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;transition:background .2s">
+              <input type="checkbox" value="privacy" style="margin-top:3px;width:16px;height:16px;accent-color:var(--gold)">
+              <div>
+                <div style="font-weight:800;color:#fff;font-size:.95rem">個人情報の利用目的・提供先の記載がない</div>
+                <div style="font-size:.82rem;color:rgba(255,255,255,.6);margin-top:2px">どこに情報が渡るか書いていない</div>
+              </div>
+            </label>
+            <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;transition:background .2s">
+              <input type="checkbox" value="ok" style="margin-top:3px;width:16px;height:16px;accent-color:var(--gold)">
+              <div>
+                <div style="font-weight:800;color:#fff;font-size:.95rem">自署欄があり、任意と書かれている</div>
+                <div style="font-size:.82rem;color:rgba(255,255,255,.6);margin-top:2px">自分で署名して提出するオプトイン方式</div>
+              </div>
+            </label>
+          </div>
+
+          <button onclick="runChecker()" style="width:100%;padding:14px;border-radius:999px;background:var(--gold);color:var(--navy);font-weight:900;font-size:1rem;border:none;cursor:pointer;transition:opacity .2s">判定する</button>
+
+          <div id="checker-result" style="display:none;margin-top:24px"></div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+    function runChecker() {
+      const checked = [...document.querySelectorAll('#checker-options input:checked')].map(i => i.value);
+      const result = document.getElementById('checker-result');
+      result.style.display = 'block';
+
+      if (checked.length === 0) {
+        result.innerHTML = '<div style="background:rgba(255,255,255,.08);border-radius:12px;padding:18px;color:rgba(255,255,255,.7)">特徴を1つ以上選択してください。</div>';
+        return;
+      }
+
+      if (checked.includes('ok') && checked.length === 1) {
+        result.innerHTML = `<div style="background:rgba(21,128,61,.2);border:1px solid rgba(74,222,128,.4);border-radius:12px;padding:20px">
+          <div style="font-weight:900;color:#86efac;font-size:1.05rem;margin-bottom:10px">✅ 適正な形式です</div>
+          <p style="color:rgba(255,255,255,.85);font-size:.92rem;line-height:1.8;margin:0">自署欄あり・任意明示のオプトイン方式は、民法上の申込み・承諾を説明しやすい入会手続です。個人情報の利用目的が明示されていれば、より確実です。</p>
+        </div>`;
+        return;
+      }
+
+      let problems = [];
+      let actions = [];
+
+      if (checked.includes('auto')) {
+        problems.push('入会届なし → 民法522条：契約が成立していない可能性があります');
+        actions.push('「いつ入会したか」をPTAに書面で問い合わせる（照会書テンプレートを使用）');
+      }
+      if (checked.includes('optout')) {
+        problems.push('オプトアウト方式 → 消費者契約法・民法上、法的根拠がありません');
+        actions.push('「拒否の申出をしなかった」は承諾とみなされません。会費は返還請求が可能です');
+      }
+      if (checked.includes('combined')) {
+        problems.push('抱き合わせ徴収 → 民法113条・地方財政法違反の可能性');
+        actions.push('PTA会費の引き落とし停止をPTAと学校の双方に書面で申し入れる');
+      }
+      if (checked.includes('privacy')) {
+        problems.push('個人情報の目的外利用 → 個人情報保護法69条違反の可能性');
+        actions.push('個人情報の利用停止・削除をPTAと学校に書面で要請する');
+      }
+
+      const level = problems.length >= 3 ? 'danger' : problems.length >= 1 ? 'warning' : 'ok';
+      const colors = {
+        danger: { bg: 'rgba(185,28,28,.2)', border: 'rgba(252,165,165,.4)', title: '#fca5a5', label: '⛔ 重大な問題の可能性' },
+        warning: { bg: 'rgba(217,119,6,.2)', border: 'rgba(251,191,36,.4)', title: '#fde68a', label: '⚠️ 問題の可能性あり' },
+      };
+      const c = colors[level] || colors.warning;
+
+      result.innerHTML = `
+        <div style="background:${c.bg};border:1px solid ${c.border};border-radius:12px;padding:22px">
+          <div style="font-weight:900;color:${c.title};font-size:1rem;margin-bottom:14px">${c.label}</div>
+          <div style="margin-bottom:14px">
+            <div style="font-size:.8rem;font-weight:900;color:rgba(255,255,255,.6);letter-spacing:.06em;margin-bottom:8px">確認された問題点</div>
+            ${problems.map(p => `<div style="display:flex;gap:8px;font-size:.88rem;color:rgba(255,255,255,.88);margin-bottom:6px;line-height:1.6"><span style="color:#fca5a5;flex-shrink:0">✗</span>${p}</div>`).join('')}
+          </div>
+          <div>
+            <div style="font-size:.8rem;font-weight:900;color:rgba(255,255,255,.6);letter-spacing:.06em;margin-bottom:8px">対処方法</div>
+            ${actions.map(a => `<div style="display:flex;gap:8px;font-size:.88rem;color:rgba(255,255,255,.88);margin-bottom:6px;line-height:1.6"><span style="color:#86efac;flex-shrink:0">→</span>${a}</div>`).join('')}
+          </div>
+          <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);display:flex;gap:10px;flex-wrap:wrap">
+            <a href="audit/index.html?mode=parent" style="display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;background:var(--gold);color:var(--navy);font-weight:900;font-size:.84rem;text-decoration:none">⚙️ 保護者向けチェックを開始する</a>
+            <a href="#pdf-dl" style="display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.1);color:#fff;font-weight:800;font-size:.84rem;text-decoration:none;border:1px solid rgba(255,255,255,.2)">📄 テンプレートPDFを使う</a>
+          </div>
+        </div>`;
+    }
+    </script>
+
+    <!-- ===== ステップ ===== -->
+    <section class="steps-section">
+      <div class="wrap">
+        <div class="section-center">
+          <div class="section-kicker">行動ガイド</div>
+          <h2 class="section-title">保護者が取るべき3つのステップ</h2>
+          <p class="section-lead">まず確認し、問題があれば文書で伝え、改善されなければ上位機関へ。</p>
+        </div>
+        <div class="steps-flow">
+          <div class="step-block">
+            <div class="step-num">1</div>
+            <h4>現状を確認する</h4>
+            <p>入会届の有無・会費引落の経緯・名簿の提供方法を確認。保護者向けチェックでリスクが見えます。</p>
+          </div>
+          <div class="step-block">
+            <div class="step-num">2</div>
+            <h4>文書でPTAに照会</h4>
+            <p>「いつ入会したか」「個人情報提供に同意した記録はあるか」をPTA宛に文書で問い合わせます。テンプレートをご活用ください。</p>
+          </div>
+          <div class="step-block">
+            <div class="step-num">3</div>
+            <h4>教育委員会に相談</h4>
+            <p>PTAが回答しない・改善がない場合は、学校を管轄する教育委員会に状況を伝えます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PDF Downloads ===== -->
+    <section class="pdf-section" id="pdf-dl">
+      <div class="wrap">
+        <div class="section-center">
+          <div class="section-kicker" style="background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.3);color:var(--gold-lt)">PDFテンプレート</div>
+          <h2 class="section-title" style="color:#fff">すぐ使えるテンプレートPDF</h2>
+          <p class="section-lead" style="color:rgba(255,255,255,.78)">印刷してそのまま使えます。自分の状況に合わせて使用してください。</p>
+        </div>
+        <div class="pdf-grid">
+          <div class="pdf-card">
+            <div class="pdf-icon">📋</div>
+            <h3>PTA入会状況照会書</h3>
+            <p>「いつ入会したか」「同意の記録があるか」をPTAに問い合わせるための文書テンプレートです。</p>
+            <a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener noreferrer" class="pdf-btn">原文PDF倉庫へ</a>
+          </div>
+          <div class="pdf-card">
+            <div class="pdf-icon">🚫</div>
+            <h3>退会届・非加入届</h3>
+            <p>PTAを退会・非加入とする意思を明確に文書化するためのテンプレートです。任意性の根拠条文付き。</p>
+            <a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener noreferrer" class="pdf-btn">原文PDF倉庫へ</a>
+          </div>
+          <div class="pdf-card">
+            <div class="pdf-icon">🔒</div>
+            <h3>個人情報削除要請書</h3>
+            <p>PTAが保有する個人情報の削除・利用停止を求めるための文書です。根拠法令・手続き付き。</p>
+            <a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener noreferrer" class="pdf-btn">原文PDF倉庫へ</a>
+          </div>
+          <div class="pdf-card">
+            <div class="pdf-icon">💰</div>
+            <h3>会費返還請求書</h3>
+            <p>入会していないにもかかわらず徴収された会費の返還を請求するための文書テンプレートです。</p>
+            <a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener noreferrer" class="pdf-btn">原文PDF倉庫へ</a>
+          </div>
+          <div class="pdf-card">
+            <div class="pdf-icon">🏫</div>
+            <h3>教育委員会への相談書</h3>
+            <p>PTAからの回答が得られない場合や、問題が解決しない場合に教育委員会へ相談するための文書です。</p>
+            <a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener noreferrer" class="pdf-btn">原文PDF倉庫へ</a>
+          </div>
+          <div class="pdf-card">
+            <div class="pdf-icon">📊</div>
+            <h3>保護者向けチェックリスト</h3>
+            <p>手元のPTAプリントを見ながら、入会申込、会費徴収、個人情報、役員選出、学校経由提出を整理できます。</p>
+            <a href="audit/index.html?mode=parent" class="pdf-btn">⚙️ 保護者向けチェックを開始する</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="wrap wrap-narrow">
+        <div class="section-center">
+          <div class="section-kicker">よくある疑問</div>
+          <h2 class="section-title">保護者からよく出る質問</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q"><div class="faq-q-text">入会届を出した記憶がないのに会費が引き落とされています。どうすればいいですか？</div><span class="faq-toggle">▼</span></div>
+            <div class="faq-a"><p>まず上記の「PTA入会状況照会書」テンプレートを使ってPTAに「いつ入会したか」を書面で問い合わせてください。入会の証拠（署名付き入会届）が存在しない場合、会費は不当利得（民法703条）として返還請求が可能です。</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><div class="faq-q-text">PTAを退会すると子供に何か影響はありますか？</div><span class="faq-toggle">▼</span></div>
+            <div class="faq-a"><p>法律上、PTAに加入しているかどうかで子どもの教育的扱いが変わるような運用は問題です。「登校班に入れない」「記念品をもらえない」などの差別的扱いがあれば、学校・教育委員会に相談してください。</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><div class="faq-q-text">「全員入会が前提」と言われました。おかしいですか？</div><span class="faq-toggle">▼</span></div>
+            <div class="faq-a"><p>はっきりおかしいです。PTAは任意加入を前提とする団体であり、「全員入会が前提」という運営は、憲法21条の結社の自由や民法522条の契約成立要件との関係で重大な問題があります。入る人が自発的に申し込む形へ改める必要があります。</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><div class="faq-q-text">連絡先が勝手にPTAに渡されていたようです。どうすればいいですか？</div><span class="faq-toggle">▼</span></div>
+            <div class="faq-a"><p>個人情報保護法上、学校（行政機関等）が保有する個人情報を本人の同意なく第三者（PTA）に提供することは、同法69条で禁止されています。PTAと学校の双方に書面で情報の削除・利用停止を要請してください。テンプレートは上記からご利用いただけます。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ（追加） ===== -->
+    <section class="faq2-section">
+      <div class="container">
+        <div class="section-label">よくある質問</div>
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-sub">保護者の方からよく寄せられるご質問にお答えします。</p>
+
+        <div class="faq2-list">
+
+          <div class="faq2-item">
+            <div class="faq2-q">
+              <div class="faq2-q-text">PTAを退会したら子どもが不利益を受けますか？</div>
+              <svg class="faq2-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq2-a"><p>受けてはなりません。PTAは任意団体であり、保護者の非加入を理由に子どもの学校生活上の扱いを分けることは不適切です。学校・教育委員会に、児童生徒の扱いと保護者団体への加入を切り離すよう求めてください。</p></div>
+          </div>
+
+          <div class="faq2-item">
+            <div class="faq2-q">
+              <div class="faq2-q-text">PTA会費の引き落としを止めることができますか？</div>
+              <svg class="faq2-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq2-a"><p>はい。加入していないか、または退会した場合、PTA会費の引き落とし自体に法的根拠がなくなります。学校が代行徴収を行っている場合は、学校側にもPTAに会員でない旨を書面で伝えてください。</p></div>
+          </div>
+
+          <div class="faq2-item">
+            <div class="faq2-q">
+              <div class="faq2-q-text">個人情報（連絡先・名前）を学校から勝手にPTAに渡されました。</div>
+              <svg class="faq2-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq2-a"><p>個人情報保護法第69条との関係で確認が必要です。学校が教育目的で保有する情報をPTA目的で利用・提供していないか、本人同意、提供項目、提供記録、不同意者の除外が整理されているかを確認してください。</p></div>
+          </div>
+
+          <div class="faq2-item">
+            <div class="faq2-q">
+              <div class="faq2-q-text">役員を断ることができますか？</div>
+              <svg class="faq2-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq2-a"><p>はい。PTAは任意加入の民間団体ですので、役員就任の強制はできません。加入の意思がない場合は退会も可能です。</p></div>
+          </div>
+
+          <div class="faq2-item">
+            <div class="faq2-q">
+              <div class="faq2-q-text">退会の手続きはどうすればいいですか？</div>
+              <svg class="faq2-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq2-a"><p>PTAの会則に従い、書面（退会届）をPTA役員または学校事務室に提出します。会則に手続きが定められていない場合でも、意思表示により退会は有効です。</p></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 教育委員会引用バナー ===== -->
+    <section class="quote-banner">
+      <div class="container">
+        <div class="section-label" style="color:var(--gold)">公式回答</div>
+        <h2 class="section-title" style="color:#fff">各教育委員会の見解</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,.65)">全国の教育委員会が公式に示した回答の一部をご紹介します。</p>
+        <div class="quote-grid">
+
+          <div class="quote-card">
+            <blockquote>学校側が児童の入学をもって一律に会員とみなす運用については不適切</blockquote>
+            <div class="quote-source">
+              <strong>兵庫県教育委員会</strong>
+              教育委員会回答例
+            </div>
+          </div>
+
+          <div class="quote-card">
+            <blockquote>学校が保有する個人情報をPTAに提供することはありません</blockquote>
+            <div class="quote-source">
+              <strong>長久手市教育委員会</strong>
+              令和8年1月 照会回答
+            </div>
+          </div>
+
+          <div class="quote-card">
+            <blockquote>教育委員会はPTA活動に関与しない立場</blockquote>
+            <div class="quote-source">
+              <strong>豊浦町教育委員会</strong>
+              令和8年2月 照会回答
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 退会・非加入の手順 ===== -->
+    <section class="howto-section">
+      <div class="container">
+        <div class="section-label">手順ガイド</div>
+        <h2 class="section-title">退会・非加入の手順</h2>
+        <p class="section-sub">落ち着いて一歩ずつ進めれば、手続きは難しくありません。</p>
+
+        <div class="howto-steps">
+
+          <div class="howto-step">
+            <div class="howto-num"><span>Step</span><span>1</span></div>
+            <div class="howto-body">
+              <h4>PTA会則・規約を確認する</h4>
+              <p>学校またはPTA役員に会則の開示を求めてください。退会に関する条項を確認しておくことで、手続きがスムーズになります。</p>
+              <span class="howto-tip">会則の開示は正当な権利です</span>
+            </div>
+          </div>
+
+          <div class="howto-step">
+            <div class="howto-num"><span>Step</span><span>2</span></div>
+            <div class="howto-body">
+              <h4>退会届（または非加入意思表示書）を作成する</h4>
+              <p>書面による意思表示を推奨します。自署（自筆署名）のある書面を用意することで、後日のトラブルを防ぐことができます。</p>
+              <span class="howto-tip">当サイトのテンプレートPDFを活用ください</span>
+            </div>
+          </div>
+
+          <div class="howto-step">
+            <div class="howto-num"><span>Step</span><span>3</span></div>
+            <div class="howto-body">
+              <h4>PTAの役員・会長宛に提出する</h4>
+              <p>学校の事務室経由での提出も可能です。受領の確認を取っておくとより確実です。提出日や担当者名をメモしておきましょう。</p>
+            </div>
+          </div>
+
+          <div class="howto-step">
+            <div class="howto-num"><span>Step</span><span>4</span></div>
+            <div class="howto-body">
+              <h4>会費の引き落とし停止を確認する</h4>
+              <p>口座引き落としがある場合は銀行への手続きも必要な場合があります。PTAから「退会受理」の確認を得た後、引き落とし状況を必ず確認してください。</p>
+              <span class="howto-tip">不当引き落としは返還請求が可能です（民法703条）</span>
+            </div>
+          </div>
+
+          <div class="howto-step">
+            <div class="howto-num"><span>Step</span><span>5</span></div>
+            <div class="howto-body">
+              <h4>子どもへの不利益がないか確認する</h4>
+              <p>退会後も子どもの学校生活に変化がないかを確認してください。登校班・記念品・学校行事などで差別的扱いがあれば、速やかに教育委員会に相談してください。</p>
+              <span class="howto-tip">差別的扱いは教育委員会へ相談を</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div>
+          <h3>PTA適正化推進委員会</h3>
+          <a href="https://yokomusubi.city.yokohama.lg.jp/organizations/detail/f69c7ad2-cf21-4dfa-87bb-9c891874eb6b/" target="_blank" rel="noopener noreferrer" class="yokomusubi-card">
+            <img src="assets/yokomusubi.png" alt="よこむすび">
+            <span class="yokomusubi-tagline">磯子区「よこむすび」掲載団体</span>
+            <span class="yokomusubi-meta">登録番号：磯子12406</span>
+            <span class="yokomusubi-meta">分類番号：12-4（市民活動・社会教育推進）</span>
+          </a>
+          <div class="footer-contact">
+            <p>〒235-0021<br>神奈川県横浜市磯子区岡村8-17-5-301</p>
+            <p><strong>070-9012-7772</strong></p>
+            <p><a href="mailto:info@ptaorg.com">info@ptaorg.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h4>公式発信</h4>
+          <p class="footer-sns-sub">最新資料・論考・動画はこちら</p>
+          <div class="footer-sns-cards">
+            <a href="https://x.com/jjjqqqxxx0852" target="_blank" rel="noopener" class="fsns-card fsns-x">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.836L2.25 2.25H8.08l4.263 5.636L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+              <div>
+                <div class="fsns-name">X</div>
+                <div class="fsns-desc">速報・資料更新</div>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@PTA%E9%81%A9%E6%AD%A3%E5%8C%96%E6%8E%A8%E9%80%B2%E5%A7%94%E5%93%A1%E4%BC%9A" target="_blank" rel="noopener" class="fsns-card fsns-yt">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <div>
+                <div class="fsns-name">YouTube</div>
+                <div class="fsns-desc">動画で解説</div>
+              </div>
+            </a>
+            <a href="https://note.com/hiroshisatoh" target="_blank" rel="noopener" class="fsns-card fsns-note">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H4zm2 3h10v2H6V8zm0 4h10v2H6v-2zm0 4h6v2H6v-2z"/></svg>
+              <div>
+                <div class="fsns-name">note</div>
+                <div class="fsns-desc">論考・研究ノート</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>立場別</h4>
+          <ul>
+            <li><a href="guide-parent.html">保護者</a></li>
+            <li><a href="guide-pta.html">PTA役員</a></li>
+            <li><a href="guide-board.html">教育委員会・学校</a></li>
+            <li><a href="guide-research.html">研究者・記者</a></li>
+            <li><a href="guide-board.html">教育委員会向け指針</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>論点</h4>
+          <ul>
+            <li><a href="membership.html">入会手続</a></li>
+            <li><a href="privacy.html">個人情報</a></li>
+            <li><a href="fee-collection.html">会費徴収</a></li>
+            <li><a href="personnel.html">教職員関与</a></li>
+            <li><a href="facilities.html">施設利用</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>資料・支援</h4>
+          <ul>
+            <li><a href="https://ptaorg.github.io/donate/">応援・寄付</a></li>
+            <li><a href="board-responses.html">教育委員会の回答</a></li>
+            <li><a href="national-archive.html">全国資料館</a></li>
+            <li><a href="journal.html">論考・調査報告</a></li>
+            <li><a href="report.html">総合分析レポート</a></li>
+            <li><a href="audit/index.html">運営チェックアプリ</a></li>
+            <li><a href="law-map.html">法制度マップ</a></li>
+            <li><a href="guideline.html">適正化ガイドライン</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  <div class="footer-support">
+    <div>
+      <strong>調査・資料公開の継続を応援してください</strong>
+      <p>いただいたご支援は、公文書開示、資料整理、Web公開、自治体・学校への働きかけに活用します。</p>
+    </div>
+    <a href="https://ptaorg.github.io/donate/">応援ページへ</a>
+  </div>
+    <p class="copyright">© PTA適正化推進委員会</p>
+  </footer>
+  <script src="js/site.js"></script>
+  <script>
+  // FAQ2 アコーディオン
+  document.querySelectorAll('.faq2-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq2-item');
+      var isOpen = item.classList.contains('is-open');
+      // 他を全て閉じる
+      document.querySelectorAll('.faq2-item.is-open').forEach(function(el) {
+        el.classList.remove('is-open');
+      });
+      if (!isOpen) {
+        item.classList.add('is-open');
+      }
+    });
+  });
+  </script>
+</body></html>

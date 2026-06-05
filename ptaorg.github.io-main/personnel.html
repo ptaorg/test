@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="description" content="教職員のPTA事務関与と職務専念義務（地公法35条）——渉外業務とPTA内部事務を分けて確認。">
+  <link rel="canonical" href="https://ptaorg.com/personnel.html">
+  <meta property="og:title" content="教職員関与と職務専念義務 | PTA適正化推進委員会">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ptaorg.com/personnel.html">
+  <meta property="og:image" content="https://ptaorg.com/assets/og-image-popc-en.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="教職員関与と職務専念義務 | PTA適正化推進委員会">
+  <meta name="twitter:description" content="地公法35条との関係で、渉外業務とPTA内部事務を分けて確認。担任配布・会費集金・名簿管理の問題。">
+  <meta name="twitter:image" content="https://ptaorg.com/assets/og-image-popc-en.png">
+  <title>教職員関与と職務専念義務 | PTA適正化推進委員会</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .pg-main{width:min(calc(100% - 40px),900px);margin-inline:auto;padding:56px 0 96px}
+    .pg-section{margin-bottom:64px}
+    .pg-section h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--navy);margin-bottom:12px;padding-bottom:10px;border-bottom:3px solid var(--gold)}
+    .pg-section h3{font-size:1.05rem;font-weight:800;color:var(--navy);margin:28px 0 10px;padding-left:12px;border-left:4px solid var(--gold)}
+    .pg-section p{color:var(--text);line-height:1.9;margin-bottom:14px;font-size:.97rem}
+
+    .scope-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0}
+    .scope-ok{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:var(--radius);padding:22px}
+    .scope-ng{background:#fff5f5;border:1px solid #fecaca;border-radius:var(--radius);padding:22px}
+    .scope-label{font-size:.74rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+    .scope-ok .scope-label{color:#15803d}
+    .scope-ng .scope-label{color:#b91c1c}
+    .scope-item{display:flex;gap:9px;font-size:.9rem;line-height:1.6;margin-bottom:8px;color:var(--text)}
+    .ok-dot{color:#15803d;font-weight:900;flex-shrink:0}
+    .ng-dot{color:#b91c1c;font-weight:900;flex-shrink:0}
+
+    @media(max-width:700px){.scope-grid{grid-template-columns:1fr}}
+
+    .page-hero{position:relative;overflow:hidden;}
+    .page-hero-bg-img{
+      position:absolute;inset:0;z-index:0;
+    }
+    .page-hero-bg-img img{
+      width:100%;height:100%;object-fit:cover;
+      filter:brightness(1.05);
+    }
+    .page-hero-bg-img::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(160deg,rgba(5,17,31,.32) 0%,rgba(5,17,31,.14) 60%,rgba(5,17,31,.05) 100%);
+    }
+    .page-hero-inner{position:relative;z-index:1;}
+  
+    /* ↓ Photo hero overrides — keep white text on photo background ↓ */
+    .page-hero{background:transparent!important;border-top:none!important;border-bottom:none!important}
+    .page-hero h1{color:#fff!important}
+    .page-hero h1 em{color:var(--gold-lt)!important}
+    .page-hero p{color:rgba(255,255,255,.88)!important}
+    .page-hero-kicker{background:rgba(212,175,55,.18)!important;border:1px solid rgba(212,175,55,.4)!important;color:var(--gold-lt)!important}
+    .hero-actions .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.5)!important}
+    .hero-actions .btn-outline:hover{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.8)!important}
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0D18ZSSLMH');
+</script>
+<link href="css/refine.css?v=refine1" rel="stylesheet"/>
+</head>
+<body>
+  
+<header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/popc-logo.png" alt="PTA適正化推進委員会">
+        <span>PTA適正化推進委員会</span>
+      </a>
+      <div class="header-search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" class="search-input" placeholder="キーワードで検索…" aria-label="サイト内検索">
+        <div class="search-results-dropdown"></div>
+      </div>
+      <nav class="desktop-nav" aria-label="主要ナビゲーション">
+        <a href="index.html" class="nav-link">トップ</a>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">立場別</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>入口</h4>
+              <ul>
+                <li><a href="guide-parent.html">保護者の方へ</a></li>
+                <li><a href="guide-pta.html">PTA役員の方へ</a></li>
+                <li><a href="guide-board.html">教育委員会・学校へ</a></li>
+                <li><a href="guide-research.html">研究者・記者の方へ</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>ツール</h4>
+              <ul>
+                <li><a href="audit/index.html">運営チェックアプリ</a></li>
+                <li><a href="guideline.html">適正化ガイドライン</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">論点</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>主要論点</h4>
+              <ul>
+                <li><a href="membership.html">入会手続・オプトアウト</a></li>
+                <li><a href="privacy.html">個人情報提供</a></li>
+                <li><a href="fee-collection.html">会費徴収</a></li>
+                <li><a href="personnel.html">教職員関与</a></li>
+                <li><a href="facilities.html">施設利用</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>制度整理</h4>
+              <ul>
+                <li><a href="law-map.html">法制度マップ</a></li>
+                <li><a href="cases.html">判例整理</a></li>
+                <li><a href="timeline.html">PTA制度史</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">資料</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>資料</h4>
+              <ul>
+                <li><a href="board-responses.html">教育委員会の回答</a></li>
+                <li><a href="national-archive.html">全国資料館</a></li>
+                <li><a href="journal.html">論考・調査報告</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>分析</h4>
+              <ul>
+                <li><a href="report.html">総合分析レポート</a></li>
+                <li><a href="administrative-materials.html">行政資料整理</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="https://ptaorg.github.io/donate/" class="nav-link support-nav-link">応援</a>
+        <a href="audit/index.html" class="btn-gold">運営チェック</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileOverlay">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-overlay" id="mobileOverlay">
+    <a href="index.html" class="mobile-link"><span>Home</span>トップページ</a>
+    <a href="guide-parent.html" class="mobile-link"><span>Guide</span>保護者の方へ</a>
+    <a href="guide-pta.html" class="mobile-link"><span>Guide</span>PTA役員の方へ</a>
+    <a href="guide-board.html" class="mobile-link"><span>Guide</span>教育委員会・学校へ</a>
+    <a href="board-responses.html" class="mobile-link"><span>Data</span>教育委員会の回答</a>
+    <a href="national-archive.html" class="mobile-link"><span>Archive</span>全国資料館</a>
+    <a href="journal.html" class="mobile-link"><span>Journal</span>論考・調査報告</a>
+    <a href="audit/index.html" class="mobile-link"><span>Check</span>運営チェックアプリ</a>
+    <a href="https://ptaorg.github.io/donate/" class="mobile-link support-mobile-link"><span>Support</span>応援・寄付</a>
+  <div class="close-overlay" id="closeOverlay">CLOSE ×</div>
+  </div>
+
+  <section class="page-hero page-hero--photo">
+    <div class="page-hero-bg-img" aria-hidden="true">
+      <img src="assets/slides/1.jpg" alt="" aria-hidden="true" loading="eager">
+    </div>
+    <div class="page-hero-inner">
+      <div class="page-hero-kicker">👩‍🏫 Issue 04 — Personnel</div>
+      <h1>教職員関与と<br><em>職務専念義務</em></h1>
+      <p>勤務時間中に教職員がPTA内部事務を担う運用は、地方公務員法第35条の職務専念義務との関係で確認が必要です。学校側の基本的な接点は「渉外業務（学校↔PTA間の連絡調整）」であり、名簿管理・会費処理・役員事務とは分けて整理する必要があります。</p>
+      <div class="hero-actions">
+        <a href="guide-board.html" class="btn-gold">教育委員会向けガイドを読む</a>
+        <a href="audit/index.html" class="btn-outline">運営チェックで確認する</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-banner" style="background-image:url('assets/slides/1.jpg')">
+    <div class="page-banner-content">
+      <div class="page-banner-kicker">Personnel &amp; Election Issues</div>
+      <div class="page-banner-title">役員選出・人事問題</div>
+    </div>
+  </div>
+
+  <main class="pg-main">
+
+    <!-- リード -->
+
+    <section class="editorial-brief personnel-editorial-brief" aria-labelledby="personnel-reading-order">
+      <div class="editorial-brief-band">教職員関与・職務専念義務の読み方</div>
+      <div class="editorial-brief-body">
+        <h2 id="personnel-reading-order">問題は、教職員の善意ではなく「勤務時間中に誰の事務をしているか」です</h2>
+        <p>学校とPTAは協力関係を持ち得ます。しかし、学校職員が勤務時間中に、PTAの会計、集金、名簿、役員選出、文書作成、封入、メール配信などを恒常的に担う場合、それは学校の職務なのか、PTAという別団体の内部事務なのかを分けて確認する必要があります。</p>
+        <div class="editorial-brief-grid">
+          <div class="editorial-brief-point"><span>1</span><strong>連絡調整</strong><p>学校行事や施設利用に必要な範囲の連絡は、渉外的な対応として整理できます。</p></div>
+          <div class="editorial-brief-point"><span>2</span><strong>内部事務</strong><p>PTA会計、名簿、役員選出、会費徴収はPTA側で完結させるべき事務です。</p></div>
+          <div class="editorial-brief-point"><span>3</span><strong>職専免</strong><p>服務免除を使う場合でも、根拠規則、対象者、時間、用務の記録が必要です。</p></div>
+          <div class="editorial-brief-point"><span>4</span><strong>移行</strong><p>教職員任せを責めるのではなく、PTA側の事務体制へ段階的に戻します。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial-panel" id="personnel-work-scope-note">
+      <h2>教職員の職務を明確にする資料は、PTA事務の線引きにも使えます</h2>
+      <p>学校現場では、保護者対応、地域連携、学校運営協議会、学校行事の調整など、教職員が関わるべき周辺業務があります。そのため、「PTAと連絡を取ったら直ちに問題」という整理ではなく、学校教育上必要な連絡調整と、PTAという別団体の内部事務代行を分けて見る必要があります。</p>
+      <p>教職員の標準的な職務や学校管理規則の整備に関する資料は、この線引きを考える材料になります。学校が担うべき職務を明確にするほど、PTA会計、PTA名簿、役員選出、会費徴収、印刷・封入などを勤務時間内に恒常処理する根拠は説明しにくくなります。</p>
+      <div class="editorial-matrix" aria-label="教職員関与の線引き">
+        <div class="editorial-matrix-row"><div class="editorial-matrix-term">学校側の連絡調整</div><div class="editorial-matrix-desc">学校行事、施設使用、安全管理、保護者への学校連絡など、学校管理上必要な範囲。</div></div>
+        <div class="editorial-matrix-row"><div class="editorial-matrix-term">PTA側の内部事務</div><div class="editorial-matrix-desc">会員管理、会費徴収、会計、役員選出、広報紙編集、総会資料作成など、PTAが自ら処理すべき範囲。</div></div>
+        <div class="editorial-matrix-row"><div class="editorial-matrix-term">境界領域</div><div class="editorial-matrix-desc">配布、校内掲示、連絡ツール利用、施設利用許可は、根拠・対象・目的・個人情報利用を記録して確認します。</div></div>
+      </div>
+    </section>
+
+    <section class="editorial-panel ed-resource-panel" id="personnel-ed-sources">
+      <div class="section-kicker">職務専念義務・働き方改革資料</div>
+      <h2>地方公務員法第35条だけでなく、教員の職務と働き方改革資料を合わせて読む</h2>
+      <p>教職員のPTA事務関与を確認するときは、地方公務員法第35条の条文だけでなく、教員の標準的な職務、学校における働き方改革、学校徴収金や外部対応の整理を合わせて見る必要があります。PTAとの連絡調整はあり得ますが、会費徴収、未納確認、会計処理、名簿作成、役員選出、広報編集を学校職務として扱うには、別途根拠説明が必要です。</p>
+      <div class="ed-resource-list">
+        <div><strong>地方公務員法第35条</strong><span>勤務時間と職務上の注意力を、地方公共団体の職務に用いるという基本線。</span></div>
+        <div><strong>教員の職務資料</strong><span>学校が担う業務と、外部団体の内部事務を分けるための補助線。</span></div>
+        <div><strong>働き方改革資料</strong><span>学校徴収金や周辺業務を教師任せにしない方向性を確認する資料。</span></div>
+      </div>
+      <div class="ed-link-buttons"><a href="https://ptaorg.github.io/ed/#sources" target="_blank" rel="noopener">職務専念義務・働き方改革資料を確認する</a></div>
+    </section>
+
+
+    <section class="pg-section">
+      <p>「担任の先生がPTA封筒を配ってくれる」「事務室で会費の集計をしてもらっている」——多くの学校でこれが当たり前になっていますが、これらは<strong>地方公務員法第35条（職務専念義務）との関係で、職務上の根拠を確認すべき行為</strong>です。悪意があったわけではなく、長年の慣行として定着してきたものですが、制度上の線引きは必要です。このページでは、何が問題なのか・何はよくて何はダメなのか・どう改善するかを整理します。</p>
+    </section>
+
+    <!-- 時計インフォグラフィック -->
+    <section class="pg-section">
+      <h2>図解：職務専念義務の壁</h2>
+      <p>税金で支払われる勤務時間を、任意団体（PTA）の事務に充てることが問題の核心です。</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:28px 0">
+
+        <!-- 時計SVG -->
+        <svg width="100%" viewBox="0 0 300 300" role="img">
+          <title>勤務時間のうちPTA業務に充てられている部分を示す時計グラフ</title>
+          <circle cx="150" cy="150" r="130" fill="#f3f4f6" stroke="#9ca3af" stroke-width="3"/>
+          <path d="M150 150 L150 22 A128 128 0 1 1 86 258 Z" fill="#e5e7eb"/>
+          <path d="M150 150 L86 258 A128 128 0 0 1 150 22 Z" fill="#fca5a5"/>
+          <line x1="108" y1="228" x2="138" y2="258" stroke="#b91c1c" stroke-width="6" stroke-linecap="round"/>
+          <line x1="138" y1="228" x2="108" y2="258" stroke="#b91c1c" stroke-width="6" stroke-linecap="round"/>
+          <line x1="150" y1="150" x2="150" y2="60" stroke="#374151" stroke-width="4" stroke-linecap="round"/>
+          <line x1="150" y1="150" x2="210" y2="150" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="150" cy="150" r="8" fill="#374151"/>
+          <line x1="150" y1="22" x2="150" y2="38" stroke="#9ca3af" stroke-width="2"/>
+          <line x1="278" y1="150" x2="262" y2="150" stroke="#9ca3af" stroke-width="2"/>
+          <line x1="150" y1="278" x2="150" y2="262" stroke="#9ca3af" stroke-width="2"/>
+          <line x1="22" y1="150" x2="38" y2="150" stroke="#9ca3af" stroke-width="2"/>
+          <text x="150" y="180" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="13" font-weight="700" fill="#374151">勤務時間</text>
+          <text x="150" y="196" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="11" fill="#6b7280">（税金で支払われる時間）</text>
+          <text x="100" y="236" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="12" font-weight="800" fill="#b91c1c">PTA集金・</text>
+          <text x="100" y="252" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="12" font-weight="800" fill="#b91c1c">名簿管理</text>
+        </svg>
+
+        <!-- 条文ボックス -->
+        <div>
+          <div style="background:var(--navy);border-radius:var(--radius);padding:22px;margin-bottom:16px">
+            <div style="font-size:.74rem;font-weight:900;letter-spacing:.08em;color:var(--gold-lt);margin-bottom:10px">地方公務員法 第35条（職務専念義務）</div>
+            <p style="color:rgba(255,255,255,.9);font-size:.92rem;line-height:1.85;margin:0">職員は、法律又は条例に特別の定がある場合を除く外、その勤務時間及び職務上の注意力のすべてをその職責遂行のために用い、当該地方公共団体がなすべき責を有する職務にのみ従事しなければならない。</p>
+          </div>
+          <div class="alert alert-danger">
+            <div class="alert-icon">⚠️</div>
+            <p>PTAは学校とは別の任意団体です。教職員が勤務時間中にPTA内部事務を担う運用は、職務専念義務や公私分離の観点から確認が必要な<strong>便宜供与</strong>の問題になります。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 行政実例 -->
+    <section class="pg-section">
+      <h2>行政実例：「PTA事務は職務に含まれない」</h2>
+      <p>この点は、法令の解釈として1960年代から一貫して確認されています。</p>
+
+      <div class="law-quote">
+        <div class="law-quote-label">行政実例（昭和39年1月20日 自治丁公発第3号・熊本県教育長あて）</div>
+        PTA等の任意団体の事務は、教職員の職務上の事務には含まれない。
+      </div>
+
+      <p>この行政実例は、現在の運用を点検する際にも重要な手掛かりになります。当委員会が整理している教育委員会回答の中にも、<strong>PTA内部事務と学校職務を分けて考える趣旨の回答</strong>があります。「昔からやっていた」「暗黙の了解だった」は法的な正当化根拠にはなりません。</p>
+
+      <div class="alert alert-warning">
+        <div class="alert-icon">📋</div>
+        <div>
+          <p><strong>服務免除制度との関係</strong></p>
+          <p>地方公務員法第35条ただし書き・各自治体の条例に基づき、一定の場合には「職務に専念する義務の特例（服務免除）」が認められることがあります。ただし、この制度を使うためには条例・規則の根拠が必要で、PTAへの日常的な関与を包括的に免除することはできません。「服務免除を取れば問題ない」というわけでなく、その範囲と手続きが厳格に問われます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 渉外業務の範囲 -->
+    <section class="pg-section">
+      <h2>何はOKで、何はNGか</h2>
+      <p>「一切の関与禁止」ではありません。<strong>渉外業務（学校↔PTA間の連絡調整窓口）</strong>を基本的な接点とし、PTA内部事務の代行と分けて確認します。</p>
+      <div class="scope-grid">
+        <div class="scope-ok">
+          <div class="scope-label">✅ 渉外業務として許容される範囲</div>
+          <div class="scope-item"><span class="ok-dot">✓</span>PTAからの行事協力依頼の受付・校長への取次ぎ</div>
+          <div class="scope-item"><span class="ok-dot">✓</span>学校行事日程など公開情報のPTAへの提供</div>
+          <div class="scope-item"><span class="ok-dot">✓</span>PTAと校長の定期連絡会議への校長参加</div>
+          <div class="scope-item"><span class="ok-dot">✓</span>PTA主催行事への校長の来賓参加</div>
+          <div class="scope-item"><span class="ok-dot">✓</span>学校施設使用許可の窓口対応</div>
+        </div>
+        <div class="scope-ng">
+          <div class="scope-label">❌ 渉外業務を超える・問題ある関与</div>
+          <div class="scope-item"><span class="ng-dot">✗</span>担任がPTA封筒・配布物を配布・回収する</div>
+          <div class="scope-item"><span class="ng-dot">✗</span>事務職員がPTA会費の集計・処理を行う</div>
+          <div class="scope-item"><span class="ng-dot">✗</span>学校名簿をPTAに提供する（個人情報保護法69条にも抵触）</div>
+          <div class="scope-item"><span class="ng-dot">✗</span>学校印刷機でPTA文書を印刷する</div>
+          <div class="scope-item"><span class="ng-dot">✗</span>会費引落しを学校名義口座で行う</div>
+          <div class="scope-item"><span class="ng-dot">✗</span>教職員がPTA役員・会計担当として運営を担う</div>
+          <div class="scope-item"><span class="ng-dot">✗</span>勤務時間中にPTA関係の電話・メール対応をする</div>
+        </div>
+      </div>
+
+      <h3>教職員がPTA役員になること</h3>
+      <p>「校長がPTA会長」「教頭がPTA副会長」という状態は各地で見られますが、これは複数の問題をはらんでいます。</p>
+      <ul style="margin:12px 0 12px 20px;font-size:.95rem;line-height:1.9;color:var(--text)">
+        <li>勤務時間中の役員活動が職務専念義務違反になる（地公法35条）</li>
+        <li>学校の公的権限とPTAの私的意思決定が混同される（社会教育法上の独立性の毀損）</li>
+        <li>「校長に反対できない」という心理的圧力が保護者に生じ、任意加入の実質を損なう</li>
+        <li>管理職が会計を担うと公費・私費の区分が一層曖昧になる</li>
+      </ul>
+      <p>社会教育法第12条の精神（行政からの自主性）からも、教職員がPTAの意思決定機関の中核を担うことは望ましくありません。</p>
+    </section>
+
+    <!-- 是正手順 -->
+    <section class="pg-section">
+      <h2>是正の進め方：段階的に切り離す</h2>
+      <p>「今すぐすべてをやめる」と機能不全が起きます。現状把握から始め、段階的に切り離すことが現実的です。</p>
+
+      <div style="display:flex;flex-direction:column;gap:0;margin:24px 0">
+        <div style="display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">1</div>
+          <div>
+            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">現状の棚卸し</p>
+            <p style="font-size:.92rem;margin:0">教職員が行っているPTA関連作業をリストアップします（配布物・集金補助・印刷・電話対応など）。多くの場合、誰も「全体像」を把握していないまま慣習が続いています。</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">2</div>
+          <div>
+            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">PTA側で代替できる業務を特定する</p>
+            <p style="font-size:.92rem;margin:0">会費管理にはクラウド会計ツール、配布物配付にはPTA役員による配付体制など、学校に依存しない方法を検討します。「不可能」なものはほとんどなく、ほぼすべてPTA側で担えます。</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">3</div>
+          <div>
+            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">校長・教育委員会と移行計画を共有する</p>
+            <p style="font-size:.92rem;margin:0">「法令上の問題があるため、1年かけて切り離す」と校長に伝えます。教育委員会も同様の問題認識を持っているケースが多く、指針を共有することで協力を得やすくなります。</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:16px;padding:20px 0">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.95rem;flex-shrink:0">4</div>
+          <div>
+            <p style="font-weight:800;color:var(--navy);margin-bottom:4px">切り離し後の「渉外業務のみ」体制を書面化する</p>
+            <p style="font-size:.92rem;margin:0">学校とPTAの間で「渉外窓口覚書」を作成し、接点の範囲を明示します。これが適正化の完成形です。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 全国の教育委員会回答 -->
+    <section class="pg-section">
+      <h2>全国教育委員会の回答に見る共通認識</h2>
+      <p>掲載している教育委員会回答には、<strong>PTA内部事務への教職員関与について、職務専念義務や服務上の整理を要する</strong>という趣旨の回答が含まれています。件数を引用する場合は、回答本文と分類タグを分けて確認してください。</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0">
+        <div class="alert alert-success">
+          <div class="alert-icon">📌</div>
+          <div>
+            <p style="font-weight:800;margin-bottom:4px">適切な回答例の傾向</p>
+            <p style="font-size:.88rem;margin:0">「PTA活動は教職員の職務ではないため、勤務時間中の従事は適切でない」「会費集金・名簿管理は学校の所掌外」とする回答が複数の教育委員会から確認されています。</p>
+          </div>
+        </div>
+        <div class="alert alert-warning">
+          <div class="alert-icon">⚠️</div>
+          <div>
+            <p style="font-weight:800;margin-bottom:4px">曖昧な回答例の傾向</p>
+            <p style="font-size:.88rem;margin:0">「各学校の判断に委ねている」「慣行的に行われているが問題とは認識していない」という回答もあり、教育委員会自体の認識が整理されていないケースも見られます。</p>
+          </div>
+        </div>
+      </div>
+
+      <p>回答全文は<a href="board-responses.html" style="color:var(--navy-3);text-decoration:underline">教育委員会の回答ページ</a>で自治体別に確認できます。</p>
+    </section>
+
+    <!-- 関連リンク -->
+
+    <section class="pg-section" id="source-candidates">
+      <h2>教職員関与・職専免に関する追加資料候補</h2>
+      <p>教職員がPTA事務に関与する問題は、「慣行」ではなく、職務専念義務、兼職兼業、学校会計処理、学校関係団体との関係として整理する必要があります。以下は、文部科学省通知・調査結果、自治体の職専免資料、参考研究を含む確認中資料候補です。</p>
+      <p>公式通知と参考研究は性質が異なります。正式掲載時には、一次資料・自治体資料・研究資料を分けて表示します。</p>
+      <ul style="line-height:2;margin-left:1.2em">
+<li><strong>文部科学省 通知 学校関係団体が実施する事業に係る兼職兼業等の取扱い及び学校における会計処理の適正化についての留意事項.pdf</strong>：PTA等学校関係団体、兼職兼業、学校会計処理、教職員関与（<a href="https://drive.google.com/file/d/1Oxl7OVyEMReYY97LF2OrV_11waFWdUQE" target="_blank" rel="noopener">Google Drive候補</a>／Drive上のPDF候補を確認。）</li>
+<li><strong>PTA等学校関係団体が実施する事業に係る兼職兼業等の取扱い及び学校における会計処理の適正化についての点検・調査結果について：文部科学省.pdf</strong>：学校関係団体・PTA関連の兼職兼業、会計処理、点検調査（<a href="https://drive.google.com/file/d/15lCVnKOwb33izYPK9JqoBr2uE70Pur3S" target="_blank" rel="noopener">Google Drive候補</a>／Drive上のPDF候補を確認。）</li>
+<li><strong>横浜市 職専免.pdf</strong>：横浜市の職務専念義務免除関係資料の候補（<a href="https://drive.google.com/file/d/1P6mOXmP3Znb7PikvB5Xio6n9qiCr1Pit" target="_blank" rel="noopener">Google Drive候補</a>／重複候補あり。内容確認が必要。）</li>
+<li><strong>teacher-duty-positioning.pdf</strong>：教員の職務・職専免・学校外団体関与の補助資料（<a href="https://drive.google.com/file/d/1MPq9_Mn88ipbrFdXUcg0ZTC1GyjAeaef" target="_blank" rel="noopener">Google Drive候補</a>／Drive上のPDF候補を確認。）</li>
+<li><strong>公私協働時代における職務専念義務免除のあり方　曽和俊文.pdf</strong>：職専免制度の理論的補助資料。一次資料ではなく参考研究（<a href="https://drive.google.com/file/d/1DwhDDrxsFZuwCy8arJVphxiF7aqc64Pd" target="_blank" rel="noopener">Google Drive候補</a>／参考資料。一次資料とは分けて扱う。）</li>
+      </ul>
+      <p><a href="/administrative-materials.html#source-candidates">追加資料候補一覧を見る</a></p>
+    </section>
+
+
+    <section class="editorial-panel source-lens-panel" id="personnel-inquiry-questions">
+      <h2>兼職兼業・職専免資料を、教育委員会への照会項目に変える</h2>
+      <p>兼職兼業、職務専念義務免除、学校関係団体の会計処理に関する資料は、抽象的な制度説明で終わらせず、学校現場の実務を確認する質問に変換できます。教育委員会に照会する際は、「PTAに協力してよいか」ではなく、学校職員がどの身分・どの時間・どの根拠で関与しているのかを問う形にします。</p>
+      <div class="source-lens-grid" aria-label="教職員関与の照会項目">
+        <div class="source-lens-item"><strong>勤務時間内か</strong><p>PTA会計、集金、名簿、印刷、メール配信、総会資料作成が勤務時間内に行われているか。</p></div>
+        <div class="source-lens-item"><strong>職務命令か</strong><p>校務として命じているのか、慣行的に任せているのか、個人の任意協力なのか。</p></div>
+        <div class="source-lens-item"><strong>職専免か</strong><p>職務専念義務免除を使っているなら、根拠規則、対象者、時間、用務、承認記録があるか。</p></div>
+        <div class="source-lens-item"><strong>兼職兼業か</strong><p>PTA役員・会計担当・事務担当としての地位を兼ねる場合、兼職兼業の手続を整理しているか。</p></div>
+        <div class="source-lens-item"><strong>会計処理か</strong><p>学校事務室がPTA通帳、現金、振替データ、領収書、決算資料を扱っていないか。</p></div>
+        <div class="source-lens-item"><strong>移行計画か</strong><p>教職員依存がある場合、PTA側へ戻す期限、担当、手順を定めているか。</p></div>
+      </div>
+    </section>
+
+
+    <section class="pg-section">
+      <h2>関連導線</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a href="guide-board.html" class="btn-navy">教育委員会・学校向けガイド</a>
+        <a href="fee-collection.html" class="btn-soft">会費徴収の問題へ</a>
+        <a href="privacy.html" class="btn-soft">個人情報提供の問題へ</a>
+        <a href="audit/index.html" class="btn-soft">運営チェックアプリで確認</a>
+        <a href="board-responses.html" class="btn-soft">全国教委の回答を見る</a>
+      </div>
+    </section>
+
+    <section style="background:#fff;padding:64px 0">
+      <div class="wrap wrap-narrow">
+        <div class="section-kicker">よくある疑問</div>
+        <h2 class="section-title">よくある質問</h2>
+        <div class="faq-list" style="display:flex;flex-direction:column;gap:10px;margin-top:28px">
+
+          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">担任の先生がPTA封筒の仕分けをしています。問題ですか？</div>
+              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+            </div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">勤務時間中の従事であれば、地方公務員法35条の職務専念義務との関係で確認が必要です。「ちょっとした手伝い」であっても、恒常的・組織的に行われれば問題状況になります。担任本人が認識しないうちに、学校として説明しにくい運用に置かれている可能性があります。</p></div>
+          </div>
+
+          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">「服務免除を取れば、勤務時間中にPTA活動をしてもいい」と言われました。本当ですか？</div>
+              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+            </div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">服務免除の制度は存在しますが、条例・規則の根拠と個別の手続きが必要です。「校長の口頭承認」だけでは不十分で、PTAへの日常的な関与を包括的に免除することはできません。また服務免除が認められたとしても、公費（給与）でPTAを支援することは、行政の中立性・社会教育法上の問題として残ります。</p></div>
+          </div>
+
+          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">渉外業務として「校長がPTA総会に出席する」のは問題ありませんか？</div>
+              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+            </div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">来賓として出席すること自体は渉外業務の範囲と考えられます。ただし「議決権を持つ役員として出席する」「予算・人事を実質的に決める」等の関与は、PTAの自律性を損ない社会教育法上の問題が生じます。「校長が事実上PTAを運営している」状態は避けてください。</p></div>
+          </div>
+
+          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">事務職員がPTA会費の集計を補助しています。どう対応すればいいですか？</div>
+              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+            </div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">勤務時間中の補助は職務専念義務違反の疑いがあります。PTAが独自に会計を担える体制（会計担当役員＋クラウド会計ツール等）を整備し、事務職員への依頼を段階的に終了することが適正化の手順です。移行期間が必要な場合は、校長に計画を共有しながら進めてください。</p></div>
+          </div>
+
+          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">「PTAのためにやっているんだから感謝してほしい」と教職員に言われます。どう返すべきですか？</div>
+              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+            </div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">善意でやってくださっていることは尊重すべきです。ただし法制度上の問題は感謝・不満とは別の次元です。「先生を守るためにも、PTA事務から切り離したい」と伝えることで、対立ではなく改善の方向に話を向けられます。職務専念義務違反は教職員本人のリスクでもあります。</p></div>
+          </div>
+
+          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">教育委員会に改善を求めることはできますか？</div>
+              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+            </div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">できます。地方教育行政の組織及び運営に関する法律第23条は、教育委員会が学校を監督する権限と責任を持つことを定めています。教職員の職務専念義務の遵守は教育委員会の監督事項であり、問題がある場合は改善指導を求めることが正当な手段です。照会状のテンプレートは当委員会のガイドで確認できます。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div>
+          <h3>PTA適正化推進委員会</h3>
+          <a href="https://yokomusubi.city.yokohama.lg.jp/organizations/detail/f69c7ad2-cf21-4dfa-87bb-9c891874eb6b/" target="_blank" rel="noopener noreferrer" class="yokomusubi-card">
+            <img src="assets/yokomusubi.png" alt="よこむすび">
+            <span class="yokomusubi-tagline">磯子区「よこむすび」掲載団体</span>
+            <span class="yokomusubi-meta">登録番号：磯子12406</span>
+            <span class="yokomusubi-meta">分類番号：12-4（市民活動・社会教育推進）</span>
+          </a>
+          <div class="footer-contact">
+            <p>〒235-0021<br>神奈川県横浜市磯子区岡村8-17-5-301</p>
+            <p><strong>070-9012-7772</strong></p>
+            <p><a href="mailto:info@ptaorg.com">info@ptaorg.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h4>公式発信</h4>
+          <p class="footer-sns-sub">最新資料・論考・動画はこちら</p>
+          <div class="footer-sns-cards">
+            <a href="https://x.com/jjjqqqxxx0852" target="_blank" rel="noopener" class="fsns-card fsns-x">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.836L2.25 2.25H8.08l4.263 5.636L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+              <div>
+                <div class="fsns-name">X</div>
+                <div class="fsns-desc">速報・資料更新</div>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@PTA%E9%81%A9%E6%AD%A3%E5%8C%96%E6%8E%A8%E9%80%B2%E5%A7%94%E5%93%A1%E4%BC%9A" target="_blank" rel="noopener" class="fsns-card fsns-yt">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <div>
+                <div class="fsns-name">YouTube</div>
+                <div class="fsns-desc">動画で解説</div>
+              </div>
+            </a>
+            <a href="https://note.com/hiroshisatoh" target="_blank" rel="noopener" class="fsns-card fsns-note">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H4zm2 3h10v2H6V8zm0 4h10v2H6v-2zm0 4h6v2H6v-2z"/></svg>
+              <div>
+                <div class="fsns-name">note</div>
+                <div class="fsns-desc">論考・研究ノート</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>立場別</h4>
+          <ul>
+            <li><a href="guide-parent.html">保護者</a></li>
+            <li><a href="guide-pta.html">PTA役員</a></li>
+            <li><a href="guide-board.html">教育委員会・学校</a></li>
+            <li><a href="guide-research.html">研究者・記者</a></li>
+            <li><a href="guide-board.html">教育委員会向け指針</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>論点</h4>
+          <ul>
+            <li><a href="membership.html">入会手続</a></li>
+            <li><a href="privacy.html">個人情報</a></li>
+            <li><a href="fee-collection.html">会費徴収</a></li>
+            <li><a href="personnel.html">教職員関与</a></li>
+            <li><a href="facilities.html">施設利用</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>資料・支援</h4>
+          <ul>
+            <li><a href="https://ptaorg.github.io/donate/">応援・寄付</a></li>
+            <li><a href="board-responses.html">教育委員会の回答</a></li>
+            <li><a href="national-archive.html">全国資料館</a></li>
+            <li><a href="journal.html">論考・調査報告</a></li>
+            <li><a href="report.html">総合分析レポート</a></li>
+            <li><a href="audit/index.html">運営チェックアプリ</a></li>
+            <li><a href="law-map.html">法制度マップ</a></li>
+            <li><a href="guideline.html">適正化ガイドライン</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  <div class="footer-support">
+    <div>
+      <strong>調査・資料公開の継続を応援してください</strong>
+      <p>いただいたご支援は、公文書開示、資料整理、Web公開、自治体・学校への働きかけに活用します。</p>
+    </div>
+    <a href="https://ptaorg.github.io/donate/">応援ページへ</a>
+  </div>
+    <p class="copyright">© PTA適正化推進委員会</p>
+  </footer>
+  <script src="js/site.js"></script>
+</body></html>

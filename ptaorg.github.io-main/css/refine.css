@@ -1,0 +1,34 @@
+/* =========================================================
+   refine.css — 軽量化・余白・統一レイヤー
+   style.css の後に読み込み。レイアウトには触れず、
+   文字の重さ／余白／影／配色の一貫性のみを調整。
+   ========================================================= */
+
+/* 1) 見出しの黒さを抑える（Noto Serif JP 900 → 700 で上品・軽快に） */
+h2, h3,
+.section-title, .fieldcase-title, .proper-title,
+.editorial-brief-body h2, .board-guide-section h2, .officer-core-section h2{
+  font-weight: 700 !important;
+  letter-spacing: .005em;
+}
+
+/* 2) キッカー（小ラベル）の重さも軽減 */
+.section-kicker{ font-weight: 700 !important; letter-spacing: .08em; }
+
+/* 3) 本文中の太字を一段軽く（読みの圧を下げる） */
+.chapter-content strong, .officer-prose strong, .plain-prose-block strong,
+.section-lead strong, p strong{ font-weight: 600; }
+
+/* 4) 段落と見出し周りに余白を足して呼吸感を出す */
+.section-title{ margin-bottom: 16px; }
+.chapter-content p, .officer-prose p, .plain-prose-block p{ margin: 0 0 1em; }
+.chapter-content p:last-child, .officer-prose p:last-child,
+.plain-prose-block p:last-child{ margin-bottom: 0; }
+.section-lead{ margin-bottom: 18px; }
+
+/* 5) 影を軽くして全体を軽やかに（影は配置に影響しない） */
+:root{
+  --shadow-sm: 0 3px 12px rgba(5,17,31,.06);
+  --shadow-md: 0 8px 26px rgba(5,17,31,.09);
+  --shadow-lg: 0 18px 46px rgba(5,17,31,.13);
+}

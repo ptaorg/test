@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="canonical" href="https://ptaorg.com/guideline.html">
+  <meta property="og:title" content="PTA運営適正化ガイドライン | PTA適正化推進委員会">
+  <meta property="og:description" content="入退会手続き・個人情報・会費徴収の適正化。書式テンプレート付き実務ガイドライン。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ptaorg.com/guideline.html">
+  <meta property="og:image" content="https://ptaorg.com/assets/og-image-popc-en.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>PTA運営適正化ガイドライン | PTA適正化推進委員会</title>
+  <meta name="description" content="PTA運営を法令に則って適正化するための実務ガイドライン。入退会・個人情報・会費・書式テンプレートを網羅。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== ガイドライン共通 ===== */
+    .gl-wrap { width: min(calc(100% - 40px), 960px); margin-inline: auto; padding: 72px 0 80px; }
+
+    /* ===== 問題パターンカード ===== */
+    .gl-problem-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 36px; }
+    .gl-problem-card {
+      background: #fff5f5; border: 1px solid #fca5a5; border-left: 4px solid #b91c1c;
+      border-radius: var(--radius); padding: 20px 18px;
+    }
+    .gl-problem-icon { font-size: 1.6rem; margin-bottom: 10px; }
+    .gl-problem-title { font-size: .95rem; font-weight: 900; color: #b91c1c; margin-bottom: 8px; }
+    .gl-problem-desc { font-size: .86rem; color: var(--text); line-height: 1.7; }
+
+    /* ===== 基本原則カード ===== */
+    .gl-principle-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 36px; }
+    .gl-principle-card {
+      background: linear-gradient(145deg, var(--navy) 0%, #1a3a52 100%);
+      border-radius: var(--radius); padding: 28px 22px; color: #fff;
+    }
+    .gl-principle-num {
+      font-size: .68rem; font-weight: 900; letter-spacing: .1em;
+      color: var(--gold); text-transform: uppercase; margin-bottom: 14px;
+    }
+    .gl-principle-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+    .gl-principle-title { font-family: 'Noto Serif JP', serif; font-size: 1.05rem; font-weight: 900; color: #fff; margin-bottom: 10px; line-height: 1.4; }
+    .gl-principle-desc { font-size: .87rem; color: rgba(255,255,255,.82); line-height: 1.8; }
+    .gl-principle-law { margin-top: 12px; font-size: .76rem; color: var(--gold-lt, #fcd34d); font-weight: 700; }
+
+    /* ===== タブ ===== */
+    .gl-tab-nav {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;
+      border-bottom: 2px solid var(--line); padding-bottom: 0;
+    }
+    .gl-tab-btn {
+      padding: 10px 18px; font-size: .87rem; font-weight: 800;
+      color: var(--text-soft); background: transparent; border: none;
+      border-bottom: 3px solid transparent; margin-bottom: -2px;
+      cursor: pointer; transition: color .2s, border-color .2s; border-radius: 0;
+      white-space: nowrap;
+    }
+    .gl-tab-btn:hover { color: var(--navy); }
+    .gl-tab-btn.active { color: var(--navy); border-bottom-color: var(--gold); }
+    .gl-tab-panel { display: none; }
+    .gl-tab-panel.active { display: block; }
+
+    /* ===== 実務ガイドライン内カード ===== */
+    .gl-box {
+      background: #f8fafc; border: 1px solid var(--line); border-left: 4px solid var(--gold);
+      border-radius: var(--radius); padding: 22px 24px; margin-bottom: 20px;
+    }
+    .gl-box h4 { font-size: 1rem; font-weight: 900; color: var(--navy); margin-bottom: 10px; }
+    .gl-box p, .gl-box li { font-size: .92rem; color: var(--text); line-height: 1.8; }
+    .gl-box ul, .gl-box ol { padding-left: 18px; margin: 8px 0; }
+    .gl-ok { color: #15803d; font-weight: 900; }
+    .gl-ng { color: #b91c1c; font-weight: 900; }
+    .gl-law-cite {
+      display: inline-block; font-size: .72rem; font-weight: 700;
+      background: rgba(26,58,82,.08); color: var(--navy); padding: 2px 8px;
+      border-radius: 4px; margin-left: 6px; vertical-align: middle;
+    }
+    .gl-notice {
+      background: rgba(212,175,55,.1); border: 1px solid var(--gold);
+      border-radius: var(--radius); padding: 14px 18px; margin-top: 16px;
+      font-size: .88rem; color: var(--navy); line-height: 1.7;
+    }
+    .gl-ng-box {
+      background: #fff5f5; border: 1px solid #fca5a5; border-radius: var(--radius);
+      padding: 14px 18px; margin-top: 12px; font-size: .88rem; color: #7f1d1d; line-height: 1.7;
+    }
+
+    /* ===== 要請リスト ===== */
+    .gl-request-list { list-style: none; padding: 0; margin-top: 28px; display: flex; flex-direction: column; gap: 16px; }
+    .gl-request-item {
+      display: flex; gap: 18px; align-items: flex-start;
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px;
+    }
+    .gl-request-num {
+      flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%;
+      background: var(--navy); color: var(--gold); display: grid; place-items: center;
+      font-size: .9rem; font-weight: 900;
+    }
+    .gl-request-body h4 { font-size: .97rem; font-weight: 900; color: var(--navy); margin-bottom: 6px; }
+    .gl-request-body p { font-size: .88rem; color: var(--text); line-height: 1.75; margin: 0; }
+
+    /* ===== テンプレートアコーディオン ===== */
+    .gl-tpl-item { border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+    .gl-tpl-btn {
+      width: 100%; display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 22px; background: #fff; border: none; cursor: pointer;
+      font-size: .95rem; font-weight: 800; color: var(--navy); text-align: left; gap: 12px;
+    }
+    .gl-tpl-btn:hover { background: var(--bg); }
+    .gl-tpl-chevron { width: 20px; height: 20px; flex-shrink: 0; transition: transform .25s; fill: none; stroke: var(--text-soft); stroke-width: 2; }
+    .gl-tpl-item.open .gl-tpl-chevron { transform: rotate(180deg); }
+    .gl-tpl-body { display: none; padding: 0 22px 22px; }
+    .gl-tpl-item.open .gl-tpl-body { display: block; }
+    .gl-tpl-pre {
+      background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+      padding: 18px 20px; font-family: monospace; font-size: .85rem; line-height: 1.8;
+      color: var(--text); white-space: pre-wrap; word-break: break-word; margin-bottom: 10px;
+    }
+    .gl-copy-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 16px; border-radius: 999px; border: 1.5px solid var(--navy);
+      background: transparent; color: var(--navy); font-size: .82rem; font-weight: 800;
+      cursor: pointer; transition: background .2s, color .2s;
+    }
+    .gl-copy-btn:hover { background: var(--navy); color: #fff; }
+    .gl-copy-btn.copied { background: #15803d; border-color: #15803d; color: #fff; }
+
+    @media(max-width: 800px) {
+      .gl-problem-grid { grid-template-columns: 1fr; }
+      .gl-principle-grid { grid-template-columns: 1fr; }
+      .gl-tab-btn { font-size: .82rem; padding: 9px 12px; }
+    }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0D18ZSSLMH');
+</script>
+<link href="css/refine.css?v=refine1" rel="stylesheet"/>
+</head>
+<body>
+  
+<header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/popc-logo.png" alt="PTA適正化推進委員会">
+        <span>PTA適正化推進委員会</span>
+      </a>
+      <div class="header-search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" class="search-input" placeholder="キーワードで検索…" aria-label="サイト内検索">
+        <div class="search-results-dropdown"></div>
+      </div>
+      <nav class="desktop-nav" aria-label="主要ナビゲーション">
+        <a href="index.html" class="nav-link">トップ</a>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">立場別</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>入口</h4>
+              <ul>
+                <li><a href="guide-parent.html">保護者の方へ</a></li>
+                <li><a href="guide-pta.html">PTA役員の方へ</a></li>
+                <li><a href="guide-board.html">教育委員会・学校へ</a></li>
+                <li><a href="guide-research.html">研究者・記者の方へ</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>ツール</h4>
+              <ul>
+                <li><a href="audit/index.html">運営チェックアプリ</a></li>
+                <li><a href="guideline.html" style="font-weight:900;color:var(--gold)">適正化ガイドライン ★</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">論点</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>主要論点</h4>
+              <ul>
+                <li><a href="membership.html">入会手続・オプトアウト</a></li>
+                <li><a href="privacy.html">個人情報提供</a></li>
+                <li><a href="fee-collection.html">会費徴収</a></li>
+                <li><a href="personnel.html">教職員関与</a></li>
+                <li><a href="facilities.html">施設利用</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>制度整理</h4>
+              <ul>
+                <li><a href="law-map.html">法制度マップ</a></li>
+                <li><a href="cases.html">判例整理</a></li>
+                <li><a href="timeline.html">PTA制度史</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">資料</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>資料</h4>
+              <ul>
+                <li><a href="board-responses.html">教育委員会の回答</a></li>
+                <li><a href="national-archive.html">全国資料館</a></li>
+                <li><a href="journal.html">論考・調査報告</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>分析</h4>
+              <ul>
+                <li><a href="report.html">総合分析レポート</a></li>
+                <li><a href="administrative-materials.html">行政資料整理</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="https://ptaorg.github.io/donate/" class="nav-link support-nav-link">応援</a>
+        <a href="audit/index.html" class="btn-gold">運営チェック</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileOverlay">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-overlay" id="mobileOverlay">
+    <a href="index.html" class="mobile-link"><span>Home</span>トップページ</a>
+    <a href="guide-parent.html" class="mobile-link"><span>Guide</span>保護者の方へ</a>
+    <a href="guide-pta.html" class="mobile-link"><span>Guide</span>PTA役員の方へ</a>
+    <a href="guide-board.html" class="mobile-link"><span>Guide</span>教育委員会・学校へ</a>
+    <a href="board-responses.html" class="mobile-link"><span>Data</span>教育委員会の回答</a>
+    <a href="timeline.html" class="mobile-link"><span>History</span>PTA制度史</a>
+    <a href="guideline.html" class="mobile-link"><span>GL</span>適正化ガイドライン</a>
+    <a href="national-archive.html" class="mobile-link"><span>Archive</span>全国資料館</a>
+    <a href="journal.html" class="mobile-link"><span>Journal</span>論考・調査報告</a>
+    <a href="audit/index.html" class="mobile-link"><span>Check</span>運営チェックアプリ</a>
+    <a href="https://ptaorg.github.io/donate/" class="mobile-link support-mobile-link"><span>Support</span>応援・寄付</a>
+  <div class="close-overlay" id="closeOverlay">CLOSE ×</div>
+  </div>
+
+  <main>
+
+    <div class="page-banner" style="background-image:url('assets/slides/1.jpg')">
+      <div class="page-banner-content">
+        <div class="page-banner-kicker">Operational Guideline · 実務ガイドライン</div>
+        <h1 class="page-banner-title">PTA運営適正化ガイドライン</h1>
+      </div>
+    </div>
+
+    <!-- ======================================================
+         はじめに
+         ====================================================== -->
+    <section style="background:#fff">
+      <div class="gl-wrap">
+        <div class="section-kicker">はじめに</div>
+        <h2 class="section-title" style="margin-bottom:16px">PTAの法的性質と現状の問題</h2>
+        <p style="font-size:1.02rem;line-height:1.9;color:var(--text);margin-bottom:32px">
+          PTAは日本国憲法第21条が保障する<strong>「結社の自由」に基づく任意団体</strong>として整理されます。加入・退会は保護者の意思確認を前提に扱う必要があり、学校への入学だけを理由に会員扱いする運用は、入会意思、個人情報、会費徴収の各面で根拠説明が必要になります。<br>
+          当委員会が収集している教育委員会回答、開示資料、学校配布文書から確認できる主な点検パターンは以下の3つです。
+        </p>
+        <div class="gl-problem-grid">
+          <div class="gl-problem-card">
+            <div class="gl-problem-icon">🚫</div>
+            <div class="gl-problem-title">自動加入・みなし加入</div>
+            <div class="gl-problem-desc">「入学をもって会員とみなす」など、加入意思の確認が不明確な会員扱い。民法上の申込み・承諾を確認できず、契約成立の根拠が問題になります。</div>
+          </div>
+          <div class="gl-problem-card">
+            <div class="gl-problem-icon">💴</div>
+            <div class="gl-problem-title">抱き合わせ徴収</div>
+            <div class="gl-problem-desc">学校徴収金とPTA会費の一体徴収。会費支払いの任意性が失われ、事実上の強制となっている。</div>
+          </div>
+          <div class="gl-problem-card">
+            <div class="gl-problem-icon">🔓</div>
+            <div class="gl-problem-title">個人情報の目的外利用</div>
+            <div class="gl-problem-desc">教育目的で収集した保護者名簿のPTAへの提供。個人情報保護法第69条違反の可能性。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         3つの基本原則
+         ====================================================== -->
+    <section style="background:var(--bg); padding:72px 0; border-top:1px solid var(--line)">
+      <div class="wrap">
+        <div class="section-kicker">Basic Principles</div>
+        <h2 class="section-title" style="margin-bottom:8px">3つの基本原則</h2>
+        <p style="color:var(--text-soft);font-size:.94rem;margin-bottom:0">適正なPTA運営はこの3原則の実現から始まります。</p>
+        <div class="gl-principle-grid">
+          <div class="gl-principle-card">
+            <div class="gl-principle-num">Principle 01</div>
+            <span class="gl-principle-icon">✍️</span>
+            <div class="gl-principle-title">任意加入の原則</div>
+            <div class="gl-principle-desc">入会は、入会申込書等により保護者本人の加入意思を確認して扱う必要があります。退会も規約に沿って申し出られるようにし、「入学をもって会員」とするだけの規約条項に依拠しない運用が必要です。</div>
+            <div class="gl-principle-law">根拠：民法第522条、日本国憲法第21条</div>
+          </div>
+          <div class="gl-principle-card">
+            <div class="gl-principle-num">Principle 02</div>
+            <span class="gl-principle-icon">📋</span>
+            <div class="gl-principle-title">法的説明責任</div>
+            <div class="gl-principle-desc">PTAは保護者に対し、加入が任意であること・退会の自由・会費の使途・個人情報の取扱いを正確かつ透明に説明する義務を負います。情報の非対称性を利用した事実上の強制は許されません。</div>
+            <div class="gl-principle-law">根拠：消費者契約法、個人情報保護法</div>
+          </div>
+          <div class="gl-principle-card">
+            <div class="gl-principle-num">Principle 03</div>
+            <span class="gl-principle-icon">🏫</span>
+            <div class="gl-principle-title">学校・行政との適切な距離</div>
+            <div class="gl-principle-desc">PTAは学校から独立した社会教育関係団体です。学校がPTAの運営を管理・統制することは社会教育法第12条で禁じられています。教職員のPTA業務への関与は地方公務員法第35条に抵触します。</div>
+            <div class="gl-principle-law">根拠：社会教育法第12条、地方公務員法第35条</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         実務ガイドライン（タブ）
+         ====================================================== -->
+    <section style="background:#fff; padding:72px 0; border-top:1px solid var(--line)">
+      <div class="gl-wrap">
+        <div class="section-kicker">Practical Guide</div>
+        <h2 class="section-title" style="margin-bottom:32px">実務ガイドライン</h2>
+
+        <div class="gl-tab-nav" role="tablist">
+          <button class="gl-tab-btn active" role="tab" data-tab="nyukai" onclick="glTab('nyukai',this)">① 入退会手続き</button>
+          <button class="gl-tab-btn" role="tab" data-tab="privacy" onclick="glTab('privacy',this)">② 個人情報取扱</button>
+          <button class="gl-tab-btn" role="tab" data-tab="minashi" onclick="glTab('minashi',this)">③ みなし加入・抱き合わせ</button>
+          <button class="gl-tab-btn" role="tab" data-tab="kaihi" onclick="glTab('kaihi',this)">④ 会費徴収</button>
+          <button class="gl-tab-btn" role="tab" data-tab="kouhei" onclick="glTab('kouhei',this)">⑤ 非会員への対応</button>
+        </div>
+
+        <!-- ① 入退会手続き -->
+        <div id="gl-tab-nyukai" class="gl-tab-panel active">
+          <div class="gl-box">
+            <h4>✅ 入会申込書の必須化</h4>
+            <p>すべての加入は<strong>書面の入会申込書</strong>による本人（保護者）の署名・捺印が必要です。入学時に一括配布し、回収できた分のみを会員として取り扱います。未回収＝非加入として扱うことを明確にしてください。</p>
+            <ul>
+              <li>入会申込書には「任意加入であること」「退会はいつでも可能なこと」「会費の金額と使途」「個人情報の取扱い」を明記する</li>
+              <li>入学式当日に強引に回収することは、事実上の強制となり問題がある</li>
+              <li>加入後に入会申込書のコピーを会員に交付することが望ましい</li>
+            </ul>
+          </div>
+          <div class="gl-box">
+            <h4>✅ 退会届の随時受付</h4>
+            <p>退会届は年度途中でも受け付けてください。<strong>「年度末にしか退会できない」という規約条項は無効</strong>です（民法第680条等）。退会後は該当会員の個人情報を速やかに削除・廃棄します。</p>
+            <ul>
+              <li>退会に際して理由を求めることは原則として不要</li>
+              <li>退会後の残余会費は按分で返金することが原則</li>
+              <li>退会届の控えを退会者に交付する</li>
+            </ul>
+          </div>
+          <div class="gl-ng-box">
+            <strong>❌ 「非加入届」の運用は推奨しない</strong><br>
+            「加入が当然で脱退したい者が届け出る」という仕組みは、加入を既定値とするオプトアウト方式です。これでは任意加入の実質を欠き、問題の根本を解消しません。入会申込書（オプトイン）方式に移行してください。
+          </div>
+        </div>
+
+        <!-- ② 個人情報取扱 -->
+        <div id="gl-tab-privacy" class="gl-tab-panel">
+          <div class="gl-box">
+            <h4>✅ 個人情報はPTA独自に収集する</h4>
+            <p>PTAが必要とする個人情報（住所・電話番号・メールアドレス等）は、<strong>入会申込書によって本人から直接収集</strong>してください。学校が収集した情報の流用は個人情報保護法第69条違反です。</p>
+            <ul>
+              <li>収集する情報は活動に必要な最小限に留める</li>
+              <li>収集目的を明示し、それ以外の目的には使用しない</li>
+              <li>個人情報取扱規則を整備し、会員に周知する</li>
+            </ul>
+          </div>
+          <div class="gl-box">
+            <h4>✅ 学校からの名簿提供を断る</h4>
+            <p>学校が収集した保護者名簿のPTAへの提供は、<strong>保護者の同意がない限り個人情報保護法第69条（目的外提供の禁止）違反</strong>です。学校側から「今まで通り提供する」と言われても、法令遵守の観点から受け取りを断ることが適切です。</p>
+            <div class="gl-notice">💡 小田原市・秦野市・海老名市の教育委員会は「学校から PTAへの名簿提供は不適切」との見解を文書で回答しています（当委員会照会）。</div>
+          </div>
+          <div class="gl-box">
+            <h4>✅ 非会員の情報は収集しない</h4>
+            <p>非加入者の個人情報をPTAが保有する根拠はありません。「会員かどうか確認するため」として非加入者の情報を管理することも認められません。会員リスト＝入会申込書提出者のみとして管理してください。</p>
+          </div>
+        </div>
+
+        <!-- ③ みなし加入・抱き合わせ -->
+        <div id="gl-tab-minashi" class="gl-tab-panel">
+          <div class="gl-ng-box">
+            <strong>❌ 「在学をもって会員とみなす」規約は無効</strong><br>
+            民法第522条では、契約は申込みと承諾によって成立します。入学という事実が「申込み」に相当するとは認められず、この規約は<strong>法的に契約として成立していない</strong>ことを意味します（契約不成立）。
+          </div>
+          <div class="gl-box" style="margin-top:20px">
+            <h4>✅ みなし加入からの移行方法</h4>
+            <p>みなし加入方式を採用している場合の移行手順は以下の通りです：</p>
+            <ol>
+              <li>総会等で規約を改正し「入会申込書による加入」に変更する</li>
+              <li>既存の「会員」全員に入会申込書を再配布し、改めて意思確認を行う</li>
+              <li>入会申込書の未提出者は非会員として扱う</li>
+              <li>会費徴収対象を入会申込書提出者のみに変更する</li>
+            </ol>
+            <div class="gl-notice">💡 横浜市通知とされる資料では、入会届による意思確認方式への整理が示されています。任意加入の原則を制度上担保する先行的な取組として参照できますが、引用する場合は通知本文・添付資料・対象校を確認してください。</div>
+          </div>
+          <div class="gl-ng-box" style="margin-top:16px">
+            <strong>❌ 学校徴収金との抱き合わせ徴収は問題</strong><br>
+            給食費・教材費などの学校徴収金と同じ口座引き落としでPTA会費を徴収すると、保護者はPTA会費の支払いを拒否できないと誤認します。これは消費者契約法上の「不当勧誘」類似の問題を生じさせます。PTA会費は独立した手段で徴収してください。
+          </div>
+        </div>
+
+        <!-- ④ 会費徴収 -->
+        <div id="gl-tab-kaihi" class="gl-tab-panel">
+          <div class="gl-box">
+            <h4>✅ PTA独自の会費徴収を確立する</h4>
+            <p>学校口座での一括徴収を止め、PTA独自の口座振替または現金徴収に切り替えてください。口座振替を利用する場合は、<strong>会員との間で個別に委任状（口座振替委任状）を締結</strong>することが必要です。</p>
+            <ul>
+              <li>委任状は退会時に効力を失うことを明記する</li>
+              <li>学校の口座情報を使用することは目的外利用にあたる可能性がある</li>
+              <li>会計は学校会計と完全に分離する</li>
+            </ul>
+          </div>
+          <div class="gl-box">
+            <h4>✅ 教職員によるPTA会費の代行徴収は廃止する</h4>
+            <p>担任の先生がPTA会費を集金することは、<strong>地方公務員法第35条（職務専念義務）違反の疑い</strong>があります。PTAは独自の役員・保護者が徴収を行うことが原則です。学校の事務室でPTA会費を管理することも同様の問題があります。</p>
+          </div>
+          <div class="gl-ng-box">
+            <strong>❌ 未加入者への会費徴収は不当利得</strong><br>
+            入会申込書を提出していない保護者からPTA会費を徴収することは、法的根拠のない金銭の取得（民法第703条の不当利得）にあたります。徴収済みの場合は返金が必要です。
+          </div>
+        </div>
+
+        <!-- ⑤ 非会員への対応 -->
+        <div id="gl-tab-kouhei" class="gl-tab-panel">
+          <div class="gl-box">
+            <h4>✅ 非会員の子どもへの差別は禁止</h4>
+            <p>PTA非会員の保護者の子どもを、学校行事や教育活動において<strong>会員の子どもと差別的に扱うことは教育基本法第4条が禁じる差別</strong>にあたります。卒業記念品の配布除外・行事への参加禁止等は許されません。</p>
+            <div class="gl-notice">💡 「PTA主催」と銘打っていても、学校施設で行われ、全児童生徒が参加する行事は実質的に学校行事とみなされる可能性があります。</div>
+          </div>
+          <div class="gl-box">
+            <h4>✅ 非会員への役員就任強制は無効</h4>
+            <p>PTAの会員でない保護者に対し、役員への就任を強制することはできません。また、会員であっても役員就任の強制は結社の自由を侵害する可能性があります。役員選出は自発的な立候補や公正な選挙で行ってください。</p>
+          </div>
+          <div class="gl-box">
+            <h4>✅ PTA活動と学校行事の明確な分離</h4>
+            <p>旗振り当番（登下校の安全見守り）・ベルマーク収集・トイレ清掃等、PTAが担ってきた活動の中には<strong>本来学校・行政が責任を持つべきもの</strong>が含まれています。これらをPTA活動として継続することは、学校の責任を曖昧にさせます。教育委員会・学校との間で役割分担を明確化してください。</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         教育委員会・学校への要請
+         ====================================================== -->
+    <section style="background:var(--bg); padding:72px 0; border-top:1px solid var(--line)">
+      <div class="wrap">
+        <div class="section-kicker">For Education Boards</div>
+        <h2 class="section-title" style="margin-bottom:8px">教育委員会・学校への要請</h2>
+        <p style="color:var(--text-soft);font-size:.94rem;margin-bottom:0">PTA適正化は教育委員会・学校の対応なしには完結しません。</p>
+        <ul class="gl-request-list">
+          <li class="gl-request-item">
+            <div class="gl-request-num">1</div>
+            <div class="gl-request-body">
+              <h4>業務依存の是正</h4>
+              <p>登下校の安全見守り・ベルマーク収集・PTA広報誌の学校施設での印刷など、学校が本来担うべき業務をPTAに依存している現状を是正してください。これらの活動を「PTAのボランティア」として継続することは、学校の法的責任の所在を曖昧にします。地方自治法・学校教育法に基づいた役割分担の明確化を求めます。</p>
+            </div>
+          </li>
+          <li class="gl-request-item">
+            <div class="gl-request-num">2</div>
+            <div class="gl-request-body">
+              <h4>教職員のPTA役員兼任の廃止</h4>
+              <p>校長・教頭・担任がPTAの役員（事務局長・会計・顧問等）を兼任することは、職務専念義務（地方公務員法第35条）に抵触し、責任の所在を曖昧にします。教職員は「協力者」の立場に限定し、PTA運営の実権は保護者が持つ体制に改めてください。</p>
+            </div>
+          </li>
+          <li class="gl-request-item">
+            <div class="gl-request-num">3</div>
+            <div class="gl-request-body">
+              <h4>監督責任の適切な履行</h4>
+              <p>社会教育法第12条は行政によるPTAへの不当な統制的支配・干渉を禁じていますが、学校が配布、回収、名簿提供、会費徴収、教職員事務に関与している部分まで「PTA内部の問題」として放置してよいという意味ではありません。個人情報の目的外提供、強制加入と誤認される案内、児童生徒への不利益取扱いなど、学校運営と接続する部分については、教育委員会が学校側の関与範囲を点検し、分離・是正を求めることが適切です。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         書式テンプレート
+         ====================================================== -->
+    <section style="background:#fff; padding:72px 0; border-top:1px solid var(--line)">
+      <div class="gl-wrap">
+        <div class="section-kicker">Templates</div>
+        <h2 class="section-title" style="margin-bottom:8px">書式テンプレート</h2>
+        <p style="color:var(--text-soft);font-size:.94rem;margin-bottom:32px">クリックして展開し、コピーしてご利用ください。各自のPTA・学校名等に書き換えてお使いください。</p>
+
+        <div class="gl-tpl-item" id="tpl-nyukai">
+          <button class="gl-tpl-btn" onclick="glTpl('tpl-nyukai')">
+            <span>📄 入会申込書（確認事項チェック式）</span>
+            <svg class="gl-tpl-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="gl-tpl-body">
+            <pre class="gl-tpl-pre" id="tpl-nyukai-text">PTA入会申込書
+
+令和　　年　　月　　日
+
+○○小学校PTA　御中
+
+私は、○○小学校PTAに入会することを申し込みます。
+
+■ 児童氏名：______________________（　　年　　組）
+■ 保護者氏名：______________________
+■ 住所：______________________
+■ 電話番号：______________________
+■ メールアドレス（任意）：______________________
+
+【確認事項】（□にチェックをご記入ください）
+□ PTAへの入会は任意であることを理解しています
+□ 退会はいつでも申し出ることができることを理解しています
+□ 個人情報はPTA活動の目的のみに使用されることを確認しました
+□ 年会費 ______円 の支払いに同意します
+□ 非加入者の子どもへの差別的取扱いが行われないことを確認しました
+
+署名（自署）：______________________
+
+※ 本申込書は任意です。未提出の場合は非加入として扱われます。
+※ 退会届は随時受け付けています。</pre>
+            <button class="gl-copy-btn" onclick="glCopy('tpl-nyukai-text',this)">📋 コピー</button>
+          </div>
+        </div>
+
+        <div class="gl-tpl-item" id="tpl-taikai">
+          <button class="gl-tpl-btn" onclick="glTpl('tpl-taikai')">
+            <span>📄 退会届</span>
+            <svg class="gl-tpl-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="gl-tpl-body">
+            <pre class="gl-tpl-pre" id="tpl-taikai-text">PTA退会届
+
+令和　　年　　月　　日
+
+○○小学校PTA　御中
+
+私は、○○小学校PTAを退会することを申し出ます。
+
+■ 児童氏名：______________________（　　年　　組）
+■ 保護者氏名：______________________
+■ 退会希望日：令和　　年　　月　　日
+
+退会後は、私および家族の個人情報をPTAの活動に
+使用しないよう、また速やかに削除・廃棄されるよう
+お願いいたします。
+
+署名（自署）：______________________
+
+※ 退会届受理後、個人情報の削除・廃棄完了の
+　 通知をいただけますようお願いいたします。</pre>
+            <button class="gl-copy-btn" onclick="glCopy('tpl-taikai-text',this)">📋 コピー</button>
+          </div>
+        </div>
+
+        <div class="gl-tpl-item" id="tpl-inkan">
+          <button class="gl-tpl-btn" onclick="glTpl('tpl-inkan')">
+            <span>📄 会費口座振替委任状</span>
+            <svg class="gl-tpl-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="gl-tpl-body">
+            <pre class="gl-tpl-pre" id="tpl-inkan-text">PTA会費口座振替委任状
+
+令和　　年　　月　　日
+
+私は、○○小学校PTAに対し、以下の条件でPTA会費の
+口座振替を委任します。
+
+■ 金融機関名：______________________
+■ 支店名：______________________
+■ 口座種別：　□普通　□当座
+■ 口座番号：______________________
+■ 口座名義（カナ）：______________________
+
+■ 振替金額：年　　　　円（月　　　　円）
+■ 振替開始：令和　　年　　月より
+■ 振替終了：退会届提出の翌月末まで
+
+【確認事項】
+□ 本委任はPTA会費の徴収目的のみに使用されます
+□ 退会後は本委任状を速やかに廃棄することに同意します
+□ 口座情報は第三者（学校を含む）に提供されません
+
+委任者署名（自署）：______________________
+
+※ 本委任状はPTA独自の管理のもと厳重に保管されます。
+※ 学校の口座情報とは別に管理されます。</pre>
+            <button class="gl-copy-btn" onclick="glCopy('tpl-inkan-text',this)">📋 コピー</button>
+          </div>
+        </div>
+
+        <div class="gl-tpl-item" id="tpl-privacy">
+          <button class="gl-tpl-btn" onclick="glTpl('tpl-privacy')">
+            <span>📄 個人情報取扱規則（抜粋）</span>
+            <svg class="gl-tpl-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="gl-tpl-body">
+            <pre class="gl-tpl-pre" id="tpl-privacy-text">○○小学校PTA個人情報取扱規則（抜粋）
+
+制定　令和　　年　　月　　日
+
+第1条（目的）
+本規則は、個人情報保護法に基づき、○○小学校PTA
+（以下「本会」という）が取り扱う個人情報の適正な
+管理について定めることを目的とする。
+
+第2条（収集の原則）
+本会は、PTA活動の運営に必要な範囲で個人情報を
+収集する。収集は入会申込書による本人の書面同意を
+得た上で行う。学校が収集した個人情報の提供を
+受けることは行わない。
+
+第3条（利用目的）
+収集した個人情報は以下の目的にのみ使用する。
+・会費の徴収
+・PTA活動に関する連絡
+・役員選出に関する手続き
+
+第4条（第三者提供の禁止）
+本人の書面による同意なく、第三者（学校・
+教育委員会を含む）に個人情報を提供しない。
+
+第5条（退会後の取扱）
+退会届受理後、遅滞なく（概ね1ヶ月以内）
+当該会員の個人情報を削除または廃棄し、
+本人に完了を通知する。
+
+第6条（開示・訂正・削除の請求）
+会員は、自己の個人情報について、本会に対し
+開示・訂正・削除を請求することができる。
+本会は正当な理由なくこれを拒むことができない。
+
+第7条（安全管理措置）
+個人情報は施錠できる場所に保管し、
+デジタルデータは適切なパスワード管理のもとで
+取り扱う。役員交代時には速やかに引き継ぐ。</pre>
+            <button class="gl-copy-btn" onclick="glCopy('tpl-privacy-text',this)">📋 コピー</button>
+          </div>
+        </div>
+
+        <div style="margin-top:32px;padding:20px 24px;background:var(--bg);border-radius:var(--radius);border:1px solid var(--line)">
+          <p style="font-size:.87rem;color:var(--text-soft);line-height:1.75;margin:0">
+            ⚠️ 上記テンプレートは参考書式です。各PTAの実情・規約に合わせて適宜修正してご利用ください。法的判断が必要な場合は弁護士等の専門家にご相談ください。
+            お問い合わせは <a href="mailto:info@ptaorg.com" style="color:var(--gold);font-weight:700">info@ptaorg.com</a> までどうぞ。
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div>
+          <h3>PTA適正化推進委員会</h3>
+          <a href="https://yokomusubi.city.yokohama.lg.jp/organizations/detail/f69c7ad2-cf21-4dfa-87bb-9c891874eb6b/" target="_blank" rel="noopener noreferrer" class="yokomusubi-card">
+            <img src="assets/yokomusubi.png" alt="よこむすび">
+            <span class="yokomusubi-tagline">磯子区「よこむすび」掲載団体</span>
+            <span class="yokomusubi-meta">登録番号：磯子12406</span>
+            <span class="yokomusubi-meta">分類番号：12-4（市民活動・社会教育推進）</span>
+          </a>
+          <div class="footer-contact">
+            <p>〒235-0021<br>神奈川県横浜市磯子区岡村8-17-5-301</p>
+            <p><strong>070-9012-7772</strong></p>
+            <p><a href="mailto:info@ptaorg.com">info@ptaorg.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h4>公式発信</h4>
+          <p class="footer-sns-sub">最新資料・論考・動画はこちら</p>
+          <div class="footer-sns-cards">
+            <a href="https://x.com/jjjqqqxxx0852" target="_blank" rel="noopener" class="fsns-card fsns-x">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.836L2.25 2.25H8.08l4.263 5.636L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+              <div>
+                <div class="fsns-name">X</div>
+                <div class="fsns-desc">速報・資料更新</div>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@PTA%E9%81%A9%E6%AD%A3%E5%8C%96%E6%8E%A8%E9%80%B2%E5%A7%94%E5%93%A1%E4%BC%9A" target="_blank" rel="noopener" class="fsns-card fsns-yt">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <div>
+                <div class="fsns-name">YouTube</div>
+                <div class="fsns-desc">動画で解説</div>
+              </div>
+            </a>
+            <a href="https://note.com/hiroshisatoh" target="_blank" rel="noopener" class="fsns-card fsns-note">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H4zm2 3h10v2H6V8zm0 4h10v2H6v-2zm0 4h6v2H6v-2z"/></svg>
+              <div>
+                <div class="fsns-name">note</div>
+                <div class="fsns-desc">論考・研究ノート</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>立場別</h4>
+          <ul>
+            <li><a href="guide-parent.html">保護者</a></li>
+            <li><a href="guide-pta.html">PTA役員</a></li>
+            <li><a href="guide-board.html">教育委員会・学校</a></li>
+            <li><a href="guide-research.html">研究者・記者</a></li>
+            <li><a href="guide-board.html">教育委員会向け指針</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>論点</h4>
+          <ul>
+            <li><a href="membership.html">入会手続</a></li>
+            <li><a href="privacy.html">個人情報</a></li>
+            <li><a href="fee-collection.html">会費徴収</a></li>
+            <li><a href="personnel.html">教職員関与</a></li>
+            <li><a href="facilities.html">施設利用</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>資料・支援</h4>
+          <ul>
+            <li><a href="https://ptaorg.github.io/donate/">応援・寄付</a></li>
+            <li><a href="board-responses.html">教育委員会の回答</a></li>
+            <li><a href="national-archive.html">全国資料館</a></li>
+            <li><a href="journal.html">論考・調査報告</a></li>
+            <li><a href="report.html">総合分析レポート</a></li>
+            <li><a href="audit/index.html">運営チェックアプリ</a></li>
+            <li><a href="law-map.html">法制度マップ</a></li>
+            <li><a href="guideline.html">適正化ガイドライン</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  <div class="footer-support">
+    <div>
+      <strong>調査・資料公開の継続を応援してください</strong>
+      <p>いただいたご支援は、公文書開示、資料整理、Web公開、自治体・学校への働きかけに活用します。</p>
+    </div>
+    <a href="https://ptaorg.github.io/donate/">応援ページへ</a>
+  </div>
+    <p class="copyright">© PTA適正化推進委員会</p>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script>
+  /* ===== タブ切り替え ===== */
+  function glTab(name, btn) {
+    document.querySelectorAll('.gl-tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.gl-tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('gl-tab-' + name).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  /* ===== テンプレートアコーディオン ===== */
+  function glTpl(id) {
+    const item = document.getElementById(id);
+    item.classList.toggle('open');
+  }
+
+  /* ===== コピー ===== */
+  function glCopy(textId, btn) {
+    const text = document.getElementById(textId).textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✅ コピーしました';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = '📋 コピー'; btn.classList.remove('copied'); }, 2000);
+    }).catch(() => {
+      // fallback
+      const ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+      btn.textContent = '✅ コピーしました'; btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = '📋 コピー'; btn.classList.remove('copied'); }, 2000);
+    });
+  }
+  </script>
+</body>
+</html>

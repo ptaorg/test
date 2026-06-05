@@ -1,0 +1,2112 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="assets/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<title>PTA適正化推進委員会</title>
+<meta content="一次資料・法令・行政回答にもとづき、PTAの任意加入、公私分離、個人情報、会費徴収を整理する資料サイトです。" name="description"/><link href="https://ptaorg.com/" rel="canonical"/><meta content="PTA適正化推進委員会" property="og:site_name"/><meta content="ja_JP" property="og:locale"/><meta content="website" property="og:type"/><meta content="PTA適正化推進委員会" property="og:title"/><meta content="一次資料・法令・行政回答にもとづき、PTAの任意加入、公私分離、個人情報、会費徴収を整理する資料サイトです。" property="og:description"/><meta content="https://ptaorg.com/" property="og:url"/><meta content="https://ptaorg.com/assets/og-image-popc-en.png" property="og:image"/><meta content="https://ptaorg.com/assets/og-image-popc-en.png" property="og:image:secure_url"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="PTA適正化推進委員会" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="PTA適正化推進委員会" name="twitter:title"/><meta content="一次資料・法令・行政回答にもとづき、PTAの任意加入、公私分離、個人情報、会費徴収を整理する資料サイトです。" name="twitter:description"/><meta content="https://ptaorg.com/assets/og-image-popc-en.png" name="twitter:image"/><meta content="PTA適正化推進委員会" name="twitter:image:alt"/>
+
+
+
+
+
+
+
+
+
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/refine.css?v=refine1" rel="stylesheet"/>
+<style>
+
+/* =============================================
+   HERO ① — スライドショー帯（写真のみ）
+   ============================================= */
+.hero-slide-wrap {
+  position: relative; overflow: hidden;
+  width: 100%;
+  height: 62svh;
+  min-height: 360px;
+  max-height: 640px;
+  background: #04101e;
+}
+.hero-slideshow {
+  position: absolute; inset: 0; z-index: 0; overflow: hidden;
+}
+.slide {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  opacity: 0;
+  transition: opacity 1.8s ease;
+  will-change: opacity, transform;
+}
+.slide.is-active { opacity: 1; }
+.slide.kb1.is-active { animation: kb1 12s ease-out both; }
+.slide.kb2.is-active { animation: kb2 12s ease-out both; }
+.slide.kb3.is-active { animation: kb3 12s ease-out both; }
+.slide.kb4.is-active { animation: kb4 12s ease-out both; }
+@keyframes kb1 { from{transform:scale(1.12) translate(1.5%,.5%)} to{transform:scale(1) translate(0%,0%)} }
+@keyframes kb2 { from{transform:scale(1) translate(0%,0%)} to{transform:scale(1.12) translate(-1.5%,-.5%)} }
+@keyframes kb3 { from{transform:scale(1.1) translate(-1%,-1%)} to{transform:scale(1) translate(.5%,.5%)} }
+@keyframes kb4 { from{transform:scale(1) translate(.5%,.5%)} to{transform:scale(1.1) translate(-1%,-.5%)} }
+
+/* オーバーレイなし — 写真をそのまま見せる */
+.slide-color-overlay { display: none; }
+/* 下部フェード → 白に溶ける */
+.slide-bottom-fade {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; height: 80px;
+  background: linear-gradient(to bottom, transparent 0%, #fff 100%);
+  pointer-events: none;
+}
+
+/* ── スライドナビ（ドット） ── */
+.slide-nav {
+  position: absolute; bottom: 28px; right: 36px; z-index: 10;
+  display: flex; gap: 9px; align-items: center;
+}
+.slide-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: rgba(255,255,255,.38); border: 1px solid rgba(255,255,255,.2);
+  cursor: pointer; padding: 0;
+  transition: all .35s ease; flex-shrink: 0;
+}
+.slide-dot.is-active {
+  background: #d4af37; border-color: #d4af37;
+  transform: scale(1.45);
+  box-shadow: 0 0 10px rgba(212,175,55,.7);
+}
+
+/* =============================================
+   HERO ② — コンテンツ帯（白背景）
+   ============================================= */
+.hero-content-wrap {
+  background: #fff;
+  padding: 40px 0 72px;
+}
+.hero-inner {
+  width: min(calc(100% - 40px), 1280px);
+  margin-inline: auto;
+}
+.hero-text-row { margin-bottom: 48px; max-width: 720px; }
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 16px; border-radius: 999px;
+  background: rgba(10,22,40,.06); border: 1px solid rgba(10,22,40,.18);
+  color: var(--navy); font-size: .72rem; font-weight: 900;
+  letter-spacing: .12em; text-transform: uppercase; margin-bottom: 24px;
+}
+.hero-eyebrow::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); animation: blink 2s ease infinite;
+}
+@keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
+.hero-h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.55rem, 3.2vw, 2.5rem);
+  font-weight: 900; line-height: 1.3; margin-bottom: 18px;
+  color: var(--navy); letter-spacing: -.01em;
+}
+.hero-h1 .gold { color: var(--gold); }
+.hero-tagline {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(.95rem, 1.6vw, 1.15rem);
+  color: rgba(10,22,40,.6); font-weight: 400;
+  margin-bottom: 28px; line-height: 1.7; max-width: 580px;
+}
+.hero-lead {
+  color: rgba(10,22,40,.7); font-size: clamp(.88rem,1.15vw,.96rem);
+  line-height: 1.9; max-width: 540px; margin-bottom: 36px;
+}
+
+/* 速報バー */
+.hero-flash {
+  display: flex; align-items: center; gap: 12px;
+  background: rgba(185,28,28,.06); border: 1px solid rgba(185,28,28,.25);
+  border-radius: 10px; padding: 12px 18px;
+  max-width: 580px; margin-bottom: 32px;
+}
+.flash-badge {
+  background: #b91c1c; color: #fff;
+  font-size: .66rem; font-weight: 900; padding: 2px 9px;
+  border-radius: 4px; white-space: nowrap; letter-spacing: .07em; flex-shrink: 0;
+}
+.flash-text { font-size: .83rem; color: rgba(10,22,40,.75); line-height: 1.55; }
+
+/* 統計帯 */
+.hero-stats {
+  display: flex; flex-wrap: wrap; gap: 0;
+  border-top: 2px solid rgba(10,22,40,.1);
+  padding-top: 24px; margin-bottom: 48px;
+}
+.hero-stat { padding: 0 28px 0 0; border-right: 1px solid rgba(10,22,40,.1); }
+.hero-stat:first-child { padding-left: 0; }
+.hero-stat:last-child { border-right: none; padding-right: 0; }
+.hero-stat strong {
+  display: block; font-family: 'Noto Serif JP', serif;
+  font-size: 1.85rem; font-weight: 700; color: var(--navy);
+  line-height: 1; margin-bottom: 4px;
+}
+.hero-stat span { font-size: .74rem; color: rgba(10,22,40,.45); font-weight: 600; }
+
+/* =============================================
+   三者エントリーポータル
+   ============================================= */
+.portal-label {
+  font-size: .72rem; font-weight: 900; letter-spacing: .12em;
+  color: rgba(10,22,40,.4); text-transform: uppercase; margin-bottom: 14px;
+}
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 860px;
+}
+.portal-card {
+  position: relative; overflow: hidden; border-radius: 18px;
+  text-decoration: none; color: var(--text); display: block;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s;
+}
+.portal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(5,17,31,.14);
+  border-color: var(--gold);
+}
+.portal-img {
+  height: 190px; overflow: hidden; position: relative;
+}
+.portal-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: brightness(1.05) saturate(1.1);
+  transition: transform .5s ease;
+}
+.portal-card:hover .portal-img img { transform: scale(1.06); }
+.portal-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 55%, rgba(5,10,18,.38) 100%);
+}
+.portal-num {
+  position: absolute; top: 12px; left: 14px;
+  font-size: .6rem; font-weight: 900; letter-spacing: .12em;
+  color: rgba(255,255,255,.9); text-transform: uppercase;
+  background: rgba(5,17,31,.35); padding: 2px 7px; border-radius: 4px;
+}
+.portal-role {
+  position: absolute; bottom: 12px; left: 14px; right: 14px;
+}
+.portal-role-en {
+  font-size: .6rem; color: rgba(255,255,255,.8); font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; margin-bottom: 3px;
+}
+.portal-role-ja {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.1rem; font-weight: 900; color: #fff; line-height: 1.2;
+  text-shadow: 0 1px 6px rgba(0,0,0,.55);
+}
+.portal-body {
+  background: #fff; padding: 18px;
+  border-top: 3px solid var(--gold);
+}
+.portal-desc {
+  font-size: .84rem; color: var(--text-soft);
+  line-height: 1.7; margin-bottom: 12px;
+}
+.portal-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+.portal-chip {
+  background: rgba(5,17,31,.06); border: 1px solid rgba(5,17,31,.14);
+  color: var(--navy); font-size: .64rem; font-weight: 700;
+  padding: 2px 8px; border-radius: 4px;
+}
+.portal-cta {
+  font-size: .82rem; font-weight: 900; color: var(--navy);
+  display: flex; align-items: center; gap: 5px;
+}
+.portal-cta svg {
+  width: 14px; height: 14px; stroke: var(--navy); fill: none;
+  stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  transition: transform .2s;
+}
+.portal-card:hover .portal-cta svg { transform: translateX(4px); }
+.portal-card:hover .portal-cta { color: #d4af37; }
+.portal-card:hover .portal-cta svg { stroke: #d4af37; }
+
+/* =============================================
+   ALERT BANNER
+   ============================================= */
+.alert-banner {
+  background: linear-gradient(90deg, #991b1b, #7f1d1d);
+  color: #fff; padding: 10px 0; overflow: hidden;
+}
+.alert-banner-inner {
+  width: min(calc(100% - 40px), 1280px); margin-inline: auto;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.ab-badge {
+  background: rgba(255,255,255,.18); font-size: .67rem; font-weight: 900;
+  padding: 3px 10px; border-radius: 4px; letter-spacing: .08em;
+  text-transform: uppercase; white-space: nowrap; flex-shrink: 0;
+}
+.ab-text { font-size: .84rem; font-weight: 700; flex: 1; min-width: 240px; }
+.ab-link {
+  white-space: nowrap; padding: 5px 14px; border-radius: 999px;
+  background: rgba(255,255,255,.14); color: #fff; font-size: .78rem;
+  font-weight: 800; text-decoration: none; border: 1px solid rgba(255,255,255,.25);
+}
+.ab-link:hover { background: rgba(255,255,255,.26); }
+
+/* =============================================
+   STRENGTHS — 当委員会の強み
+   ============================================= */
+.strengths-section { background: #fff; padding: 100px 0; }
+.strength-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 22px; margin-top: 52px;
+}
+.strength-card {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 32px 28px; position: relative; overflow: hidden;
+  transition: var(--t); background: #fff;
+}
+.strength-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.strength-card.featured {
+  background: linear-gradient(145deg, #1d4ed8, #2563eb);
+  border-color: rgba(255,255,255,.15); color: #fff;
+  grid-column: span 2;
+}
+.strength-num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 3rem; font-weight: 900; color: rgba(212,175,55,.18);
+  line-height: 1; margin-bottom: 10px; display: block;
+}
+.strength-card.featured .strength-num { color: rgba(212,175,55,.2); }
+.strength-icon {
+  font-size: 2.2rem; margin-bottom: 14px; display: block;
+}
+.strength-card h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.15rem; font-weight: 900; color: var(--navy);
+  margin-bottom: 10px; line-height: 1.4;
+}
+.strength-card.featured h3 { color: #f4e7a6; font-size: 1.4rem; }
+.strength-card p {
+  font-size: .9rem; color: var(--text-soft); line-height: 1.8;
+}
+.strength-card.featured p { color: rgba(255,255,255,.8); font-size: .95rem; }
+.strength-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 4px;
+  background: rgba(212,175,55,.12); border: 1px solid rgba(212,175,55,.3);
+  color: #d4af37; font-size: .72rem; font-weight: 900;
+  letter-spacing: .07em; text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.strength-card:not(.featured) .strength-badge {
+  background: rgba(5,17,31,.07); border-color: rgba(5,17,31,.12);
+  color: var(--navy);
+}
+.strength-number-big {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2.6rem; font-weight: 900; color: #d4af37;
+  line-height: 1; margin-bottom: 4px;
+}
+.strength-number-big.dark { color: var(--navy); }
+.strength-number-label { font-size: .78rem; color: rgba(255,255,255,.55); font-weight: 700; }
+.strength-number-label.dark { color: var(--text-soft); }
+.strength-numbers { display: flex; gap: 28px; margin-top: 22px; }
+
+/* =============================================
+   THREE AUDIENCES — 詳細ガイドセクション
+   ============================================= */
+.audience-section { background: var(--bg); padding: 100px 0; }
+.audience-tabs {
+  display: flex; gap: 0; border-bottom: 2px solid var(--line);
+  margin-bottom: 48px; overflow-x: auto;
+  scrollbar-width: none;
+}
+.audience-tabs::-webkit-scrollbar { display: none; }
+.audience-tab {
+  padding: 14px 28px; font-size: .9rem; font-weight: 800;
+  color: var(--text-soft); cursor: pointer;
+  border-bottom: 3px solid transparent; margin-bottom: -2px;
+  white-space: nowrap; transition: var(--t); text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+}
+.audience-tab:hover { color: var(--navy); }
+.audience-tab.active { color: var(--navy); border-bottom-color: var(--gold); }
+
+.audience-panels { }
+.audience-panel {
+  display: none;
+}
+.audience-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.audience-panel-img {
+  border-radius: 24px; overflow: hidden;
+  position: relative; aspect-ratio: 4/3;
+}
+.audience-panel-img img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.audience-panel-img-badge {
+  position: absolute; top: 18px; left: 18px;
+  background: var(--gold); color: var(--navy);
+  font-size: .7rem; font-weight: 900; letter-spacing: .07em;
+  padding: 5px 14px; border-radius: 4px;
+}
+.audience-panel-content h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.6rem, 2.4vw, 2.1rem); font-weight: 900;
+  color: var(--navy); margin-bottom: 16px; line-height: 1.3;
+}
+.audience-panel-content > p {
+  font-size: .97rem; color: var(--text-soft); line-height: 1.85; margin-bottom: 24px;
+}
+.audience-items { list-style: none; margin-bottom: 28px; }
+.audience-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 0; border-bottom: 1px solid var(--line);
+}
+.audience-item:last-child { border-bottom: none; }
+.audience-item-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; flex-shrink: 0; margin-top: 1px;
+}
+.audience-item-body h4 { font-size: .95rem; font-weight: 800; color: var(--navy); margin-bottom: 3px; }
+.audience-item-body p { font-size: .84rem; color: var(--text-soft); line-height: 1.65; }
+.audience-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* =============================================
+   EVIDENCE — 教育委員会の法的見解
+   ============================================= */
+.evidence-section {
+  background: linear-gradient(135deg, #010912, #071428);
+  padding: 100px 0; color: #fff;
+}
+.evidence-intro {
+  display: grid; grid-template-columns: 1fr auto; gap: 32px;
+  align-items: end; margin-bottom: 52px;
+}
+.evidence-big-stat {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 900;
+  color: #d4af37; line-height: 1;
+}
+.evidence-big-stat span {
+  font-size: clamp(1.2rem, 2vw, 1.8rem); vertical-align: super;
+  margin-left: 4px;
+}
+.evidence-quote-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-bottom: 48px;
+}
+.eq-card {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius); padding: 24px;
+  position: relative; transition: var(--t);
+}
+.eq-card:hover { background: rgba(255,255,255,.07); border-color: rgba(212,175,55,.2); }
+.eq-card::before {
+  content: '"'; position: absolute; top: 12px; right: 16px;
+  font-family: 'Noto Serif JP', serif; font-size: 3.5rem;
+  color: rgba(212,175,55,.15); line-height: 1;
+}
+.eq-status {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 12px;
+}
+.eq-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.eq-status-text { font-size: .7rem; font-weight: 900; letter-spacing: .07em; color: rgba(255,255,255,.55); }
+.eq-quote { font-size: .88rem; color: rgba(255,255,255,.82); line-height: 1.85; margin-bottom: 12px; }
+.eq-source { font-size: .75rem; color: rgba(255,255,255,.4); font-weight: 700; }
+
+/* =============================================
+   RESEARCH — 論考・研究ノート
+   ============================================= */
+.research-section { background: #fff; padding: 100px 0; }
+.research-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; margin-top: 48px; }
+.research-featured {
+  background: linear-gradient(145deg, var(--navy), #0e2236);
+  border-radius: var(--radius); padding: 40px;
+  color: #fff; text-decoration: none; display: block;
+  border: 1px solid rgba(212,175,55,.2); transition: var(--t);
+}
+.research-featured:hover { transform: translateY(-5px); box-shadow: 0 28px 60px rgba(5,17,31,.25); }
+.research-featured-kicker {
+  font-size: .7rem; font-weight: 900; letter-spacing: .1em;
+  color: rgba(212,175,55,.75); text-transform: uppercase; margin-bottom: 14px;
+}
+.research-featured h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.5rem; font-weight: 900; color: #f4e7a6;
+  margin-bottom: 14px; line-height: 1.4;
+}
+.research-featured p { color: rgba(255,255,255,.78); font-size: .93rem; line-height: 1.85; margin-bottom: 20px; }
+.research-featured-arrow { font-size: .84rem; font-weight: 900; color: #d4af37; }
+.research-stack { display: flex; flex-direction: column; gap: 14px; }
+.research-card {
+  background: var(--bg); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 20px 22px;
+  text-decoration: none; color: inherit; transition: var(--t);
+  display: flex; align-items: center; gap: 16px;
+}
+.research-card:hover { background: #fff; box-shadow: var(--shadow-sm); transform: translateX(4px); }
+.research-card-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--navy); display: flex; align-items: center;
+  justify-content: center; font-size: 1.3rem; flex-shrink: 0;
+}
+.research-card-body h4 { font-size: .93rem; font-weight: 800; color: var(--navy); margin-bottom: 3px; line-height: 1.35; }
+.research-card-body p { font-size: .8rem; color: var(--text-soft); line-height: 1.55; }
+.research-card-arrow { font-size: .82rem; font-weight: 800; color: var(--gold); margin-left: auto; flex-shrink: 0; }
+
+/* =============================================
+   MEDIA — SNS・音声・YouTube
+   ============================================= */
+.media-section { background: var(--bg); padding: 100px 0; }
+.media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+.media-card {
+  border-radius: var(--radius); overflow: hidden;
+  text-decoration: none; color: #fff; display: block;
+  transition: var(--t);
+}
+.media-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.media-card-header {
+  padding: 32px 28px 24px;
+  position: relative; overflow: hidden;
+}
+.media-card-header::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('assets/slides/2.jpg') center/cover;
+  filter: brightness(1.04) saturate(1.06);
+}
+.media-card.x-card .media-card-header { background: #000; }
+.media-card.note-card .media-card-header { background: #1c1c1c; }
+.media-card.youtube-card .media-card-header { background: #0f0f0f; }
+.media-logo {
+  position: relative; z-index: 1;
+  font-size: 2.2rem; margin-bottom: 10px; display: block;
+}
+.media-card-header h3 {
+  position: relative; z-index: 1;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.15rem; font-weight: 900; color: #fff; margin-bottom: 6px;
+}
+.media-card-header p {
+  position: relative; z-index: 1;
+  font-size: .82rem; color: rgba(255,255,255,.65); line-height: 1.6;
+}
+.media-card-body {
+  background: var(--navy); padding: 20px 24px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.media-card-body span {
+  font-size: .83rem; color: rgba(255,255,255,.75); font-weight: 700;
+}
+.media-card-body svg {
+  width: 18px; height: 18px; stroke: #d4af37; fill: none;
+  stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* 音声データカード */
+.audio-banner {
+  grid-column: span 3;
+  background: linear-gradient(135deg, #7f1d1d, #991b1b);
+  border-radius: var(--radius); padding: 32px 36px;
+  display: flex; align-items: center; gap: 32px;
+  color: #fff; text-decoration: none; transition: var(--t);
+}
+.audio-banner:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.audio-icon-wrap {
+  width: 70px; height: 70px; border-radius: 50%;
+  background: rgba(255,255,255,.12); border: 2px solid rgba(255,255,255,.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; flex-shrink: 0;
+}
+.audio-body { flex: 1; }
+.audio-body-label {
+  font-size: .72rem; font-weight: 900; letter-spacing: .1em;
+  color: rgba(255,255,255,.5); text-transform: uppercase; margin-bottom: 6px;
+}
+.audio-body h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.3rem; font-weight: 900; color: #fff; margin-bottom: 6px;
+}
+.audio-body p { font-size: .88rem; color: rgba(255,255,255,.75); line-height: 1.65; }
+.audio-arrow { font-size: 1.5rem; color: rgba(255,255,255,.4); flex-shrink: 0; }
+
+/* =============================================
+   DOCUMENTS — 公文書開示資料
+   ============================================= */
+.docs-section { background: #fff; padding: 100px 0; }
+.docs-visual {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; align-items: center;
+}
+.docs-image-stack { position: relative; height: 400px; }
+.docs-img-main {
+  position: absolute; right: 0; top: 0;
+  width: 82%; height: 82%; object-fit: cover;
+  border-radius: 20px; box-shadow: var(--shadow-md);
+}
+.docs-img-sub {
+  position: absolute; left: 0; bottom: 0;
+  width: 54%; height: 52%; object-fit: cover;
+  border-radius: 16px; box-shadow: var(--shadow-lg);
+  border: 4px solid #fff;
+}
+.docs-stat-badge {
+  position: absolute; top: 50%; right: -12px; transform: translateY(-50%);
+  background: var(--gold); color: var(--navy);
+  border-radius: 16px; padding: 16px 22px; text-align: center;
+  box-shadow: 0 8px 24px rgba(212,175,55,.4);
+}
+.docs-stat-badge strong {
+  display: block; font-family: 'Noto Serif JP', serif;
+  font-size: 2rem; font-weight: 900; line-height: 1;
+}
+.docs-stat-badge span { font-size: .7rem; font-weight: 800; }
+.docs-content h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.7rem, 2.4vw, 2.2rem); font-weight: 900;
+  color: var(--navy); margin-bottom: 16px; line-height: 1.3;
+}
+.docs-content > p { font-size: .96rem; color: var(--text-soft); line-height: 1.85; margin-bottom: 28px; }
+.docs-list { list-style: none; margin-bottom: 32px; }
+.docs-list li {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--line);
+  font-size: .9rem; color: var(--text-soft); line-height: 1.6;
+}
+.docs-list li:last-child { border-bottom: none; }
+.docs-list-icon {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: rgba(5,17,31,.06); display: flex; align-items: center;
+  justify-content: center; font-size: 1rem; flex-shrink: 0;
+}
+
+/* =============================================
+   CTA — AUDIT SYSTEM
+   ============================================= */
+.cta-audit {
+  background: linear-gradient(135deg, #d4af37, #b8962a);
+  padding: 80px 0; text-align: center;
+}
+.cta-audit h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 900;
+  color: var(--navy); margin-bottom: 14px; line-height: 1.3;
+}
+.cta-audit p { color: rgba(5,17,31,.7); font-size: .97rem; line-height: 1.8; margin-bottom: 30px; max-width: 600px; margin-inline: auto; }
+.cta-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media(max-width:1024px){
+  .portal-grid { grid-template-columns: repeat(2, 1fr); max-width: none; }
+  .portal-grid .portal-card:nth-child(3) { display: none; }
+  .strength-grid { grid-template-columns: 1fr 1fr; }
+  .strength-card.featured { grid-column: span 2; }
+  .evidence-quote-grid { grid-template-columns: 1fr 1fr; }
+  .research-grid { grid-template-columns: 1fr; }
+  .docs-visual { grid-template-columns: 1fr; }
+  .docs-image-stack { height: 280px; }
+  .media-grid { grid-template-columns: 1fr 1fr; }
+  .audio-banner { grid-column: span 2; }
+}
+@media(max-width:860px){
+  .audience-panel.active { grid-template-columns: 1fr; }
+  .audience-panel-img { aspect-ratio: 16/7; }
+  .evidence-intro { grid-template-columns: 1fr; }
+  .evidence-quote-grid { grid-template-columns: 1fr; }
+  .portal-grid { grid-template-columns: 1fr 1fr; }
+  .hero-stats { gap: 16px 0; }
+  .hero-stat { padding: 0 16px 0 0; }
+}
+@media(max-width:640px){
+  .portal-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .portal-grid .portal-card:nth-child(3) { display: block; }
+  .strength-grid { grid-template-columns: 1fr; }
+  .strength-grid > * { grid-column: 1 / -1 !important; }
+  .strength-card.featured { grid-column: 1 / -1 !important; }
+  .strength-card[style*="span 2"] { grid-column: 1 / -1 !important; flex-direction: column; gap: 16px; }
+  .media-grid { grid-template-columns: 1fr; }
+  .audio-banner { grid-column: span 1; flex-direction: column; text-align: center; }
+  .docs-visual { gap: 24px; }
+  .docs-image-stack { height: 220px; }
+  .docs-stat-badge { right: 0; top: auto; bottom: -16px; transform: none; }
+  /* モバイル：ドットナビ位置調整 */
+  .slide-nav { bottom: 16px; right: 18px; }
+  /* スライドショー高さをモバイル用に調整 */
+  .hero-slide-wrap { height: 52svh; min-height: 260px; }
+  .hero-content-wrap { padding: 36px 0 56px; }
+}
+  
+/* ===== RESTRUCTURED TOP PAGE ===== */
+
+/* Hero buttons */
+.hero-btns {
+  display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px;
+}
+.hero-btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 999px;
+  background: var(--navy); color: #fff;
+  font-size: .96rem; font-weight: 900; text-decoration: none;
+  transition: all .2s;
+}
+.hero-btn-primary:hover { background: #0e2a50; box-shadow: 0 8px 24px rgba(5,17,31,.25); }
+.hero-btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 24px; border-radius: 999px;
+  background: transparent; color: var(--navy);
+  border: 2px solid rgba(10,22,40,.3);
+  font-size: .88rem; font-weight: 800; text-decoration: none;
+  transition: all .2s;
+}
+.hero-btn-secondary:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+/* ---- lead section ---- */
+.lead-section { background: var(--bg); padding: 88px 0; }
+.lead-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px 64px;
+  margin-top: 52px;
+}
+.lead-paragraph h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.02rem; font-weight: 900; color: var(--navy);
+  margin-bottom: 10px; padding-left: 14px;
+  border-left: 3px solid var(--gold);
+}
+.lead-paragraph p {
+  font-size: .94rem; color: var(--text-soft); line-height: 2;
+}
+
+/* ---- updates section ---- */
+.updates-section { background: #fff; padding: 80px 0; }
+.update-list {
+  margin-top: 40px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow-sm);
+}
+.update-item {
+  display: grid; grid-template-columns: 112px auto 1fr 24px;
+  align-items: center; gap: 16px;
+  padding: 16px 22px; text-decoration: none; color: inherit;
+  border-bottom: 1px solid var(--line); transition: background .15s;
+}
+.update-item:last-child { border-bottom: none; }
+.update-item:hover { background: var(--bg); }
+.update-date { font-size: .78rem; color: var(--text-soft); font-weight: 700; white-space: nowrap; }
+.update-tag {
+  display: inline-flex; align-items: center;
+  padding: 3px 10px; border-radius: 4px;
+  font-size: .68rem; font-weight: 900; white-space: nowrap;
+}
+.update-tag--incident { background:#fef2f2; color:#991b1b; border:1px solid #fecaca; }
+.update-tag--response { background:#f0fdf4; color:#166534; border:1px solid #bbf7d0; }
+.update-tag--doc     { background:#fff7ed; color:#9a3412; border:1px solid #fed7aa; }
+.update-tag--new     { background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; }
+.update-title { font-size: .88rem; color: var(--text); line-height: 1.55; }
+.update-arrow { font-size: .84rem; color: var(--text-soft); text-align: right; }
+
+/* ---- issues section ---- */
+.issues-section { background: var(--bg); padding: 100px 0; }
+.issue-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; margin-top: 48px;
+}
+.issue-card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 28px 24px; text-decoration: none; color: inherit;
+  display: block; transition: var(--t);
+}
+.issue-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--gold); }
+.issue-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+.issue-card h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.02rem; font-weight: 900; color: var(--navy);
+  margin-bottom: 8px; line-height: 1.4;
+}
+.issue-card p { font-size: .84rem; color: var(--text-soft); line-height: 1.78; }
+.issue-law {
+  display: inline-flex; margin-top: 14px;
+  padding: 3px 9px; border-radius: 4px;
+  font-size: .7rem; font-weight: 800;
+  color: var(--navy); background: rgba(5,17,31,.06);
+  border: 1px solid rgba(5,17,31,.1);
+}
+
+/* ---- law section ---- */
+.law-section {
+  background: linear-gradient(135deg, #010912, #071428);
+  padding: 100px 0; color: #fff;
+}
+.law-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-top: 48px;
+}
+.law-card {
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--radius); padding: 26px; text-decoration: none;
+  color: #fff; display: block; transition: var(--t);
+}
+.law-card:hover { background: rgba(255,255,255,.09); border-color: rgba(212,175,55,.35); transform: translateY(-4px); }
+.law-card-icon { font-size: 1.8rem; margin-bottom: 12px; display: block; }
+.law-card h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: .96rem; font-weight: 900; color: #f4e7a6;
+  margin-bottom: 8px; line-height: 1.4;
+}
+.law-card p { font-size: .82rem; color: rgba(255,255,255,.65); line-height: 1.75; }
+
+/* ---- responses section ---- */
+.responses-section { background: #fff; padding: 100px 0; }
+.response-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 14px; margin-top: 48px;
+}
+.response-card {
+  background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px; text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; gap: 8px; transition: var(--t);
+}
+.response-card:hover { background: #fff; box-shadow: var(--shadow-md); border-color: var(--gold); }
+.response-card-region { font-size: .68rem; font-weight: 900; color: var(--text-soft); letter-spacing: .06em; }
+.response-card h4 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: .88rem; font-weight: 900; color: var(--navy); line-height: 1.35;
+}
+.response-card-quote {
+  font-size: .78rem; color: var(--text-soft); line-height: 1.65;
+  border-left: 3px solid var(--gold); padding-left: 10px; flex: 1;
+}
+.response-card-meta { font-size: .7rem; color: var(--text-soft); font-weight: 700; }
+
+/* ---- archive section ---- */
+.archive-section { background: var(--bg); padding: 100px 0; }
+.archive-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 14px; margin-top: 48px;
+}
+.archive-card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px; text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; gap: 10px; transition: var(--t);
+}
+.archive-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--navy); }
+.archive-card-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: rgba(5,17,31,.07); display: flex; align-items: center;
+  justify-content: center; font-size: 1.2rem;
+}
+.archive-card h4 { font-size: .88rem; font-weight: 900; color: var(--navy); line-height: 1.35; }
+.archive-card p { font-size: .78rem; color: var(--text-soft); line-height: 1.68; flex: 1; }
+
+/* ---- purpose section ---- */
+.purpose-section { background: #fff; padding: 100px 0; }
+.purpose-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 20px; margin-top: 48px;
+}
+.purpose-card {
+  background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 32px; text-decoration: none; color: inherit;
+  display: flex; gap: 24px; align-items: flex-start; transition: var(--t);
+}
+.purpose-card:hover { background: #fff; box-shadow: var(--shadow-md); border-color: var(--gold); transform: translateX(4px); }
+.purpose-card-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: var(--navy); display: flex; align-items: center;
+  justify-content: center; font-size: 1.5rem; flex-shrink: 0;
+}
+.purpose-card-body h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.05rem; font-weight: 900; color: var(--navy);
+  margin-bottom: 8px; line-height: 1.35;
+}
+.purpose-card-body p { font-size: .86rem; color: var(--text-soft); line-height: 1.78; margin-bottom: 14px; }
+.purpose-card-cta { font-size: .82rem; font-weight: 900; color: var(--gold); }
+
+/* ---- support section ---- */
+.support-section {
+  background: linear-gradient(135deg, var(--navy), #0e2236);
+  padding: 88px 0; text-align: center; color: #fff;
+}
+.support-section h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 900;
+  color: #f4e7a6; margin-bottom: 18px; line-height: 1.35;
+}
+.support-section > .wrap > p {
+  color: rgba(255,255,255,.72); font-size: .96rem;
+  line-height: 1.9; max-width: 600px;
+  margin-inline: auto; margin-bottom: 36px;
+}
+.support-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.support-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 999px;
+  background: var(--gold); color: var(--navy);
+  font-size: .94rem; font-weight: 900; text-decoration: none; transition: opacity .2s;
+}
+.support-btn:hover { opacity: .88; }
+.support-btn-sub {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 24px; border-radius: 999px;
+  background: transparent; color: #fff;
+  border: 2px solid rgba(255,255,255,.32);
+  font-size: .87rem; font-weight: 800; text-decoration: none; transition: all .2s;
+}
+.support-btn-sub:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+/* responsive for new sections */
+@media(max-width:1024px){
+  .response-grid { grid-template-columns: repeat(2, 1fr); }
+  .archive-grid  { grid-template-columns: repeat(2, 1fr); }
+  .law-grid      { grid-template-columns: repeat(2, 1fr); }
+  .issue-grid    { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width:760px){
+  .purpose-grid  { grid-template-columns: 1fr; }
+  .lead-grid     { grid-template-columns: 1fr; gap: 30px; }
+  .update-item   { grid-template-columns: 90px auto 1fr; }
+  .update-arrow  { display: none; }
+}
+@media(max-width:580px){
+  .issue-grid    { grid-template-columns: 1fr; }
+  .law-grid      { grid-template-columns: 1fr; }
+  .response-grid { grid-template-columns: 1fr; }
+  .archive-grid  { grid-template-columns: 1fr; }
+  .purpose-card  { flex-direction: column; }
+  .hero-btns     { flex-direction: column; align-items: center; }
+}
+
+/* =============================================
+   HERO CENTER & COLOR OVERRIDES
+   ============================================= */
+
+/* 背景：白→薄いネイビー系グラデ */
+.hero-content-wrap {
+  background: linear-gradient(180deg, #eef2f7 0%, #fff 60%);
+  padding: 56px 0 88px;
+}
+
+/* テキスト列：中央揃え */
+.hero-text-row {
+  max-width: 860px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* eyebrow：中央 */
+.hero-eyebrow {
+  margin-inline: auto;
+}
+
+/* h1：中央 */
+.hero-h1 {
+  margin-inline: auto;
+}
+
+/* リード文：枠なし・太字・大きめ・カラー */
+.hero-lead {
+  max-width: 860px;
+  margin-inline: auto;
+  margin-bottom: 32px;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-weight: 600;
+  color: #1a3a5c;
+  line-height: 2.1;
+}
+
+/* 速報バー：中央 */
+.hero-flash {
+  max-width: 660px;
+  margin-inline: auto;
+  margin-bottom: 32px;
+}
+
+/* 統計：中央揃え */
+.hero-stats {
+  justify-content: center;
+  max-width: 480px;
+  margin-inline: auto;
+  margin-bottom: 32px;
+  border-top-color: rgba(10,22,40,.12);
+  padding-top: 28px;
+}
+.hero-stat { padding: 0 24px; }
+.hero-stat strong { font-size: 2.2rem; }
+
+/* CTAボタン：中央 */
+.hero-btns {
+  justify-content: center;
+}
+
+/* =============================================
+   動画セクション
+   ============================================= */
+.video-section {
+  background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+  padding: 80px 0 88px;
+}
+.video-section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.video-section-kicker {
+  font-size: .72rem; font-weight: 900; letter-spacing: .16em;
+  color: #b91c1c; text-transform: uppercase; margin-bottom: 12px;
+}
+.video-section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 900; color: #7f1d1d; line-height: 1.35; margin-bottom: 14px;
+}
+.video-section-lead {
+  font-size: clamp(.88rem, 1.2vw, .97rem);
+  color: #991b1b; line-height: 1.85;
+  max-width: 600px; margin-inline: auto;
+}
+.video-wrap {
+  max-width: 860px;
+  margin-inline: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,.6);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.video-wrap video {
+  display: block; width: 100%; height: auto;
+}
+
+/* =============================================
+   実態セクション（動画の下）
+   ============================================= */
+.reality-section {
+  background: #fff;
+  padding: 88px 0 96px;
+}
+.reality-section-head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.reality-section-kicker {
+  font-size: .72rem; font-weight: 900; letter-spacing: .16em;
+  color: #b91c1c; text-transform: uppercase; margin-bottom: 12px;
+}
+.reality-section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  font-weight: 900; color: #0d2044; line-height: 1.3; margin-bottom: 16px;
+}
+.reality-section-lead {
+  font-size: clamp(.9rem, 1.2vw, 1rem);
+  color: #4a5568; line-height: 1.85;
+  max-width: 600px; margin-inline: auto;
+}
+.reality-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1080px;
+  margin-inline: auto;
+}
+.reality-card {
+  display: flex; flex-direction: column;
+  text-decoration: none; color: inherit;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px; overflow: hidden;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.reality-card:hover {
+  border-color: #b91c1c;
+  box-shadow: 0 12px 36px rgba(185,28,28,.12);
+  transform: translateY(-4px);
+}
+.reality-card-img {
+  height: 160px; overflow: hidden; position: relative;
+}
+.reality-card-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .5s ease;
+}
+.reality-card:hover .reality-card-img img { transform: scale(1.06); }
+.reality-card-num {
+  position: absolute; top: 10px; left: 12px;
+  background: #b91c1c; color: #fff;
+  font-size: .65rem; font-weight: 900; letter-spacing: .08em;
+  padding: 3px 9px; border-radius: 4px;
+}
+.reality-card-body {
+  padding: 20px 20px 22px;
+  background: #fff;
+  border-top: 3px solid #fecaca;
+  flex: 1; display: flex; flex-direction: column;
+}
+.reality-card-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(.95rem, 1.4vw, 1.05rem);
+  font-weight: 900; color: #0d2044;
+  line-height: 1.4; margin-bottom: 10px;
+}
+.reality-card-desc {
+  font-size: .83rem; color: #4a5568;
+  line-height: 1.75; margin-bottom: 16px; flex: 1;
+}
+.reality-card-cta {
+  font-size: .82rem; font-weight: 900;
+  color: #b91c1c; letter-spacing: .02em;
+}
+@media(max-width:1024px) { .reality-grid { grid-template-columns: 1fr 1fr; max-width: 680px; } }
+@media(max-width:580px)  { .reality-grid { grid-template-columns: 1fr; max-width: 420px; } }
+
+/* =============================================
+   現場実例セクション（トップページ）
+   ============================================= */
+.fieldcase-section {
+  padding: 80px 0 88px;
+  background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+  position: relative;
+  overflow: hidden;
+}
+.fieldcase-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.fieldcase-head {
+  text-align: center;
+  margin-bottom: 52px;
+  position: relative;
+}
+.fieldcase-kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 4px 16px; border-radius: 999px;
+  background: rgba(185,28,28,.1); border: 1px solid rgba(185,28,28,.3);
+  font-size: .7rem; font-weight: 900; letter-spacing: .14em;
+  text-transform: uppercase; color: #b91c1c;
+  margin-bottom: 20px;
+}
+.fieldcase-kicker::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: #b91c1c; animation: fc-blink 2s ease infinite;
+}
+@keyframes fc-blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+.fieldcase-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  font-weight: 900; color: #0c2d52;
+  line-height: 1.3; margin-bottom: 18px;
+}
+.fieldcase-video-wrap {
+  max-width: 720px;
+  margin: 28px auto 28px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(12,45,82,.15);
+}
+.fieldcase-video-wrap video {
+  width: 100%; display: block;
+}
+.fieldcase-lead {
+  font-size: clamp(.88rem, 1.3vw, 1rem);
+  color: #3d5a7a;
+  line-height: 1.9;
+  max-width: 640px; margin-inline: auto;
+}
+/* カードグリッド */
+.fieldcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  position: relative;
+}
+@media (max-width: 860px) {
+  .fieldcase-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .fieldcase-grid { grid-template-columns: 1fr; }
+}
+.fc-card {
+  background: rgba(255,255,255,.6);
+  border: 1px solid rgba(12,45,82,.15);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex; flex-direction: column;
+  transition: background .25s, border-color .25s, transform .25s;
+  position: relative;
+}
+.fc-card:hover {
+  background: rgba(255,255,255,.9);
+  border-color: rgba(185,28,28,.4);
+  transform: translateY(-4px);
+}
+.fc-card-img {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.fc-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: brightness(1.02) saturate(1.04);
+  transition: filter .3s;
+}
+.fc-card:hover .fc-card-img img {
+  filter: brightness(1.08) saturate(1.08);
+}
+.fc-card-num {
+  position: absolute; top: 12px; left: 12px;
+  background: rgba(185,28,28,.85);
+  color: #fff; font-size: .65rem; font-weight: 900;
+  letter-spacing: .1em; padding: 3px 10px; border-radius: 4px;
+}
+.fc-card-tag {
+  position: absolute; bottom: 12px; left: 12px; right: 12px;
+  background: rgba(0,0,0,.65);
+  color: #fca5a5; font-size: .68rem; font-weight: 800;
+  padding: 4px 10px; border-radius: 4px;
+  backdrop-filter: blur(4px);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.fc-card-body {
+  padding: 18px 18px 20px;
+  flex: 1; display: flex; flex-direction: column;
+}
+.fc-card-title {
+  font-size: .95rem; font-weight: 700; color: #0c2d52;
+  line-height: 1.45; margin-bottom: 8px;
+}
+.fc-card-desc {
+  font-size: .78rem; color: #4a6580;
+  line-height: 1.7; flex: 1; margin-bottom: 14px;
+}
+.fc-card-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .78rem; font-weight: 700; color: #b91c1c;
+}
+.fc-card-cta svg {
+  width: 14px; height: 14px;
+  stroke: currentColor; fill: none;
+  stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  transition: transform .2s;
+}
+.fc-card:hover .fc-card-cta svg { transform: translateX(4px); }
+/* フルワイドCTAカード */
+.fieldcase-single {
+  max-width: 680px;
+  margin-inline: auto;
+}
+.fc-card-wide {
+  grid-column: 1 / -1;
+  flex-direction: row; align-items: center;
+  padding: 28px 32px;
+  background: rgba(255,255,255,.85);
+  border-color: rgba(185,28,28,.25);
+  gap: 24px;
+}
+@media (max-width: 540px) {
+  .fc-card-wide { flex-direction: column; padding: 22px 18px; }
+}
+.fc-card-wide-text { flex: 1; }
+.fc-card-wide-title {
+  font-size: 1.15rem; font-weight: 800; color: #0c2d52;
+  margin-bottom: 8px;
+}
+.fc-card-wide-desc {
+  font-size: .95rem; color: #3a5272; line-height: 1.75;
+}
+.fc-card-wide-btn {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #b91c1c; color: #fff;
+  font-weight: 800; font-size: .88rem;
+  padding: 13px 24px; border-radius: 8px;
+  white-space: nowrap;
+  transition: background .2s, transform .2s;
+}
+.fc-card-wide:hover .fc-card-wide-btn {
+  background: #991b1b; transform: scale(1.03);
+}
+
+/* =============================================
+   正しいPTA運営のあり方セクション
+   ============================================= */
+.proper-section {
+  padding: 80px 0 88px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+.proper-head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.proper-kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 4px 16px; border-radius: 999px;
+  background: rgba(21,128,61,.1); border: 1px solid rgba(21,128,61,.3);
+  font-size: .7rem; font-weight: 900; letter-spacing: .14em;
+  text-transform: uppercase; color: #15803d;
+  margin-bottom: 16px;
+}
+.proper-kicker::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: #15803d;
+}
+.proper-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  font-weight: 900; color: #0f4c2a;
+  line-height: 1.3; margin-bottom: 14px;
+}
+.proper-lead {
+  font-size: clamp(.88rem, 1.3vw, 1rem);
+  color: #1f5c38; line-height: 1.8;
+  max-width: 620px; margin-inline: auto;
+}
+.proper-single {
+  max-width: 680px;
+  margin-inline: auto;
+}
+.proper-card {
+  background: #fff;
+  border: 1px solid rgba(21,128,61,.2);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column;
+  transition: box-shadow .25s, transform .25s, border-color .25s;
+}
+.proper-card:hover {
+  box-shadow: 0 10px 32px rgba(21,128,61,.18);
+  transform: translateY(-4px);
+  border-color: rgba(21,128,61,.45);
+}
+.proper-card-img-wrap {
+  position: relative;
+  aspect-ratio: 16/7;
+  overflow: hidden;
+}
+.proper-card-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+.proper-card:hover .proper-card-img-wrap img { transform: scale(1.04); }
+.proper-card-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(15,76,42,.2) 0%, rgba(15,76,42,.55) 100%);
+}
+.proper-card-img-label {
+  position: absolute; bottom: 14px; left: 16px;
+  background: rgba(21,128,61,.85);
+  color: #fff; font-size: .68rem; font-weight: 900;
+  letter-spacing: .1em; padding: 4px 12px; border-radius: 4px;
+  backdrop-filter: blur(4px);
+}
+.proper-card-body {
+  padding: 24px 26px 26px;
+}
+.proper-card-title {
+  font-size: 1.1rem; font-weight: 800; color: #0f4c2a;
+  line-height: 1.4; margin-bottom: 10px;
+}
+.proper-card-desc {
+  font-size: .88rem; color: #374151; line-height: 1.75;
+  margin-bottom: 16px;
+}
+.proper-card-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .85rem; font-weight: 700; color: #15803d;
+}
+.proper-card-cta svg {
+  width: 14px; height: 14px;
+  stroke: currentColor; fill: none;
+  stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  transition: transform .2s;
+}
+.proper-card:hover .proper-card-cta svg { transform: translateX(4px); }
+
+/* =============================================
+   立場別入り口セクション
+   ============================================= */
+.entry-section {
+  background: linear-gradient(135deg, #dce8f5 0%, #edf4fb 100%);
+  padding: 80px 0 88px;
+}
+.entry-section-head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.entry-section-kicker {
+  font-size: .72rem; font-weight: 900; letter-spacing: .16em;
+  color: rgba(26,61,120,.55); text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.entry-section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  font-weight: 900; color: #0d2044; line-height: 1.3;
+  margin-bottom: 16px;
+}
+.entry-section-lead {
+  font-size: clamp(.9rem, 1.2vw, 1rem);
+  color: rgba(15,30,60,.68);
+  line-height: 1.85;
+  max-width: 580px;
+  margin-inline: auto;
+}
+.entry-portal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1080px;
+  margin-inline: auto;
+}
+/* 3枚目を常に表示（既存CSSの display:none を上書き） */
+.entry-portal-grid .portal-card:nth-child(3) { display: block !important; }
+/* ポータルカードを明背景用に調整 */
+.entry-portal-grid .portal-card {
+  border-color: rgba(26,61,120,.14);
+  box-shadow: 0 4px 20px rgba(0,0,60,.1);
+}
+.entry-portal-grid .portal-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 16px 40px rgba(0,0,60,.16);
+}
+@media(max-width:1024px) {
+  .entry-portal-grid { grid-template-columns: 1fr 1fr; max-width: 680px; }
+  .entry-portal-grid .portal-card:nth-child(3) { display: block !important; grid-column: span 2; max-width: 340px; margin-inline: auto; width: 100%; }
+}
+@media(max-width:580px) {
+  .entry-portal-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .entry-portal-grid .portal-card:nth-child(3) { grid-column: span 1; max-width: none; margin-inline: 0; }
+}
+/* 画像上のテキストを非表示・画像はクリーンに */
+.entry-portal-grid .portal-num,
+.entry-portal-grid .portal-role { display: none; }
+.entry-portal-grid .portal-img-overlay {
+  background: linear-gradient(to bottom, transparent 60%, rgba(5,10,18,.08) 100%);
+}
+/* portal-body 内ヘッダー：番号＋タイトル */
+.portal-card-header { margin-bottom: 12px; }
+.portal-card-header-num {
+  font-size: .6rem; font-weight: 900; letter-spacing: .13em;
+  color: rgba(26,61,120,.5); text-transform: uppercase; margin-bottom: 5px;
+}
+.portal-card-header-ja {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  font-weight: 900; color: #0d2044; line-height: 1.3;
+}
+
+/* =============================================
+   2列フィーチャーカードセクション
+   ============================================= */
+.feature-duo-section {
+  background: var(--bg);
+  padding: 100px 0;
+}
+.feature-duo-section .section-center { margin-bottom: 56px; }
+.feature-duo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 1040px;
+  margin-inline: auto;
+}
+.feature-duo-card {
+  display: block;
+  text-decoration: none;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.feature-duo-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 12px 40px rgba(0,0,0,.1);
+  transform: translateY(-3px);
+}
+.feature-duo-card-img {
+  height: 200px; overflow: hidden; position: relative;
+}
+.feature-duo-card-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: brightness(1.02) saturate(1.1);
+  transition: transform .5s ease;
+}
+.feature-duo-card:hover .feature-duo-card-img img { transform: scale(1.06); }
+.feature-duo-card-body {
+  background: #fff;
+  padding: 28px 32px 32px;
+  border-top: 3px solid var(--gold);
+}
+.feature-duo-card-body h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  font-weight: 900;
+  color: #0d2044;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+.feature-duo-card-lead {
+  font-size: clamp(.87rem, 1.12vw, .96rem);
+  color: #4a5568;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+.feature-duo-card-cta {
+  font-size: .87rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: .02em;
+}
+@media(max-width:760px) {
+  .feature-duo-grid { grid-template-columns: 1fr; max-width: 520px; }
+}
+
+
+/* Stage28: restore top hero three-photo visual strip */
+.home-hero-photo-triptych{
+  display:grid;
+  grid-template-columns:1.18fr .94fr .94fr;
+  gap:14px;
+  width:min(100%,960px);
+  margin:18px 0 28px;
+}
+.home-hero-photo-triptych figure{
+  position:relative;
+  margin:0;
+  min-height:160px;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.24);
+  box-shadow:0 16px 34px rgba(0,0,0,.24);
+  background:#0f172a;
+}
+.home-hero-photo-triptych figure:first-child{min-height:230px;grid-row:span 2;}
+.home-hero-photo-triptych img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.02);}
+.home-hero-photo-triptych figure::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,0) 45%,rgba(15,23,42,.38));pointer-events:none;}
+.home-hero-photo-triptych figcaption{position:absolute;left:12px;right:12px;bottom:10px;z-index:1;color:#fff;font-size:.78rem;font-weight:900;text-shadow:0 2px 10px rgba(0,0,0,.55);letter-spacing:.03em;}
+@media(max-width:760px){.home-hero-photo-triptych{grid-template-columns:1fr;gap:10px}.home-hero-photo-triptych figure,.home-hero-photo-triptych figure:first-child{min-height:178px;grid-row:auto}}
+
+
+
+/* Stage34: top hero restored as a compact full-photo slideshow.
+   The hero is visual navigation only; body text starts after this block. */
+.home-photo-hero{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  min-height:340px;
+  height:clamp(340px, 42vw, 470px);
+  max-height:470px;
+  background:#08213d;
+  border-top:1px solid rgba(212,175,55,.55);
+}
+.home-photo-hero .hero-slideshow,
+.home-photo-hero .slide{
+  position:absolute;
+  inset:0;
+}
+.home-photo-hero .slide{
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity 1.8s ease;
+  will-change:opacity, transform;
+}
+.home-photo-hero .slide.is-active{opacity:1;}
+.home-photo-hero-overlay{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(90deg, rgba(5,17,31,.38) 0%, rgba(5,17,31,.18) 42%, rgba(5,17,31,.04) 78%),
+    linear-gradient(180deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.02) 48%, rgba(5,17,31,.10) 100%);
+  pointer-events:none;
+}
+.home-photo-hero-inner{
+  position:relative;
+  z-index:2;
+  width:min(calc(100% - 40px), 1100px);
+  height:100%;
+  margin-inline:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:34px 0 42px;
+}
+.home-photo-hero-kicker{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 14px;
+  border-radius:999px;
+  background:rgba(212,175,55,.18);
+  border:1px solid rgba(212,175,55,.45);
+  color:#fff2a8;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+  text-shadow:0 1px 5px rgba(5,17,31,.42);
+}
+.home-photo-hero-title{
+  max-width:760px;
+  margin:0;
+  font-family:'Noto Serif JP', serif;
+  font-size:clamp(2rem, 4.2vw, 3.5rem);
+  font-weight:900;
+  line-height:1.22;
+  letter-spacing:-.035em;
+  color:#fff;
+  text-shadow:0 3px 14px rgba(5,17,31,.45);
+}
+.home-photo-hero-title span{color:#fff2a8;}
+.home-photo-hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:26px;
+}
+.home-photo-hero-actions a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:10px 20px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:.9rem;
+  font-weight:900;
+  line-height:1;
+  box-shadow:0 8px 24px rgba(5,17,31,.22);
+}
+.home-photo-hero-actions .primary{
+  background:var(--gold, #d4af37);
+  color:var(--navy, #05172f);
+}
+.home-photo-hero-actions .secondary{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.55);
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(6px);
+}
+.home-photo-hero .slide-nav{
+  right:28px;
+  bottom:22px;
+  z-index:4;
+}
+.home-photo-hero .slide-bottom-fade{
+  height:44px;
+  z-index:3;
+  background:linear-gradient(to bottom, transparent 0%, #fff 100%);
+}
+@media (max-width: 760px){
+  .home-photo-hero{height:390px; min-height:390px; max-height:none;}
+  .home-photo-hero-inner{width:min(calc(100% - 28px), 1100px); padding:28px 0 42px;}
+  .home-photo-hero-title{font-size:clamp(1.72rem, 8vw, 2.45rem);}
+  .home-photo-hero-actions{gap:9px; margin-top:22px;}
+  .home-photo-hero-actions a{min-height:40px; padding:10px 16px; font-size:.84rem;}
+  .home-photo-hero .slide-nav{right:16px; bottom:16px;}
+}
+
+</style>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0D18ZSSLMH');
+</script>
+<style id="stage31-breadcrumb-and-unbox">
+  .breadcrumb-bar{background:#fff;border-bottom:1px solid #d8dee8;}
+  .breadcrumb-inner{max-width:1120px;margin:0 auto;padding:11px 24px;font-size:.92rem;line-height:1.6;color:#475569;display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+  .breadcrumb-inner a{color:#06c;text-decoration:none;}
+  .breadcrumb-inner a:hover{text-decoration:underline;}
+  .breadcrumb-inner .current{color:#334155;}
+  .document-breadcrumb{max-width:1120px;margin:0 auto 18px;padding:11px 0;font-size:.92rem;color:#475569;display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #d8dee8;}
+  .document-breadcrumb a{color:#06c;text-decoration:none;}
+  .document-breadcrumb a:hover{text-decoration:underline;}
+  .plain-prose-block{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;}
+  .unboxed-panel{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;}
+
+  .editorial-panel:not(.ed-resource-panel),
+  .documents-note.editorial-panel{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;}
+  .ed-resource-panel{box-shadow:none!important;border-radius:0!important;}
+</style>
+</head>
+<body>
+<!-- =========================================
+     ヘッダー
+     ========================================= -->
+<header class="site-header">
+<div class="nav-container">
+<a class="logo" href="index.html">
+<img alt="PTA適正化推進委員会ロゴ" src="assets/popc-logo.png"/>
+<span>PTA適正化推進委員会</span>
+</a>
+<div class="header-search">
+<svg viewbox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+<input aria-label="サイト内検索" class="search-input" placeholder="キーワードで検索…" type="text"/>
+<div class="search-results-dropdown"></div>
+</div>
+<nav aria-label="主要ナビゲーション" class="desktop-nav">
+<a class="nav-link" href="index.html">トップ</a>
+<a class="nav-link" href="proper-management.html">適正化とは</a>
+<a class="nav-link" href="edu-board-separation.html">教委向け分離指針</a>
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="#">立場別入り口</a>
+<div class="mega-menu">
+<div class="mega-col">
+<h4>立場別ガイド</h4>
+<ul>
+<li><a href="guide-parent.html">保護者の方へ</a></li>
+<li><a href="guide-pta.html">PTA役員の方へ</a></li>
+<li><a href="guide-board.html">学校・教育委員会の方へ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="#">資料</a>
+<div class="mega-menu">
+<div class="mega-col">
+<h4>証拠資料</h4>
+<ul>
+<li><a href="board-responses.html">教育委員会の回答</a></li>
+<li><a href="national-archive.html">全国資料館</a></li>
+<li><a href="administrative-materials.html">行政資料整理</a></li>
+</ul>
+</div>
+<div class="mega-col">
+<h4>ガイド・ツール</h4>
+<ul>
+<li><a href="guideline.html">適正化ガイドライン</a></li>
+<li><a href="audit/index.html">運営チェックアプリ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="nav-item has-dropdown">
+<a class="nav-link" href="#">研究論考</a>
+<div class="mega-menu">
+<div class="mega-col">
+<h4>研究・論考</h4>
+<ul>
+<li><a href="journal.html">論考・調査報告</a></li>
+<li><a href="report.html">総合分析レポート</a></li>
+<li><a href="law-map.html">法制度マップ</a></li>
+<li><a href="cases.html">判例整理</a></li>
+<li><a href="timeline.html">PTA制度史</a></li>
+</ul>
+</div>
+</div>
+</div>
+<a class="nav-link support-nav-link" href="https://ptaorg.github.io/donate/">応援</a>
+<a class="btn-gold" href="audit/index.html">⚙️ 運営チェック</a>
+</nav>
+<button aria-controls="mobileOverlay" aria-expanded="false" aria-label="メニューを開く" class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+</header>
+<div class="mobile-overlay" id="mobileOverlay">
+<a class="mobile-link" href="index.html"><span>Top</span>トップ</a>
+<a class="mobile-link" href="proper-management.html"><span>Policy</span>適正化とは</a>
+<a class="mobile-link" href="edu-board-separation.html"><span>Board</span>教委向け分離指針</a>
+<a class="mobile-link" href="guide-parent.html"><span>Parents</span>保護者の方へ</a>
+<a class="mobile-link" href="guide-pta.html"><span>PTA Board</span>PTA役員の方へ</a>
+<a class="mobile-link" href="guide-board.html"><span>School / Board</span>学校・教育委員会の方へ</a>
+<a class="mobile-link" href="board-responses.html"><span>Evidence</span>教育委員会の回答</a>
+<a class="mobile-link" href="national-archive.html"><span>Archive</span>全国資料館</a>
+<a class="mobile-link" href="journal.html"><span>Research</span>論考・調査報告</a>
+<a class="mobile-link" href="audit/index.html"><span>Check</span>運営チェックアプリ</a>
+<a class="mobile-link support-mobile-link" href="https://ptaorg.github.io/donate/"><span>Support</span>応援・寄付</a>
+<div class="close-overlay" id="closeOverlay">CLOSE ×</div>
+</div>
+<main>
+<section aria-labelledby="top-hero-title" class="home-photo-hero">
+<div aria-hidden="true" class="hero-slideshow" id="heroSlideshow">
+<div class="slide kb1 is-active" style="background-image:url('assets/slides/1.jpg')"></div>
+<div class="slide kb2" style="background-image:url('assets/slides/2.jpg')"></div>
+<div class="slide kb3" style="background-image:url('assets/slides/3.jpg')"></div>
+</div>
+<div aria-hidden="true" class="home-photo-hero-overlay"></div>
+<div class="home-photo-hero-inner">
+<div class="home-photo-hero-kicker">Research · Evidence · Legal Compliance</div>
+<h1 class="home-photo-hero-title" id="top-hero-title">PTAを、任意加入の原則と<br/><span>法令に基づく運営</span>へ。</h1>
+<div aria-label="トップページの主要導線" class="home-photo-hero-actions">
+<a class="primary" href="guide-parent.html">保護者として読む</a>
+<a class="secondary" href="guide-board.html">学校・教育委員会向け</a>
+<a class="secondary" href="national-archive.html">資料を見る</a>
+</div>
+</div>
+<div aria-label="トップ画像切り替え" class="slide-nav" id="slideNav"></div>
+<div aria-hidden="true" class="slide-bottom-fade"></div>
+</section>
+<section aria-labelledby="home-reading-title" class="home-reading-section" style="background:#fff;padding:72px 0;border-top:1px solid rgba(5,17,31,.08);border-bottom:1px solid rgba(5,17,31,.08)">
+<div class="wrap" style="max-width:980px">
+<div class="section-kicker">Main Issue</div>
+<h2 class="section-title" id="home-reading-title">問題は、PTAがあることではなく、学校手続に溶け込んで見えなくなることです。</h2>
+<p class="section-lead" style="max-width:860px">PTAは、保護者と教職員が任意に参加する団体です。その活動自体を否定する必要はありません。確認すべきなのは、入会意思、会費、名簿、連絡、配布、教職員の事務が、学校の手続や学校の資源にどこまで組み込まれているかです。</p>
+<div class="editorial-bluebar" style="margin-top:24px">任意団体として尊重するためにこそ、学校の業務、学校の情報、学校徴収金、学校施設との境界を明確にする。</div>
+<div aria-label="トップページの主要論点" class="editorial-matrix" style="margin-top:24px">
+<div class="editorial-matrix-row"><div class="editorial-matrix-term">入会</div><div class="editorial-matrix-desc">申込書や承諾記録がないまま、全家庭を会員扱いしていないか。</div></div>
+<div class="editorial-matrix-row"><div class="editorial-matrix-term">会費</div><div class="editorial-matrix-desc">学校徴収金とPTA会費が、同じ案内・同じ口座・同じ未納管理で処理されていないか。</div></div>
+<div class="editorial-matrix-row"><div class="editorial-matrix-term">情報・人・場所</div><div class="editorial-matrix-desc">学校保有情報、学校連絡ツール、教職員の勤務時間、学校施設が、PTA内部事務のために使われていないか。</div></div>
+</div>
+</div>
+</section>
+<section id="home-legal-frame" aria-labelledby="home-legal-frame-h" style="padding:48px 0;background:#fbfcfe">
+<div style="max-width:1080px;margin:0 auto;padding:0 20px">
+<div style="font-size:.74rem;font-weight:900;letter-spacing:.1em;color:#1e3a5f;text-transform:uppercase;margin-bottom:10px">なぜ問題なのか</div>
+<h2 id="home-legal-frame-h" style="font-family:'Noto Serif JP',serif;color:#1e3a5f;font-size:1.6rem;line-height:1.5;margin:0 0 12px">「見えなくなる」ことには、3つの独立した法的論点があります</h2>
+<p style="color:#374151;line-height:1.9;margin:0;max-width:760px">これは「PTAをなくせ」という主張ではありません。学校とPTAの境界があいまいなまま運用されると、次の3点が同時に生じます。いずれか一つでも問題になり得ますが、実際には連鎖しています。</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px">
+<div style="background:#fff;border:1px solid #e8ebf0;border-top:3px solid #1e3a5f;border-radius:12px;padding:20px 20px 18px;box-shadow:0 4px 14px rgba(15,23,42,.05)">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#1e3a5f;color:#d4af37;font-weight:900;font-size:.9rem">1</span><span style="font-weight:700;color:#1e3a5f;letter-spacing:.04em;font-size:.8rem">入口</span></div>
+<strong style="display:block;color:#111827;font-size:1.02rem;margin-bottom:6px">加入の意思確認</strong>
+<p style="margin:0;color:#374151;line-height:1.8;font-size:.92rem">入会申込みの記録がないまま「全員加入」とすると、そもそも加入契約として有効に成立しているかが疑わしくなります（任意加入原則・消費者契約法）。</p>
+</div>
+<div style="background:#fff;border:1px solid #e8ebf0;border-top:3px solid #1e3a5f;border-radius:12px;padding:20px 20px 18px;box-shadow:0 4px 14px rgba(15,23,42,.05)">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#1e3a5f;color:#d4af37;font-weight:900;font-size:.9rem">2</span><span style="font-weight:700;color:#1e3a5f;letter-spacing:.04em;font-size:.8rem">運営</span></div>
+<strong style="display:block;color:#111827;font-size:1.02rem;margin-bottom:6px">個人情報の使い道</strong>
+<p style="margin:0;color:#374151;line-height:1.8;font-size:.92rem">学校が集めた名簿をPTA運営のために使うことは、学校業務の利用目的の範囲外の利用にあたり得ます（個人情報保護法第69条・社会教育法第2条）。</p>
+</div>
+<div style="background:#fff;border:1px solid #e8ebf0;border-top:3px solid #1e3a5f;border-radius:12px;padding:20px 20px 18px;box-shadow:0 4px 14px rgba(15,23,42,.05)">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#1e3a5f;color:#d4af37;font-weight:900;font-size:.9rem">3</span><span style="font-weight:700;color:#1e3a5f;letter-spacing:.04em;font-size:.8rem">公金</span></div>
+<strong style="display:block;color:#111827;font-size:1.02rem;margin-bottom:6px">教職員の事務と給与</strong>
+<p style="margin:0;color:#374151;line-height:1.8;font-size:.92rem">私的団体であるPTAの会費徴収・会計を教職員が勤務時間中に担うことは、公務とは言えず、公金支出の問題になり得ます。</p>
+</div>
+</div>
+<p style="margin:18px 0 0;color:#374151;font-size:.92rem">詳しい根拠と条文は <a href="guide-board.html" style="color:#1e3a5f;font-weight:700">教育委員会向けガイド</a> に整理しています。</p>
+</div>
+</section>
+<!-- =========================================
+     現場実例セクション（動画含む）
+     ========================================= -->
+<section class="fieldcase-section">
+<div class="wrap">
+<div class="fieldcase-head">
+<div class="fieldcase-kicker">Documentary — 現場レポート</div>
+<h2 class="fieldcase-title">PTAの強制加入問題</h2>
+<div class="fieldcase-video-wrap">
+<video controls="" playsinline="" preload="metadata">
+<source src="assets/video/pta-compulsion.mp4" type="video/mp4"/>
+          お使いのブラウザは動画の再生に対応していません。
+        </video>
+</div>
+<p class="fieldcase-lead">PTAの強制加入・強制活動と受け止められている事例を記録した映像です。「みんなやっているから」では済まされない、コンプライアンス上の問題を書類・文書とともに解説します。</p>
+</div>
+<div class="fieldcase-single">
+<a class="fc-card fc-card-wide" href="compliance.html">
+<div class="fc-card-wide-text">
+<div class="fc-card-wide-title">今、実際に何が行われているか</div>
+<div class="fc-card-wide-desc">みなし加入、代行徴収、個人情報提供、教職員関与、非加入者の扱いを、実際の書類・文書をもとに確認します。</div>
+</div>
+<span class="fc-card-wide-btn">
+          実例を見る
+          <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</span>
+</a>
+</div>
+</div>
+</section>
+<!-- =========================================
+     立場別入り口
+     ========================================= -->
+<section class="entry-section">
+</section>
+<!-- =========================================
+     コンテンツ入口：2列フィーチャーカード
+     ========================================= -->
+<section class="feature-duo-section">
+<div class="wrap">
+<div class="section-center">
+<div class="section-kicker">一次資料・行政見解</div>
+<h2 class="section-title">本文の論点を、実物資料で確認する</h2>
+<p class="section-lead">教育委員会回答と学校別資料は、単なるリンク先ではありません。入会意思確認、名簿作成、学校徴収金、教職員関与について、行政の説明と現場資料を照合するための根拠資料です。</p>
+</div>
+<div class="feature-duo-grid">
+<a class="feature-duo-card" href="board-responses.html">
+<div class="feature-duo-card-img">
+<img alt="明るい学校風景" loading="lazy" src="assets/slides/1.jpg"/>
+</div>
+<div class="feature-duo-card-body">
+<h3>自治体・教育委員会の公式回答</h3>
+<p class="feature-duo-card-lead">76自治体・111件の分類済み回答を含む、教育委員会への照会・公文書開示請求によって得た行政の公式見解を収録しています。任意加入・個人情報提供・会費代行徴収・教職員関与など、論点ごとに自治体名・担当部署・回答年月を整理して掲載。「行政がどう認識しているか」を一次資料で確認できます。</p>
+<div class="feature-duo-card-cta">回答データベースを開く →</div>
+</div>
+</a>
+<a class="feature-duo-card" href="national-archive.html">
+<div class="feature-duo-card-img">
+<img alt="明るい校舎の風景" loading="lazy" src="assets/slides/1.jpg"/>
+</div>
+<div class="feature-duo-card-body">
+<h3>全国の実際のPTA書類</h3>
+<p class="feature-duo-card-lead">情報公開請求・公文書開示請求によって各地の学校・教育委員会から入手した実物書類を公開しています。PTA規約・会費徴収文書・学校との覚書・職務専念義務免除申請書・会計決算書など、現場の実態を「慣習」ではなく実際の文書で確認できます。</p>
+<div class="feature-duo-card-cta">全国資料館を開く →</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- =========================================
+     正しいPTA運営のあり方
+     ========================================= -->
+<section class="proper-section">
+<div class="wrap">
+<div class="proper-head">
+<div class="proper-kicker">Best Practice — 適正運営ガイド</div>
+<h2 class="proper-title">正しいPTA運営のあり方</h2>
+<p class="proper-lead">問題の指摘にとどまらず、「ではどうすればよいのか」を示します。法令に基づいた正しい運営の手順・文例を解説します。</p>
+</div>
+<div class="proper-single">
+<a class="proper-card proper-card-img-type" href="proper-management.html">
+<div class="proper-card-img-wrap">
+<img alt="明るいプールの風景" loading="lazy" src="assets/slides/2.jpg"/>
+<div class="proper-card-img-overlay"></div>
+<div class="proper-card-img-label">Best Practice — 適正運営ガイド</div>
+</div>
+<div class="proper-card-body">
+<h3 class="proper-card-title">正しいPTA運営のあり方を読む</h3>
+<p class="proper-card-desc">任意加入・会費徴収・個人情報・教職員との関係など、法令に基づく正しい運営の手順と文例を解説します。</p>
+<span class="proper-card-cta">詳しく見る <svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- =========================================
+     最新更新・掲載情報
+     ========================================= -->
+<section class="updates-section">
+<div class="wrap">
+<div class="section-center">
+<div class="section-kicker">最新情報</div>
+<h2 class="section-title">最新更新・掲載情報</h2>
+</div>
+<div class="update-list">
+<a class="update-item" href="board-responses.html">
+<div class="update-date">令和8年4月</div>
+<div><span class="update-tag update-tag--response">回答追加</span></div>
+<div class="update-title">厚木市教育委員会：「PTAが独自に徴収することが最もふさわしい方法」（代行徴収に法的位置づけなし）</div>
+<div class="update-arrow">→</div>
+</a>
+<a class="update-item" href="board-responses.html">
+<div class="update-date">令和8年4月</div>
+<div><span class="update-tag update-tag--response">回答追加</span></div>
+<div class="update-title">川崎市教育委員会：委任要綱による代行徴収継続。問題モデルとして収録。</div>
+<div class="update-arrow">→</div>
+</a>
+<a class="update-item" href="board-responses.html">
+<div class="update-date">令和8年2月</div>
+<div><span class="update-tag update-tag--response">回答追加</span></div>
+<div class="update-title">豊浦町教育委員会（北海道）：「教育委員会はPTA活動に関与しない立場」</div>
+<div class="update-arrow">→</div>
+</a>
+<a class="update-item" href="board-responses.html">
+<div class="update-date">資料確認中</div>
+<div><span class="update-tag update-tag--new">通知</span></div>
+<div class="update-title">横浜市教育委員会通知とされる資料を掲載。入会意思確認、個人情報、会費徴収の分離を読む資料。</div>
+<div class="update-arrow">→</div>
+</a>
+<a class="update-item" href="board-responses.html">
+<div class="update-date">令和7年11月</div>
+<div><span class="update-tag update-tag--new">通知</span></div>
+<div class="update-title">兵庫県教育委員会：照会に対する文書回答を掲載。みなし加入、入会意思確認、学校関与の整理を読む回答例。</div>
+<div class="update-arrow">→</div>
+</a>
+<a class="update-item" href="journal.html">
+<div class="update-date">令和7年10月</div>
+<div><span class="update-tag update-tag--doc">委員会反応</span></div>
+<div class="update-title">文部科学省担当者との直接交渉：「PTAは任意加入の民間団体であり学校が関与を強制することはできない」と口頭で確認。音声記録を公開。</div>
+<div class="update-arrow">→</div>
+</a>
+<a class="update-item" href="journal.html">
+<div class="update-date">令和7年9月</div>
+<div><span class="update-tag update-tag--doc">委員会反応</span></div>
+<div class="update-title">消費者庁：PTA会費の強制徴収は消費者契約法・景表法の観点から問題があるとの見解を非公式に確認。交渉記録を掲載。</div>
+<div class="update-arrow">→</div>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- =========================================
+     フッター
+     ========================================= -->
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-grid">
+<div>
+<h3>PTA適正化推進委員会</h3>
+<div class="footer-contact">
+<p>〒235-0021<br>神奈川県横浜市磯子区岡村8-17-5-301</br></p>
+<p><strong>070-9012-7772</strong></p>
+<p><a href="mailto:info@ptaorg.com">info@ptaorg.com</a></p>
+</div>
+<a class="yokomusubi-img-link" href="https://yokomusubi.city.yokohama.lg.jp/organizations/detail/f69c7ad2-cf21-4dfa-87bb-9c891874eb6b/" rel="noopener noreferrer" target="_blank">
+<img alt="よこむすび" src="assets/yokomusubi.png"/>
+</a>
+<p class="yokomusubi-tagline-out">磯子区「よこむすび」掲載団体</p>
+<p class="yokomusubi-meta-out">登録番号：磯子12406　分類番号：12-4（市民活動・社会教育推進）</p>
+</div>
+<div>
+<h4>公式発信</h4>
+<p class="footer-sns-sub">最新資料・論考・動画はこちら</p>
+<div class="footer-sns-cards">
+<a class="fsns-card fsns-x" href="https://x.com/jjjqqqxxx0852" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.836L2.25 2.25H8.08l4.263 5.636L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"></path></svg>
+<div>
+<div class="fsns-name">X</div>
+<div class="fsns-desc">速報・資料更新</div>
+</div>
+</a>
+<a class="fsns-card fsns-yt" href="https://www.youtube.com/@PTA%E9%81%A9%E6%AD%A3%E5%8C%96%E6%8E%A8%E9%80%B2%E5%A7%94%E5%93%A1%E4%BC%9A" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+<div>
+<div class="fsns-name">YouTube</div>
+<div class="fsns-desc">動画で解説</div>
+</div>
+</a>
+<a class="fsns-card fsns-note" href="https://note.com/hiroshisatoh" rel="noopener" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H4zm2 3h10v2H6V8zm0 4h10v2H6v-2zm0 4h6v2H6v-2z"></path></svg>
+<div>
+<div class="fsns-name">note</div>
+<div class="fsns-desc">論考・研究ノート</div>
+</div>
+</a>
+</div>
+</div>
+<div>
+<h4>立場別</h4>
+<ul>
+<li><a href="guide-parent.html">保護者</a></li>
+<li><a href="guide-pta.html">PTA役員</a></li>
+<li><a href="guide-board.html">教育委員会・学校</a></li>
+<li><a href="guide-board.html">教育委員会向け指針</a></li>
+</ul>
+</div>
+<div>
+<h4>論点</h4>
+<ul>
+<li><a href="membership.html">入会手続</a></li>
+<li><a href="privacy.html">個人情報</a></li>
+<li><a href="fee-collection.html">会費徴収</a></li>
+<li><a href="personnel.html">教職員関与</a></li>
+<li><a href="facilities.html">施設利用</a></li>
+</ul>
+</div>
+<div>
+<h4>資料・支援</h4>
+<ul>
+<li><a href="https://ptaorg.github.io/donate/">応援・寄付</a></li>
+<li><a href="board-responses.html">教育委員会の回答</a></li>
+<li><a href="national-archive.html">全国資料館</a></li>
+<li><a href="journal.html">論考・調査報告</a></li>
+<li><a href="report.html">総合分析レポート</a></li>
+<li><a href="audit/index.html">運営チェックアプリ</a></li>
+<li><a href="law-map.html">法制度マップ</a></li>
+<li><a href="guideline.html">適正化ガイドライン</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer-support">
+<div>
+<strong>調査・資料公開の継続を応援してください</strong>
+<p>いただいたご支援は、公文書開示、資料整理、Web公開、自治体・学校への働きかけに活用します。</p>
+</div>
+<a href="https://ptaorg.github.io/donate/">応援ページへ</a>
+</div>
+<p class="copyright">© PTA適正化推進委員会</p>
+</footer>
+<script src="js/site.js"></script>
+<script>
+/* ==========================================
+   Hero Slideshow — クロスフェード + Ken Burns
+   ========================================== */
+(function() {
+  var slides = document.querySelectorAll('#heroSlideshow .slide');
+  if (!slides.length) return;
+  var navEl = document.getElementById('slideNav');
+  var dots = [];
+  var current = 0;
+  var total = slides.length;
+  var INTERVAL = 6500; // 各スライドの表示時間(ms)
+  var timer;
+
+  // ドットを生成
+  if (navEl) {
+    for (var i = 0; i < total; i++) {
+      var btn = document.createElement('button');
+      btn.className = 'slide-dot' + (i === 0 ? ' is-active' : '');
+      btn.setAttribute('aria-label', (i + 1) + '枚目のスライド');
+      (function(idx) {
+        btn.addEventListener('click', function() { goTo(idx); });
+      })(i);
+      navEl.appendChild(btn);
+      dots.push(btn);
+    }
+  }
+
+  function goTo(idx) {
+    if (idx === current) return;
+    var prev = current;
+    current = idx;
+
+    // 前スライドを非表示（アニメーションもリセット）
+    slides[prev].classList.remove('is-active');
+    slides[prev].style.animation = 'none';
+    if (dots[prev]) dots[prev].classList.remove('is-active');
+
+    // 新スライドのKen Burnsをリスタート
+    slides[current].style.animation = 'none';
+    void slides[current].offsetWidth; // reflow
+    slides[current].style.animation = '';
+
+    slides[current].classList.add('is-active');
+    if (dots[current]) dots[current].classList.add('is-active');
+
+    // タイマーリセット
+    clearInterval(timer);
+    timer = setInterval(autoNext, INTERVAL);
+  }
+
+  function autoNext() {
+    goTo((current + 1) % total);
+  }
+
+  // 最初のスライドのKen Burnsをページ読み込み後に開始
+  void slides[0].offsetWidth;
+
+  timer = setInterval(autoNext, INTERVAL);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="description" content="研究者・記者の方へ——全国公文書・教委回答・一次資料へのアクセスガイド。">
+  <link rel="canonical" href="https://ptaorg.com/guide-research.html">
+  <meta property="og:title" content="研究者・記者の方へ | PTA適正化推進委員会">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ptaorg.com/guide-research.html">
+  <meta property="og:image" content="https://ptaorg.com/assets/og-image-popc-en.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="研究者・記者の方へ | PTA適正化推進委員会">
+  <meta name="twitter:description" content="公文書・教育委員会回答・判例・法令整理。PTA問題を一次資料で把握するための入口。">
+  <meta name="twitter:image" content="https://ptaorg.com/assets/og-image-popc-en.png">
+  <title>研究者・記者の方へ | PTA適正化推進委員会</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .pg{width:min(calc(100% - 40px),1000px);margin-inline:auto;padding:56px 0 96px}
+    .pg h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.45rem,2.4vw,1.95rem);color:var(--navy);margin:0 0 12px;padding-bottom:10px;border-bottom:3px solid var(--gold)}
+    .pg h3{font-size:1.02rem;font-weight:800;color:var(--navy);margin:28px 0 10px;padding-left:12px;border-left:4px solid var(--gold)}
+    .pg p{color:var(--text);line-height:1.9;margin-bottom:14px;font-size:.97rem}
+    .pg section{margin-bottom:64px}
+    .strength-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+    .strength-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-sm)}
+    .strength-card .s-icon{font-size:2rem;margin-bottom:10px}
+    .strength-card h4{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:900;color:var(--navy);margin-bottom:8px}
+    .strength-card p{font-size:.87rem;color:var(--text-soft);line-height:1.75;margin:0}
+    .resource-list{display:flex;flex-direction:column;gap:14px;margin:20px 0}
+    .resource-item{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm);text-decoration:none;color:inherit;transition:var(--t)}
+    .resource-item:hover{transform:translateX(4px);box-shadow:var(--shadow-md)}
+    .resource-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--navy-3));color:#fff;display:grid;place-items:center;font-size:1.3rem;flex-shrink:0}
+    .resource-body{flex:1}
+    .resource-body strong{display:block;font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:4px}
+    .resource-body p{font-size:.87rem;color:var(--text-soft);line-height:1.65;margin:0}
+    .resource-arrow{color:var(--text-soft);align-self:center;font-size:1.1rem}
+    .path-flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:20px 0;padding:20px;background:var(--bg);border-radius:var(--radius)}
+    .path-step{background:#fff;border:1.5px solid var(--navy-3);border-radius:10px;padding:10px 16px;font-size:.88rem;font-weight:700;color:var(--navy)}
+    .path-arrow{color:var(--text-soft)}
+    .contact-box{background:linear-gradient(145deg,#1d4ed8,#2563eb);color:#fff;border-radius:var(--radius);padding:32px;margin-top:8px}
+    .contact-box h3{color:var(--gold-lt);font-family:'Noto Serif JP',serif;font-size:1.15rem;margin-bottom:12px}
+    .contact-box p{color:rgba(255,255,255,.85);font-size:.93rem;line-height:1.85;margin-bottom:14px}
+    .contact-box a{color:var(--gold-lt);font-weight:700}
+    @media(max-width:800px){.strength-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.strength-grid{grid-template-columns:1fr}}
+
+    .page-hero{position:relative;overflow:hidden;}
+    .page-hero-bg-img{
+      position:absolute;inset:0;z-index:0;
+    }
+    .page-hero-bg-img img{
+      width:100%;height:100%;object-fit:cover;
+      filter:brightness(1.05);
+    }
+    .page-hero-bg-img::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(160deg,rgba(5,17,31,.32) 0%,rgba(5,17,31,.14) 60%,rgba(5,17,31,.05) 100%);
+    }
+    .page-hero-inner{position:relative;z-index:1;}
+  
+    /* ↓ Photo hero overrides — keep white text on photo background ↓ */
+    .page-hero{background:transparent!important;border-top:none!important;border-bottom:none!important}
+    .page-hero h1{color:#fff!important}
+    .page-hero h1 em{color:var(--gold-lt)!important}
+    .page-hero p{color:rgba(255,255,255,.88)!important}
+    .page-hero-kicker{background:rgba(212,175,55,.18)!important;border:1px solid rgba(212,175,55,.4)!important;color:var(--gold-lt)!important}
+    .hero-actions .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.5)!important}
+    .hero-actions .btn-outline:hover{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.8)!important}
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0D18ZSSLMH');
+</script>
+<link href="css/refine.css?v=refine1" rel="stylesheet"/>
+</head>
+<body>
+  
+<header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/popc-logo.png" alt="PTA適正化推進委員会">
+        <span>PTA適正化推進委員会</span>
+      </a>
+      <div class="header-search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" class="search-input" placeholder="キーワードで検索…" aria-label="サイト内検索">
+        <div class="search-results-dropdown"></div>
+      </div>
+      <nav class="desktop-nav" aria-label="主要ナビゲーション">
+        <a href="index.html" class="nav-link">トップ</a>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">立場別</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>入口</h4>
+              <ul>
+                <li><a href="guide-parent.html">保護者の方へ</a></li>
+                <li><a href="guide-pta.html">PTA役員の方へ</a></li>
+                <li><a href="guide-board.html">教育委員会・学校へ</a></li>
+                <li><a href="guide-research.html">研究者・記者の方へ</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>ツール</h4>
+              <ul>
+                <li><a href="audit/index.html">運営チェックアプリ</a></li>
+                <li><a href="guideline.html">適正化ガイドライン</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">論点</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>主要論点</h4>
+              <ul>
+                <li><a href="membership.html">入会手続・オプトアウト</a></li>
+                <li><a href="privacy.html">個人情報提供</a></li>
+                <li><a href="fee-collection.html">会費徴収</a></li>
+                <li><a href="personnel.html">教職員関与</a></li>
+                <li><a href="facilities.html">施設利用</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>制度整理</h4>
+              <ul>
+                <li><a href="law-map.html">法制度マップ</a></li>
+                <li><a href="cases.html">判例整理</a></li>
+                <li><a href="timeline.html">PTA制度史</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">資料</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>資料</h4>
+              <ul>
+                <li><a href="board-responses.html">教育委員会の回答</a></li>
+                <li><a href="national-archive.html">全国資料館</a></li>
+                <li><a href="journal.html">論考・調査報告</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>分析</h4>
+              <ul>
+                <li><a href="report.html">総合分析レポート</a></li>
+                <li><a href="administrative-materials.html">行政資料整理</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="https://ptaorg.github.io/donate/" class="nav-link support-nav-link">応援</a>
+        <a href="audit/index.html" class="btn-gold">運営チェック</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileOverlay">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-overlay" id="mobileOverlay">
+    <a href="index.html" class="mobile-link"><span>Home</span>トップページ</a>
+    <a href="guide-parent.html" class="mobile-link"><span>Guide</span>保護者の方へ</a>
+    <a href="guide-pta.html" class="mobile-link"><span>Guide</span>PTA役員の方へ</a>
+    <a href="guide-board.html" class="mobile-link"><span>Guide</span>教育委員会・学校へ</a>
+    <a href="board-responses.html" class="mobile-link"><span>Data</span>教育委員会の回答</a>
+    <a href="national-archive.html" class="mobile-link"><span>Archive</span>全国資料館</a>
+    <a href="journal.html" class="mobile-link"><span>Journal</span>論考・調査報告</a>
+    <a href="audit/index.html" class="mobile-link"><span>Check</span>運営チェックアプリ</a>
+    <a href="https://ptaorg.github.io/donate/" class="mobile-link support-mobile-link"><span>Support</span>応援・寄付</a>
+  <div class="close-overlay" id="closeOverlay">CLOSE ×</div>
+  </div>
+
+  <section class="page-hero page-hero--photo">
+    <div class="page-hero-bg-img" aria-hidden="true">
+      <img src="assets/slides/1.jpg" alt="" aria-hidden="true" loading="eager">
+    </div>
+    <div class="page-hero-inner">
+      <div class="page-hero-kicker">For Researchers</div>
+      <h1>研究者・記者の方へ</h1>
+      <p>情報公開請求・教育委員会への照会・実物文書の収集——意見ではなく一次資料で語る研究サイトです。制度論と実物資料を行き来しながら、PTA問題を構造的に把握するための入口をまとめています。</p>
+      <div class="hero-actions">
+        <a href="national-archive.html" class="btn-gold">全国資料館へ</a>
+        <a href="board-responses.html" class="btn-outline">教委回答一覧へ</a>
+        <a href="documents.html" class="btn-outline">資料解説を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="pg">
+
+    <!-- リード -->
+    <p style="font-size:1.05rem;line-height:1.95;color:var(--text);margin-bottom:48px;padding:24px 28px;background:#f8fafc;border-left:5px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0">
+      PTA問題はこれまで「体験談・感情論」として処理されてきましたが、当委員会は法令・行政解釈・公文書に基づく<strong>一次資料研究</strong>として取り組んでいます。情報公開請求で入手した実物文書、教育委員会への照会回答、判例・行政実例の整理を公開し、研究者・記者の方が一次資料の所在と読み方を確認できるようにしています。
+    </p>
+
+
+    <section class="editorial-brief research-editorial-brief" aria-labelledby="research-reading-order">
+      <div class="editorial-brief-band">研究者・記者向け・資料の読み方</div>
+      <div class="editorial-brief-body">
+        <h2 id="research-reading-order">このサイトの資料は、件数の多さではなく「実物文書と制度論を照合できること」に意味があります</h2>
+        <p>PTA問題は、体験談だけでは制度問題として整理しにくい分野です。入会申込書、学校徴収金案内、個人情報同意、教育委員会回答、行政通知を横断して読むことで、任意加入団体であるPTAが学校手続の中に組み込まれている構造を確認できます。</p>
+        <div class="editorial-brief-grid">
+          <div class="editorial-brief-point"><span>1</span><strong>実物資料</strong><p>学校別資料で、実際の案内・徴収・同意の文面を確認します。</p></div>
+          <div class="editorial-brief-point"><span>2</span><strong>行政回答</strong><p>自治体数、回答件数、分類タグを混同せず、回答本文を読みます。</p></div>
+          <div class="editorial-brief-point"><span>3</span><strong>公式資料</strong><p>通知・法令・行政資料は、発出主体と日付を確認して引用します。</p></div>
+          <div class="editorial-brief-point"><span>4</span><strong>論考</strong><p>個別資料を、契約・個人情報・会計・服務の論点へ接続します。</p></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- このサイトの強み -->
+    <section>
+      <h2>このサイトの強み：意見ではなく一次資料</h2>
+      <p>PTA問題は体験談・意見・感情論が先行しやすい分野です。当委員会は一次資料の収集・整理・公開に特化しています。</p>
+
+      <div class="strength-grid">
+        <div class="strength-card">
+          <div class="s-icon">🗂️</div>
+          <h4>情報公開請求で取得した公文書</h4>
+          <p>情報公開請求で取得した実物の行政文書。入会届・会費関係書類・個人情報同意書・覚書など。</p>
+        </div>
+        <div class="strength-card">
+          <div class="s-icon">📮</div>
+          <h4>全国教育委員会への照会回答</h4>
+          <p>強制加入、名簿提供、職務専念義務に関する各教育委員会の回答。回答本文ごとに論点を確認できます。</p>
+        </div>
+        <div class="strength-card">
+          <div class="s-icon">⚖️</div>
+          <h4>法令・判例との接続</h4>
+          <p>民法・個人情報保護法・地公法・憲法等の条文と、実物資料・行政回答を論点別に接続して整理。</p>
+        </div>
+        <div class="strength-card">
+          <div class="s-icon">🏙️</div>
+          <h4>自治体通知・公式資料</h4>
+          <p>任意加入、個人情報、非加入者への配慮などを整理する自治体通知・公式資料。引用時は発出主体・日付・現行性を確認します。</p>
+        </div>
+        <div class="strength-card">
+          <div class="s-icon">🏫</div>
+          <h4>学校別の実物PTA文書</h4>
+          <p>各校が実際に配布した入会案内・規約・会費明細。自治体・学校ごとの実態差を比較可能。</p>
+        </div>
+        <div class="strength-card">
+          <div class="s-icon">📊</div>
+          <h4>5軸診断システム</h4>
+          <p>入会手続・個人情報・会費・教職員関与・施設利用の5軸でリスクを可視化する運営チェックアプリ。研究の分類軸として活用可能。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 資料へのアクセス -->
+    <section>
+      <h2>一次資料へのアクセス</h2>
+
+      <div class="resource-list">
+        <a href="national-archive.html" class="resource-item">
+          <div class="resource-icon">🗂️</div>
+          <div class="resource-body">
+            <strong>全国資料館（このサイト）</strong>
+            <p>論点別カテゴリで整理した資料案内。入会手続・個人情報・会費・教職員関与・施設利用・教委回答の6カテゴリ。</p>
+          </div>
+          <div class="resource-arrow">→</div>
+        </a>
+        <a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener noreferrer" class="resource-item">
+          <div class="resource-icon">📂</div>
+          <div class="resource-body">
+            <strong>PDF原本倉庫（Googleサイト）</strong>
+            <p>情報公開請求等で取得した実物PDF文書を公開。原本資料を確認しながら、学校ごとの運用実態を比較できます。</p>
+          </div>
+          <div class="resource-arrow">↗</div>
+        </a>
+        <a href="board-responses.html" class="resource-item">
+          <div class="resource-icon">📮</div>
+          <div class="resource-body">
+            <strong>教育委員会の回答（地図付き）</strong>
+            <p>全国の教育委員会への照会結果。強制加入・名簿提供・職務専念義務についての行政の公式見解一覧。</p>
+          </div>
+          <div class="resource-arrow">→</div>
+        </a>
+        <a href="journal.html" class="resource-item">
+          <div class="resource-icon">📝</div>
+          <div class="resource-body">
+            <strong>論考・調査報告</strong>
+            <p>制度分析・全国調査報告・行政動向の考察。スライド資料「PTA会費徴収のパラドックス」も掲載。</p>
+          </div>
+          <div class="resource-arrow">→</div>
+        </a>
+        <a href="law-map.html" class="resource-item">
+          <div class="resource-icon">⚖️</div>
+          <div class="resource-body">
+            <strong>法制度マップ</strong>
+            <p>憲法・民法・個人情報保護法・地方公務員法・学校教育法等を論点別に整理した法令対照表。</p>
+          </div>
+          <div class="resource-arrow">→</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 推奨する読み方 -->
+    <section>
+      <h2>推奨する資料の読み方</h2>
+      <p>制度整理 → 実物文書 → 行政回答 の順で見ると、制度と運用のズレが最もクリアに把握できます。</p>
+      <div class="path-flow">
+        <div class="path-step">①法制度マップで論点を把握</div>
+        <div class="path-arrow">→</div>
+        <div class="path-step">②全国資料館で実物文書を確認</div>
+        <div class="path-arrow">→</div>
+        <div class="path-step">③教委回答で行政の公式見解を照合</div>
+        <div class="path-arrow">→</div>
+        <div class="path-step">④論考・調査報告で構造分析</div>
+      </div>
+      <p>各ページから関連する法令条文・資料・他論点に相互リンクしているため、横断的な調査に対応しています。</p>
+    </section>
+
+    <!-- 引用・転載について -->
+    <section>
+      <h2>資料の引用・転載について</h2>
+      <p>当委員会が収集・公開している資料は以下の通り取り扱います。</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0">
+        <div class="alert alert-success">
+          <div class="alert-icon">✅</div>
+          <div>
+            <p style="font-weight:800;margin-bottom:4px">自由に利用できるもの</p>
+            <ul style="font-size:.88rem;margin:8px 0 0 16px;line-height:1.8;color:var(--text)">
+              <li>当委員会の分析・論考（出典明記で引用可）</li>
+              <li>教育委員会の回答（公文書として著作権なし）</li>
+              <li>法令条文・行政通知（著作権なし）</li>
+              <li>統計・集計結果（出典明記で引用可）</li>
+            </ul>
+          </div>
+        </div>
+        <div class="alert alert-warning">
+          <div class="alert-icon">⚠️</div>
+          <div>
+            <p style="font-weight:800;margin-bottom:4px">個別確認が必要なもの</p>
+            <ul style="font-size:.88rem;margin:8px 0 0 16px;line-height:1.8;color:var(--text)">
+              <li>各PTAの内部文書（著作権は原作者に帰属）</li>
+              <li>当委員会独自のデザイン・図版</li>
+              <li>大量複製・商業利用・改変再配布</li>
+              <li>研究論文等への一次資料の全文転載</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>学術論文・報道記事での引用・参照は出典明記（委員会名・URL・取得日）のうえ自由に使用できます。</p>
+    </section>
+
+    <!-- 研究者向けFAQ -->
+    <section>
+      <h2>よくある質問（研究者・記者の方から）</h2>
+      <div class="faq-list" style="display:flex;flex-direction:column;gap:10px;margin-top:16px">
+
+        <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+          <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+            <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">教育委員会への照会はどのように行いましたか？照会文書を見ることはできますか？</div>
+            <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          </div>
+          <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">各教育委員会の問い合わせ窓口へ、書面またはメールで標準化した質問票を送付しています。照会文書の雛形・各自治体の回答原文は公開資料として整理しています。取材・研究目的での照会文書の確認はメールにてお問い合わせください。</p></div>
+        </div>
+
+        <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+          <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+            <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">情報公開請求で入手した文書は本物ですか？どの自治体のものか特定できますか？</div>
+            <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          </div>
+          <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">すべて情報公開請求（開示決定通知書つき）で入手した原本です。自治体名・学校名・文書番号等は原本に記載されています（一部個人名等は墨消し処理）。Googleサイトで公開中のPDFファイル名・フォルダ構造に自治体名を含めており、出所の確認が可能です。研究利用目的での原本確認は取材問い合わせにてご相談ください。</p></div>
+        </div>
+
+        <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+          <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+            <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">PTA問題に関して法的な専門家（弁護士・研究者）との連携はありますか？</div>
+            <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+          </div>
+          <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">当委員会の資料・論考はいずれも当委員会独自の整理に基づくものですが、法令解釈・行政実例については行政書士・弁護士等の専門家に確認を取りながら作成しています。共同研究・取材連携については個別にお問い合わせください。</p></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 取材・問い合わせ -->
+    <section>
+      <h2>取材・問い合わせ</h2>
+      <div class="contact-box">
+        <h3>PTA適正化推進委員会</h3>
+        <p>取材対応・資料提供・一次資料の照会はメールにてお問い合わせください。情報公開請求の経緯・照会文書の提供等についても対応可能です。</p>
+        <p>📧 <a href="mailto:info@ptaorg.com">info@ptaorg.com</a></p>
+        <p>📞 070-9012-7772</p>
+        <p>よこむすび登録団体（磯子12406）／横浜市磯子区岡村8-17-5-301</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div>
+          <h3>PTA適正化推進委員会</h3>
+          <a href="https://yokomusubi.city.yokohama.lg.jp/organizations/detail/f69c7ad2-cf21-4dfa-87bb-9c891874eb6b/" target="_blank" rel="noopener noreferrer" class="yokomusubi-card">
+            <img src="assets/yokomusubi.png" alt="よこむすび">
+            <span class="yokomusubi-tagline">磯子区「よこむすび」掲載団体</span>
+            <span class="yokomusubi-meta">登録番号：磯子12406</span>
+            <span class="yokomusubi-meta">分類番号：12-4（市民活動・社会教育推進）</span>
+          </a>
+          <div class="footer-contact">
+            <p>〒235-0021<br>神奈川県横浜市磯子区岡村8-17-5-301</p>
+            <p><strong>070-9012-7772</strong></p>
+            <p><a href="mailto:info@ptaorg.com">info@ptaorg.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h4>公式発信</h4>
+          <p class="footer-sns-sub">最新資料・論考・動画はこちら</p>
+          <div class="footer-sns-cards">
+            <a href="https://x.com/jjjqqqxxx0852" target="_blank" rel="noopener" class="fsns-card fsns-x">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.836L2.25 2.25H8.08l4.263 5.636L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+              <div>
+                <div class="fsns-name">X</div>
+                <div class="fsns-desc">速報・資料更新</div>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@PTA%E9%81%A9%E6%AD%A3%E5%8C%96%E6%8E%A8%E9%80%B2%E5%A7%94%E5%93%A1%E4%BC%9A" target="_blank" rel="noopener" class="fsns-card fsns-yt">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <div>
+                <div class="fsns-name">YouTube</div>
+                <div class="fsns-desc">動画で解説</div>
+              </div>
+            </a>
+            <a href="https://note.com/hiroshisatoh" target="_blank" rel="noopener" class="fsns-card fsns-note">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H4zm2 3h10v2H6V8zm0 4h10v2H6v-2zm0 4h6v2H6v-2z"/></svg>
+              <div>
+                <div class="fsns-name">note</div>
+                <div class="fsns-desc">論考・研究ノート</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>立場別</h4>
+          <ul>
+            <li><a href="guide-parent.html">保護者</a></li>
+            <li><a href="guide-pta.html">PTA役員</a></li>
+            <li><a href="guide-board.html">教育委員会・学校</a></li>
+            <li><a href="guide-research.html">研究者・記者</a></li>
+            <li><a href="guide-board.html">教育委員会向け指針</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>論点</h4>
+          <ul>
+            <li><a href="membership.html">入会手続</a></li>
+            <li><a href="privacy.html">個人情報</a></li>
+            <li><a href="fee-collection.html">会費徴収</a></li>
+            <li><a href="personnel.html">教職員関与</a></li>
+            <li><a href="facilities.html">施設利用</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>資料・支援</h4>
+          <ul>
+            <li><a href="https://ptaorg.github.io/donate/">応援・寄付</a></li>
+            <li><a href="board-responses.html">教育委員会の回答</a></li>
+            <li><a href="national-archive.html">全国資料館</a></li>
+            <li><a href="journal.html">論考・調査報告</a></li>
+            <li><a href="report.html">総合分析レポート</a></li>
+            <li><a href="audit/index.html">運営チェックアプリ</a></li>
+            <li><a href="law-map.html">法制度マップ</a></li>
+            <li><a href="guideline.html">適正化ガイドライン</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  <div class="footer-support">
+    <div>
+      <strong>調査・資料公開の継続を応援してください</strong>
+      <p>いただいたご支援は、公文書開示、資料整理、Web公開、自治体・学校への働きかけに活用します。</p>
+    </div>
+    <a href="https://ptaorg.github.io/donate/">応援ページへ</a>
+  </div>
+    <p class="copyright">© PTA適正化推進委員会</p>
+  </footer>
+  <script src="js/site.js"></script>
+</body></html>
