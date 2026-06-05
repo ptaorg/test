@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公立学校におけるPTA運営の適正化に関するガイドブック 第4版</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Meiryo',sans-serif;
+  font-size:14px; line-height:1.95; color:#222; background:#fff;
+  max-width:820px; margin:0 auto; padding:40px 50px;
+}
+a { color:#1a4a8a; text-decoration:underline; word-break:break-all; }
+a:hover { color:#c0392b; }
+
+.cover { text-align:center; border:3px double #1a4a8a; padding:50px 30px 44px; margin-bottom:50px; position:relative; }
+.cover-kamon { font-size:40px; color:#1a4a8a; margin-bottom:18px; }
+.cover-label { font-size:11px; color:#888; letter-spacing:.3em; margin-bottom:6px; }
+.cover-org { font-size:13px; color:#1a4a8a; font-weight:700; letter-spacing:.15em; margin-bottom:28px; }
+.cover-title { font-family:'Noto Serif JP','Yu Mincho',serif; font-size:26px; color:#1a4a8a; font-weight:700; letter-spacing:.06em; line-height:1.55; margin-bottom:12px; }
+.cover-subtitle { font-size:13px; color:#555; letter-spacing:.08em; margin-bottom:28px; }
+.cover-tag { display:inline-block; border:1px solid #1a4a8a; color:#1a4a8a; font-size:11px; padding:3px 12px; letter-spacing:.15em; margin:0 4px; }
+.cover-edition { position:absolute; bottom:14px; right:20px; font-size:11px; color:#aaa; }
+
+.section-break { border-top:2px solid #1a4a8a; margin:52px 0 36px; padding-top:36px; }
+.section-title { text-align:center; font-size:16px; font-weight:700; letter-spacing:.4em; margin-bottom:20px; padding-bottom:8px; border-bottom:2px solid #1a4a8a; color:#1a4a8a; }
+h2 { font-size:17px; font-weight:700; color:#1a4a8a; margin:40px 0 14px; padding:9px 14px; border-left:5px solid #1a4a8a; background:#f0f4ff; line-height:1.55; }
+h3 { font-size:15px; font-weight:700; margin:28px 0 10px; padding-left:12px; border-left:3px solid #5b7ec9; color:#1a3060; }
+p { margin-bottom:12px; text-align:justify; }
+p.lead { font-size:15px; line-height:2.05; margin-bottom:18px; }
+a { color:#1a4a8a; }
+
+.toc-item { display:flex; align-items:baseline; padding:6px 0; border-bottom:1px dotted #ccc; }
+.toc-num { font-weight:700; min-width:36px; color:#1a4a8a; font-size:13px; }
+.toc-text { flex:1; font-size:13px; }
+.toc-sub { display:flex; align-items:baseline; padding:4px 0 4px 36px; border-bottom:1px dotted #eee; font-size:12px; color:#444; }
+.toc-kana { min-width:28px; color:#999; font-size:11px; }
+
+.law-cite { background:#f8f5e8; border-left:4px solid #c8a800; padding:12px 16px; margin:16px 0; font-size:12.5px; color:#333; line-height:1.85; }
+.law-cite-title { font-weight:700; color:#7a6200; margin-bottom:5px; font-size:11px; letter-spacing:.1em; }
+.law-cite-link { font-size:11px; color:#1a4a8a; margin-top:6px; display:block; }
+
+.principle-box { border:3px solid #1a4a8a; border-radius:4px; padding:20px 26px; margin:22px 0; background:#e8efff; text-align:center; }
+.principle-box p { font-size:15px; font-weight:700; color:#1a3060; line-height:1.85; text-align:center; margin-bottom:0; }
+
+.risk-box { border:3px solid #c0392b; border-radius:4px; padding:18px 22px; margin:22px 0; background:#fff0f0; }
+.risk-box-title { font-weight:700; font-size:13px; background:#c0392b; color:#fff; display:inline-block; padding:4px 14px; margin-bottom:12px; letter-spacing:.1em; }
+.risk-item { display:flex; align-items:flex-start; margin-bottom:9px; font-size:13px; line-height:1.8; }
+.risk-item::before { content:"⚠"; margin-right:8px; color:#c0392b; flex-shrink:0; margin-top:1px; }
+
+.case-box { border:2px solid #8b5e00; border-radius:4px; padding:16px 20px; margin:18px 0; background:#fffbf0; }
+.case-box-title { font-weight:700; font-size:12px; background:#8b5e00; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
+.case-item { display:flex; align-items:flex-start; margin-bottom:8px; font-size:13px; line-height:1.8; }
+.case-item::before { content:"▶"; margin-right:8px; color:#8b5e00; flex-shrink:0; font-size:10px; margin-top:4px; }
+
+.social-box { border:2px solid #6a1a6a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#fbf0fb; }
+.social-box-title { font-weight:700; font-size:12px; background:#6a1a6a; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
+
+.mext-box { border:2px solid #1a6a1a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#f0fbf0; }
+.mext-box-title { font-weight:700; font-size:12px; background:#1a6a1a; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
+
+.judgment-box { border:2px solid #5a3a00; border-radius:4px; padding:16px 20px; margin:18px 0; background:#fdf6ee; }
+.judgment-box-title { font-weight:700; font-size:12px; background:#5a3a00; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
+
+.paradox-box { border:2px solid #1a4a8a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#f0f4ff; }
+.paradox-box-title { font-weight:700; font-size:12px; background:#1a4a8a; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
+
+.ppc-box { border:2px solid #1a5a6a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#f0fafb; }
+.ppc-box-title { font-weight:700; font-size:12px; background:#1a5a6a; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
+
+.check-box { border:1.5px solid #1a4a8a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#f5f8ff; }
+.check-box-title { font-weight:700; font-size:12px; background:#1a4a8a; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:12px; letter-spacing:.1em; }
+.check-item { display:flex; align-items:flex-start; margin-bottom:7px; font-size:13px; line-height:1.75; }
+.check-item::before { content:"□"; margin-right:10px; color:#1a4a8a; font-size:15px; flex-shrink:0; margin-top:1px; }
+
+.notice-box { border:2px solid #c0392b; border-radius:4px; padding:14px 18px; margin:18px 0; background:#fff8f8; }
+.notice-box-title { font-weight:700; font-size:12px; background:#c0392b; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:10px; letter-spacing:.1em; }
+
+.info-box { border:1.5px solid #2980b9; border-radius:4px; padding:14px 18px; margin:18px 0; background:#f0f7ff; }
+.info-box-title { font-weight:700; font-size:12px; background:#2980b9; color:#fff; display:inline-block; padding:3px 12px; margin-bottom:10px; letter-spacing:.1em; }
+
+.division-box { display:flex; gap:0; margin:18px 0; border:1.5px solid #999; border-radius:4px; overflow:hidden; }
+.division-col { flex:1; padding:14px 16px; font-size:13px; }
+.division-col:first-child { background:#f5f8ff; border-right:1px solid #ccc; }
+.division-col:last-child { background:#fff8f8; }
+.division-col-title { font-weight:700; font-size:12px; display:block; margin-bottom:8px; padding-bottom:5px; border-bottom:1px solid #ccc; }
+.div-ok { color:#1a6a1a; }
+.div-ng { color:#c0392b; }
+
+.flow-box { border:1.5px solid #1a4a8a; border-radius:4px; padding:16px 20px; margin:18px 0; background:#f0f5ff; }
+.flow-box-title { font-weight:700; font-size:12px; color:#1a4a8a; margin-bottom:14px; }
+.flow-step { display:flex; align-items:flex-start; margin-bottom:10px; font-size:13px; }
+.flow-num { font-weight:700; color:#fff; background:#1a4a8a; width:24px; height:24px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; margin-right:10px; flex-shrink:0; margin-top:2px; }
+.flow-arrow { text-align:center; color:#1a4a8a; font-size:16px; margin:4px 0 4px 34px; }
+
+.qa-item { margin-bottom:20px; border-bottom:1px dotted #ccc; padding-bottom:16px; }
+.qa-q { font-weight:700; color:#1a4a8a; margin-bottom:6px; display:flex; gap:8px; font-size:14px; }
+.qa-q-label { background:#1a4a8a; color:#fff; font-size:11px; padding:2px 8px; flex-shrink:0; align-self:flex-start; margin-top:2px; }
+.qa-a { padding-left:16px; border-left:3px solid #ccd8f0; font-size:13px; line-height:1.85; }
+.qa-a-label { font-weight:700; color:#c0392b; margin-right:6px; }
+
+ul.list { margin:8px 0 14px 1.5em; list-style:none; }
+ul.list li { margin-bottom:6px; font-size:13px; padding-left:1em; position:relative; }
+ul.list li::before { content:"・"; position:absolute; left:-.2em; color:#1a4a8a; }
+
+.form-example { border:1px solid #999; padding:18px 20px; margin:18px 0; font-size:13px; }
+.form-example-title { text-align:center; font-weight:700; font-size:14px; margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid #ccc; }
+.form-row { display:flex; align-items:baseline; margin-bottom:10px; gap:10px; }
+.form-label { min-width:120px; color:#555; font-size:12px; flex-shrink:0; }
+.form-line { flex:1; border-bottom:1px solid #999; min-height:20px; }
+.form-note { font-size:11px; color:#777; margin-top:10px; padding-top:8px; border-top:1px dotted #ccc; }
+
+.rule-box { border:1px solid #aaa; padding:16px 20px; margin:14px 0; font-size:13px; background:#fafafa; }
+.rule-box-title { font-weight:700; font-size:12px; color:#555; margin-bottom:10px; }
+.rule-article { margin-bottom:10px; }
+.rule-article-num { font-weight:700; color:#1a4a8a; }
+
+.ref-box { border:1px solid #bbb; background:#f9f9f9; padding:14px 18px; margin:18px 0; font-size:12px; }
+.ref-box-title { font-weight:700; font-size:12px; color:#444; margin-bottom:8px; padding-bottom:6px; border-bottom:1px dotted #ccc; }
+.ref-item { margin-bottom:7px; padding-left:1em; position:relative; line-height:1.75; }
+.ref-item::before { content:"▷"; position:absolute; left:0; color:#999; font-size:10px; top:3px; }
+
+strong { font-weight:700; }
+em.warn { font-style:normal; font-weight:700; color:#c0392b; }
+em.blue { font-style:normal; font-weight:700; color:#1a4a8a; }
+em.green { font-style:normal; font-weight:700; color:#1a6a1a; }
+
+@media print {
+  body { padding:20px 30px; }
+  .section-break { page-break-before:always; border-top:none; }
+  h2 { page-break-after:avoid; }
+  .check-box,.notice-box,.case-box,.risk-box { page-break-inside:avoid; }
+}
+@media (max-width:600px) {
+  body { padding:20px 18px; }
+  .division-box { flex-direction:column; }
+  .division-col:first-child { border-right:none; border-bottom:1px solid #ccc; }
+}
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0D18ZSSLMH');
+</script>
+<link rel="canonical" href="https://ptaorg.com/PTA%E9%81%8B%E5%96%B6%E9%81%A9%E6%AD%A3%E5%8C%96%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF_%E7%AC%AC4%E7%89%88_%E6%94%B9%E8%A8%82%E6%9C%AC%E6%96%87.html">
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-kamon">◈</div>
+  <div class="cover-label">教育委員会・学校管理職向け</div>
+  <div class="cover-org">PTA適正化推進委員会</div>
+  <div class="cover-title">公立学校における<br>PTA運営の適正化に関する<br>ガイドブック</div>
+  <div class="cover-subtitle">──学校・PTAの癒着を断ち切り、法令が示す本来の関係を取り戻すために──</div>
+  <div style="margin-top:20px;">
+    <span class="cover-tag">教育委員会向け</span>
+    <span class="cover-tag">学校管理職向け</span>
+  </div>
+  <div class="cover-edition">第4版</div>
+</div>
+
+<p class="lead">このガイドブックは、<strong>教育委員会・学校管理職向け</strong>に、公立学校におけるPTA運営の適正化を図るために必要な確認事項・整理事項を整理したものです。</p>
+<p>PTAは、学校とは別の<em class="blue">任意加入の民間団体（社会教育関係団体）</em>です。この単純な事実が、全国の学校現場で長年にわたって無視されてきました。その結果として生じている<em class="warn">学校とPTAの癒着</em>こそが、今日のPTA問題のすべての根源です。</p>
+<p>問題の解決は複雑ではありません。<em class="blue">基本に立ち戻り、学校とPTAをきちんと切り分ける</em>──それだけです。今求められているのは、間違った運営をどう法的に追認するかという脱法的発想ではなく、法令が最初から示していた本来の姿に戻ることです。そして、このまま放置することは、教育委員会・学校・PTA役員のいずれにとっても<em class="warn">深刻な訴訟リスク</em>を意味します。</p>
+
+<div style="margin:40px 0 50px;">
+<div class="section-title">目　次</div>
+<div class="toc-item"><span class="toc-num">第１章</span><span class="toc-text">PTAとは何か──社会教育関係団体であり、学校補助団体では断じてない</span></div>
+<div class="toc-sub"><span class="toc-kana">1-1</span><span class="toc-text">PTAの法的性格</span></div>
+<div class="toc-sub"><span class="toc-kana">1-2</span><span class="toc-text">社会教育関係団体であることの意味</span></div>
+<div class="toc-sub"><span class="toc-kana">1-3</span><span class="toc-text">PTAは学校補助団体ではない</span></div>
+<div class="toc-sub"><span class="toc-kana">1-4</span><span class="toc-text">学校・PTA癒着の現状と社会問題化</span></div>
+<div class="toc-sub"><span class="toc-kana">1-5</span><span class="toc-text">文部科学省が示す「学校が関与できる限界」──業務の3分類</span></div>
+<div class="toc-item"><span class="toc-num">第２章</span><span class="toc-text">PTA加入は「消費者契約」である──消費者契約法が適用される</span></div>
+<div class="toc-sub"><span class="toc-kana">2-1</span><span class="toc-text">PTAは消費者契約法上の「事業者」にあたる</span></div>
+<div class="toc-sub"><span class="toc-kana">2-2</span><span class="toc-text">自動加入・強制加入は消費者契約法違反</span></div>
+<div class="toc-sub"><span class="toc-kana">2-3</span><span class="toc-text">訴訟リスクと会費返還請求</span></div>
+<div class="toc-item"><span class="toc-num">第３章</span><span class="toc-text">個人情報保護法第69条──学校からPTAへの情報提供という根本問題</span></div>
+<div class="toc-sub"><span class="toc-kana">3-1</span><span class="toc-text">第69条の構造──原則禁止と例外</span></div>
+<div class="toc-sub"><span class="toc-kana">3-2</span><span class="toc-text">「本人の同意」という例外は、現場では機能しない</span></div>
+<div class="toc-sub"><span class="toc-kana">3-3</span><span class="toc-text">PTAが会員自身から情報を取得すべき理由</span></div>
+<div class="toc-sub"><span class="toc-kana">3-4</span><span class="toc-text">学校連絡ツールの使用も認められない</span></div>
+<div class="toc-sub"><span class="toc-kana">3-5</span><span class="toc-text">個人情報保護委員会の最新見解</span></div>
+<div class="toc-item"><span class="toc-num">第４章</span><span class="toc-text">学校教育法第137条──学校施設利用の根拠と要件、そしてその逆説</span></div>
+<div class="toc-item"><span class="toc-num">第５章</span><span class="toc-text">社会教育法第12条の「都合のいい使われ方」という問題</span></div>
+<div class="toc-item"><span class="toc-num">第６章</span><span class="toc-text">学校が関与する各領域の問題</span></div>
+<div class="toc-item"><span class="toc-num">第７章</span><span class="toc-text">「委任」「要綱」だけでは足りない問題</span></div>
+<div class="toc-item"><span class="toc-num">第８章</span><span class="toc-text">訴訟リスクの全体像</span></div>
+<div class="toc-item"><span class="toc-num">第９章</span><span class="toc-text">教育委員会が確認すべき文書</span></div>
+<div class="toc-item"><span class="toc-num">第10章</span><span class="toc-text">教育委員会が講ずべき施策</span></div>
+<div class="toc-item"><span class="toc-num">第11章</span><span class="toc-text">是正されない場合の対応──法的措置・エスカレーション</span></div>
+<div class="toc-item"><span class="toc-num">第12章</span><span class="toc-text">Web・記事・実務キットへの展開</span></div>
+<div class="toc-item"><span class="toc-num">第13章</span><span class="toc-text">よくある質問（Q&amp;A）</span></div>
+<div class="toc-item"><span class="toc-num">付録</span><span class="toc-text">会則例・様式例・参考法令・一次資料リンク</span></div>
+</div>
+
+
+<!-- ======== 第１章 ======== -->
+<div class="section-break">
+<h2>第１章　PTAとは何か──社会教育関係団体であり、学校補助団体では断じてない</h2>
+
+<h3>1-1　PTAの法的性格</h3>
+<p>PTA（Parent-Teacher Association）は、保護者と教職員が<strong>自発的に参加する任意加入の民間団体</strong>です。法人格を持たない任意団体として設立・運営されることが多く、法的には民法上の権利能力なき社団として扱われます。</p>
+<p>PTA加入は<em class="blue">契約行為</em>です。保護者本人が内容を理解したうえで申し込みの意思表示を行い、PTAがこれを承諾することで成立します。この点については次章（第２章）で詳述しますが、この契約には<em class="warn">消費者契約法が適用される</em>ことが消費者庁の公式見解として確立しています。入会申込記録のないPTAは、契約の存在を証明できず、会費請求・名簿・議決・役員選出のすべての根拠が失われます。</p>
+
+<h3>1-2　社会教育関係団体であることの意味</h3>
+<p>PTAは、社会教育法第10条に定める<strong>社会教育関係団体</strong>です。</p>
+<div class="law-cite">
+  <div class="law-cite-title">社会教育法 第10条（社会教育関係団体の定義）</div>
+  この法律で「社会教育関係団体」とは、法人であると否とを問わず、<strong>公の支配に属しない団体</strong>で社会教育に関する事業を行うことを主たる目的とするものをいう。
+  <a class="law-cite-link" href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000207" target="_blank">▶ e-Gov法令検索：社会教育法</a>
+</div>
+<p>「<em class="blue">公の支配に属しない団体</em>」──これが社会教育関係団体の本質です。PTAは国や地方公共団体の支配下にない。行政の指揮命令に服さない。つまり、<em class="warn">教育委員会や学校はPTAを管理・指揮する立場にない</em>のです。社会教育法第12条は「不当に統制的支配を及ぼし、又はその事業に干渉を加えてはならない」と明確に禁じています。</p>
+<div class="law-cite">
+  <div class="law-cite-title">社会教育法 第12条（国・地方の関与限界）</div>
+  国及び地方公共団体は、社会教育関係団体に対し、いかなる方法によっても、<strong>不当に統制的支配を及ぼし、又はその事業に干渉を加えてはならない</strong>。
+  <a class="law-cite-link" href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000207" target="_blank">▶ e-Gov法令検索：社会教育法</a>
+</div>
+<div class="principle-box">
+  <p>PTAは「社会教育関係団体」である。<br>すなわち、公の支配に属しない、独立した民間団体である。<br>学校は、PTAを管理・指揮・支配してはならない。</p>
+</div>
+
+<h3>1-3　PTAは学校補助団体ではない</h3>
+<p>全国の現場では、PTAが「学校の補助機関」のように位置づけられてきました。しかし、これは<em class="warn">法的根拠のない誤った認識</em>です。PTAは学校の校務分掌にも学校教育法にも構成要素として規定されていません。文部科学省もPTAについて「子供の健やかな育成のため、<em class="blue">自ら組織し、学び、活動する団体</em>」と明記しています。学校から組織され、学校に動員され、学校のために活動させられることは、この定義と真っ向から反します。</p>
+
+<h3>1-4　学校・PTA癒着の現状と社会問題化</h3>
+<p>今日のPTA問題の根源は、<em class="warn">学校とPTAの癒着</em>にあります。この癒着が放置されてきたのは、関係者全員が「昔からそうだから」で思考を止めてきたからです。しかし、<em class="warn">慣行は法律を上書きしません</em>。</p>
+<div class="case-box">
+  <div class="case-box-title">全国で確認されている現場の実態</div>
+  <div class="case-item">入学時の配布物に学校手続書類とPTA入会申込書が一括封入。保護者にはどれが学校書類でどれがPTA書類か判別できない</div>
+  <div class="case-item">PTA会費が学校口座で管理され、教材費・給食費と同一口座振替で引き落とされる。保護者はPTA会費を「学校への支払い」と認識している</div>
+  <div class="case-item">学校が管理・運営する学校アプリを通じてPTA役員募集・PTA行事案内・PTA会費納入通知が全保護者に配信される。PTA通知が「学校からの公式連絡」として届く</div>
+  <div class="case-item">学校事務職員・教頭がPTAの会計処理・名簿管理・文書作成を勤務時間中に行っている。PTAは独自事務処理能力を持たず、学校なしには機能できない</div>
+  <div class="case-item">PTA入会申込書が存在しない。全保護者が自動的に会員扱いされ、退会の選択肢があることすら知らない保護者が多数いる</div>
+  <div class="case-item">校長・教頭がPTAの「副会長」「会計」「顧問」として会則上に組み込まれ、学校管理職の立場とPTA役職の立場が不可分に混在している</div>
+</div>
+<div class="social-box">
+  <div class="social-box-title">社会問題化の現状</div>
+  <ul class="list" style="margin-bottom:0;">
+    <li>全国各地で、PTA関係文書を対象とした<strong>公文書開示請求</strong>が増加している</li>
+    <li>教育委員会・学校・PTAに対する<strong>行政不服申立・住民監査請求・訴訟</strong>が報告されている</li>
+    <li>SNSを通じて保護者の情報共有が急速に進み、「PTAが任意加入であること」の認知が拡大している</li>
+    <li>新聞・テレビ・週刊誌等のメディアが繰り返しPTA問題を報道している</li>
+    <li>令和4年、文部科学大臣が「入退会についてはそれぞれのPTAでご判断いただくというのが筋」と公式発言した</li>
+    <li>憲法第21条が保障する<strong>結社の自由</strong>（消極的結社の自由＝団体に加入しない自由）との関係が問われている</li>
+    <li>個人情報保護委員会が令和8年3月に「公立学校とPTAの間で個人情報のやり取りをするためのポイント」を公表するに至った</li>
+  </ul>
+</div>
+
+<h3>1-5　文部科学省が示す「学校が関与できる限界」──業務の3分類</h3>
+<div class="mext-box">
+  <div class="mext-box-title">文部科学省「業務の3分類」（中央教育審議会答申・平成31年1月）</div>
+  <p style="font-size:13px; margin-bottom:8px;"><strong>① 基本的には学校以外が担うべき業務（学校・教師がすべきでない業務）</strong></p>
+  <ul class="list" style="margin-bottom:14px;">
+    <li>登下校に関する対応</li>
+    <li>放課後から夜間などにおける見回り、補導された時の対応</li>
+    <li><strong>学校徴収金の徴収・管理</strong></li>
+    <li>地域ボランティアとの<strong>連絡調整</strong>等</li>
+  </ul>
+  <a href="https://www.mext.go.jp/content/20230725-mext_zaimu-000031116_3.pdf" target="_blank" rel="noopener" style="font-size:11px; color:#1a6a1a; display:block;">▶ 原文PDF：文部科学省「学校・教師が担う業務に係る３分類 更なる役割分担・適正化の推進に向けた取組について」（令和5年7月）</a>
+</div>
+<p>「学校徴収金の徴収・管理」でさえ「学校以外が担うべき業務」であり、地域ボランティア（PTAを含む）との「連絡調整」もまた「学校以外が担うべき業務」とされています。<em class="warn">学校がPTAに関与できるのは連絡調整まで</em>──これが国の示した境界線です。PTA会費の管理・PTA事務の代行はその限界を大幅に超えています。</p>
+<div class="principle-box">
+  <p>文部科学省は明示している。<br>学校がPTAに関与できるのは「連絡調整まで」である。<br>学校徴収金の徴収・管理でさえ「学校以外が担うべき業務」である。<br>PTA会費の管理・PTA事務の代行は、この限界を大幅に超えている。</p>
+</div>
+</div><!-- end 第1章 -->
+
+
+<!-- ======== 第２章 ======== -->
+<div class="section-break">
+<h2>第２章　PTA加入は「消費者契約」である──消費者契約法が適用される</h2>
+
+<h3>2-1　PTAは消費者契約法上の「事業者」にあたる</h3>
+<p>PTA加入は、単なる「仲間に入ること」ではなく、<em class="blue">会費の支払い義務・役員就任義務・活動参加義務等を伴う法的な契約行為</em>です。そして、この契約には<em class="warn">消費者契約法（平成12年法律第61号）が適用されます</em>。</p>
+<p>消費者契約法第2条第2項は「事業者」について、「法人その他の団体」と定めています。そして消費者庁が公表している消費者契約法の逐条解説は、「その他の団体」に含まれるものとして<em class="warn">明示的に「PTA」を例示しています</em>。</p>
+
+<div class="law-cite">
+  <div class="law-cite-title">消費者契約法 第2条第2項（事業者の定義）</div>
+  この法律において「事業者」とは、<strong>法人その他の団体</strong>及び事業として又は事業のために契約の当事者となる場合における個人をいう。
+  <a class="law-cite-link" href="https://elaws.e-gov.go.jp/document?lawid=412AC0000000061" target="_blank">▶ e-Gov法令検索：消費者契約法</a>
+</div>
+
+<div class="judgment-box">
+  <div class="judgment-box-title">消費者庁「消費者契約法逐条解説」（公式見解）</div>
+  <p style="font-size:13px; margin-bottom:8px;">「その他の団体」には、民法上の組合をはじめ、法人格を有しない社団又は財団が含まれる。</p>
+  <p style="font-size:13px; margin-bottom:0;"><strong>各種の親善、社交等を目的とする団体、PTA、学会、同窓会等といった法人となることが可能であるがその手続を経ない各種の団体がこれに含まれる。</strong></p>
+  <a href="https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_04.pdf" target="_blank" rel="noopener" style="font-size:11px; color:#5a3a00; display:block; margin-top:8px;">▶ 原文PDF：消費者庁「消費者契約法逐条解説」（令和5年9月改訂版）</a>
+</div>
+
+<p>消費者契約法の目的は、「消費者と事業者との間の<em class="blue">情報の質及び量並びに交渉力の格差</em>」を是正することにあります（第1条）。PTA役員（運営側）と一般保護者（加入を求められる側）の間には、PTAの内部事情・権利義務関係・任意性についての情報量に明確な格差があります。この格差こそが、消費者契約法の適用を正当化します。</p>
+
+<h3>2-2　自動加入・強制加入は消費者契約法違反</h3>
+<p>消費者契約法第4条は、事業者が消費者を誤認させ、または困惑させてした意思表示を取り消しうるものと定めています。具体的には次のような行為が問題になります。</p>
+<div class="law-cite">
+  <div class="law-cite-title">消費者契約法 第4条（取消しうる意思表示）</div>
+  事業者が消費者契約の締結について勧誘をするに際し、当該消費者に対して次の各号に掲げる行為をしたことにより当該各号に定める誤認をし、それによって当該消費者契約の申込み又はその承諾の意思表示をしたときは、これを取り消すことができる。<br>
+  一　重要事項について事実と異なることを告げること。当該告げられた内容が事実であるとの誤認<br>
+  二　物品、権利、役務その他の当該消費者契約の目的となるものに関し、<strong>将来における変動が不確実な事項につき断定的判断を提供すること</strong>。
+  <a class="law-cite-link" href="https://elaws.e-gov.go.jp/document?lawid=412AC0000000061" target="_blank">▶ e-Gov法令検索：消費者契約法</a>
+</div>
+
+<p>入学手続と一体化した案内で「全員加入」が前提であるかのように扱い、任意加入であることを一切説明しない──これは、<em class="warn">「加入しなければならない」という誤認を生じさせる行為</em>であり、消費者契約法上取り消しうる意思表示を引き出す行為です。また、加入しなければ学校行事や情報提供から排除される状況を作り出すことは、消費者を「困惑させ」たうえでの契約（第4条第3項）にあたる可能性があります。</p>
+<p>さらに、消費者契約法第3条は事業者に対し、「消費者契約の締結について勧誘をするに際しては、消費者の理解を深めるために、消費者の権利義務その他の消費者契約の内容についての必要な情報を提供するよう努めなければならない」と義務付けています。<em class="warn">任意加入であることを説明せずに会費を徴収する運営は、この情報提供義務に反します</em>。</p>
+
+<h3>2-3　訴訟リスクと会費返還請求</h3>
+<p>全国では、会費返還請求訴訟が実際に起きています。入会申込記録がない状態で徴収された会費は、<em class="warn">法律上の原因なく取得した不当利得（民法第703条）</em>として返還請求の対象になりえます。また消費者契約法に基づく取消・返還請求の訴訟リスクも存在します。</p>
+
+<div class="risk-box">
+  <div class="risk-box-title">PTAが直面する訴訟リスク</div>
+  <div class="risk-item">入会申込記録なしに徴収した会費に対する<strong>不当利得返還請求</strong>（民法第703条）</div>
+  <div class="risk-item">任意加入の説明なしに勧誘・徴収したことによる<strong>消費者契約法に基づく取消・返還請求</strong></div>
+  <div class="risk-item">個人情報の無断利用・漏えいに対する<strong>損害賠償請求</strong>（個人情報保護法・民法）</div>
+  <div class="risk-item">憲法第21条（結社の自由）侵害に基づく<strong>加入強制・不利益への損害賠償請求</strong></div>
+  <div class="risk-item">不当な役員強制選出・就任強要に対する<strong>不法行為に基づく損害賠償請求</strong></div>
+</div>
+
+<p>そして、これらの訴訟リスクは<em class="warn">PTAだけでなく、学校・教育委員会にも波及する可能性があります</em>。学校がPTA加入を学校手続と一体化させ、PTA会費を学校口座で管理し、学校アプリでPTA通知を配信した場合、学校・教育委員会がこれらの違法状態を共同して作り出したと評価される可能性があるからです。</p>
+
+<div class="notice-box">
+  <div class="notice-box-title">教育委員会・学校管理職が認識すべきこと</div>
+  <p style="font-size:13px; margin-bottom:0;">学校がPTA加入手続に関与し、PTA会費の徴収を担い、学校アプリでPTA通知を配信していた場合、PTAに対する訴訟において「学校も共同行為者」として関与が問われる可能性があります。教育委員会が実態を把握しながら放置していた場合も同様です。これは「PTAの問題だから学校は関係ない」では済まない問題です。</p>
+</div>
+</div><!-- end 第2章 -->
+
+
+<!-- ======== 第３章 ======== -->
+<div class="section-break">
+<h2>第３章　個人情報保護法第69条──学校からPTAへの情報提供という根本問題</h2>
+
+<h3>3-1　第69条の構造──原則禁止と例外</h3>
+<p>公立学校は行政機関であり、保有する個人情報については個人情報の保護に関する法律（個人情報保護法）の「行政機関等」に関する規定が適用されます。同法第69条は、目的外利用・提供を<em class="warn">原則として禁止</em>しています。</p>
+
+<div class="law-cite">
+  <div class="law-cite-title">個人情報の保護に関する法律 第69条（利用及び提供の制限）</div>
+  <strong>行政機関の長等は、法令に基づく場合を除き、利用目的以外の目的のために保有個人情報を自ら利用し、又は提供してはならない。</strong><br>
+  ２　前項の規定にかかわらず、行政機関の長等は、次の各号のいずれかに該当すると認めるときは、利用目的以外の目的のために保有個人情報を自ら利用し、又は提供することができる。ただし、保有個人情報を利用目的以外の目的のために自ら利用し、又は提供することによって、本人又は第三者の権利利益を不当に侵害するおそれがあると認められるときは、この限りでない。<br>
+  一　<strong>本人の同意があるとき</strong>、又は本人に提供するとき。<br>
+  四　その他保有個人情報を提供することについて特別の理由があるとき。
+  <a class="law-cite-link" href="https://elaws.e-gov.go.jp/document?lawid=415AC0000000057" target="_blank">▶ e-Gov法令検索：個人情報の保護に関する法律</a>
+</div>
+
+<p>学校が就学手続で取得した保護者・児童生徒の個人情報は、「就学・在籍管理・安全確保・教育活動」のために取得したものです。この情報をPTAに提供することは、<em class="warn">取得目的の範囲外の第三者提供</em>です。PTAは公立学校とは別の民間団体であり、「同一行政機関内部の利用」でも「他の行政機関への提供」でもありません。</p>
+<div class="notice-box">
+  <div class="notice-box-title">第27条ではなく、第69条で整理する</div>
+  <p style="font-size:13px; margin-bottom:8px;">この問題を検討する際、民間事業者を主な対象とする個人情報保護法第27条（第三者提供の制限）だけで整理しては足りません。公立学校が保有する児童生徒・保護者情報は、地方公共団体の機関が保有する<em class="blue">保有個人情報</em>として扱われるため、学校からPTAへの提供は、同法第69条（利用及び提供の制限）を中心に検討する必要があります。</p>
+  <p style="font-size:13px; margin-bottom:0;">したがって、学校側は「保護者のため」「PTA活動のため」という一般的説明ではなく、法令に基づく場合に当たるのか、第69条第2項各号の例外要件に当たるのか、本人の自由な意思に基づく個別同意がどの範囲で取得されているのかを、文書で説明できなければなりません。</p>
+</div>
+
+<h3>3-2　「本人の同意」という例外は、現場では機能しない</h3>
+<p>第69条第2項第1号が「本人の同意があるとき」を例外として認めています。しかし、この「同意」が実際に有効に機能するためには、厳格な要件が必要です。</p>
+<p>まず、<em class="blue">同意が有効であるためには、保護者が「PTAへの情報提供に同意しない」という選択肢を実質的に行使できなければなりません</em>。しかし現状では、PTA加入が学校手続と一体化しており、「加入しない・情報提供に同意しない」ことで生じる不利益が明確でない、あるいは現実に不利益が生じる環境にあります。このような状況下での同意は、<em class="warn">自由な意思による同意とはいえません</em>。</p>
+<p>次に、PTAに加入しない保護者や、同意しない保護者の個人情報は、提供できません。全員から同意を得ることは、一部の保護者が拒否した瞬間に不可能になります。<em class="warn">同意を全員から得られると限らない以上、学校が一括してPTAへ情報提供する「同意ベース」の仕組みは、制度設計として根本的に成立しません</em>。</p>
+<p>さらに、入会申込記録がない場合、誰が会員なのか、誰に同意を求めるべきなのかも特定できません。同意を取る以前に、対象者の確定ができないのです。</p>
+
+<div class="notice-box">
+  <div class="notice-box-title">「同意があれば提供できる」という理解の誤り</div>
+  <p style="font-size:13px; margin-bottom:0;">「本人同意があれば学校からPTAへ情報提供できる」という理解は半分しか正しくありません。同意しない保護者の情報は提供できず、同意しない保護者が一人でもいれば、その人の情報はPTA名簿から除外しなければなりません。「全員同意」を前提にした一括提供は、制度上ありえません。PTAが必要な情報は、PTAが入会申込書を通じて入会した会員本人から直接取得する以外に方法はありません。</p>
+</div>
+
+<h3>3-3　PTAが会員自身から情報を取得すべき理由</h3>
+<p>個人情報保護委員会のPTA向けFAQも明確に述べています。</p>
+<div class="ppc-box">
+  <div class="ppc-box-title">個人情報保護委員会 FAQ（公式見解）</div>
+  <p style="font-size:13px; margin-bottom:8px;">「PTAが名簿を作成しようとする場合、<strong>本人にその利用目的を通知・公表し、本人から取得した個人情報をその利用目的の範囲内で利用することが可能</strong>です。」</p>
+  <p style="font-size:13px; margin-bottom:0;">「なお、学校による個人情報（個人データ又は保有個人情報）の第三者提供については、個人情報保護法の規定に基づいて適正に取り扱うことが求められます。」</p>
+  <a href="https://www.ppc.go.jp/all_faq_index/faq1-q4-13/" target="_blank" style="font-size:11px; color:#1a5a6a; display:block; margin-top:8px;">▶ 個人情報保護委員会FAQ「PTAが学校から生徒等に関する個人情報を取得する場合、どういった点に注意すればよいですか」</a>
+</div>
+<p>つまり、PTAが会員の個人情報を必要とするなら、<em class="blue">PTAが入会申込書を通じて入会した会員本人から直接取得する</em>のが正しい手順です。学校経由での一括取得は、この原則に反します。</p>
+<p>PTAがものごとを完結させなければならない──これが法令の要請です。<em class="warn">PTA加入の勧誘・入会申込の受付・個人情報の取得・会費の徴収・会計の管理・名簿の作成・退会の受付</em>、これらすべてをPTAが自ら行い、<em class="warn">学校はその一切に関与しない</em>。これが法令が示す正しい姿です。</p>
+
+<h3>3-4　学校連絡ツールの使用も認められない</h3>
+<p>学校アプリ（デジタル連絡ツール）は、学校が保護者の連絡先情報を収集・管理するシステムです。その収集目的は「学校からの連絡」であって、「PTAからの連絡」ではありません。学校アプリを通じてPTA通知を全保護者に配信することは、次の三つの問題を同時に引き起こします。</p>
+<ul class="list">
+  <li><strong>目的外利用問題</strong>──学校アプリで収集した連絡先情報を、PTAの通知配信に使うことは個人情報の目的外利用にあたる可能性がある</li>
+  <li><strong>情報混同問題</strong>──学校からの公式連絡とPTAからの通知が同一システムで届くことで、保護者がPTA通知を「学校の公式通知」と誤認する構造が生まれる</li>
+  <li><strong>非会員への配信問題</strong>──PTA非加入者や未入会者にもPTA通知が届くことになり、「全員がPTA会員である」という誤認を強化する</li>
+</ul>
+<p><em class="warn">学校連絡ツールによるPTA通知の配信は、学校とPTAの切り分けという観点から認められません</em>。PTAが会員に連絡したい場合は、PTAが自ら管理する連絡手段（PTAが自ら収集した会員の連絡先）を使う必要があります。学校のシステムを間借りすることは、情報の混同と目的外利用を構造的に生み出します。</p>
+
+<h3>3-5　個人情報保護委員会の最新見解</h3>
+<div class="ppc-box">
+  <div class="ppc-box-title">個人情報保護委員会「公立学校とPTAの間で個人情報のやり取りをするためのポイント」（令和8年3月）</div>
+  <p style="font-size:13px; margin-bottom:8px;">個人情報保護委員会は令和8年3月、教育委員会・公立学校関係者・PTA関係者向けに、公立学校とPTAの間の個人情報のやり取りについての資料を公表しました。この資料は、学校からPTAへの個人情報提供が法律上いかに困難であるかを改めて明確にしています。</p>
+  <ul class="list" style="margin-bottom:8px;">
+    <li>学校からPTAへの情報提供は、<strong>「利用目的」の範囲内と整理できる場合</strong>か、<strong>本人の同意がある場合</strong>か、<strong>特別の理由がある場合</strong>に限られる（法第69条）</li>
+    <li>同意が得られなかった個人情報部分は、提供にあたって<strong>削除やマスキング処理が必要</strong></li>
+    <li><strong>同意は個人ごとに取得する必要がある</strong>──一部の保護者が同意しない場合、その情報は提供できない</li>
+  </ul>
+  <a href="https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf" target="_blank" rel="noopener" style="font-size:11px; color:#1a5a6a; display:block;">▶ 原文PDF：個人情報保護委員会「公立学校とPTAの間で個人情報のやり取りをするためのポイント」（令和8年3月）</a>
+</div>
+<p>この資料が公表されたこと自体、国が「学校とPTA間の個人情報のやり取りは現状問題がある」と認識していることの証左です。教育委員会はこの資料を精読し、管下学校の実態を確認する必要があります。</p>
+
+<div class="principle-box">
+  <p>PTAに必要な個人情報は、<br>PTAが入会申込書を通じて、入会した会員本人から直接取得する。<br>学校は一切関与しない。<br>学校連絡ツールはPTA通知に使わない。<br>これがすべての原則であり、法令の要請である。</p>
+</div>
+</div><!-- end 第3章 -->
+
+
+<!-- ======== 第４章 ======== -->
+<div class="section-break">
+<h2>第４章　学校教育法第137条──学校施設利用の根拠と要件、そしてその逆説</h2>
+
+<h3>4-1　第137条の条文と二つの要件</h3>
+<div class="law-cite">
+  <div class="law-cite-title">学校教育法 第137条</div>
+  <strong>学校教育上支障のない限り</strong>、学校には、社会教育に関する施設を附置し、又は学校の施設を<strong>社会教育その他公共のために</strong>、利用させることができる。
+  <a class="law-cite-link" href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000026" target="_blank">▶ e-Gov法令検索：学校教育法</a>
+</div>
+<p>この条文には<strong>二つの独立した要件</strong>があります。①学校教育上支障のない限り、②社会教育その他公共のために──の両方を満たした場合にのみ、学校施設の利用が認められます。</p>
+
+<h3>4-2　「学校教育上支障のない限り」──判例が示す広い意味</h3>
+<div class="judgment-box">
+  <div class="judgment-box-title">最高裁判所 平成18年2月7日 第三小法廷判決（民集60巻2号401頁）</div>
+  <p style="font-size:13px; margin-bottom:8px;">学校教育上の支障とは、</p>
+  <ul class="list" style="margin-bottom:8px;">
+    <li><strong>物理的支障に限られるものではなく</strong></li>
+    <li>教育的配慮の観点から、<strong>児童・生徒に対し精神的悪影響を与え、学校の教育方針にもとることとなる場合も含まれ</strong></li>
+    <li><strong>将来における教育上の支障が生ずるおそれが明白に認められる場合も含まれる</strong></li>
+  </ul>
+  <a href="https://www.courts.go.jp/app/hanrei_jp/detail2?id=52387" target="_blank" style="font-size:11px; color:#5a3a00; display:block;">▶ 裁判所ウェブサイト：最高裁判所 平成18年2月7日 第三小法廷判決</a>
+  <a href="https://www.mext.go.jp/b_menu/hakusho/nc/mext_00095.html" target="_blank" style="font-size:11px; color:#5a3a00; display:block; margin-top:4px;">▶ 文部科学省：公立学校施設の目的外使用に係る留意事項の周知について（通知）令和7年3月26日</a>
+</div>
+<p>「学校教育上の支障」は物理的な障害だけを指しません。<em class="warn">子どもの精神的成長への悪影響、将来にわたる教育上のおそれ</em>も含みます。法令を守らない大人たちの活動が学校の中で行われていること、憲法が保障する結社の自由が踏みにじられていること──これは、「将来における教育上の支障が生ずるおそれが明白に認められる場合」にほかなりません。</p>
+
+<h3>4-3　「社会教育その他公共のために」──入会申込記録のないPTAは要件を満たすか</h3>
+<p>PTAが学校施設を利用できるのは「公共のため」の活動を行うからです。しかし、入会申込記録がなく全員強制加入的に運営されているPTAは、「公共のため」の団体として機能しているといえるでしょうか。任意加入を隠し、非加入者に不利益を与え、会費を強制徴収し、個人情報を無断流用している団体が「公共のため」の活動をしているとは、到底言えません。</p>
+
+<h3>4-4　要件を満たさないPTAへの施設利用許可権限と責任</h3>
+<div class="law-cite">
+  <div class="law-cite-title">社会教育法 第44条・第45条（学校施設の利用許可）</div>
+  第44条　学校の管理機関は、学校教育上支障がないと認める限り、その管理する学校の施設を社会教育のために利用に供するように努めなければならない。<br>
+  ２　「<strong>学校の管理機関</strong>」とは、（略）大学及び幼保連携型認定こども園以外の公立学校にあつては（略）<strong>教育委員会</strong>（略）をいう。<br><br>
+  第45条　社会教育のために学校の施設を利用しようとする者は、当該学校の<strong>管理機関の許可</strong>を受けなければならない。<br>
+  ２　学校の管理機関が学校施設の利用を許可しようとするときは、あらかじめ、<strong>学校の長の意見を聞かなければならない</strong>。
+  <a class="law-cite-link" href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000207" target="_blank">▶ e-Gov法令検索：社会教育法</a>
+</div>
+<p>学校施設利用の許可権限は<em class="blue">教育委員会</em>にあります。「PTAの問題だから関知しない」と言える立場にはありません。PTAが第137条の要件を満たしているかどうかを判断し、満たさない場合には<em class="warn">学校施設の利用を許可しない、または差し止める権限と責任</em>を持つのが教育委員会です。</p>
+
+<h3>4-5　校長・教頭のPTA役員就任という根本矛盾</h3>
+<p>校長・教頭がPTAの副会長・会計等の役員として会則上に組み込まれている実態は、<em class="warn">三重の矛盾</em>をはらんでいます。</p>
+<p>第一の矛盾は<em class="blue">施設利用許可の利益相反</em>──施設利用許可の意見を述べる立場と、その施設を利用するPTAの役員を兼ねる。第二の矛盾は<em class="blue">寄付関係の利益相反</em>──PTAから学校への寄附・物品提供を受ける側と、そのPTAの運営者（提供する側）を同時に兼ねる。第三の矛盾は<em class="blue">社会教育法第12条との衝突</em>──校長・教頭がPTA役員として参画することは、まさに「統制的支配」「事業への干渉」に当たります。</p>
+</div><!-- end 第4章 -->
+
+
+<!-- ======== 第５章 ======== -->
+<div class="section-break">
+<h2>第５章　社会教育法第12条の「都合のいい使われ方」という問題</h2>
+
+<p>社会教育法第12条は長年にわたって<em class="warn">都合のいいときにだけ使われ、都合の悪いときには踏みにじられてきた</em>という歴史があります。</p>
+
+<div class="paradox-box">
+  <div class="paradox-box-title">社会教育法第12条の「都合のいい使われ方」と「都合の悪い踏みにじり方」</div>
+  <div class="division-box" style="margin:0;">
+    <div class="division-col">
+      <span class="division-col-title div-ok">「都合のいい」使われ方（第12条を盾にして）</span>
+      <ul class="list" style="margin-bottom:0;">
+        <li>保護者がPTA問題について教育委員会に相談すると、「PTAは社会教育関係団体であり独立した団体なので、教育委員会は介入できない」と回答して門前払い</li>
+        <li>PTA強制加入・会費不正について是正を求めると「PTAの内部問題」として拒絶</li>
+        <li>情報公開請求に対して「PTAは別団体なので文書は保有していない」と回答</li>
+      </ul>
+    </div>
+    <div class="division-col">
+      <span class="division-col-title div-ng">「都合の悪い」踏みにじり方（第12条を完全に無視して）</span>
+      <ul class="list" style="margin-bottom:0;">
+        <li>校長・教頭がPTA役員に就任し、PTAの意思決定・財政・運営に直接参画（統制的支配）</li>
+        <li>学校がPTAの入会案内配布・会費徴収・名簿管理・文書作成を担う（事業への干渉）</li>
+        <li>教育委員会がPTA連合会と一体的に活動し、PTAの組織・運営に事実上関与</li>
+        <li>学校がPTA通知を公式連絡と同格に扱い、PTAの権威を学校の権威で保護</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<p>「PTAは独立した団体だから教育委員会は関与できない」と言いながら、校長がPTA副会長を務め、教頭がPTA会計を担い、学校がPTA会費を徴収する──これは論理として成立しません。</p>
+<p>第12条を正しく適用するなら結論は一つです。<em class="blue">学校・教育委員会はPTAへの干渉・統制的支配を直ちにやめ、そのためにこそ学校とPTAを切り分けることが必要</em>です。第12条は、保護者への門前払いの道具ではなく、学校・教育委員会自身の干渉をやめるための根拠として機能させるべきです。</p>
+<div class="principle-box">
+  <p>社会教育法第12条を保護者への門前払いに使うことをやめ、<br>学校・教育委員会自身の干渉・統制的支配をやめるために使え。<br>それが第12条の正しい適用である。</p>
+</div>
+</div><!-- end 第5章 -->
+
+
+<!-- ======== 第６章 ======== -->
+<div class="section-break">
+<h2>第６章　学校が関与する各領域の問題</h2>
+
+<h3>6-1　入会手続と学校手続の混同──「非会員の特定不能」という根本矛盾</h3>
+<p>PTA非加入を理由に児童生徒が不利益を受けないようにする──この点は重要です。しかし、その前に根本的な問いがあります。<em class="warn">「誰が会員で、誰が非会員なのか、そもそも誰にも分からない」</em>という状態が全国の多くの学校で常態化しています。入会申込記録が存在しないPTAでは、会員・非会員の区別自体が成立しません。</p>
+<p>入会申込記録がない場合、以下のすべてが法的根拠を失います：会員の確定・非会員の特定・会費請求の根拠・名簿の根拠・議決権の確認・役員選出の正当性・個人情報利用の根拠、そして「非会員への配慮」も。</p>
+<div class="check-box">
+  <div class="check-box-title">確認事項：入会手続</div>
+  <div class="check-item">PTA加入案内が学校の就学手続と同じ封筒・書類で配布されていないか</div>
+  <div class="check-item">任意加入であることが明記されているか</div>
+  <div class="check-item">入会申込書が個別に用意されており、提出先がPTAになっているか</div>
+  <div class="check-item">入会申込記録が保存されているか（存在しない場合は施設利用許可の見直しが必要）</div>
+  <div class="check-item">申込なしに全員を会員扱いにしていないか</div>
+  <div class="check-item">退会・非加入の手続が明示されているか</div>
+</div>
+
+<h3>6-2　PTA会費と学校徴収金の混在</h3>
+<p>学校徴収金でさえ「学校以外が担うべき業務」（文科省業務の3分類）とされているのに、PTA会費（任意団体の私費）を学校が徴収・管理することは、さらに大きな問題です。学校徴収金とPTA会費が同じ口座振替で引き落とされることで、保護者はPTA会費を義務的費用と認識します。これはPTA加入の任意性を根底から覆し、消費者契約法上の問題とも連動します。</p>
+<div class="check-box">
+  <div class="check-box-title">確認事項：会費徴収</div>
+  <div class="check-item">PTA会費が学校徴収金と同じ文書・口座振替で扱われていないか</div>
+  <div class="check-item">PTA会費の徴収根拠が入会申込記録と結びついているか</div>
+  <div class="check-item">退会者・非加入者への請求停止が整理されているか</div>
+  <div class="check-item">学校職員が集計・督促・会計処理を行っていないか</div>
+</div>
+<div class="case-box">
+  <div class="case-box-title">ケーススタディ：学校徴収金への便乗徴収</div>
+  <p style="font-size:13px; margin-bottom:8px;">高校・中学校・小学校を問わず、教材費、積立金、給食費、校外活動費等の学校徴収金と、PTA会費を同じ案内文・同じ口座振替・同じ会計処理の中で扱う運用が見られます。これは保護者から見ると、PTA会費が学校に支払う義務的費用であるかのように見えるため、任意加入の説明を形骸化させます。</p>
+  <div class="case-item">学校徴収金案内の中に、PTA会費が当然の徴収項目として記載されている</div>
+  <div class="case-item">口座振替依頼書で、学校徴収金とPTA会費が分離されていない</div>
+  <div class="case-item">入会申込記録がないにもかかわらず、全家庭からPTA会費を徴収している</div>
+  <div class="case-item">退会者・非加入者の請求停止処理、返金処理、会費計算根拠が文書化されていない</div>
+  <div class="case-item">学校口座・学校管理システム・学校職員の事務でPTA会費を処理している</div>
+</div>
+<div class="law-cite">
+  <div class="law-cite-title">地方自治法 第235条の4第2項（現金及び有価証券の保管）</div>
+  普通地方公共団体の所有に属しない現金又は有価証券は、法律又は政令の規定によるのでなければ、これを保管することができない。
+  <a class="law-cite-link" href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000067" target="_blank">▶ e-Gov法令検索：地方自治法</a>
+</div>
+<p>PTA会費はPTAという任意団体の私費であり、地方公共団体の所有に属する現金ではありません。学校がPTA会費を収受・保管・管理している場合、地方自治法第235条の4第2項との関係で、どの法律又は政令に基づいて保管しているのかという根拠が問われます。少なくとも、教育委員会は「昔から学校で集めている」「PTAから頼まれている」という説明で済ませることはできません。</p>
+
+<h3>6-3　学校保有個人情報のPTA提供（第３章と連動）</h3>
+<p>第３章で詳述したとおり、学校からPTAへの個人情報提供は個人情報保護法第69条の原則禁止に服します。「本人の同意があれば提供できる」という理解も、同意しない保護者が一人でもいれば機能しません。<em class="warn">PTAが自ら入会申込書で取得する以外の方法はない</em>のです。</p>
+
+<h3>6-4　学校アプリ・連絡ツールを通じたPTA通知（第３章と連動）</h3>
+<p>第３章で整理したとおり、学校アプリによるPTA通知配信は目的外利用・情報混同・非会員への配信の三つの問題を生じさせます。<em class="warn">学校連絡ツールはPTA通知に使わない</em>──これは交渉の余地のない原則です。</p>
+
+<h3>6-5　教職員によるPTA事務関与</h3>
+<div class="law-cite">
+  <div class="law-cite-title">地方公務員法 第35条（職務に専念する義務）</div>
+  職員は、法律又は条例に特別の定がある場合を除く外、その勤務時間及び職務上の注意力のすべてをその職責遂行のために用い、当該地方公共団体がなすべき責を有する職務にのみ従事しなければならない。
+  <a class="law-cite-link" href="https://elaws.e-gov.go.jp/document?lawid=325AC0000000261" target="_blank">▶ e-Gov法令検索：地方公務員法</a>
+</div>
+<p>「昔からやっている」「PTAに頼まれた」「委任されている」は法的根拠になりません。勤務時間中のPTA事務には職専免が必要です。「委任されているから校務になる」という論理は法的に成立しません。</p>
+<div class="check-box">
+  <div class="check-box-title">確認事項：教職員の関与</div>
+  <div class="check-item">PTA文書・会計・名簿作業を学校職員が勤務時間中に行っていないか</div>
+  <div class="check-item">勤務時間中のPTA事務について職専免の手続があるか</div>
+  <div class="check-item">校長・教頭がPTA役員・顧問等として実質関与していないか</div>
+</div>
+</div><!-- end 第6章 -->
+
+
+<!-- ======== 第７章 ======== -->
+<div class="section-break">
+<h2>第７章　「委任」「要綱」だけでは足りない問題</h2>
+<p>PTAから委任を受けていることを理由に教職員がPTA事務を処理する運用が各地で見られますが、<em class="warn">委任の存在は教職員が勤務時間中にその業務を行える根拠になりません</em>。「委任されているから校務になる」という論理は法的に成立しません。</p>
+<p>また、要綱や内規は法律・条例ではありません。確認すべきなのは「要綱に書いてあるか」ではなく、その要綱の内容が<em class="blue">上位法令と整合しているか</em>です。</p>
+<div class="division-box">
+  <div class="division-col">
+    <span class="division-col-title div-ok">要綱・内規で整理できる事項（例）</span>
+    <ul class="list" style="margin-bottom:0;">
+      <li>PTA通知の掲示場所・期間</li>
+      <li>施設利用申請の手続フロー</li>
+      <li>PTAとの連絡窓口の設置</li>
+    </ul>
+  </div>
+  <div class="division-col">
+    <span class="division-col-title div-ng">要綱・内規だけでは足りない事項（例）</span>
+    <ul class="list" style="margin-bottom:0;">
+      <li>学校保有個人情報のPTAへの提供</li>
+      <li>PTA会費の学校口座での管理</li>
+      <li>勤務時間中の教職員によるPTA事務</li>
+      <li>学校連絡ツールを使ったPTA通知配信</li>
+    </ul>
+  </div>
+</div>
+</div><!-- end 第7章 -->
+
+
+<!-- ======== 第８章 ======== -->
+<div class="section-break">
+<h2>第８章　訴訟リスクの全体像</h2>
+<p>現在のPTA運営の状態は、<em class="warn">非常に訴訟リスクの高い状態</em>です。リスクはPTAだけでなく、学校・教育委員会にも及びます。</p>
+
+<div class="risk-box">
+  <div class="risk-box-title">現状のPTA運営が抱える訴訟リスクの全体像</div>
+  <div class="risk-item"><strong>会費返還請求（不当利得）</strong>──入会申込記録なしに徴収した会費は、法律上の原因なく取得した不当利得（民法第703条）として返還請求の対象になりえる</div>
+  <div class="risk-item"><strong>消費者契約法に基づく取消・返還請求</strong>──任意加入の説明なし・誤認を生じさせる勧誘・困惑させての契約締結は、消費者契約法第4条に基づく取消の対象</div>
+  <div class="risk-item"><strong>個人情報漏えいに対する損害賠償請求</strong>──無断取得・目的外利用・不適切な第三者提供は個人情報保護法違反となり、損害賠償請求および個人情報保護委員会による調査・勧告・命令の対象</div>
+  <div class="risk-item"><strong>結社の自由侵害に対する国家賠償請求</strong>──憲法第21条が保障する消極的結社の自由（加入しない自由）を公権力が事実上侵害している場合、国家賠償法（第1条）に基づく請求が検討されうる</div>
+  <div class="risk-item"><strong>役員強制・就任強要に対する不法行為請求</strong>──役員への強制的な選出・就任強要は民法第709条の不法行為に当たりうる</div>
+  <div class="risk-item"><strong>学校・教育委員会への共同不法行為責任</strong>──学校がPTA加入手続に関与し、PTA会費を管理し、学校アプリで通知配信していた場合、学校・教育委員会も共同行為者として責任を問われうる</div>
+</div>
+
+<p>「PTA問題だから学校・教育委員会は関係ない」という考えは、現在の法的環境では通りません。学校とPTAの癒着構造を作り出し、維持してきた責任を、行政として問われる可能性があります。</p>
+<p>逆に言えば、<em class="blue">今からでも学校とPTAを切り分けることで、これらのリスクを大幅に低減できます</em>。必要なのは、基本に立ち戻ることだけです。</p>
+</div><!-- end 第8章 -->
+
+
+<!-- ======== 第９章 ======== -->
+<div class="section-break">
+<h2>第９章　教育委員会が確認すべき文書</h2>
+<div class="check-box">
+  <div class="check-box-title">PTA・入会関係</div>
+  <div class="check-item">PTA会則（役員規定に校長・教頭が組み込まれていないか、入会手続規定を確認）</div>
+  <div class="check-item">PTA入会申込書の書式と保存状況（存在しない場合は施設利用許可の見直し・消費者契約法リスクの整理が必要）</div>
+  <div class="check-item">PTA退会届の書式と保存状況</div>
+  <div class="check-item">PTA入会案内文書（配布方法・任意加入の記載・提出先がPTAになっているか）</div>
+</div>
+<div class="check-box">
+  <div class="check-box-title">会費・会計関係</div>
+  <div class="check-item">学校徴収金案内（PTA会費との分離状況──消費者契約法リスクと連動）</div>
+  <div class="check-item">PTA会費徴収文書（徴収方法・振替先・学校関与の有無）</div>
+  <div class="check-item">学校徴収金取扱要綱（PTA会費の取扱いが含まれる場合は上位法令との照合が必要）</div>
+  <div class="check-item">PTA会計書類の保管場所──学校が保管している場合は問題</div>
+</div>
+<div class="check-box">
+  <div class="check-box-title">個人情報関係（第３章と連動）</div>
+  <div class="check-item">PTA名簿（作成根拠・情報源・入会申込記録との突合）</div>
+  <div class="check-item">個人情報提供に関する同意書──個別に取得されているか、強制的状況下での同意でないか</div>
+  <div class="check-item">学校アプリ運用規程──PTA通知配信の根拠が含まれているか、目的外利用になっていないか</div>
+  <div class="check-item">個人情報保護委員会「公立学校とPTAの間で個人情報のやり取りをするためのポイント」（令和8年3月）との整合性確認</div>
+</div>
+<div class="check-box">
+  <div class="check-box-title">教職員関与・服務関係</div>
+  <div class="check-item">校務分掌表（PTA担当の位置づけ・校長教頭のPTA役員就任の有無）</div>
+  <div class="check-item">職務専念義務免除（職専免）関係文書</div>
+  <div class="check-item">兼職・兼業届出文書（校長・教頭等がPTA役員に就く場合は必須）</div>
+</div>
+<div class="check-box">
+  <div class="check-box-title">施設利用関係（第４章と連動）</div>
+  <div class="check-item">学校施設使用申請・許可記録（学校教育法第137条・社会教育法第44・45条に基づく許可があるか）</div>
+  <div class="check-item">PTAが第137条の要件（学校教育上支障なし・公共のため）を満たしているかの判断記録</div>
+</div>
+</div><!-- end 第9章 -->
+
+
+<!-- ======== 第10章 ======== -->
+<div class="section-break">
+<h2>第10章　教育委員会が講ずべき施策</h2>
+
+<h3>まず実態を把握する</h3>
+<p>「実態を知らなかった」では、開示請求・住民監査請求・訴訟が起きた後には通りません。今すぐ実態調査を始めることが訴訟リスク低減の第一歩です。</p>
+<div class="flow-box">
+  <div class="flow-box-title">実態調査と是正の流れ</div>
+  <div class="flow-step"><div class="flow-num">1</div><div>各学校にPTA関係文書の提出・報告を求める</div></div>
+  <div class="flow-arrow">↓</div>
+  <div class="flow-step"><div class="flow-num">2</div><div>入会申込記録の有無・校長教頭のPTA役員就任・個人情報提供・学校アプリ使用・会費一体徴収の実態を整理する</div></div>
+  <div class="flow-arrow">↓</div>
+  <div class="flow-step"><div class="flow-num">3</div><div>消費者契約法・個人情報保護法・社会教育法・地方公務員法との整合性を法令上確認する</div></div>
+  <div class="flow-arrow">↓</div>
+  <div class="flow-step"><div class="flow-num">4</div><div>校長・教頭研修を実施し、「学校とPTAの切り分け」を管理職の共通認識にする</div></div>
+  <div class="flow-arrow">↓</div>
+  <div class="flow-step"><div class="flow-num">5</div><div>各学校・各PTAに対して、入会申込書の整備・学校関与の整理・連絡ツール使用の見直しを進める</div></div>
+</div>
+
+<h3>校長・教頭研修の内容</h3>
+<p>研修では特に以下の点を明示することが必要です。</p>
+<ul class="list">
+  <li>PTAは社会教育関係団体であり学校補助団体ではない</li>
+  <li>PTA加入は消費者契約であり、消費者契約法が適用される（PTAは「事業者」）</li>
+  <li>学校からPTAへの個人情報提供には個人情報保護法第69条の制約がある</li>
+  <li>学校連絡ツールはPTA通知配信に使えない</li>
+  <li>校長・教頭のPTA役員就任は利益相反であり、社会教育法第12条との関係で問題がある</li>
+  <li>学校がPTAに関与できるのは連絡調整まで（文科省業務の3分類）</li>
+  <li>学校徴収金の徴収・管理でさえ学校以外が担うべき業務とされている</li>
+  <li>現状の放置は訴訟リスクにつながる</li>
+</ul>
+
+<h3>社会教育法第12条の正しい適用</h3>
+<p>第12条は保護者への門前払いの道具ではありません。学校・教育委員会自身の干渉をやめるための根拠として機能させるべきです。保護者から相談がある場合、「学校が関与している部分」については教育委員会の確認対象として受け付け、適切に対応することが必要です。</p>
+</div><!-- end 第10章 -->
+
+
+<!-- ======== 第11章 ======== -->
+<div class="section-break">
+
+<!-- ======== 第11章 ======== -->
+<div class="section-break">
+<h2>第11章　是正されない場合の対応──法的措置・エスカレーション</h2>
+
+<p>教育委員会・学校管理職が、学校によるPTA運営への関与を把握しながら是正しない場合、問題は単なるPTA内部の紛争にとどまりません。学校が配布、回収、徴収、通知、個人情報提供、事務処理、施設・備品利用に関与している以上、その関与部分は学校運営上の確認対象となります。</p>
+<p>保護者や住民が最初に行うべきことは、感情的な抗議ではなく、<em class="blue">文書による事実確認</em>です。どの文書に、誰の名義で、どのような説明があり、どの事務を学校が担っているのかを明らかにすることで、学校とPTAの境界がどこで崩れているのかを客観的に確認できます。</p>
+
+<h3>11-1　公文書開示請求による事実確認</h3>
+<p>学校が関与しているPTA事務は、多くの場合、学校配布文書、学校徴収金案内、校務分掌、職務専念義務免除関係文書、施設使用許可記録、教育委員会通知、学校アプリ運用資料などの形で痕跡を残します。これらは、公文書開示請求により確認できる場合があります。</p>
+<div class="check-box">
+  <div class="check-box-title">開示請求で確認すべき文書</div>
+  <div class="check-item">PTA入会案内、入会申込書、退会届、非加入者対応文書</div>
+  <div class="check-item">学校徴収金案内、口座振替依頼書、PTA会費徴収文書</div>
+  <div class="check-item">学校アプリ・連絡ツールでPTA通知を配信した記録、運用ルール、契約・仕様書</div>
+  <div class="check-item">学校からPTAへの個人情報提供に関する同意書、説明文、名簿作成資料</div>
+  <div class="check-item">校務分掌表、職務専念義務免除関係文書、兼職兼業関係文書</div>
+  <div class="check-item">学校施設使用申請書、使用許可記録、備品・印刷機使用記録</div>
+  <div class="check-item">教育委員会から学校へのPTA関係通知、校長会資料、研修資料</div>
+</div>
+
+<h3>11-2　個人情報関係の確認手続</h3>
+<p>学校からPTAへの個人情報提供が疑われる場合、確認すべき中心条文は個人情報保護法第69条です。保護者は、学校がどの利用目的で情報を取得し、PTAにどの情報を、どの根拠で、どの範囲で提供したのかを確認する必要があります。</p>
+<p>個人情報に関する問題は、住民監査請求だけで処理する問題ではありません。情報提供の根拠、本人同意の有無、同意しない者の扱い、PTA名簿の作成経路を確認し、必要に応じて個人情報保護制度上の開示請求、訂正請求、利用停止請求、苦情申出、審査請求等を検討することになります。</p>
+<div class="notice-box">
+  <div class="notice-box-title">第69条違反の有無は、同意の有無だけでは決まらない</div>
+  <p style="font-size:13px; margin-bottom:0;">本人の同意があるとされる場合でも、同意の対象、提供情報の範囲、提供先、利用目的、不同意者の除外方法が具体的に示されていなければ、実質的な同意として評価できるか疑問が残ります。教育委員会は、同意書の有無だけでなく、保護者が自由に拒否できる設計になっているかを確認する必要があります。</p>
+</div>
+
+<h3>11-3　住民監査請求の対象となり得る場面</h3>
+<p>住民監査請求は、地方公共団体の財務会計上の行為又は怠る事実を対象とする手続です。したがって、PTAの任意加入や個人情報問題そのものが常に直接の監査対象になるわけではありません。しかし、学校がPTA会費を保管している、学校施設・備品を不適切に使用させている、公費でPTA事務を処理している、教職員の勤務時間をPTA事務に充てているなど、財務会計上の問題と結びつく場合には、監査対象となり得ます。</p>
+<div class="risk-box">
+  <div class="risk-box-title">監査請求につながり得る典型場面</div>
+  <div class="risk-item">学校口座又は学校管理の仕組みでPTA会費を収受・保管・管理している場合</div>
+  <div class="risk-item">学校の印刷機、紙、電話、郵送費、備品等をPTA事務に無償又は不明確な条件で使用している場合</div>
+  <div class="risk-item">学校施設をPTAに使用させているが、申請・許可・使用料・保険・責任分担の記録がない場合</div>
+  <div class="risk-item">教職員が勤務時間中にPTA会計、名簿、文書作成、会議準備を行っている場合</div>
+  <div class="risk-item">PTAへの寄附・物品提供・活動費支出が、公費又は学校会計と混在している場合</div>
+</div>
+<p>住民監査請求は、PTA問題のすべてを直接解決する万能手段ではありません。しかし、学校・教育委員会が財産管理、公金支出、施設使用、現金保管、教職員の勤務時間に関与している場合、その部分については住民による監査の対象となり得ることを、教育委員会は認識すべきです。</p>
+
+<h3>11-4　教育委員会が放置した場合のリスク</h3>
+<p>教育委員会が「PTAは任意団体だから関知しない」と回答しながら、実際には学校がPTA会費を徴収し、学校アプリでPTA通知を配信し、教職員がPTA事務を担い、学校施設を恒常的に使わせているのであれば、その説明は成り立ちません。</p>
+<p>教育委員会が行うべきことは、PTAの会則や役員選出を支配することではありません。学校が関与している範囲を特定し、関与をやめるべき部分、学校が全保護者に対して責任を持つべき部分、PTAが自ら担うべき部分を切り分けることです。放置すれば、開示請求、監査請求、個人情報制度上の手続、議会質問、報道、訴訟等により、後からより大きな問題として顕在化します。</p>
+</div>
+
+<!-- ======== 第12章 ======== -->
+<div class="section-break">
+<h2>第12章　Web・記事・実務キットへの展開</h2>
+
+<p>本ガイドブックは、教育委員会・学校管理職に対する制度的な指針として作成するものです。一方で、PTA問題は全国の保護者、PTA役員、教職員、自治体職員がそれぞれの立場で直面する問題でもあります。そのため、PDFとして完結させるだけでなく、Web上で参照しやすく、実務に使いやすい形へ展開することが重要です。</p>
+
+<h3>12-1　Web版ハンドブック</h3>
+<p>PDFは全体像を伝えるのに適していますが、現場で必要になるのは「今、自分が確認すべき項目へすぐ移動できる」構造です。Web版では、保護者向け、PTA役員向け、教育委員会・学校関係者向けに入口を分け、各ページから実資料、法令、論考、開示請求テンプレートへ進めるようにします。</p>
+<div class="flow-box">
+  <div class="flow-box-title">Web版で用意する導線</div>
+  <div class="flow-step"><span class="flow-num">1</span><span>立場別に読む：保護者、PTA役員、教育委員会・学校関係者</span></div>
+  <div class="flow-arrow">↓</div>
+  <div class="flow-step"><span class="flow-num">2</span><span>論点別に読む：入会記録、会費徴収、個人情報、学校アプリ、教職員関与、施設利用</span></div>
+  <div class="flow-arrow">↓</div>
+  <div class="flow-step"><span class="flow-num">3</span><span>資料で確認する：教育委員会回答、学校文書、PTA案内、会計資料、開示請求結果</span></div>
+  <div class="flow-arrow">↓</div>
+  <div class="flow-step"><span class="flow-num">4</span><span>実務に使う：開示請求文例、確認質問、入会申込書・退会届テンプレート</span></div>
+</div>
+
+<h3>12-2　記事化・連載化</h3>
+<p>各章は、単独の解説記事としても展開できます。たとえば「PTAは学校補助団体ではない」「第69条で見る学校からPTAへの個人情報提供」「学校徴収金とPTA会費の便乗徴収」「委任契約でPTA業務を校務化できるのか」といった記事に分けることで、問題意識を持つ保護者やPTA役員が必要な論点だけを読みやすくなります。</p>
+<p>記事化する場合も、法令・一次資料・開示資料へのリンクを明示し、単なる意見記事ではなく、根拠資料へたどれる構成にします。これにより、各地の保護者が教育委員会や学校へ確認するときの共通言語として利用できます。</p>
+
+<h3>12-3　スターターサイトと実務キット</h3>
+<p>Web版には、PDF本文だけでなく、実務キットを併設することが有効です。開示請求の文例、学校・教育委員会への質問テンプレート、時系列整理表、文書チェックリスト、住民監査請求の準備メモなどを公開することで、読者が単に理解するだけでなく、具体的な確認行動へ移れるようになります。</p>
+<div class="check-box">
+  <div class="check-box-title">実務キットに含めるもの</div>
+  <div class="check-item">PTA入会案内・入会申込書の確認チェックリスト</div>
+  <div class="check-item">学校徴収金とPTA会費の分離状況を確認する質問票</div>
+  <div class="check-item">学校からPTAへの個人情報提供に関する確認書式</div>
+  <div class="check-item">教職員関与・職務専念義務・職専免関係文書の開示請求例</div>
+  <div class="check-item">学校施設利用許可・備品使用・印刷機使用に関する確認項目</div>
+  <div class="check-item">住民監査請求を検討する前の財務会計行為整理メモ</div>
+</div>
+</div>
+
+<h2>第13章　よくある質問（Q&amp;A）</h2>
+
+<div class="qa-item">
+  <div class="qa-q"><span class="qa-q-label">Q</span>PTAは「法人でもない任意団体」なので、消費者契約法のような法律は関係ないのではないか。</div>
+  <div class="qa-a"><span class="qa-a-label">A</span>関係します。消費者契約法第2条第2項は事業者を「法人その他の団体」と定めており、消費者庁の逐条解説は「その他の団体」の例として明示的に「PTA」を挙げています。PTAは法人格の有無にかかわらず消費者契約法上の「事業者」にあたり、保護者との加入契約には消費者契約法が適用されます。</div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-q"><span class="qa-q-label">Q</span>全員から同意を取れば、学校の個人情報をPTAに提供できるのか。</div>
+  <div class="qa-a"><span class="qa-a-label">A</span>理論上は同意があれば提供できますが（個人情報保護法第69条第2項第1号）、「全員から同意を取る」ことは、一人でも拒否した時点で不可能になります。同意しない保護者の情報は提供できず、削除・マスキングが必要です（個人情報保護委員会・令和8年3月）。「全員同意」を前提にした一括提供の仕組みは制度設計として成立しません。PTAが必要な情報は、PTAが入会申込書を通じて会員本人から直接取得するしかありません。</div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-q"><span class="qa-q-label">Q</span>学校アプリでPTA通知を送ることの何が問題なのか。PTAと学校が協力して連絡することのどこが悪いのか。</div>
+  <div class="qa-a"><span class="qa-a-label">A</span>三つの問題があります。①学校アプリで収集した保護者の連絡先情報をPTA通知配信に使うことは、収集目的外の利用（個人情報保護法上の問題）。②学校公式システムとPTA通知が混在することで、保護者がPTA通知を学校の公式連絡と誤認する構造が生まれる（消費者契約法上の誤認を助長）。③PTA非加入者にもPTA通知が届くことで「全員がPTA会員」という前提が強化される（任意加入の形骸化）。これらは「協力」ではなく「癒着」であり、法令上の問題です。</div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-q"><span class="qa-q-label">Q</span>入会申込書がなくても、長年全員が会員として運営してきたのだから問題ないのではないか。</div>
+  <div class="qa-a"><span class="qa-a-label">A</span>慣行は法律を上書きしません。入会申込記録がない場合、誰が会員かを証明できず、会費請求・名簿・議決権・役員選出・個人情報利用のすべての根拠が失われます。さらに、消費者契約法上の取消リスク・不当利得返還リスクも生じます。「長年続いてきた」ことは正当であることの証明にはなりません。長年問題が放置されてきたことを意味するだけです。</div>
+</div>
+
+<div class="qa-item">
+  <div class="qa-q"><span class="qa-q-label">Q</span>保護者からPTAに関する苦情が来た場合、「PTAの問題なので学校・教育委員会では対応できない」と回答してよいか。</div>
+  <div class="qa-a"><span class="qa-a-label">A</span>学校が関与している部分──入会案内の配布・会費の一体徴収・教職員によるPTA事務・学校アプリによる通知──については学校・教育委員会の確認対象です。「PTAの問題だから」という一言で門前払いすることは、社会教育法第12条を保護者への盾として使い、同時に学校・教育委員会自身の問題から目を逸らすことになります。また、そのような対応が不誠実であるとして行政不服申立や訴訟のきっかけになる可能性もあります。</div>
+</div>
+</div><!-- end 第11章 -->
+
+
+<!-- ======== 付録 ======== -->
+<div class="section-break">
+<h2>付録１　会則例（抜粋）</h2>
+<div class="rule-box">
+  <div class="rule-box-title">会則記載事項の例</div>
+  <div class="rule-article"><span class="rule-article-num">（会員）</span><br>
+  第○条　本会の会員は、○○小学校に在籍する児童の保護者のうち、<strong>入会申込書を提出した者</strong>とする。<br>
+  ２　入会は任意とし、入会しないことによる不利益は生じない。</div>
+  <div class="rule-article"><span class="rule-article-num">（役員）</span><br>
+  第○条　（略）<br>
+  ２　<strong>学校の管理職（校長・副校長・教頭）は、本会の役員に就任しない</strong>ものとする。</div>
+  <div class="rule-article"><span class="rule-article-num">（会費）</span><br>
+  第○条　会費は、入会した会員に対してのみ請求する。<br>
+  ２　学校が徴収する教材費・給食費等とは<strong>別に</strong>請求し、学校を通じた徴収・管理は行わない。</div>
+  <div class="rule-article"><span class="rule-article-num">（個人情報）</span><br>
+  第○条　本会が取得する個人情報は、<strong>入会申込書等を通じて本人から直接取得する</strong>。学校保有の個人情報の一括提供は受けない。<br>
+  ２　取得した個人情報は、会の活動目的の範囲内でのみ利用し、第三者に提供しない。</div>
+  <div class="rule-article"><span class="rule-article-num">（連絡手段）</span><br>
+  第○条　会員への連絡は、<strong>本会が管理する連絡手段</strong>を用いる。学校が管理する連絡ツール（学校アプリ等）は、本会の通知配信に使用しない。</div>
+</div>
+
+<h2>付録２　様式例</h2>
+<div class="form-example">
+  <div class="form-example-title">PTA入会申込書</div>
+  <p style="font-size:12px; color:#555; margin-bottom:14px;">※PTAへの加入は任意です。入会しない場合も、学校教育上の不利益はありません。本申込書の提出をもって入会となります。提出しない場合は、非加入の扱いとなります。</p>
+  <div class="form-row"><div class="form-label">申込日</div><div class="form-line"></div><span style="font-size:13px;">年</span><div class="form-line" style="min-width:30px;"></div><span style="font-size:13px;">月</span><div class="form-line" style="min-width:30px;"></div><span style="font-size:13px;">日</span></div>
+  <div class="form-row"><div class="form-label">児童氏名</div><div class="form-line"></div><span style="font-size:12px; color:#777;">（　　年　組）</span></div>
+  <div class="form-row"><div class="form-label">保護者氏名</div><div class="form-line"></div></div>
+  <div class="form-row"><div class="form-label">連絡先（PTA用）</div><div class="form-line"></div></div>
+  <div style="margin:14px 0; font-size:13px; line-height:1.8;">私は、○○小学校PTAへの加入を申し込みます。氏名・住所・電話番号・メールアドレス等の個人情報を、PTA活動（会員名簿・連絡・行事案内等）に利用することに同意します。</div>
+  <div style="text-align:right; font-size:13px;">○○小学校PTA 御中</div>
+  <div class="form-note">
+    ※提出先はPTAです（学校ではありません）。<br>
+    ※取得した個人情報はPTA活動目的にのみ利用します。学校からの一括提供は受けておりません。<br>
+    ※入会をご希望されない場合、提出の必要はありません。
+  </div>
+</div>
+<div class="form-example" style="margin-top:22px;">
+  <div class="form-example-title">PTA退会届</div>
+  <div class="form-row"><div class="form-label">届出日</div><div class="form-line"></div><span style="font-size:13px;">年</span><div class="form-line" style="min-width:30px;"></div><span style="font-size:13px;">月</span><div class="form-line" style="min-width:30px;"></div><span style="font-size:13px;">日</span></div>
+  <div class="form-row"><div class="form-label">児童氏名</div><div class="form-line"></div></div>
+  <div class="form-row"><div class="form-label">保護者氏名</div><div class="form-line"></div></div>
+  <div style="margin:14px 0; font-size:13px; line-height:1.8;">私は、○○小学校PTAを退会します。退会以降は会費の請求を停止するとともに、私の個人情報をPTA名簿等から削除し、以後利用しないでください。</div>
+  <div style="text-align:right; font-size:13px;">○○小学校PTA 御中</div>
+  <div class="form-note">※退会しても、学校教育上の不利益はありません。</div>
+</div>
+
+<h2>付録３　参考法令・一次資料リンク</h2>
+<div class="ref-box">
+  <div class="ref-box-title">法令（e-Gov法令検索）</div>
+  <div class="ref-item"><a href="https://elaws.e-gov.go.jp/document?lawid=321CONSTITUTION" target="_blank">日本国憲法（第21条：結社の自由）</a></div>
+  <div class="ref-item"><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000026" target="_blank">学校教育法（第137条：学校施設の社会教育への利用）</a></div>
+  <div class="ref-item"><a href="https://elaws.e-gov.go.jp/document?lawid=324AC0000000207" target="_blank">社会教育法（第10条・第12条・第44〜47条）</a></div>
+  <div class="ref-item"><a href="https://elaws.e-gov.go.jp/document?lawid=415AC0000000057" target="_blank">個人情報の保護に関する法律（第69条：利用及び提供の制限）</a></div>
+  <div class="ref-item"><a href="https://elaws.e-gov.go.jp/document?lawid=412AC0000000061" target="_blank">消費者契約法（第2条：事業者の定義、第3条・第4条：情報提供義務・取消）</a></div>
+  <div class="ref-item"><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000067" target="_blank">地方自治法（第238条の4：行政財産の管理）</a></div>
+  <div class="ref-item"><a href="https://elaws.e-gov.go.jp/document?lawid=325AC0000000261" target="_blank">地方公務員法（第35条：職務専念義務、第38条：兼職・兼業）</a></div>
+  <div class="ref-item"><a href="https://elaws.e-gov.go.jp/document?lawid=129AC0000000089" target="_blank">民法（第703条：不当利得、第709条：不法行為）</a></div>
+</div>
+<div class="ref-box" style="margin-top:14px;">
+  <div class="ref-box-title">文部科学省・国の機関による通知・資料</div>
+  <div class="ref-item"><a href="https://www.mext.go.jp/b_menu/hakusho/nc/mext_00095.html" target="_blank">文部科学省「公立学校施設の目的外使用に係る留意事項の周知について」（令和7年3月26日 ６文科教第2074号）</a></div>
+  <div class="ref-item"><a href="https://www.mext.go.jp/content/20230725-mext_zaimu-000031116_3.pdf" target="_blank" rel="noopener">原文PDF：文部科学省「学校・教師が担う業務に係る３分類 更なる役割分担・適正化の推進」（令和5年7月）</a></div>
+  <div class="ref-item"><a href="https://www.ppc.go.jp/files/pdf/202603_school_pta_pd_point.pdf" target="_blank" rel="noopener">原文PDF：個人情報保護委員会「公立学校とPTAの間で個人情報のやり取りをするためのポイント」（令和8年3月）</a></div>
+  <div class="ref-item"><a href="https://www.ppc.go.jp/all_faq_index/faq1-q4-13/" target="_blank">個人情報保護委員会FAQ「PTAが学校から生徒等に関する個人情報を取得する場合の注意事項」</a></div>
+  <div class="ref-item"><a href="https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_04.pdf" target="_blank" rel="noopener">原文PDF：消費者庁「消費者契約法逐条解説」（令和5年9月改訂）──PTAが「事業者」にあたることを明示</a></div>
+  <div class="ref-item"><a href="https://www.mext.go.jp/a_menu/shotou/jinji/1329576.htm" target="_blank">文部科学省「PTA等学校関係団体が実施する事業に係る兼職兼業等の取扱い及び学校における会計処理の適正化についての点検・調査結果」</a></div>
+</div>
+<div class="ref-box" style="margin-top:14px;">
+  <div class="ref-box-title">判例</div>
+  <div class="ref-item"><a href="https://www.courts.go.jp/app/hanrei_jp/detail2?id=52387" target="_blank">最高裁判所 平成18年2月7日 第三小法廷判決（民集60巻2号401頁）──「学校教育上の支障」の定義（物理的・精神的・将来的支障を含む）</a></div>
+</div>
+</div><!-- end 付録 -->
+
+<div style="margin-top:60px; padding-top:20px; border-top:2px solid #1a4a8a; text-align:center; font-size:12px; color:#777; line-height:2.2;">
+  <strong style="color:#1a4a8a;">PTA適正化推進委員会</strong><br>
+  公立学校におけるPTA運営の適正化に関するガイドブック（第4版）<br>
+  本資料は、教育委員会・学校管理職の参考資料として作成したものです。<br>
+  各自治体・学校の状況に応じて、必要な確認・整理を行ってください。
+</div>
+
+</body>
+</html>

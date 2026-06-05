@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta name="description" content="PTAの入会手続、会費徴収、個人情報、役員選出、学校関与について、立場別に確認できるセルフチェックツールです。">
+  <link rel="canonical" href="https://ptaorg.com/audit/">
+  <meta property="og:title" content="PTA運営チェックアプリ | PTA適正化推進委員会">
+  <meta property="og:description" content="PTAの入会手続、会費徴収、個人情報、役員選出、学校関与について、立場別に確認できるセルフチェックです。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ptaorg.com/audit/index.html">
+  <meta property="og:image" content="https://ptaorg.com/assets/og-image.png">
+  <title>PTA運営チェックアプリ | PTA適正化推進委員会</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* ===== OPERATION CHECK APP ===== */
+
+    :root {
+      --risk-0: #15803D;
+      --risk-0-bg: #F0FDF4;
+      --risk-0-border: #BBF7D0;
+      --risk-1: #2563EB;
+      --risk-1-bg: #EFF6FF;
+      --risk-1-border: #BFDBFE;
+      --risk-2: #D97706;
+      --risk-2-bg: #FFFBEB;
+      --risk-2-border: #FDE68A;
+      --risk-3: #C2410C;
+      --risk-3-bg: #FFF7ED;
+      --risk-3-border: #FED7AA;
+      --risk-4: #B91C1C;
+      --risk-4-bg: #FFF5F5;
+      --risk-4-border: #FED7D7;
+    }
+
+    body {
+      background:
+        radial-gradient(ellipse 80% 40% at 50% 0%, rgba(10,25,47,.05) 0%, transparent 60%),
+        linear-gradient(180deg, #F4F7FB 0%, #EEF2F7 100%);
+    }
+
+    /* ===== HERO — cinematic ===== */
+    .audit-hero {
+      position: relative;
+      padding: 96px 0 120px;
+      overflow: hidden;
+      background: #0b2a4a;
+    }
+    .audit-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(90deg, rgba(5,17,31,.46) 0%, rgba(5,17,31,.24) 48%, rgba(5,17,31,.08) 100%),
+        linear-gradient(180deg, rgba(255,255,255,.08) 0%, rgba(5,17,31,.12) 100%),
+        url('../assets/slides/1.jpg') center/cover;
+      filter: brightness(1.08) saturate(1.08);
+    }
+    .audit-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .audit-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 40px), 1240px);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(380px, 460px);
+      gap: 56px;
+      align-items: center;
+    }
+    .audit-hero-left { position: relative; }
+    .audit-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(212,175,55,.14);
+      border: 1px solid rgba(212,175,55,.42);
+      color: var(--color-gold-light);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+    .audit-hero-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      box-shadow: 0 0 12px rgba(212,175,55,.8);
+    }
+    .audit-hero h1 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.22;
+      margin-bottom: 22px;
+      letter-spacing: .01em;
+      text-shadow: 0 4px 24px rgba(0,0,0,.35);
+    }
+    .audit-hero h1 .accent {
+      background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    .audit-hero-lede {
+      color: rgba(255,255,255,.82);
+      font-size: 1.04rem;
+      line-height: 1.95;
+      max-width: 580px;
+      margin-bottom: 30px;
+    }
+    .audit-hero-lede strong {
+      color: var(--color-gold-light);
+      font-weight: 800;
+    }
+    .audit-hero-meta {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.14);
+    }
+    .hero-meta-item {
+      color: rgba(255,255,255,.78);
+      font-size: .88rem;
+    }
+    .hero-meta-item strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-gold-light);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    /* ===== HERO RIGHT — 5 axis cards (stacked, linked) ===== */
+    .audit-hero-axes {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.35);
+    }
+    .audit-hero-axes-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0 6px 14px;
+      margin-bottom: 6px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .axes-head-title {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 800;
+      color: #fff;
+      font-size: 1rem;
+      letter-spacing: .04em;
+    }
+    .axes-head-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--color-gold-light);
+      font-size: .85rem;
+    }
+    .axis-link {
+      display: grid;
+      grid-template-columns: 52px 1fr auto;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      text-decoration: none;
+      color: #fff;
+      transition: all .28s ease;
+      cursor: pointer;
+    }
+    .axis-link:hover {
+      background: rgba(212,175,55,.12);
+      border-color: rgba(212,175,55,.45);
+      transform: translateX(4px);
+    }
+    .axis-link-icon {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(212,175,55,.22), rgba(212,175,55,.08));
+      border: 1px solid rgba(212,175,55,.3);
+      display: grid; place-items: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .axis-link-text {
+      min-width: 0;
+    }
+    .axis-link-label {
+      font-size: .92rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 2px;
+      letter-spacing: .02em;
+    }
+    .axis-link-sub {
+      font-size: .72rem;
+      color: rgba(255,255,255,.6);
+      letter-spacing: .02em;
+    }
+    .axis-link-arrow {
+      color: rgba(255,255,255,.4);
+      font-size: 1.1rem;
+      font-weight: 300;
+      transition: all .3s ease;
+    }
+    .axis-link:hover .axis-link-arrow {
+      color: var(--color-gold);
+      transform: translateX(3px);
+    }
+
+    /* Risk legend compact in hero */
+    .hero-legend-mini {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+      padding: 14px 6px 4px;
+      margin-top: 8px;
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .mini-lv {
+      text-align: center;
+      padding: 6px 4px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.04);
+    }
+    .mini-lv-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      margin: 0 auto 4px;
+    }
+    .mini-lv-dot.lv0 { background: var(--risk-0); }
+    .mini-lv-dot.lv1 { background: var(--risk-1); }
+    .mini-lv-dot.lv2 { background: var(--risk-2); }
+    .mini-lv-dot.lv3 { background: var(--risk-3); }
+    .mini-lv-dot.lv4 { background: var(--risk-4); }
+    .mini-lv-label {
+      font-size: .62rem;
+      color: rgba(255,255,255,.65);
+      letter-spacing: .03em;
+      font-weight: 700;
+    }
+
+    /* ===== MAIN SHELL ===== */
+    .audit-shell {
+      width: min(calc(100% - 40px), 1200px);
+      margin: -72px auto 0;
+      position: relative;
+      z-index: 2;
+      padding: 0 0 120px;
+    }
+
+    /* ===== INTRO SECTION ===== */
+    #screen-intro {}
+
+    .intro-section-header {
+      text-align: center;
+      margin: 48px 0 40px;
+    }
+    .intro-section-kicker {
+      display: inline-block;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--color-gold);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      letter-spacing: .05em;
+    }
+    .intro-section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.75rem, 3vw, 2.4rem);
+      font-weight: 900;
+      color: var(--color-navy);
+      line-height: 1.3;
+      margin-bottom: 16px;
+      letter-spacing: .01em;
+    }
+    .intro-section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-gold), transparent);
+      margin: 18px auto 0;
+    }
+    .intro-section-lead {
+      font-size: 1rem;
+      color: var(--color-text-soft);
+      line-height: 1.85;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ===== MODE CARDS — photos are visual only; text lives outside images ===== */
+    .mode-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+    .mode-card {
+      position: relative;
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid var(--color-line);
+      transition: all .4s cubic-bezier(.2, .8, .2, 1);
+      box-shadow: 0 8px 24px rgba(10,25,47,.06);
+      text-align: left;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 520px;
+    }
+    .mode-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(10,25,47,.2);
+      border-color: transparent;
+    }
+    .mode-card-image {
+      position: relative;
+      height: 190px;
+      overflow: hidden;
+      background: #E5ECF3;
+    }
+    .mode-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .9s cubic-bezier(.2, .8, .2, 1);
+      filter: brightness(1.04) saturate(1.06);
+    }
+    .mode-card:hover .mode-card-image img {
+      transform: scale(1.04);
+    }
+    .mode-card-image::before {
+      content: none;
+    }
+    .mode-card-image::after {
+      content: none;
+    }
+    .mode-card-head {
+      margin-bottom: 16px;
+    }
+    .mode-card-kicker {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: #FFF7D8;
+      border: 1px solid rgba(212,175,55,.38);
+      color: #775A10;
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .mode-card-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.36rem;
+      font-weight: 900;
+      color: var(--color-navy);
+      line-height: 1.3;
+      letter-spacing: .01em;
+      margin: 0;
+    }
+    .mode-card-body {
+      padding: 26px 26px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .mode-card-desc {
+      font-size: .92rem;
+      color: var(--color-text-soft);
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+    .mode-check-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      padding: 16px 18px;
+      background: linear-gradient(135deg, #F8FAFC, #EEF3F8);
+      border-radius: 14px;
+      border-left: 3px solid var(--color-gold);
+      margin-bottom: 22px;
+    }
+    .mode-check {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .85rem;
+      color: var(--color-text);
+      font-weight: 500;
+    }
+    .mode-check::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      flex-shrink: 0;
+    }
+    .mode-start-btn {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background: var(--color-navy);
+      color: #fff;
+      font-size: .92rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      transition: all .3s ease;
+    }
+    .mode-card:hover .mode-start-btn {
+      background: linear-gradient(135deg, var(--color-navy) 0%, #284b78 100%);
+      transform: translateX(4px);
+    }
+    .mode-start-btn .arrow {
+      transition: transform .3s ease;
+    }
+    .mode-card:hover .mode-start-btn .arrow {
+      transform: translateX(6px);
+    }
+
+    /* ===== QUESTION SCREEN ===== */
+    #screen-question { max-width: 820px; margin: 40px auto 0; }
+
+    .q-progress-wrap {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+      padding: 0 4px;
+    }
+    .q-progress-bar {
+      flex: 1;
+      height: 5px;
+      background: rgba(26,54,93,.1);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .q-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--color-navy), var(--color-gold));
+      border-radius: 999px;
+      transition: width .5s ease;
+      box-shadow: 0 0 12px rgba(212,175,55,.5);
+    }
+    .q-progress-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      white-space: nowrap;
+    }
+
+    .q-card {
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-radius: 24px;
+      padding: 44px;
+      box-shadow: 0 16px 48px rgba(10,25,47,.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .q-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-navy), var(--color-gold), var(--color-navy));
+    }
+    .q-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .q-axis-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(26,54,93,.07);
+      color: var(--color-navy);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      border: 1px solid rgba(26,54,93,.14);
+    }
+    .q-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+      color: var(--color-navy);
+      line-height: 1.55;
+      margin-bottom: 32px;
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+    .q-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .q-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 22px;
+      border-radius: 16px;
+      border: 2px solid var(--color-line);
+      background: #fff;
+      cursor: pointer;
+      transition: all .28s ease;
+      text-align: left;
+      width: 100%;
+    }
+    .q-option:hover {
+      border-color: var(--color-navy);
+      background: linear-gradient(135deg, #F8FAFC, #EEF3F8);
+      transform: translateX(6px);
+      box-shadow: 0 8px 24px rgba(26,54,93,.08);
+    }
+    .q-option-mark {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--color-navy), #284b78);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: .95rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(26,54,93,.3);
+    }
+    .q-option-text {
+      font-size: .98rem;
+      color: var(--color-text);
+      line-height: 1.7;
+      padding-top: 5px;
+    }
+    .q-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 11px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--color-line);
+      background: #fff;
+      color: var(--color-text-soft);
+      font-size: .88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .btn-back:hover:not(:disabled) {
+      border-color: var(--color-navy);
+      color: var(--color-navy);
+      background: #F8FAFC;
+    }
+    .btn-back:disabled { opacity: .4; cursor: not-allowed; }
+
+    /* ===== RESULT SCREEN ===== */
+    #screen-result {}
+
+    /* Result Hero Banner — cinematic */
+    .result-risk-banner {
+      border-radius: 28px;
+      padding: 52px 56px;
+      margin: 40px 0 36px;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      box-shadow: 0 24px 64px rgba(10,25,47,.2);
+    }
+    .result-risk-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    .result-risk-banner::after {
+      content: '';
+      position: absolute;
+      top: -50%; right: -20%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(212,175,55,.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .result-risk-banner.lv0 { background: linear-gradient(135deg, #14532D, #15803D, #166534); }
+    .result-risk-banner.lv1 { background: linear-gradient(135deg, #1e3a8a, #2563EB, #1e40af); }
+    .result-risk-banner.lv2 { background: linear-gradient(135deg, #78350F, #D97706, #92400E); }
+    .result-risk-banner.lv3 { background: linear-gradient(135deg, #7C2D12, #C2410C, #9A3412); }
+    .result-risk-banner.lv4 { background: linear-gradient(135deg, #7F1D1D, #B91C1C, #991B1B); }
+
+    .banner-inner { position: relative; z-index: 1; }
+    .banner-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.3);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      backdrop-filter: blur(6px);
+    }
+    .banner-risk-label {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.18;
+      margin-bottom: 16px;
+      letter-spacing: .01em;
+      text-shadow: 0 4px 20px rgba(0,0,0,.25);
+    }
+    .banner-summary {
+      color: rgba(255,255,255,.92);
+      font-size: 1.06rem;
+      line-height: 1.9;
+      max-width: 760px;
+    }
+    .banner-counts {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .banner-count-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.22);
+      font-size: .88rem;
+      font-weight: 700;
+      backdrop-filter: blur(6px);
+    }
+    .banner-count-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* ===== COMPREHENSIVE ASSESSMENT — the key new addition ===== */
+    .assessment-panel {
+      background: #fff;
+      border-radius: 24px;
+      padding: 48px 52px;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--color-line);
+      box-shadow: 0 16px 48px rgba(10,25,47,.08);
+    }
+    .assessment-panel::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--color-navy) 0%, var(--color-gold) 50%, var(--color-navy) 100%);
+    }
+    .assessment-panel::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 240px; height: 240px;
+      background-image: url('../assets/slides/2.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: .06;
+      pointer-events: none;
+    }
+    .assessment-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+      padding-bottom: 22px;
+      border-bottom: 2px solid #EEF3F8;
+      position: relative;
+    }
+    .assessment-header-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .assessment-seal {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #F4E7A6, var(--color-gold) 60%, #8a6d1f);
+      display: grid; place-items: center;
+      color: var(--color-navy-dark);
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      border: 3px solid #fff;
+      box-shadow: 0 8px 24px rgba(212,175,55,.4), inset 0 1px 2px rgba(255,255,255,.5);
+      flex-shrink: 0;
+    }
+    .assessment-title-group {}
+    .assessment-kicker {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--color-gold);
+      letter-spacing: .08em;
+      margin-bottom: 2px;
+    }
+    .assessment-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--color-navy);
+      letter-spacing: .02em;
+      line-height: 1.3;
+    }
+    .assessment-date {
+      text-align: right;
+      font-size: .82rem;
+      color: var(--color-text-soft);
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: .04em;
+    }
+    .assessment-date strong {
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      color: var(--color-navy);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .assessment-body {
+      font-size: 1rem;
+      color: var(--color-text);
+      line-height: 2.05;
+      letter-spacing: 0;
+      white-space: normal;
+      word-break: break-word;
+    }
+    .assessment-body h4 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      margin: 24px 0 10px;
+      padding-left: 14px;
+      border-left: 4px solid var(--color-gold);
+      letter-spacing: .02em;
+    }
+    .assessment-body p {
+      margin-bottom: 16px;
+    }
+    .assessment-body p:first-letter {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--color-navy);
+      float: left;
+      line-height: 1;
+      margin: 4px 10px 0 0;
+    }
+
+    .check-result-summary,
+    .check-result-risks,
+    .check-result-documents,
+    .check-result-actions,
+    .check-result-contacts,
+    .check-result-questions,
+    .check-result-links,
+    .check-result-note {
+      margin-top: 22px;
+      padding: 20px;
+      border: 1px solid rgba(10, 25, 47, .1);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .check-result-summary {
+      margin-top: 0;
+      background: linear-gradient(135deg, rgba(212,175,55,.12), rgba(255,255,255,.9));
+      border-color: rgba(212,175,55,.24);
+    }
+
+    .check-result-summary h2,
+    .check-result-risks h3,
+    .check-result-documents h3,
+    .check-result-actions h3,
+    .check-result-contacts h3,
+    .check-result-questions h3,
+    .check-result-links h3 {
+      margin: 0 0 10px;
+      color: var(--color-navy);
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.08rem;
+      line-height: 1.45;
+    }
+
+    .check-result-summary p,
+    .check-result-note p {
+      margin: 0;
+      color: var(--color-text);
+      line-height: 1.85;
+    }
+
+    .check-result-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .check-result-list,
+    .check-result-actions ol {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: var(--color-text);
+      line-height: 1.85;
+    }
+
+    .check-result-links ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-result-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border: 1px solid #dbe4ee;
+      border-radius: 999px;
+      background: #f8fafc;
+      color: var(--color-navy);
+      font-size: .84rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .check-result-links a:hover {
+      border-color: rgba(212,175,55,.55);
+      background: #fff;
+    }
+
+    .check-result-empty {
+      margin: 0;
+      color: var(--color-text-soft);
+      line-height: 1.75;
+    }
+
+    .assessment-loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      gap: 18px;
+    }
+    .assessment-spinner {
+      width: 48px; height: 48px;
+      border: 3px solid rgba(26,54,93,.15);
+      border-top-color: var(--color-gold);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .assessment-loading-text {
+      font-family: 'Noto Serif JP', serif;
+      color: var(--color-navy);
+      font-weight: 700;
+      font-size: .95rem;
+      letter-spacing: .05em;
+    }
+    .assessment-loading-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--color-text-soft);
+      font-size: .9rem;
+    }
+
+    .assessment-error {
+      padding: 24px;
+      border-radius: 14px;
+      background: #FFF7ED;
+      border: 1px solid #FED7AA;
+      color: #9A3412;
+      font-size: .92rem;
+      line-height: 1.8;
+    }
+    .assessment-error strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: .95rem;
+    }
+
+    .assessment-footer {
+      margin-top: 30px;
+      padding-top: 22px;
+      border-top: 1px dashed #E5ECF3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .assessment-footer-note {
+      font-size: .8rem;
+      color: var(--color-text-soft);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+    .btn-regenerate {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--color-line);
+      color: var(--color-navy);
+      font-size: .86rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .btn-regenerate:hover {
+      border-color: var(--color-gold);
+      background: rgba(212,175,55,.06);
+      color: var(--color-navy);
+    }
+    .btn-regenerate:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+
+    /* Result layout */
+    .result-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 26px;
+      align-items: start;
+    }
+    .result-panel {
+      background: #fff;
+      border: 1px solid var(--color-line);
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 8px 28px rgba(10,25,47,.06);
+    }
+    .result-panel-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .result-panel-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--color-navy), #284b78);
+      color: #fff;
+      display: grid; place-items: center;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(26,54,93,.25);
+    }
+    .result-panel h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--color-navy);
+      letter-spacing: .02em;
+    }
+    .result-panel-sub {
+      font-size: .85rem;
+      color: var(--color-text-soft);
+      margin-bottom: 22px;
+      padding-left: 52px;
+    }
+
+    /* 5-axis visual bars */
+    .axis-bars { display: flex; flex-direction: column; gap: 16px; margin: 14px 0; }
+    .axis-bar-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .axis-bar-name {
+      font-size: .9rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .axis-bar-risk-label {
+      font-size: .72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: .04em;
+    }
+    .axis-bar-track {
+      height: 10px;
+      border-radius: 999px;
+      background: #E5ECF3;
+      overflow: hidden;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+    }
+    .axis-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width .8s cubic-bezier(.2, .8, .2, 1);
+    }
+    .fill-lv0 { background: linear-gradient(90deg, var(--risk-0), #16a34a); }
+    .fill-lv1 { background: linear-gradient(90deg, var(--risk-1), #3b82f6); }
+    .fill-lv2 { background: linear-gradient(90deg, var(--risk-2), #f59e0b); }
+    .fill-lv3 { background: linear-gradient(90deg, var(--risk-3), #ea580c); }
+    .fill-lv4 { background: linear-gradient(90deg, var(--risk-4), #dc2626); }
+
+    /* Count grid */
+    .risk-count-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid #EEF3F8;
+    }
+    .risk-count-cell {
+      border-radius: 12px;
+      padding: 14px 6px;
+      text-align: center;
+      border: 1px solid;
+      transition: transform .25s ease;
+    }
+    .risk-count-cell:hover { transform: translateY(-2px); }
+    .risk-count-cell.lv0 { background: var(--risk-0-bg); border-color: var(--risk-0-border); }
+    .risk-count-cell.lv1 { background: var(--risk-1-bg); border-color: var(--risk-1-border); }
+    .risk-count-cell.lv2 { background: var(--risk-2-bg); border-color: var(--risk-2-border); }
+    .risk-count-cell.lv3 { background: var(--risk-3-bg); border-color: var(--risk-3-border); }
+    .risk-count-cell.lv4 { background: var(--risk-4-bg); border-color: var(--risk-4-border); }
+    .risk-count-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .risk-count-cell.lv0 .risk-count-num { color: var(--risk-0); }
+    .risk-count-cell.lv1 .risk-count-num { color: var(--risk-1); }
+    .risk-count-cell.lv2 .risk-count-num { color: var(--risk-2); }
+    .risk-count-cell.lv3 .risk-count-num { color: var(--risk-3); }
+    .risk-count-cell.lv4 .risk-count-num { color: var(--risk-4); }
+    .risk-count-name { font-size: .68rem; font-weight: 700; color: var(--color-text-soft); letter-spacing: .04em; }
+
+    /* Answer detail cards */
+    .answer-cards { display: flex; flex-direction: column; gap: 14px; max-height: 720px; overflow-y: auto; padding-right: 6px; }
+    .answer-cards::-webkit-scrollbar { width: 6px; }
+    .answer-cards::-webkit-scrollbar-track { background: #F1F5F9; border-radius: 3px; }
+    .answer-cards::-webkit-scrollbar-thumb { background: #CBD5E0; border-radius: 3px; }
+    .answer-card {
+      border-radius: 16px;
+      border: 1px solid;
+      padding: 20px 22px;
+      transition: all .28s ease;
+    }
+    .answer-card:hover { transform: translateX(4px); box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+    .answer-card.lv0 { background: var(--risk-0-bg); border-color: var(--risk-0-border); border-left: 5px solid var(--risk-0); }
+    .answer-card.lv1 { background: var(--risk-1-bg); border-color: var(--risk-1-border); border-left: 5px solid var(--risk-1); }
+    .answer-card.lv2 { background: var(--risk-2-bg); border-color: var(--risk-2-border); border-left: 5px solid var(--risk-2); }
+    .answer-card.lv3 { background: var(--risk-3-bg); border-color: var(--risk-3-border); border-left: 5px solid var(--risk-3); }
+    .answer-card.lv4 { background: var(--risk-4-bg); border-color: var(--risk-4-border); border-left: 5px solid var(--risk-4); }
+
+    .answer-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .answer-cat { font-size: .82rem; font-weight: 800; color: var(--color-navy); letter-spacing: .02em; }
+    .answer-risk-pill {
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: .7rem;
+      font-weight: 800;
+      white-space: nowrap;
+      letter-spacing: .04em;
+    }
+    .answer-risk-pill.lv0 { background: rgba(21,128,61,.16); color: var(--risk-0); }
+    .answer-risk-pill.lv1 { background: rgba(37,99,235,.16); color: var(--risk-1); }
+    .answer-risk-pill.lv2 { background: rgba(217,119,6,.16); color: var(--risk-2); }
+    .answer-risk-pill.lv3 { background: rgba(194,65,12,.16); color: var(--risk-3); }
+    .answer-risk-pill.lv4 { background: rgba(185,28,28,.16); color: var(--risk-4); }
+
+    .answer-choice {
+      font-size: .9rem;
+      color: var(--color-text);
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    .answer-advice {
+      font-size: .86rem;
+      color: var(--color-text-soft);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .answer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+    .answer-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 11px;
+      border-radius: 8px;
+      background: rgba(26,54,93,.08);
+      color: var(--color-navy);
+      font-size: .76rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all .2s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .answer-link:hover { background: rgba(26,54,93,.16); transform: translateY(-1px); }
+
+    /* Result actions */
+    .result-actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+    .btn-restart, .btn-share, .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: .9rem;
+      border: none;
+      cursor: pointer;
+      transition: all .28s ease;
+      letter-spacing: .02em;
+    }
+    .btn-restart {
+      background: var(--color-navy);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(26,54,93,.25);
+    }
+    .btn-restart:hover {
+      background: #284b78;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(26,54,93,.35);
+    }
+    .btn-share {
+      background: #000;
+      color: #fff;
+    }
+    .btn-share:hover { background: #333; transform: translateY(-2px); }
+    .btn-print {
+      background: #fff;
+      color: var(--color-navy);
+      border: 1px solid var(--color-line);
+    }
+    .btn-print:hover {
+      border-color: var(--color-gold);
+      background: rgba(212,175,55,.05);
+    }
+
+    /* Law modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(10,25,47,.78);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 1600;
+      backdrop-filter: blur(4px);
+    }
+    .modal.is-open { display: flex; }
+    .modal-content {
+      width: min(860px, 100%);
+      background: #fff;
+      border-radius: 24px;
+      border-top: 6px solid var(--color-gold);
+      box-shadow: 0 32px 80px rgba(10,25,47,.4);
+      position: relative;
+      padding: 40px;
+      max-height: 84vh;
+      overflow: auto;
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--color-line);
+      background: #fff;
+      cursor: pointer;
+      font-size: 1.4rem;
+      display: grid;
+      place-items: center;
+      transition: all .2s ease;
+    }
+    .modal-close:hover {
+      background: #FFF7ED;
+      border-color: var(--color-gold);
+    }
+
+    .hidden { display: none !important; }
+
+    /* Print styles */
+    @media print {
+      .site-header, .mobile-overlay, .footer, .result-actions-row, .btn-regenerate { display: none !important; }
+      .audit-hero { display: none; }
+      body { background: #fff; }
+      .audit-shell { margin-top: 20px; }
+      .assessment-panel { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; }
+      .result-panel { box-shadow: none; border: 1px solid #ccc; }
+    }
+
+    @media (max-width: 1100px) {
+      .result-layout { grid-template-columns: 1fr; }
+      .audit-hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .mode-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .audit-hero { padding: 64px 0 88px; }
+      .mode-grid { grid-template-columns: 1fr; }
+      .risk-count-grid { grid-template-columns: repeat(5, 1fr); gap: 4px; }
+      .check-result-grid { grid-template-columns: 1fr; }
+      .q-card, .assessment-panel, .result-panel, .result-risk-banner { padding: 28px 22px; }
+      .assessment-header { flex-direction: column; align-items: flex-start; }
+      .audit-shell { margin-top: -48px; }
+    }
+    @media (max-width: 480px) {
+      .result-risk-banner { padding: 32px 24px; }
+      .assessment-seal { width: 56px; height: 56px; font-size: 1.2rem; }
+      .banner-risk-label { font-size: 1.8rem; }
+    }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0D18ZSSLMH');
+</script>
+</head>
+<body>
+<div class="support-strip" role="complementary" aria-label="活動支援のお願い">
+  <div class="support-strip-inner">
+    <span class="support-strip-label">応援のお願い</span>
+    <span class="support-strip-text">公文書開示、資料整理、Web公開を続けるため、寄付・カンパでのご支援をお願いします。</span>
+    <a class="support-strip-link" href="https://ptaorg.github.io/donate/">応援ページへ</a>
+  </div>
+</div>
+
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <img src="../assets/popc-logo.png" alt="PTA適正化推進委員会ロゴ">
+        <span>PTA適正化推進委員会</span>
+      </a>
+      <nav class="desktop-nav" aria-label="主要ナビゲーション">
+        <a href="../index.html" class="nav-link">トップ</a>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">入口別ガイド</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>対象別入口</h4>
+              <ul>
+                <li><a href="../guide-parent.html">保護者の方へ</a></li>
+                <li><a href="../guide-pta.html">PTA役員の方へ</a></li>
+                <li><a href="../guide-board.html">教育委員会の方へ</a></li>
+                <li><a href="../guide-research.html">研究者・記者の方へ</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>導線</h4>
+              <ul>
+                <li><a href="../membership.html">入会手続とオプトアウト</a></li>
+                <li><a href="../law-map.html">法制度マップ</a></li>
+                <li><a href="../cases.html">判例整理</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="../law-map.html" class="nav-link">論点別</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>主要論点</h4>
+              <ul>
+                <li><a href="../membership.html">入会手続・オプトアウト</a></li>
+                <li><a href="../privacy.html">個人情報提供</a></li>
+                <li><a href="../fee-collection.html">会費徴収</a></li>
+                <li><a href="../personnel.html">教職員関与</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="index.html" class="btn-gold active" style="font-size:.88rem; padding:10px 18px; min-height:0;">運営チェックアプリ</a>
+            <a href="https://ptaorg.github.io/donate/" class="nav-link support-nav-link">応援</a>
+    </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileOverlay">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay">
+    <a href="../index.html" class="mobile-link"><span>Home</span>トップページ</a>
+    <a href="../guide-parent.html" class="mobile-link"><span>Guide</span>保護者の方へ</a>
+    <a href="../guide-pta.html" class="mobile-link"><span>Guide</span>PTA役員の方へ</a>
+    <a href="../guide-board.html" class="mobile-link"><span>Guide</span>教育委員会の方へ</a>
+    <a href="index.html" class="mobile-link"><span>Check</span>運営チェックアプリ</a>
+  <a href="https://ptaorg.github.io/donate/" class="mobile-link support-mobile-link"><span>Support</span>応援・寄付</a>
+
+    <div class="close-overlay" id="closeOverlay">CLOSE ×</div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="audit-hero">
+    <div class="audit-hero-inner">
+      <div class="audit-hero-left">
+        <div class="audit-hero-eyebrow">Operation Check App</div>
+        <h1>立場別に確認する<br><span class="accent">PTA運営チェックアプリ</span></h1>
+        <p class="audit-hero-lede">
+          PTAの入会手続、会費徴収、個人情報、役員選出、学校関与について、立場別に確認できるセルフチェックです。
+          結果は個別事案の適法性を断定するものではありません。手元の文書や現在の運用を整理し、
+          どの点を学校・PTA・教育委員会に確認すべきかを把握するために利用してください。
+        </p>
+        <div class="audit-hero-meta">
+          <div class="hero-meta-item">
+            <strong>5</strong>確認軸
+          </div>
+          <div class="hero-meta-item">
+            <strong>3</strong>立場別モード
+          </div>
+          <div class="hero-meta-item">
+            <strong>4段階</strong>確認結果
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side — 5 axis cards with links -->
+      <aside class="audit-hero-axes">
+        <div class="audit-hero-axes-head">
+          <span class="axes-head-title">確認5軸</span>
+          <span class="axes-head-sub">Five Axes</span>
+        </div>
+        <a href="../membership.html" class="axis-link">
+          <span class="axis-link-icon">📋</span>
+          <span class="axis-link-text">
+            <span class="axis-link-label">契約性</span>
+            <span class="axis-link-sub">入会意思・オプトアウト</span>
+          </span>
+          <span class="axis-link-arrow">→</span>
+        </a>
+        <a href="../privacy.html" class="axis-link">
+          <span class="axis-link-icon">🔒</span>
+          <span class="axis-link-text">
+            <span class="axis-link-label">情報管理</span>
+            <span class="axis-link-sub">個人情報提供</span>
+          </span>
+          <span class="axis-link-arrow">→</span>
+        </a>
+        <a href="../fee-collection.html" class="axis-link">
+          <span class="axis-link-icon">💰</span>
+          <span class="axis-link-text">
+            <span class="axis-link-label">財務健全性</span>
+            <span class="axis-link-sub">会費徴収・会計分離</span>
+          </span>
+          <span class="axis-link-arrow">→</span>
+        </a>
+        <a href="../personnel.html" class="axis-link">
+          <span class="axis-link-icon">👩‍🏫</span>
+          <span class="axis-link-text">
+            <span class="axis-link-label">服務規律</span>
+            <span class="axis-link-sub">教職員関与</span>
+          </span>
+          <span class="axis-link-arrow">→</span>
+        </a>
+        <a href="../facilities.html" class="axis-link">
+          <span class="axis-link-icon">🏫</span>
+          <span class="axis-link-text">
+            <span class="axis-link-label">公物管理</span>
+            <span class="axis-link-sub">施設利用・公私境界</span>
+          </span>
+          <span class="axis-link-arrow">→</span>
+        </a>
+        <div class="hero-legend-mini">
+          <div class="mini-lv"><div class="mini-lv-dot lv0"></div><div class="mini-lv-label">問題なしに近い</div></div>
+          <div class="mini-lv"><div class="mini-lv-dot lv1"></div><div class="mini-lv-label">確認が必要</div></div>
+          <div class="mini-lv"><div class="mini-lv-dot lv2"></div><div class="mini-lv-label">運用リスクあり</div></div>
+          <div class="mini-lv"><div class="mini-lv-dot lv3"></div><div class="mini-lv-label">早急な見直し</div></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===== MAIN ===== -->
+  <main class="audit-shell">
+
+    <!-- INTRO — mode select -->
+    <section id="screen-intro">
+      <div class="intro-section-header">
+        <span class="intro-section-kicker">Select Your Role</span>
+        <h2 class="intro-section-title">立場を選んで運営チェックを始める</h2>
+        <p class="intro-section-lead">
+          保護者・PTA役員・学校・教育委員会のそれぞれの視点から、手元の文書や現在の運用を整理します。
+          個人名・学校名・住所・電話番号などは入力不要です。入力内容はこの端末上での確認にのみ使用し、送信・保存しません。
+        </p>
+      </div>
+
+      <div class="mode-grid">
+
+        <!-- 保護者モード -->
+        <button class="mode-card" data-role="parent">
+          <div class="mode-card-image">
+            <img src="../assets/slides/1.jpg" alt="明るい校舎の風景">
+          </div>
+          <div class="mode-card-body">
+            <div class="mode-card-head">
+              <span class="mode-card-kicker">Parents</span>
+              <h3 class="mode-card-title">保護者向けチェック</h3>
+            </div>
+            <p class="mode-card-desc">
+              手元のPTAプリントを見ながら、入会申込、会費徴収、個人情報、役員選出、学校経由提出の確認点を整理します。
+            </p>
+            <div class="mode-check-list">
+              <div class="mode-check">入会届・みなし加入の確認</div>
+              <div class="mode-check">個人情報の提供経路</div>
+              <div class="mode-check">会費徴収の法的根拠</div>
+              <div class="mode-check">学校による配布・案内の方法</div>
+            </div>
+            <div class="mode-start-btn">
+              <span>保護者向けチェックを開始する</span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </button>
+
+        <!-- PTA役員モード -->
+        <button class="mode-card" data-role="officer">
+          <div class="mode-card-image">
+            <img src="../assets/slides/1.jpg" alt="明るい校舎の風景">
+          </div>
+          <div class="mode-card-body">
+            <div class="mode-card-head">
+              <span class="mode-card-kicker">Officers</span>
+              <h3 class="mode-card-title">PTA役員向けチェック</h3>
+            </div>
+            <p class="mode-card-desc">
+              役員を責めるためではなく、次年度から保護者へ説明できる運営に直すための確認点を整理します。
+            </p>
+            <div class="mode-check-list">
+              <div class="mode-check">加入案内・入会手続の方式</div>
+              <div class="mode-check">会計管理・口座の分離状況</div>
+              <div class="mode-check">学校依存・事務代行の範囲</div>
+              <div class="mode-check">管理職の意思決定への関与</div>
+            </div>
+            <div class="mode-start-btn">
+              <span>PTA役員向けチェックを開始する</span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </button>
+
+        <!-- 学校管理職モード -->
+        <button class="mode-card" data-role="school">
+          <div class="mode-card-image">
+            <img src="../assets/slides/2.jpg" alt="明るいプールの風景">
+          </div>
+          <div class="mode-card-body">
+            <div class="mode-card-head">
+              <span class="mode-card-kicker">Schools</span>
+              <h3 class="mode-card-title">学校・教育委員会向けチェック</h3>
+            </div>
+            <p class="mode-card-desc">
+              PTAを支配するためではなく、学校側の配布・回収、個人情報、会費徴収、連絡ツール利用の関与を点検します。
+            </p>
+            <div class="mode-check-list">
+              <div class="mode-check">学校職員のPTA固有事務関与</div>
+              <div class="mode-check">個人情報の提供実態</div>
+              <div class="mode-check">施設・設備の利用許可</div>
+              <div class="mode-check">学校手続との混在</div>
+            </div>
+            <div class="mode-start-btn">
+              <span>学校・教育委員会向けチェックを開始する</span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- QUESTION -->
+    <section id="screen-question" class="hidden">
+      <div class="q-progress-wrap">
+        <div class="q-progress-bar">
+          <div class="q-progress-fill" id="progressFill"></div>
+        </div>
+        <div class="q-progress-label" id="questionCounter"></div>
+      </div>
+      <div class="q-card">
+        <div class="q-meta">
+          <span class="q-axis-badge" id="questionCategory"></span>
+        </div>
+        <div class="q-text" id="questionText"></div>
+        <div class="q-options" id="questionOptions"></div>
+        <div class="q-actions">
+          <button class="btn-back" id="prevQuestion">← 前の設問</button>
+          <button class="btn-back" id="backToHome">トップへ戻る</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="screen-result" class="hidden">
+
+      <!-- Overall banner -->
+      <div class="result-risk-banner" id="riskBanner">
+        <div class="banner-inner">
+          <div class="banner-eyebrow" id="bannerEyebrow">チェック結果</div>
+          <div class="banner-risk-label" id="bannerTitle"></div>
+          <div class="banner-summary" id="bannerSummary"></div>
+          <div class="banner-counts" id="bannerCounts"></div>
+        </div>
+      </div>
+
+      <!-- ===== COMPREHENSIVE ASSESSMENT PANEL ===== -->
+      <div class="assessment-panel">
+        <div class="assessment-header">
+          <div class="assessment-header-left">
+            <div class="assessment-seal">確認</div>
+            <div class="assessment-title-group">
+              <div class="assessment-kicker">Comprehensive Assessment</div>
+              <div class="assessment-title">総合評価書</div>
+            </div>
+          </div>
+          <div class="assessment-date">
+            <strong id="assessmentDate">—</strong>
+            <span>PTA適正化推進委員会</span>
+          </div>
+        </div>
+
+        <div id="assessmentContent">
+          <div class="assessment-loading" id="assessmentLoading">
+            <div class="assessment-spinner"></div>
+            <div class="assessment-loading-text">総合評価を生成しています…</div>
+            <div class="assessment-loading-sub">法的観点からチェック結果を分析中</div>
+          </div>
+          <div class="assessment-body" id="assessmentBody" style="display:none;"></div>
+          <div class="assessment-error" id="assessmentError" style="display:none;"></div>
+        </div>
+
+        <div class="assessment-footer">
+          <p class="assessment-footer-note">
+            ※ このチェック結果は、個別事案の適法性を断定するものではありません。
+            手元の文書や現在の運用を整理し、どの点を確認すべきかを示すためのものです。
+          </p>
+          <button class="btn-regenerate" id="regenerateAssessment">
+            <span>🔄</span><span>再生成</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Axis + answers layout -->
+      <div class="result-layout">
+
+        <div>
+          <div class="result-panel">
+            <div class="result-panel-header">
+              <div class="result-panel-icon">📊</div>
+              <h3>5軸のリスク状況</h3>
+            </div>
+            <div class="result-panel-sub">各軸の危険度を色で確認できます</div>
+            <div class="axis-bars" id="axisBars"></div>
+            <div class="risk-count-grid" id="riskCountGrid"></div>
+          </div>
+
+          <div class="result-actions-row">
+            <button class="btn-restart" id="restartAudit">🔄 もう一度チェックする</button>
+            <button class="btn-share" id="shareResult">𝕏 Xで共有</button>
+            <button class="btn-print" id="printResult">🖨️ 印刷する</button>
+          </div>
+        </div>
+
+        <div class="result-panel">
+          <div class="result-panel-header">
+            <div class="result-panel-icon">📝</div>
+            <h3>設問ごとのチェック結果</h3>
+          </div>
+          <div class="result-panel-sub">各項目から関連法令・資料へ進めます</div>
+          <div class="answer-cards" id="resultDetails"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Law Modal -->
+  <div class="modal" id="lawModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="footer-support">
+    <div>
+      <strong>調査・資料公開の継続を応援してください</strong>
+      <p>公文書開示、資料整理、Web公開、自治体・学校への働きかけに活用します。</p>
+    </div>
+    <a href="https://ptaorg.github.io/donate/">応援ページへ</a>
+  </div>
+
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div>
+          <h3>PTA適正化推進委員会</h3>
+          <a href="https://yokomusubi.city.yokohama.lg.jp/organizations/detail/f69c7ad2-cf21-4dfa-87bb-9c891874eb6b/" target="_blank" rel="noopener noreferrer" class="yokomusubi-card">
+            <img src="../assets/yokomusubi.png" alt="よこむすび">
+            <span class="yokomusubi-tagline">磯子区「よこむすび」掲載団体</span>
+            <span class="yokomusubi-meta">登録番号：磯子12406</span>
+            <span class="yokomusubi-meta">分類番号：12-4（市民活動・社会教育推進）</span>
+          </a>
+          <div class="footer-contact">
+            <p>〒235-0021<br>神奈川県横浜市磯子区岡村8-17-5-301</p>
+            <p><strong>070-9012-7772</strong></p>
+            <p><a href="mailto:info@ptaorg.com">info@ptaorg.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h4>公式発信</h4>
+          <p class="footer-sns-sub">最新資料・論考・動画はこちら</p>
+          <div class="footer-sns-cards">
+            <a href="https://x.com/jjjqqqxxx0852" target="_blank" rel="noopener" class="fsns-card fsns-x">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.836L2.25 2.25H8.08l4.263 5.636L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+              <div>
+                <div class="fsns-name">X</div>
+                <div class="fsns-desc">速報・資料更新</div>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@PTA%E9%81%A9%E6%AD%A3%E5%8C%96%E6%8E%A8%E9%80%B2%E5%A7%94%E5%93%A1%E4%BC%9A" target="_blank" rel="noopener" class="fsns-card fsns-yt">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <div>
+                <div class="fsns-name">YouTube</div>
+                <div class="fsns-desc">動画で解説</div>
+              </div>
+            </a>
+            <a href="https://note.com/hiroshisatoh" target="_blank" rel="noopener" class="fsns-card fsns-note">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H4zm2 3h10v2H6V8zm0 4h10v2H6v-2zm0 4h6v2H6v-2z"/></svg>
+              <div>
+                <div class="fsns-name">note</div>
+                <div class="fsns-desc">論考・研究ノート</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>立場別</h4>
+          <ul>
+            <li><a href="../guide-parent.html">保護者</a></li>
+            <li><a href="../guide-pta.html">PTA役員</a></li>
+            <li><a href="../guide-board.html">教育委員会・学校</a></li>
+            <li><a href="../guide-research.html">研究者・記者</a></li>
+            <li><a href="../guide-board.html">教育委員会向け指針</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>論点</h4>
+          <ul>
+            <li><a href="../membership.html">入会手続</a></li>
+            <li><a href="../privacy.html">個人情報</a></li>
+            <li><a href="../fee-collection.html">会費徴収</a></li>
+            <li><a href="../personnel.html">教職員関与</a></li>
+            <li><a href="../facilities.html">施設利用</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>資料・支援</h4>
+          <ul>
+            <li><a href="../board-responses.html">教育委員会の回答</a></li>
+            <li><a href="../national-archive.html">全国資料館</a></li>
+            <li><a href="../journal.html">論考・調査報告</a></li>
+            <li><a href="../report.html">総合分析レポート</a></li>
+            <li><a href="../audit/index.html">運営チェックアプリ</a></li>
+            <li><a href="../law-map.html">法制度マップ</a></li>
+            <li><a href="../guideline.html">適正化ガイドライン</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <p class="copyright">© PTA適正化推進委員会</p>
+  </footer>
+
+  <script src="../js/law-data.js"></script>
+  <script src="../js/site.js"></script>
+  <script src="check-app.js"></script>
+</body>
+</html>

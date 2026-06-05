@@ -1,0 +1,167 @@
+{
+  "note": "サイト掲載前の資料候補一覧です。PDF本体は別管理であり、引用前に発出主体・発出日・現行性・重複の有無を確認します。",
+  "items": [
+    {
+      "category": "01_横浜市通知",
+      "priority": "A",
+      "title": "横浜市教育委員会通知 学教第1965号（yokohama-notice-1965.pdf）",
+      "url": "https://drive.google.com/file/d/1f1QSbyS8UtsRnRAFct9z0lnKlad_p8ci",
+      "type": "自治体公式通知PDF候補",
+      "use": "PTA任意加入、個人情報同意、未加入家庭配慮、会費説明、学校とPTAの関係",
+      "status": "PDF本体は別管理。Drive候補確認。"
+    },
+    {
+      "category": "02_個人情報",
+      "priority": "A",
+      "title": "第353回個人情報保護委員会資料3",
+      "url": "https://drive.google.com/file/d/1ZgAu-we_1MUUQOMrICl0-PqxrHBQQbDc",
+      "type": "個人情報保護委員会資料PDF",
+      "use": "学校からPTAへの個人情報提供、同意取得、第三者提供・目的外利用",
+      "status": "PDF本体は別管理。Drive候補確認。"
+    },
+    {
+      "category": "02_個人情報",
+      "priority": "A",
+      "title": "ppc-pta-personal-information-material-353.pdf",
+      "url": "https://drive.google.com/file/d/16JgzzbA2XSmPG_khN626DbI6zk2i48wG",
+      "type": "個人情報保護委員会関連整理PDF",
+      "use": "PTA・学校個人情報ページ用候補。第353回資料との重複確認が必要",
+      "status": "重複可能性あり。内容照合が必要。"
+    },
+    {
+      "category": "03_学校徴収金",
+      "priority": "A",
+      "title": "文部科学省 学校徴収金の公会計化等の取組の一層の推進について（通知）",
+      "url": "https://drive.google.com/file/d/16cN8p-Ymv1Po-XKXZ4PfMysE34EWpZbo",
+      "type": "文部科学省通知PDF",
+      "use": "学校徴収金の公会計化、学校・教師の負担軽減、学校以外が担うべき業務",
+      "status": "テキスト抽出確認済み。"
+    },
+    {
+      "category": "03_学校徴収金",
+      "priority": "B",
+      "title": "宮崎市 学校納入金等取扱マニュアル.pdf",
+      "url": "https://drive.google.com/file/d/1lZcnNTcq2x3mRY4vi2NaKmYn4Lv6ulI-",
+      "type": "自治体マニュアルPDF",
+      "use": "学校納入金・団体会計処理の自治体比較資料",
+      "status": "発出主体・現行性の確認が必要。"
+    },
+    {
+      "category": "03_学校徴収金",
+      "priority": "B",
+      "title": "山梨県 PTA・積立金会計事務処理の手引.pdf",
+      "url": "https://drive.google.com/file/d/1dKrZ6Rvzzd_r1CgyPqvnJLnp_WgnFRHS",
+      "type": "自治体/県資料PDF",
+      "use": "PTA会計・積立金会計を学校側が扱う制度整理の比較資料",
+      "status": "発出主体・現行性の確認が必要。"
+    },
+    {
+      "category": "03_学校徴収金",
+      "priority": "B",
+      "title": "高松市 学校徴収金等取扱マニュアル.pdf",
+      "url": "https://drive.google.com/file/d/1RYSdUfBtYAC2fvwHUCBj2MkliyJraTag",
+      "type": "自治体マニュアルPDF",
+      "use": "学校徴収金・団体徴収金の自治体比較資料",
+      "status": "発出主体・現行性の確認が必要。"
+    },
+    {
+      "category": "03_学校徴収金",
+      "priority": "B",
+      "title": "つくば市立学校 学校徴収金取扱要項（ガイドライン）.pdf",
+      "url": "https://drive.google.com/file/d/1Sz7zRzB_9psV3OG4iLL-Id4REIgpkMZz",
+      "type": "自治体ガイドラインPDF",
+      "use": "学校徴収金にPTA会費等を含める運用比較、問題点整理",
+      "status": "発出主体・現行性の確認が必要。"
+    },
+    {
+      "category": "04_兼職兼業_職専免",
+      "priority": "A",
+      "title": "文部科学省 通知 学校関係団体が実施する事業に係る兼職兼業等の取扱い及び学校における会計処理の適正化についての留意事項.pdf",
+      "url": "https://drive.google.com/file/d/1Oxl7OVyEMReYY97LF2OrV_11waFWdUQE",
+      "type": "文部科学省通知PDF",
+      "use": "PTA等学校関係団体、兼職兼業、学校会計処理、教職員関与",
+      "status": "Drive上の資料候補として確認。"
+    },
+    {
+      "category": "04_兼職兼業_職専免",
+      "priority": "A",
+      "title": "PTA等学校関係団体が実施する事業に係る兼職兼業等の取扱い及び学校における会計処理の適正化についての点検・調査結果について：文部科学省.pdf",
+      "url": "https://drive.google.com/file/d/15lCVnKOwb33izYPK9JqoBr2uE70Pur3S",
+      "type": "文部科学省調査結果PDF",
+      "use": "学校関係団体・PTA関連の兼職兼業、会計処理、点検調査",
+      "status": "Drive上の資料候補として確認。"
+    },
+    {
+      "category": "04_兼職兼業_職専免",
+      "priority": "B",
+      "title": "横浜市 職専免.pdf",
+      "url": "https://drive.google.com/file/d/1P6mOXmP3Znb7PikvB5Xio6n9qiCr1Pit",
+      "type": "自治体資料PDF",
+      "use": "横浜市の職務専念義務免除関係資料の候補",
+      "status": "重複候補あり。内容確認が必要。"
+    },
+    {
+      "category": "04_兼職兼業_職専免",
+      "priority": "B",
+      "title": "teacher-duty-positioning.pdf",
+      "url": "https://drive.google.com/file/d/1MPq9_Mn88ipbrFdXUcg0ZTC1GyjAeaef",
+      "type": "教員職務位置づけ資料PDF",
+      "use": "教員の職務・職専免・学校外団体関与の補助資料",
+      "status": "Drive上の資料候補として確認。"
+    },
+    {
+      "category": "04_兼職兼業_職専免",
+      "priority": "B",
+      "title": "公私協働時代における職務専念義務免除のあり方　曽和俊文.pdf",
+      "url": "https://drive.google.com/file/d/1DwhDDrxsFZuwCy8arJVphxiF7aqc64Pd",
+      "type": "学術論文/研究資料PDF",
+      "use": "職専免制度の理論的補助資料。一次資料ではなく参考研究",
+      "status": "参考資料。一次資料とは分けて扱う。"
+    },
+    {
+      "category": "05_施設利用_137条",
+      "priority": "A",
+      "title": "mext-school-facility-article137-notice.pdf",
+      "url": "https://drive.google.com/file/d/1whRTpAMLsWj8IK288bWOMmXSW8HjHipj",
+      "type": "文部科学省/学校施設利用関係PDF候補",
+      "use": "学校教育法137条、学校施設利用、PTA学校利用",
+      "status": "Drive上の資料候補として確認。"
+    },
+    {
+      "category": "05_施設利用_137条",
+      "priority": "B",
+      "title": "文科省　137条について.pdf",
+      "url": "https://drive.google.com/file/d/1OadXcFqv8_IHz4eqIB91A-QyZKYmgVVy",
+      "type": "文科省137条資料PDF候補",
+      "use": "学校教育法137条整理の補助資料",
+      "status": "mext-school-facility-article137-notice.pdfとの重複確認が必要。"
+    },
+    {
+      "category": "06_働き方改革",
+      "priority": "A",
+      "title": "文科省　答申平成31年.pdf",
+      "url": "https://drive.google.com/file/d/18xjEMjYPwc37iQ2E7zU2Id23e1OxfDyZ",
+      "type": "中央教育審議会答申PDF",
+      "use": "学校・教師が担う業務3分類、学校徴収金や地域対応等の前提資料",
+      "status": "重複多数あり。1件だけ採用すればよい。"
+    },
+    {
+      "category": "07_消費者契約法",
+      "priority": "B",
+      "title": "消費者庁　消費者契約法逐条解説　事業者.pdf",
+      "url": "https://drive.google.com/file/d/10nqDa6HMOGYl3dGqHnCDml4sYifV3F2q",
+      "type": "消費者庁逐条解説PDF候補",
+      "use": "PTAの事業者性、消費者契約法上の説明・取消し・不当条項の検討補助資料",
+      "status": "公式解説候補。全文・出典確認が必要。"
+    },
+    {
+      "category": "08_自治労_文科省確認",
+      "priority": "C",
+      "title": "自治労　文科省回答PDF.pdf",
+      "url": "https://drive.google.com/file/d/1TF-K9TcRobnWak5nD0I_2jF_gFrCVlzy",
+      "type": "交渉記録/回答PDF",
+      "use": "PTA事務と教職員職務の関係を検討する補助資料",
+      "status": "補助資料。公式通知とは分ける。"
+    }
+  ]
+}

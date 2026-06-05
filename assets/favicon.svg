@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#D4AF37"/>
+  
+  <!-- Letter 'P' in bold, modern style -->
+  <path d="M 20 16 L 20 48 L 26 48 L 26 35 L 38 35 C 44 35 48 31 48 25.5 C 48 20 44 16 38 16 Z M 26 22 L 36 22 C 39.5 22 42 23.5 42 25.5 C 42 27.5 39.5 29 36 29 L 26 29 Z" fill="#1a1a1a"/>
+</svg>

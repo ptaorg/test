@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="description" content="静岡市立小中学校20校で児童生徒9200人分の個人情報が保護者の同意なくPTAに提供——静岡市教育長「法律と学校文化にずれ」。構造的問題の分析。">
+  <link rel="canonical" href="https://ptaorg.com/shizuoka-incident.html">
+  <meta property="og:title" content="静岡市・9200人分個人情報提供の根拠確認事案 | PTA適正化推進委員会">
+  <meta property="og:description" content="「PTAに教職員の関与ゼロ」と回答していた静岡市で、9200人分の個人情報提供の根拠確認が発覚。矛盾ではなく構造的問題の必然的帰結。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ptaorg.com/shizuoka-incident.html">
+  <meta property="og:image" content="https://ptaorg.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>静岡市・9200人分個人情報提供の根拠確認事案 | PTA適正化推進委員会</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .inc-wrap{width:min(calc(100% - 40px),900px);margin-inline:auto;padding:56px 0 80px}
+    .inc-wrap h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.4rem,2.2vw,1.85rem);color:var(--navy);margin:48px 0 14px;padding-bottom:10px;border-bottom:3px solid var(--gold)}
+    .inc-wrap h3{font-size:1rem;font-weight:800;color:var(--navy);margin:28px 0 10px;padding-left:12px;border-left:4px solid var(--gold)}
+    .inc-wrap p{color:var(--text);line-height:1.95;margin-bottom:14px;font-size:.97rem}
+    .inc-wrap a{color:var(--blue);font-weight:700}
+    .fact-box{background:#fff5f5;border:2px solid #fca5a5;border-left:6px solid #b91c1c;border-radius:var(--radius);padding:24px 28px;margin:28px 0}
+    .fact-box h3{color:#7f1d1d;border-left-color:#b91c1c;margin-top:0}
+    .fact-box p{color:#374151;margin-bottom:8px}
+    .timeline{display:flex;flex-direction:column;gap:0;margin:24px 0}
+    .tl-item{display:flex;gap:16px;position:relative;padding-bottom:24px}
+    .tl-item::before{content:'';position:absolute;left:19px;top:44px;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold) 0%,transparent 100%)}
+    .tl-item:last-child::before{display:none}
+    .tl-dot{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:.85rem;font-weight:900;flex-shrink:0;z-index:1}
+    .tl-content{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;flex:1}
+    .tl-content .tl-date{font-size:.75rem;font-weight:900;color:var(--text-soft);letter-spacing:.06em;margin-bottom:4px}
+    .tl-content .tl-title{font-weight:800;color:var(--navy);font-size:.97rem;margin-bottom:6px}
+    .tl-content p{font-size:.9rem;color:var(--text-soft);line-height:1.75;margin:0}
+    .quote-box{background:linear-gradient(145deg,#1d4ed8,#2563eb);border-radius:var(--radius);padding:28px 32px;margin:24px 0;position:relative}
+    .quote-box::before{content:'"';position:absolute;top:10px;right:20px;font-family:'Noto Serif JP',serif;font-size:5rem;color:rgba(212,175,55,.15);line-height:1}
+    .quote-box .qb-src{font-size:.72rem;font-weight:900;letter-spacing:.08em;color:var(--gold-lt);text-transform:uppercase;margin-bottom:12px}
+    .quote-box blockquote{font-family:'Noto Serif JP',serif;font-size:1.1rem;color:#fff;line-height:1.9;margin:0 0 14px;font-style:normal}
+    .quote-box .qb-attr{font-size:.82rem;color:rgba(255,255,255,.6)}
+    .analysis-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+    .ag-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm)}
+    .ag-card .ag-label{font-size:.72rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+    .ag-card h4{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:900;color:var(--navy);margin-bottom:8px;line-height:1.4}
+    .ag-card p{font-size:.88rem;color:var(--text-soft);line-height:1.75;margin:0}
+    .law-ref{display:inline-flex;align-items:center;gap:5px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:7px;padding:5px 11px;font-size:.8rem;font-weight:800;color:#1d4ed8;text-decoration:none;margin:3px 3px 3px 0;transition:var(--t)}
+    .law-ref:hover{background:#dbeafe}
+    .verdict{background:var(--navy);border-radius:var(--radius);padding:28px 32px;margin:32px 0;text-align:center}
+    .verdict p{font-family:'Noto Serif JP',serif;font-size:1.15rem;font-weight:900;color:var(--gold-lt);margin:0;line-height:1.7}
+    @media(max-width:700px){.analysis-grid{grid-template-columns:1fr}}
+  
+    /* ↓ Photo hero overrides — keep white text on photo background ↓ */
+    .page-hero{background:transparent!important;border-top:none!important;border-bottom:none!important}
+    .page-hero h1{color:#fff!important}
+    .page-hero h1 em{color:var(--gold-lt)!important}
+    .page-hero p{color:rgba(255,255,255,.88)!important}
+    .page-hero-kicker{background:rgba(212,175,55,.18)!important;border:1px solid rgba(212,175,55,.4)!important;color:var(--gold-lt)!important}
+    .hero-actions .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.5)!important}
+    .hero-actions .btn-outline:hover{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.8)!important}
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D18ZSSLMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0D18ZSSLMH');
+</script>
+</head>
+<body>
+  
+<div class="support-strip" role="complementary" aria-label="活動支援のお願い">
+  <div class="support-strip-inner">
+    <span class="support-strip-label">応援のお願い</span>
+    <span class="support-strip-text">公文書開示、資料整理、Web公開を続けるため、寄付・カンパでのご支援をお願いします。</span>
+    <a class="support-strip-link" href="https://ptaorg.github.io/donate/">応援ページへ</a>
+  </div>
+</div>
+<header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/popc-logo.png" alt="PTA適正化推進委員会">
+        <span>PTA適正化推進委員会</span>
+      </a>
+      <div class="header-search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" class="search-input" placeholder="キーワードで検索…" aria-label="サイト内検索">
+        <div class="search-results-dropdown"></div>
+      </div>
+      <nav class="desktop-nav" aria-label="主要ナビゲーション">
+        <a href="index.html" class="nav-link">トップ</a>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">立場別</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>入口</h4>
+              <ul>
+                <li><a href="guide-parent.html">保護者の方へ</a></li>
+                <li><a href="guide-pta.html">PTA役員の方へ</a></li>
+                <li><a href="guide-board.html">教育委員会・学校へ</a></li>
+                <li><a href="guide-research.html">研究者・記者の方へ</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>ツール</h4>
+              <ul>
+                <li><a href="audit/index.html">運営チェックアプリ</a></li>
+                <li><a href="guideline.html">適正化ガイドライン</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">論点</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>主要論点</h4>
+              <ul>
+                <li><a href="membership.html">入会手続・オプトアウト</a></li>
+                <li><a href="privacy.html">個人情報提供</a></li>
+                <li><a href="fee-collection.html">会費徴収</a></li>
+                <li><a href="personnel.html">教職員関与</a></li>
+                <li><a href="facilities.html">施設利用</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>制度整理</h4>
+              <ul>
+                <li><a href="law-map.html">法制度マップ</a></li>
+                <li><a href="cases.html">判例整理</a></li>
+                <li><a href="timeline.html">PTA制度史</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">資料</a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h4>資料</h4>
+              <ul>
+                <li><a href="board-responses.html">教育委員会の回答</a></li>
+                <li><a href="national-archive.html">全国資料館</a></li>
+                <li><a href="journal.html">論考・調査報告</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4>分析</h4>
+              <ul>
+                <li><a href="report.html">総合分析レポート</a></li>
+                <li><a href="administrative-materials.html">行政資料整理</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="https://ptaorg.github.io/donate/" class="nav-link support-nav-link">応援</a>
+        <a href="audit/index.html" class="btn-gold">運営チェック</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileOverlay">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-overlay" id="mobileOverlay">
+    <a href="index.html" class="mobile-link"><span>Home</span>トップページ</a>
+    <a href="guide-parent.html" class="mobile-link"><span>Guide</span>保護者の方へ</a>
+    <a href="guide-pta.html" class="mobile-link"><span>Guide</span>PTA役員の方へ</a>
+    <a href="guide-board.html" class="mobile-link"><span>Guide</span>教育委員会・学校へ</a>
+    <a href="board-responses.html" class="mobile-link"><span>Data</span>教育委員会の回答</a>
+    <a href="national-archive.html" class="mobile-link"><span>Archive</span>全国資料館</a>
+    <a href="journal.html" class="mobile-link"><span>Journal</span>論考・調査報告</a>
+    <a href="audit/index.html" class="mobile-link"><span>Check</span>運営チェックアプリ</a>
+    <a href="https://ptaorg.github.io/donate/" class="mobile-link support-mobile-link"><span>Support</span>応援・寄付</a>
+  <div class="close-overlay" id="closeOverlay">CLOSE ×</div>
+  </div>
+
+  <!-- ヒーロービジュアル -->
+  <section class="page-hero page-hero--photo" style="position:relative;overflow:hidden">
+    <div class="page-hero-bg-img" aria-hidden="true" style="position:absolute;inset:0;z-index:0">
+      <img src="assets/slides/1.jpg"
+           alt="" style="width:100%;height:100%;object-fit:cover;filter:brightness(1.14) saturate(1.05)">
+      <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(127,29,29,.36),rgba(5,17,31,.18))"></div>
+    </div>
+    <div class="page-hero-inner" style="position:relative;z-index:1">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border-radius:999px;background:rgba(252,165,165,.15);border:1px solid rgba(252,165,165,.35);color:#fca5a5;font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px">
+        🚨 速報・事案分析 — 2026年4月21日
+      </div>
+      <h1 style="font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:900;color:#fff;line-height:1.3;margin-bottom:14px">
+        静岡市立20校で<br>
+        <span style="color:#fca5a5">9,200人分の個人情報</span>を<br>
+        保護者の同意なくPTAに提供
+      </h1>
+      <p style="color:rgba(255,255,255,.78);font-size:.97rem;line-height:1.85;max-width:620px;margin-bottom:20px">
+        「教職員の関与ゼロ・完全分離済」と照会回答していた静岡市で発覚した個人情報提供の根拠確認。これは矛盾ではなく、構造的問題の必然的帰結です。
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <a href="privacy.html" class="btn-gold" style="font-size:.9rem">個人情報提供の問題へ</a>
+        <a href="board-responses.html" class="btn-outline" style="font-size:.9rem">全国教委の回答一覧</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- アラート -->
+  <div style="background:#b91c1c;color:#fff;padding:12px 0">
+    <div style="width:min(calc(100% - 40px),900px);margin-inline:auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+      <span style="background:rgba(255,255,255,.2);padding:3px 10px;border-radius:4px;font-size:.72rem;font-weight:900;letter-spacing:.08em;flex-shrink:0">静岡放送SBS 2026/04/21 報道</span>
+      <span style="font-size:.88rem;font-weight:700">「法律とこれまでの学校文化に"ずれ"のようなものがあるのではないか」— 中村百見 静岡市教育長</span>
+    </div>
+  </div>
+
+  <main>
+
+  <div class="page-banner" style="background-image:url('assets/slides/1.jpg')">
+    <div class="page-banner-content">
+      <div class="page-banner-kicker">Case Report · 個人情報漏洩事案</div>
+      <div class="page-banner-title">静岡市立小中学校 個人情報漏洩事件</div>
+    </div>
+  </div>
+
+  <div class="inc-wrap">
+
+    <!-- 事案の概要 -->
+    <div class="fact-box">
+      <h3>📋 事案の概要（確認済み事実）</h3>
+      <p><strong>発生場所：</strong>静岡市立小中学校 計20校</p>
+      <p><strong>対象情報：</strong>児童生徒などの住所・連絡先等の個人情報 <strong>約9,200人分</strong></p>
+      <p><strong>内容：</strong>保護者の同意を得ないまま、PTAの役員に提供されていた</p>
+      <p><strong>用途：</strong>PTA役員選出・登下校の旗振り当番の調整などに使用</p>
+      <p><strong>発覚後の対応：</strong>該当情報はPTAから回収・全て破棄済み（とされる）</p>
+      <p><strong>行政の認識：</strong>「教育委員会として再度マニュアルを徹底できるような形で考えたい」（静岡市教育長）</p>
+      <p style="margin:0"><strong>教委の手引きには：</strong>「学校が収集した個人情報は、保護者の同意なしにPTAに提供できない」と明示されていたが、20校で徹底されていなかった</p>
+    </div>
+
+    <!-- 教育長の発言 -->
+    <div class="quote-box">
+      <div class="qb-src">静岡市教育委員会 教育長発言 — 令和8年4月21日 定例校長会議</div>
+      <blockquote>「今回の問題の本質は、まさに個人情報保護法の制度と学校文化の間に"ずれ"のようなものがあるのではないかと考えております」</blockquote>
+      <blockquote style="margin-top:12px">「昨年度もやっていたからとか、前例を踏襲するというところがあった」</blockquote>
+      <div class="qb-attr">中村百見 静岡市教育委員会教育長 / 出典：静岡放送SBS 2026年4月21日報道</div>
+    </div>
+
+    <h2>「完全分離済」という回答そのものが、虚偽だった</h2>
+
+    <div class="fact-box" style="border-left-color:#7f1d1d;background:#fff5f5">
+      <h3 style="color:#7f1d1d">⚠️ 虚偽回答の事実確認</h3>
+      <p>当委員会は令和8年3月、静岡市教育委員会に7問照会を行い、以下の回答を受けた。</p>
+      <div class="quote-box" style="margin:16px 0">
+        <div class="qb-src">静岡市教育委員会 令和8年3月 照会回答（メール原文）</div>
+        <blockquote>「PTA会費は学校徴収金から<strong>除外</strong>しており、勤務時間中における教職員の関与は<strong>ありません</strong>。公務として取り扱っておりません。」</blockquote>
+      </div>
+      <p>しかしこの回答のわずか数週間後、静岡市立20校で9,200人分の個人情報が保護者の同意なくPTAに提供されていたことが発覚した。</p>
+      <p style="margin:0;font-weight:900;color:#7f1d1d">「完全分離済」という回答は、事実と大きく乖離していた。これは単なる「見落とし」ではなく、<u>行政が自己申告で「適正化済」と回答することの限界</u>を示す決定的な事例である。</p>
+    </div>
+
+    <p>この問題は静岡市固有の問題ではない。<strong>全国の教育委員会への照会は、あくまで「自己申告」である。</strong>担当者が実態を把握していない場合、現場と方針が乖離している場合、あるいは意図的に都合よく回答している場合——いずれも「適正化済」という回答が返ってくる。</p>
+
+    <div style="background:linear-gradient(135deg,#7f1d1d,#991b1b);border-radius:var(--radius);padding:28px 32px;margin:24px 0;color:#fff">
+      <div style="font-size:.72rem;font-weight:900;letter-spacing:.1em;color:rgba(255,255,255,.6);text-transform:uppercase;margin-bottom:10px">当委員会の視点</div>
+      <p style="font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:900;color:#fca5a5;line-height:1.7;margin:0">行政の「適正化済」回答を鵜呑みにしてはいけない。<br>
+      自己申告と現場実態が乖離するのは、PTA問題の本質そのものだ。<br>
+      <span style="color:#fff">だからこそ、情報公開請求・現場検証・継続的な照会が必要になる。</span></p>
+    </div>
+
+    <h2>では、なぜ「完全分離済」と回答したのか</h2>
+
+    <p>静岡市は会費徴収については実際に適正化を進めており、その部分については回答は事実だった可能性がある。しかし<strong>個人情報の管理については、担当者が現場実態を把握していないまま「問題なし」として回答した</strong>と考えられる。</p>
+
+    <p>これは「悪意ある虚偽」ではないかもしれないが、結果として虚偽の情報を提供したことに変わりはない。そしてより根本的な問題として、<strong>教育委員会の担当者が各校の個人情報管理の実態を把握できる体制にそもそもなっていない</strong>ことが露呈している。</p>
+
+    <div class="analysis-grid">
+      <div class="ag-card">
+        <div class="ag-label" style="color:#15803d">✅ 静岡市が達成していたこと（会費）</div>
+        <h4>会費徴収からの教職員関与ゼロ</h4>
+        <p>学校徴収金からPTA会費を除外し、教職員が勤務時間中にPTA会費事務を担わない体制。この部分は事実だった。</p>
+      </div>
+      <div class="ag-card">
+        <div class="ag-label" style="color:#b91c1c">❌ 実態として起きていたこと（個人情報）</div>
+        <h4>名簿の根拠不明の提供が20校で継続</h4>
+        <p>「完全分離済」という回答とは裏腹に、個人情報の根拠不明の提供は20校で継続。担当者がこれを把握していなかった。</p>
+      </div>
+    </div>
+
+    <h2>「行政回答の信頼性」という根本問題</h2>
+
+    <p>教育委員会回答は、基本的に自治体側の自己申告・文書回答である。静岡市の事例は、回答本文だけでなく、実際の学校資料、同意書、名簿提供記録、再発防止資料を照合して読む必要があることを示している。</p>
+
+    <div class="analysis-grid">
+      <div class="ag-card">
+        <div class="ag-label" style="color:#b91c1c">❌ 自己申告が抱える構造的限界</div>
+        <h4>「適正化済」でも現場は別物</h4>
+        <p>担当者が各校の実態を把握していない・方針と現場が乖離している・都合よく回答している——いずれも「適正化済」という回答が返ってくる。</p>
+      </div>
+      <div class="ag-card">
+        <div class="ag-label" style="color:#15803d">✅ だからこそ必要なこと</div>
+        <h4>情報公開請求と現場の一次資料</h4>
+        <p>自己申告を超えた検証には、公文書開示請求・現場からの証拠収集・継続的な照会が不可欠。当委員会が大量の公文書を収集してきた理由がここにある。</p>
+      </div>
+    </div>
+
+    <p>「教育委員会が『適正化済』と回答しているから大丈夫」は、静岡市の事例が示す通り根拠にならない。<strong>「適正化済」という回答は、スタート地点に過ぎない。</strong>その回答の実態が現場で貫徹されているかを検証する外部の目こそが、当委員会の存在意義の一つである。</p>
+
+    <div class="verdict">
+      <p>「会費を適正化した」だけでは足りない。<br>個人情報・入会手続・教職員関与・施設利用——<br><strong style="color:#fff">5つの論点すべてを同時に整理しなければ、問題は別の形で噴出する。<br>そして「整理した」という行政の言葉も、検証なしには信用できない。</strong></p>
+    </div>
+
+    <h2>法的整理</h2>
+
+    <h3>問題となる法令</h3>
+    <p>今回の事案では、少なくとも以下の法令との関係を確認する必要があります。</p>
+    <a href="law-map.html#lc-privacy" class="law-ref">個人情報保護法 第69条（目的外提供禁止）</a>
+    <a href="law-map.html#lc-privacy" class="law-ref">個人情報保護法 第61条（利用目的の特定）</a>
+    <a href="law-map.html#lc-local-public" class="law-ref">地方公務員法 第34条（守秘義務）</a>
+
+    <div class="law-quote" style="margin-top:20px">
+      <div class="law-quote-label">個人情報保護法 第69条（保有個人情報の利用及び提供の制限）</div>
+      行政機関の長等は、法令に基づく場合を除き、利用目的以外の目的のために保有個人情報を自ら利用し、又は提供してはならない。
+    </div>
+
+    <p>公立学校は個人情報保護法上の行政機関等として整理されます。PTAは別個の私的団体であり、学校がPTAに名簿を提供する場面では、同法69条の目的外利用・目的外提供との関係を確認する必要があります。本人同意、提供項目、提供記録、不同意者の除外が整理されていなければ、重大な問題になります。</p>
+
+    <h3>「破棄した」では解決しない</h3>
+    <p>「提供した情報はPTAから回収し全て破棄した」とされていますが、法的問題はこれで解消しません。</p>
+    <p>個人情報保護法上、問題となる提供行為が既に発生している以上、情報主体である保護者に対する説明、再発防止、利用停止等の整理が必要になります。また、提供された情報を役員が記憶・メモしていた場合、「破棄」の確認は事実上不可能です。</p>
+
+    <h2>教育長の「ずれ」発言の意味</h2>
+
+    <p>中村教育長は「法律と学校文化の間にずれがある」と表現しました。これは重要な認識です。しかしこの「ずれ」は<strong>偶発的なものではなく、構造的なものです。</strong></p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#fee2e2;color:#b91c1c">慣</div>
+        <div class="tl-content">
+          <div class="tl-date">構造①</div>
+          <div class="tl-title">「昨年度もやっていたから」という前例踏襲</div>
+          <p>個人情報保護法の制度が変わっても（令和3年改正）、現場の運用は変わらない。個人情報保護法制の下で問題になるという認識が共有されていない。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#fff3cd;color:#92400e">委</div>
+        <div class="tl-content">
+          <div class="tl-date">構造②</div>
+          <div class="tl-title">手引きを作っても現場に届かない</div>
+          <p>教育委員会が「同意なし提供禁止」と手引きに明示していたにもかかわらず20校で徹底されなかった。「マニュアルの存在」と「現場の運用」の乖離。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#fff3cd;color:#92400e">覚</div>
+        <div class="tl-content">
+          <div class="tl-date">構造③</div>
+          <div class="tl-title">「覚書があっても問題状態は解消されない」のと同じ構造</div>
+          <p>書面で禁止を明示しても、制度と現場の「文化」の乖離が続く限り問題状態は継続します。これは他地域でも起こり得る構造です。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#dcfce7;color:#15803d">解</div>
+        <div class="tl-content">
+          <div class="tl-date">解決策</div>
+          <div class="tl-title">「PTAが独自に収集する」体制への切り替えのみが根本解</div>
+          <p>学校がPTA向けに名簿を「渡さない」ルールを作るのではなく、<strong>PTAが入会届で直接収集する体制</strong>にすれば、学校は提供できない（情報を持っていない）状態になる。禁止より仕組みの変更が根本解。</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>文科省の公式見解との接続</h2>
+
+    <p>今回の事案は、文部科学省の公式資料が長年指摘してきた問題の現れです。</p>
+
+    <div class="law-quote">
+      <div class="law-quote-label">文部科学省通知（平成24年5月9日）「学校関係団体が実施する事業に係る兼職兼業等の取扱い及び学校における会計処理の適正化についての留意事項等について」</div>
+      PTA等学校関係団体の事業に係る学校会計と団体会計の区分を明確にするとともに、個人情報の取扱いについて適切な措置を講じること。
+    </div>
+
+    <p>この通知は2012年に発出されています。14年後の2026年にも同じ問題が起きているという事実が、「法律と学校文化のずれ」の根深さを示しています。</p>
+
+    <h2>他の自治体への示唆</h2>
+
+    <p>静岡市は全国でも最先進の教育委員会の一つです。その静岡市でも20校で根拠不明の提供が起きていた。これが意味することは明確です。</p>
+
+    <p><strong>「うちの市は大丈夫」という確信は根拠がありません。</strong>全国97自治体への照会回答（回答集.xlsx）を見ると、明確に適正化方針を示した自治体は一握りです。現場での運用実態は、教育委員会の方針とは乖離している可能性が高い。</p>
+
+    <div class="alert alert-danger" style="margin-top:24px">
+      <div class="alert-icon">⚠️</div>
+      <div>
+        <p><strong>保護者の皆さんへ：</strong>あなたの子どもの情報がPTAに渡っていないか、学校に書面で確認してください。「渡していない」という回答があっても、実態を確認する権利があります。</p>
+        <p style="margin:0"><a href="guide-parent.html#pdf-dl">照会書テンプレートを使う →</a></p>
+      </div>
+    </div>
+
+    <h2>関連資料</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:16px">
+      <a href="privacy.html" class="btn-navy">個人情報提供問題の詳細</a>
+      <a href="board-responses.html" class="btn-soft">全国教委の回答一覧</a>
+      <a href="administrative-materials.html" class="btn-soft">文科省通知の整理</a>
+      <a href="audit/index.html" class="btn-soft">運営チェックアプリで確認</a>
+      <a href="https://news.yahoo.co.jp/articles/c565beab1264bc9feff6f8134973c2a078f2cf89" target="_blank" rel="noopener noreferrer" class="btn-soft">SBS報道記事を見る ↗</a>
+    </div>
+
+  </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div>
+          <h3>PTA適正化推進委員会</h3>
+          <a href="https://yokomusubi.city.yokohama.lg.jp/organizations/detail/f69c7ad2-cf21-4dfa-87bb-9c891874eb6b/" target="_blank" rel="noopener noreferrer" class="yokomusubi-card">
+            <img src="assets/yokomusubi.png" alt="よこむすび">
+            <span class="yokomusubi-tagline">磯子区「よこむすび」掲載団体</span>
+            <span class="yokomusubi-meta">登録番号：磯子12406</span>
+            <span class="yokomusubi-meta">分類番号：12-4（市民活動・社会教育推進）</span>
+          </a>
+          <div class="footer-contact">
+            <p>〒235-0021<br>神奈川県横浜市磯子区岡村8-17-5-301</p>
+            <p><strong>070-9012-7772</strong></p>
+            <p><a href="mailto:info@ptaorg.com">info@ptaorg.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h4>公式発信</h4>
+          <p class="footer-sns-sub">最新資料・論考・動画はこちら</p>
+          <div class="footer-sns-cards">
+            <a href="https://x.com/jjjqqqxxx0852" target="_blank" rel="noopener" class="fsns-card fsns-x">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.836L2.25 2.25H8.08l4.263 5.636L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+              <div>
+                <div class="fsns-name">X</div>
+                <div class="fsns-desc">速報・資料更新</div>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@PTA%E9%81%A9%E6%AD%A3%E5%8C%96%E6%8E%A8%E9%80%B2%E5%A7%94%E5%93%A1%E4%BC%9A" target="_blank" rel="noopener" class="fsns-card fsns-yt">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <div>
+                <div class="fsns-name">YouTube</div>
+                <div class="fsns-desc">動画で解説</div>
+              </div>
+            </a>
+            <a href="https://note.com/hiroshisatoh" target="_blank" rel="noopener" class="fsns-card fsns-note">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H4zm2 3h10v2H6V8zm0 4h10v2H6v-2zm0 4h6v2H6v-2z"/></svg>
+              <div>
+                <div class="fsns-name">note</div>
+                <div class="fsns-desc">論考・研究ノート</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>立場別</h4>
+          <ul>
+            <li><a href="guide-parent.html">保護者</a></li>
+            <li><a href="guide-pta.html">PTA役員</a></li>
+            <li><a href="guide-board.html">教育委員会・学校</a></li>
+            <li><a href="guide-research.html">研究者・記者</a></li>
+            <li><a href="guide-board.html">教育委員会向け指針</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>論点</h4>
+          <ul>
+            <li><a href="membership.html">入会手続</a></li>
+            <li><a href="privacy.html">個人情報</a></li>
+            <li><a href="fee-collection.html">会費徴収</a></li>
+            <li><a href="personnel.html">教職員関与</a></li>
+            <li><a href="facilities.html">施設利用</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>資料・支援</h4>
+          <ul>
+            <li><a href="https://ptaorg.github.io/donate/">応援・寄付</a></li>
+            <li><a href="board-responses.html">教育委員会の回答</a></li>
+            <li><a href="national-archive.html">全国資料館</a></li>
+            <li><a href="journal.html">論考・調査報告</a></li>
+            <li><a href="report.html">総合分析レポート</a></li>
+            <li><a href="audit/index.html">運営チェックアプリ</a></li>
+            <li><a href="law-map.html">法制度マップ</a></li>
+            <li><a href="guideline.html">適正化ガイドライン</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  <div class="footer-support">
+    <div>
+      <strong>調査・資料公開の継続を応援してください</strong>
+      <p>いただいたご支援は、公文書開示、資料整理、Web公開、自治体・学校への働きかけに活用します。</p>
+    </div>
+    <a href="https://ptaorg.github.io/donate/">応援ページへ</a>
+  </div>
+    <p class="copyright">© PTA適正化推進委員会</p>
+  </footer>
+  <script src="js/site.js"></script>
+</body></html>

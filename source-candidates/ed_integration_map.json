@@ -1,0 +1,50 @@
+[
+  {
+    "page": "education-board-responsibility.html",
+    "section_id": "ed-resource-set",
+    "purpose": "論考から教育委員会向け実務指針・資料セットへ接続",
+    "target_url": "https://ptaorg.github.io/ed/"
+  },
+  {
+    "page": "guide-board.html",
+    "section_id": "board-ed-resource-set",
+    "purpose": "点検ページから通知モデル・様式・一次資料へ接続",
+    "target_url": "https://ptaorg.github.io/ed/#templates"
+  },
+  {
+    "page": "administrative-materials.html",
+    "section_id": "ed-resource-set",
+    "purpose": "行政資料ページでedを根拠資料セットとして位置づけ",
+    "target_url": "https://ptaorg.github.io/ed/#sources"
+  },
+  {
+    "page": "law-map.html",
+    "section_id": "law-ed-sources",
+    "purpose": "法令マップから条文・アーカイブ資料確認先へ接続",
+    "target_url": "https://ptaorg.github.io/ed/#sources"
+  },
+  {
+    "page": "personnel.html",
+    "section_id": "personnel-ed-sources",
+    "purpose": "職務専念義務・働き方改革資料へ接続",
+    "target_url": "https://ptaorg.github.io/ed/#sources"
+  },
+  {
+    "page": "privacy.html",
+    "section_id": "privacy-ed-sources",
+    "purpose": "個人情報保護法・行政機関等編ガイドラインへ接続",
+    "target_url": "https://ptaorg.github.io/ed/#sources"
+  },
+  {
+    "page": "fee-collection.html",
+    "section_id": "fee-ed-sources",
+    "purpose": "民法・消費者契約法・地方自治法資料へ接続",
+    "target_url": "https://ptaorg.github.io/ed/#sources"
+  },
+  {
+    "page": "journal.html",
+    "section_id": "journal-ed-resource",
+    "purpose": "論考目録から教育委員会向け実務指針へ接続",
+    "target_url": "https://ptaorg.github.io/ed/"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "ptaorg-github-io",
+  "private": true,
+  "scripts": {
+    "sync:materials": "node scripts/sync-school-materials.js --dry-run",
+    "sync:materials:write": "node scripts/sync-school-materials.js --write",
+    "generate:schools": "node scripts/generate-school-pages.js",
+    "generate:archive": "node scripts/generate-national-archive.js",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "generate:all": "npm run generate:schools && npm run generate:archive && npm run generate:sitemap"
+  }
+}

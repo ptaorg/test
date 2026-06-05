@@ -1,0 +1,87 @@
+{
+  "municipality": "厚木市",
+  "prefecture": "神奈川県",
+  "schoolName": "相川中学校",
+  "schoolType": "中学校",
+  "slug": "aikawa-jhs",
+  "basePath": "/archive/atsugi/aikawa-jhs/",
+  "canonical": "https://ptaorg.com/archive/atsugi/aikawa-jhs/",
+  "ogImage": "/assets/ogp/atsugi/aikawa-jhs.png",
+  "status": "重大リスク",
+  "statusClass": "eval-critical",
+  "summary": "このページでは、PTA入会案内、PTA入会申込書、学校納入金・会費徴収資料等の確認状況を整理します。画像とPDFは、個人情報・印影・口座情報・QRコード等の確認が完了するまで掲載しません。",
+  "description": "相川中学校のPTA関連資料について、確認できる事実、資料上確認できない点、当委員会の評価を整理したページです。",
+  "ogDescription": "学校連絡手段、口座振替、教職員関与が複合して確認されます。学校とPTAの分離について重大な確認事項があります。",
+  "materials": {
+    "documentName": "相川中学校 会議録_04.pdf",
+    "confirmedDocuments": [
+      "相川中学校 会議録_04.pdf"
+    ],
+    "hasMembershipNotice": "未確認",
+    "hasApplicationForm": "開示資料上確認できない",
+    "applicationFormStatus": "開示資料上確認できない",
+    "hasSchoolCollectionNotice": "未確認",
+    "sourceImages": [
+      {
+        "src": "/assets/archive/atsugi/aikawa-jhs/01.png",
+        "caption": "資料画像1"
+      },
+      {
+        "src": "/assets/archive/atsugi/aikawa-jhs/02.png",
+        "caption": "資料画像2"
+      },
+      {
+        "src": "/assets/archive/atsugi/aikawa-jhs/03.png",
+        "caption": "資料画像3"
+      },
+      {
+        "src": "/assets/archive/atsugi/aikawa-jhs/04.png",
+        "caption": "資料画像4"
+      },
+      {
+        "src": "/assets/archive/atsugi/aikawa-jhs/05.png",
+        "caption": "資料画像5"
+      },
+      {
+        "src": "/assets/archive/atsugi/aikawa-jhs/06.png",
+        "caption": "資料画像6"
+      },
+      {
+        "src": "/assets/archive/atsugi/aikawa-jhs/07.png",
+        "caption": "資料画像7"
+      },
+      {
+        "src": "/assets/archive/atsugi/aikawa-jhs/08.png",
+        "caption": "資料画像8"
+      },
+      {
+        "src": "/assets/archive/atsugi/aikawa-jhs/09.png",
+        "caption": "資料画像9"
+      }
+    ],
+    "pdfStatus": "準備中",
+    "pdf": null
+  },
+  "confirmedFacts": [
+    "PTA本部会報告、職員会議資料を確認しています。",
+    "PTA会費集金のお知らせをtetoruで配信、口座振替、職員会議資料でPTA担当者確認、PTA運営委員会への教職員出席依頼等が確認されます。"
+  ],
+  "unconfirmedPoints": [
+    "学校連絡手段をPTA連絡へ使用する根拠、利用目的、管理権限。",
+    "口座振替・教職員関与・職務専念義務免除等に関する根拠資料。"
+  ],
+  "riskFlags": [
+    "学校によるPTA会費徴収疑い",
+    "学校連絡手段のPTA利用疑い",
+    "教職員関与疑い"
+  ],
+  "evaluation": [
+    "PTA本部会報告、職員会議資料を確認。PTA会費集金のお知らせをtetoruで配信、口座振替、職員会議資料でPTA担当者確認、PTA運営委員会への教職員出席依頼等が確認できる。学校連絡手段、口座振替、教職員関与が複合して確認されるため、学校とPTAの分離、職務専念義務、個人情報利用の観点から重大な確認を要する。"
+  ],
+  "humanReviewRequired": true,
+  "lastReviewed": "2026-06-02",
+  "nationalArchive": {
+    "order": 36,
+    "group": "中学校"
+  }
+}

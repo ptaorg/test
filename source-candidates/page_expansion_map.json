@@ -1,0 +1,32 @@
+[
+  {
+    "page": "privacy.html",
+    "theme": "個人情報提供",
+    "new_section": "privacy-evidence-questions",
+    "purpose": "同意書の有無だけでなく、出所・項目・不同意者処理・記録管理へ確認を広げる"
+  },
+  {
+    "page": "personnel.html",
+    "theme": "教職員関与",
+    "new_section": "personnel-inquiry-questions",
+    "purpose": "兼職兼業・職専免資料を教育委員会への照会項目に変換する"
+  },
+  {
+    "page": "facilities.html",
+    "theme": "学校施設利用",
+    "new_section": "facility-permission-questions",
+    "purpose": "学校教育法137条資料を施設使用許可条件に落とし込む"
+  },
+  {
+    "page": "cases.html",
+    "theme": "判例・研究・報道",
+    "new_section": "case-source-types",
+    "purpose": "資料種別ごとに広げる論点と使い方を分ける"
+  },
+  {
+    "page": "reality.html",
+    "theme": "再現例と開示請求",
+    "new_section": "reality-request-map",
+    "purpose": "再現例から次に集める資料を論点別に整理する"
+  }
+]

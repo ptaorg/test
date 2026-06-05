@@ -1,0 +1,9 @@
+page,section_id,purpose,target_url
+education-board-responsibility.html,ed-resource-set,論考から教育委員会向け実務指針・資料セットへ接続,https://ptaorg.github.io/ed/
+guide-board.html,board-ed-resource-set,点検ページから通知モデル・様式・一次資料へ接続,https://ptaorg.github.io/ed/#templates
+administrative-materials.html,ed-resource-set,行政資料ページでedを根拠資料セットとして位置づけ,https://ptaorg.github.io/ed/#sources
+law-map.html,law-ed-sources,法令マップから条文・アーカイブ資料確認先へ接続,https://ptaorg.github.io/ed/#sources
+personnel.html,personnel-ed-sources,職務専念義務・働き方改革資料へ接続,https://ptaorg.github.io/ed/#sources
+privacy.html,privacy-ed-sources,個人情報保護法・行政機関等編ガイドラインへ接続,https://ptaorg.github.io/ed/#sources
+fee-collection.html,fee-ed-sources,民法・消費者契約法・地方自治法資料へ接続,https://ptaorg.github.io/ed/#sources
+journal.html,journal-ed-resource,論考目録から教育委員会向け実務指針へ接続,https://ptaorg.github.io/ed/

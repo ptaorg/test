@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ptaorg.com/data/schema/school-archive.schema.json",
+  "title": "School archive record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "municipality",
+    "prefecture",
+    "schoolName",
+    "schoolType",
+    "slug",
+    "basePath",
+    "canonical",
+    "status",
+    "statusClass",
+    "materials",
+    "confirmedFacts",
+    "unconfirmedPoints",
+    "riskFlags",
+    "evaluation",
+    "humanReviewRequired"
+  ],
+  "properties": {
+    "municipality": { "type": "string" },
+    "prefecture": { "type": "string" },
+    "schoolName": { "type": "string" },
+    "schoolType": { "type": "string", "enum": ["小学校", "中学校", "義務教育学校", "高等学校", "特別支援学校", "その他"] },
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "basePath": { "type": "string", "pattern": "^/archive/.+/$" },
+    "canonical": { "type": "string", "format": "uri" },
+    "ogImage": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["重大リスク", "問題あり", "要確認", "資料不足", "適正化モデル", "未評価", "評価準備中"]
+    },
+    "statusClass": {
+      "type": "string",
+      "enum": ["eval-critical", "eval-problem", "eval-warning", "eval-insufficient", "eval-good", "eval-pending"]
+    },
+    "summary": { "type": "string" },
+    "description": { "type": "string" },
+    "ogDescription": { "type": "string" },
+    "materials": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["sourceImages"],
+      "properties": {
+        "documentName": { "type": "string" },
+        "confirmedDocuments": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "hasMembershipNotice": { "type": "string" },
+        "hasApplicationForm": { "type": "string" },
+        "applicationFormStatus": { "type": "string" },
+        "hasSchoolCollectionNotice": { "type": "string" },
+        "pdfStatus": { "type": "string" },
+        "sourceImages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["src", "caption"],
+            "properties": {
+              "src": { "type": "string" },
+              "caption": { "type": "string" },
+              "alt": { "type": "string" }
+            }
+          }
+        },
+        "pdf": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "required": ["src", "label"],
+              "properties": {
+                "src": { "type": "string" },
+                "label": { "type": "string" }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "confirmedFacts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "unconfirmedPoints": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "riskFlags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evaluation": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "humanReviewRequired": { "type": "boolean" },
+    "lastReviewed": { "type": "string" },
+    "nationalArchive": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "order": { "type": "number" },
+        "group": { "type": "string" }
+      }
+    }
+  }
+}
